@@ -1,0 +1,1090 @@
+{
+ "indicator_id": "wgi.gov_wgi_ge_est",
+ "unit": "wgi_estimate",
+ "source_id": "wgi",
+ "source_version": "2026-09-25",
+ "retrieved_at": "2026-10-26T01:07:55+00:00",
+ "license": "CC-BY-4.0",
+ "observations": [
+  {
+   "geo_code": "ARG",
+   "year": 1996,
+   "value": 0.258256,
+   "lower": -0.15671318050000005,
+   "upper": 0.6732251805,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1998,
+   "value": 0.077215,
+   "lower": -0.33775418050000006,
+   "upper": 0.4921841805,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2000,
+   "value": 0.0302816,
+   "lower": -0.3846875805,
+   "upper": 0.44525078050000005,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2002,
+   "value": -0.1949453,
+   "lower": -0.5809611645,
+   "upper": 0.19107056450000004,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2003,
+   "value": -0.1124474,
+   "lower": -0.4984632645,
+   "upper": 0.27356846450000005,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2004,
+   "value": 0.0149839,
+   "lower": -0.35498696350000003,
+   "upper": 0.3849547635,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2005,
+   "value": 0.0544303,
+   "lower": -0.31554056350000004,
+   "upper": 0.4244011635,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2006,
+   "value": 0.094084,
+   "lower": -0.272376269,
+   "upper": 0.460544269,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2007,
+   "value": 0.0463793,
+   "lower": -0.320080969,
+   "upper": 0.412839569,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2008,
+   "value": -0.0161725,
+   "lower": -0.382632769,
+   "upper": 0.350287769,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2009,
+   "value": -0.0054131,
+   "lower": -0.371873369,
+   "upper": 0.361047169,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2010,
+   "value": 0.0739395,
+   "lower": -0.292520769,
+   "upper": 0.440399769,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2011,
+   "value": 0.1310805,
+   "lower": -0.23537976900000002,
+   "upper": 0.497540769,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2012,
+   "value": 0.0685533,
+   "lower": -0.297906969,
+   "upper": 0.435013569,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2013,
+   "value": 0.0537935,
+   "lower": -0.312666769,
+   "upper": 0.420253769,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2014,
+   "value": 0.2310158,
+   "lower": -0.135444469,
+   "upper": 0.597476069,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2015,
+   "value": 0.1439524,
+   "lower": -0.222507869,
+   "upper": 0.510412669,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2016,
+   "value": 0.3509353,
+   "lower": -0.015524969,
+   "upper": 0.717395569,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2017,
+   "value": 0.3104807,
+   "lower": -0.05597956900000001,
+   "upper": 0.676940969,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2018,
+   "value": 0.2987842,
+   "lower": -0.067676069,
+   "upper": 0.665244469,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2019,
+   "value": 0.3062953,
+   "lower": -0.06016496900000001,
+   "upper": 0.672755569,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2020,
+   "value": 0.1889768,
+   "lower": -0.177483469,
+   "upper": 0.555437069,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2021,
+   "value": 0.1346725,
+   "lower": -0.231787769,
+   "upper": 0.501132769,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2022,
+   "value": 0.1192888,
+   "lower": -0.23296459099999997,
+   "upper": 0.47154219099999994,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2023,
+   "value": 0.0347051,
+   "lower": -0.331312006,
+   "upper": 0.40072220599999997,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2024,
+   "value": 0.194177,
+   "lower": -0.171840106,
+   "upper": 0.560194106,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2025,
+   "value": 0.2757855,
+   "lower": -0.08832044500000003,
+   "upper": 0.6398914450000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1996,
+   "value": -0.0491183,
+   "lower": -0.46408748050000004,
+   "upper": 0.36585088050000003,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1998,
+   "value": -0.2505556,
+   "lower": -0.6655247805,
+   "upper": 0.16441358050000004,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2000,
+   "value": -0.229614,
+   "lower": -0.6445831805000001,
+   "upper": 0.18535518050000002,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2002,
+   "value": -0.11074,
+   "lower": -0.49675586450000003,
+   "upper": 0.2752758645,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2003,
+   "value": -0.1601345,
+   "lower": -0.5461503645000001,
+   "upper": 0.22588136450000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2004,
+   "value": -0.2251549,
+   "lower": -0.5951257635,
+   "upper": 0.14481596350000003,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2005,
+   "value": -0.3335397,
+   "lower": -0.7035105635000001,
+   "upper": 0.03643116350000003,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2006,
+   "value": -0.3718123,
+   "lower": -0.738272569,
+   "upper": -0.005352030999999979,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2007,
+   "value": -0.3768965,
+   "lower": -0.743356769,
+   "upper": -0.010436231000000018,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2008,
+   "value": 0.1085416,
+   "lower": -0.257918669,
+   "upper": 0.475001869,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2009,
+   "value": 0.1910058,
+   "lower": -0.175454469,
+   "upper": 0.557466069,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2010,
+   "value": 0.193878,
+   "lower": -0.172582269,
+   "upper": 0.560338269,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2011,
+   "value": 0.1699521,
+   "lower": -0.196508169,
+   "upper": 0.536412369,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2012,
+   "value": 0.1938658,
+   "lower": -0.172594469,
+   "upper": 0.560326069,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2013,
+   "value": 0.2797499,
+   "lower": -0.08671036900000001,
+   "upper": 0.646210169,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2014,
+   "value": 0.1380177,
+   "lower": -0.228442569,
+   "upper": 0.504477969,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2015,
+   "value": 0.0397274,
+   "lower": -0.326732869,
+   "upper": 0.40618766900000003,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2016,
+   "value": 0.0251685,
+   "lower": -0.341291769,
+   "upper": 0.391628769,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2017,
+   "value": -0.0418302,
+   "lower": -0.408290469,
+   "upper": 0.324630069,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2018,
+   "value": -0.1412291,
+   "lower": -0.507689369,
+   "upper": 0.225231169,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2019,
+   "value": 0.0853751,
+   "lower": -0.281085169,
+   "upper": 0.451835369,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2020,
+   "value": -0.0212269,
+   "lower": -0.387687169,
+   "upper": 0.345233369,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2021,
+   "value": -0.0104637,
+   "lower": -0.376923969,
+   "upper": 0.355996569,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2022,
+   "value": -0.1979051,
+   "lower": -0.5501584909999999,
+   "upper": 0.15434829099999997,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2023,
+   "value": -0.2500394,
+   "lower": -0.6160565060000001,
+   "upper": 0.11597770599999996,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2024,
+   "value": -0.1860013,
+   "lower": -0.552018406,
+   "upper": 0.18001580599999997,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2025,
+   "value": -0.0356251,
+   "lower": -0.39973104500000006,
+   "upper": 0.328480845,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1996,
+   "value": 1.0134214,
+   "lower": 0.5984522194999999,
+   "upper": 1.4283905805,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1998,
+   "value": 0.9237448,
+   "lower": 0.5087756194999999,
+   "upper": 1.3387139805000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2000,
+   "value": 0.9578534,
+   "lower": 0.5428842194999999,
+   "upper": 1.3728225805,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2002,
+   "value": 1.0982633,
+   "lower": 0.7122474354999999,
+   "upper": 1.4842791645,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2003,
+   "value": 1.1483204,
+   "lower": 0.7623045355,
+   "upper": 1.5343362645,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2004,
+   "value": 1.1428491,
+   "lower": 0.7728782365,
+   "upper": 1.5128199635000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2005,
+   "value": 1.2953117,
+   "lower": 0.9253408365,
+   "upper": 1.6652825635000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2006,
+   "value": 1.2736093,
+   "lower": 0.9071490309999999,
+   "upper": 1.640069569,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2007,
+   "value": 1.2808682,
+   "lower": 0.914407931,
+   "upper": 1.647328469,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2008,
+   "value": 1.2664846,
+   "lower": 0.900024331,
+   "upper": 1.6329448690000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2009,
+   "value": 1.333997,
+   "lower": 0.967536731,
+   "upper": 1.7004572690000002,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2010,
+   "value": 1.2083876,
+   "lower": 0.826354116,
+   "upper": 1.590421084,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2011,
+   "value": 1.2731834,
+   "lower": 0.8911499159999999,
+   "upper": 1.655216884,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2012,
+   "value": 1.3079018,
+   "lower": 0.925868316,
+   "upper": 1.6899352840000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2013,
+   "value": 1.2777127,
+   "lower": 0.8956792159999999,
+   "upper": 1.6597461839999998,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2014,
+   "value": 1.1779137,
+   "lower": 0.7958802159999999,
+   "upper": 1.5599471839999999,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2015,
+   "value": 1.1198481,
+   "lower": 0.737814616,
+   "upper": 1.501881584,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2016,
+   "value": 1.0533135,
+   "lower": 0.671280016,
+   "upper": 1.4353469840000002,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2017,
+   "value": 1.0363271,
+   "lower": 0.654293616,
+   "upper": 1.4183605840000002,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2018,
+   "value": 1.0985906,
+   "lower": 0.716557116,
+   "upper": 1.480624084,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2019,
+   "value": 1.1067349,
+   "lower": 0.7247014159999999,
+   "upper": 1.4887683840000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2020,
+   "value": 0.9318715,
+   "lower": 0.5498380159999999,
+   "upper": 1.313904984,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2021,
+   "value": 0.9124462,
+   "lower": 0.530412716,
+   "upper": 1.2944796840000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2022,
+   "value": 0.9289252,
+   "lower": 0.562908094,
+   "upper": 1.294942306,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2023,
+   "value": 1.0056495,
+   "lower": 0.6396323940000002,
+   "upper": 1.371666606,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2024,
+   "value": 1.0140437,
+   "lower": 0.6480265940000001,
+   "upper": 1.380060806,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2025,
+   "value": 1.0424726,
+   "lower": 0.6783666549999999,
+   "upper": 1.406578545,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1996,
+   "value": -0.0346235,
+   "lower": -0.4495926805,
+   "upper": 0.38034568050000006,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1998,
+   "value": -0.4116195,
+   "lower": -0.8265886805,
+   "upper": 0.0033496805000000074,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2000,
+   "value": -0.4404204,
+   "lower": -0.8553895805,
+   "upper": -0.025451219499999955,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2002,
+   "value": -0.7912951,
+   "lower": -1.1773109645000002,
+   "upper": -0.4052792355,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2003,
+   "value": -0.4837646,
+   "lower": -0.8697804645,
+   "upper": -0.09774873549999996,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2004,
+   "value": -0.2863499,
+   "lower": -0.6563207635,
+   "upper": 0.08362096350000003,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2005,
+   "value": -0.3376676,
+   "lower": -0.7076384635,
+   "upper": 0.03230326350000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2006,
+   "value": -0.2410073,
+   "lower": -0.607467569,
+   "upper": 0.125452969,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2007,
+   "value": -0.2298176,
+   "lower": -0.596277869,
+   "upper": 0.136642669,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2008,
+   "value": -0.0885108,
+   "lower": -0.454971069,
+   "upper": 0.277949469,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2009,
+   "value": -0.149716,
+   "lower": -0.516176269,
+   "upper": 0.21674426900000002,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2010,
+   "value": -0.0340002,
+   "lower": -0.400460469,
+   "upper": 0.332460069,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2011,
+   "value": 0.0677342,
+   "lower": -0.298726069,
+   "upper": 0.434194469,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2012,
+   "value": 0.0313668,
+   "lower": -0.33509346900000003,
+   "upper": 0.397827069,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2013,
+   "value": 0.0632522,
+   "lower": -0.303208069,
+   "upper": 0.429712469,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2014,
+   "value": -0.0672041,
+   "lower": -0.433664369,
+   "upper": 0.299256169,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2015,
+   "value": -0.0012165,
+   "lower": -0.367676769,
+   "upper": 0.365243769,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2016,
+   "value": 0.0162303,
+   "lower": -0.35022996900000003,
+   "upper": 0.382690569,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2017,
+   "value": -0.0263499,
+   "lower": -0.392810169,
+   "upper": 0.340110369,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2018,
+   "value": -0.0053583,
+   "lower": -0.371818569,
+   "upper": 0.361101969,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2019,
+   "value": 0.0282031,
+   "lower": -0.338257169,
+   "upper": 0.394663369,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2020,
+   "value": -0.0183306,
+   "lower": -0.384790869,
+   "upper": 0.34812966900000003,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2021,
+   "value": -0.0243614,
+   "lower": -0.390821669,
+   "upper": 0.342098869,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2022,
+   "value": 0.0185649,
+   "lower": -0.333688491,
+   "upper": 0.37081829099999997,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2023,
+   "value": -0.0408261,
+   "lower": -0.404932045,
+   "upper": 0.32327984500000007,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2024,
+   "value": -0.0380875,
+   "lower": -0.40219344500000004,
+   "upper": 0.32601844500000005,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2025,
+   "value": -0.0934617,
+   "lower": -0.457567645,
+   "upper": 0.27064424500000006,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1996,
+   "value": -0.458301,
+   "lower": -0.8732701805,
+   "upper": -0.04333181949999998,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1998,
+   "value": 0.0482857,
+   "lower": -0.36668348050000005,
+   "upper": 0.4632548805,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2000,
+   "value": 0.0309484,
+   "lower": -0.38402078050000005,
+   "upper": 0.4459175805,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2002,
+   "value": -0.3429396,
+   "lower": -0.7289554645,
+   "upper": 0.04307626450000002,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2003,
+   "value": -0.3009889,
+   "lower": -0.6870047645,
+   "upper": 0.08502696450000002,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2004,
+   "value": -0.2446442,
+   "lower": -0.6146150635000001,
+   "upper": 0.12532666350000002,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2005,
+   "value": -0.1405651,
+   "lower": -0.5105359635,
+   "upper": 0.22940576350000003,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2006,
+   "value": -0.0958788,
+   "lower": -0.462339069,
+   "upper": 0.270581469,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2007,
+   "value": -0.1737217,
+   "lower": -0.540181969,
+   "upper": 0.192738569,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2008,
+   "value": 0.143898,
+   "lower": -0.222562269,
+   "upper": 0.510358269,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2009,
+   "value": 0.228862,
+   "lower": -0.137598269,
+   "upper": 0.595322269,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2010,
+   "value": 0.0700301,
+   "lower": -0.296430169,
+   "upper": 0.436490369,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2011,
+   "value": 0.2122526,
+   "lower": -0.154207669,
+   "upper": 0.5787128690000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2012,
+   "value": 0.3024831,
+   "lower": -0.063977169,
+   "upper": 0.668943369,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2013,
+   "value": 0.305982,
+   "lower": -0.06047826900000003,
+   "upper": 0.672442269,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2014,
+   "value": 0.1897215,
+   "lower": -0.17673876900000002,
+   "upper": 0.5561817689999999,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2015,
+   "value": 0.1614725,
+   "lower": -0.20498776900000001,
+   "upper": 0.527932769,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2016,
+   "value": 0.1836197,
+   "lower": -0.182840569,
+   "upper": 0.550079969,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2017,
+   "value": 0.0927696,
+   "lower": -0.273690669,
+   "upper": 0.459229869,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2018,
+   "value": 0.0375159,
+   "lower": -0.328944369,
+   "upper": 0.403976169,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2019,
+   "value": 0.0548906,
+   "lower": -0.311569669,
+   "upper": 0.421350869,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2020,
+   "value": 0.0117015,
+   "lower": -0.35475876900000003,
+   "upper": 0.378161769,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2021,
+   "value": -0.02505,
+   "lower": -0.391510269,
+   "upper": 0.341410269,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2022,
+   "value": -0.0936313,
+   "lower": -0.44588469099999994,
+   "upper": 0.258622091,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2023,
+   "value": -0.1119496,
+   "lower": -0.476055545,
+   "upper": 0.25215634500000006,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2024,
+   "value": -0.1853724,
+   "lower": -0.549478345,
+   "upper": 0.17873354500000005,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2025,
+   "value": -0.1806742,
+   "lower": -0.544780145,
+   "upper": 0.18343174500000003,
+   "series_break": false
+  }
+ ]
+}

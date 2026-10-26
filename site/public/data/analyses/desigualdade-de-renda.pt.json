@@ -1,0 +1,715 @@
+{
+ "slug": "desigualdade-de-renda",
+ "lang": "pt",
+ "title": "Desigualdade de renda no Brasil desde 1980",
+ "question": "Como a desigualdade de renda evoluiu no Brasil desde 1980, e o que a literatura revisada por pares atribui às mudanças?",
+ "hypothesis": "A queda da desigualdade a partir de 2001 coincidiu com políticas de salário mínimo e de transferência de renda, mas também com uma queda parecida em outros países da região e com mudanças no mercado de trabalho; nenhum fator isolado explica toda a queda.",
+ "indicators": [
+  "ipeadata.disoc_rdcg",
+  "ibge_sidra.gini_pnadc",
+  "wdi.si_pov_gini",
+  "ipeadata.disoc_ppy",
+  "wdi.si_pov_dday",
+  "undp_hdr.hdi",
+  "undp_hdr.ihdi",
+  "wdi.ny_gdp_pcap_kd",
+  "wdi.fp_cpi_totl_zg"
+ ],
+ "geographies": [
+  "BRA",
+  "ARG",
+  "CHL",
+  "COL",
+  "MEX"
+ ],
+ "period": {
+  "start": 1976,
+  "end": 2025
+ },
+ "method": "descriptive",
+ "method_description": "Descrição das séries de desigualdade e pobreza, mantidas separadas por pesquisa (PNAD antiga e PNAD Contínua), comparadas com países vizinhos, e revisão de estudos que decompõem a queda da desigualdade. Não há estimativa causal própria: as frações da queda atribuídas a cada fator vêm dos estudos citados e dependem dos métodos deles.",
+ "causal_claims": false,
+ "body": "<h2>O que os dados mostram</h2>\n<h3>Anos 1980: desigualdade alta e crescente</h3>\n<p>Pela antiga PNAD, o Gini da renda domiciliar per capita era\n<a class=\"dado\" href=\"#dado-1\" id=\"ref-1\">0,584</a> em 1981 e chegou a\n<a class=\"dado\" href=\"#dado-2\" id=\"ref-2\">0,636</a> em 1989, o valor mais alto da série. Foi uma\ndécada de renda estagnada e inflação crescente: o PIB per capita variou\n<a class=\"dado\" href=\"#dado-3\" id=\"ref-3\">−5,0%</a> entre 1980 e 1990, e a inflação ao\nconsumidor chegou a <a class=\"dado\" href=\"#dado-4\" id=\"ref-4\">1.430,7</a>% em 1989.</p>\n<h3>Anos 1990: menos pobreza, mesma desigualdade</h3>\n<p>Entre 1993 e 1995, período do Plano Real, a taxa de pobreza medida com as linhas regionais\ndo Ipea passou de <a class=\"dado\" href=\"#dado-5\" id=\"ref-5\">43,0</a>% para\n<a class=\"dado\" href=\"#dado-6\" id=\"ref-6\">35,1</a>%. O Gini quase não se moveu:\n<a class=\"dado\" href=\"#dado-7\" id=\"ref-7\">0,604</a> em 1993 e\n<a class=\"dado\" href=\"#dado-8\" id=\"ref-8\">0,601</a> em 1995. Barros, Henriques e Mendonça (2000)\ndescreveram esse quadro como uma \"estabilidade inaceitável\" da desigualdade.</p>\n<h3>De 2001 a 2014: queda contínua</h3>\n<p>O Gini da PNAD antiga variou <a class=\"dado\" href=\"#dado-9\" id=\"ref-9\">−0,078</a> entre\n2001 e 2014, de <a class=\"dado\" href=\"#dado-10\" id=\"ref-10\">0,596</a> para\n<a class=\"dado\" href=\"#dado-11\" id=\"ref-11\">0,518</a>. No mesmo período, a taxa de pobreza com\nlinhas regionais foi de <a class=\"dado\" href=\"#dado-12\" id=\"ref-12\">35,8</a>% em 2003 para\n<a class=\"dado\" href=\"#dado-13\" id=\"ref-13\">13,3</a>% em 2014.</p>\n<h3>Desde 2012: PNAD Contínua</h3>\n<p>A série oficial atual do IBGE começa em <a class=\"dado\" href=\"#dado-14\" id=\"ref-14\">0,540</a> em\n2012. Depois da recessão de 2015 e 2016, quando o PIB per capita variou\n<a class=\"dado\" href=\"#dado-15\" id=\"ref-15\">−8,1%</a> em dois anos, o índice subiu para\n<a class=\"dado\" href=\"#dado-16\" id=\"ref-16\">0,545</a> em 2018. Em 2020 foi a\n<a class=\"dado\" href=\"#dado-17\" id=\"ref-17\">0,523</a> e voltou a\n<a class=\"dado\" href=\"#dado-18\" id=\"ref-18\">0,543</a> em 2021; nesses dois anos a renda vem da 5ª\nvisita da pesquisa, e não da 1ª, por causa da pandemia. Em 2024 o valor foi\n<a class=\"dado\" href=\"#dado-19\" id=\"ref-19\">0,504</a>. O gráfico mostra o intervalo de <a class=\"dado\" href=\"#dado-20\" id=\"ref-20\">95%</a> de cada\nano: diferenças pequenas entre anos vizinhos podem não ser estatisticamente significativas.</p>\n<h3>O Brasil e os vizinhos</h3>\n<p>A queda dos anos 2000 não foi exclusiva do Brasil. Entre 2002 e 2014, pelo Gini do Banco\nMundial (escala de <a class=\"dado\" href=\"#dado-21\" id=\"ref-21\">0 a 100</a>), o Brasil variou <a class=\"dado\" href=\"#dado-22\" id=\"ref-22\">−6,0</a>,\no México <a class=\"dado\" href=\"#dado-23\" id=\"ref-23\">−1,7</a> e a Colômbia\n<a class=\"dado\" href=\"#dado-24\" id=\"ref-24\">−2,4</a>; a Argentina urbana variou\n<a class=\"dado\" href=\"#dado-25\" id=\"ref-25\">−9,2</a> entre 2003 e 2014. Quando vários países\nmudam juntos, fatores comuns à região provavelmente pesam,\nao lado de políticas nacionais.</p>\n<h3>Desigualdade além da renda</h3>\n<p>Em 2023, o IDH do Brasil foi <a class=\"dado\" href=\"#dado-26\" id=\"ref-26\">0,786</a> e o IDH ajustado à\ndesigualdade, <a class=\"dado\" href=\"#dado-27\" id=\"ref-27\">0,594</a>. A diferença é o quanto de\ndesenvolvimento humano se perde pela desigualdade em saúde, educação e renda.</p>\n<h2>O que a literatura atribui</h2>\n<p>Os estudos revisados por pares apontam vários fatores, e nenhum explica sozinho a queda.\nA valorização do salário mínimo, as transferências focalizadas como o Bolsa Família e\nmudanças no mercado de trabalho, como a queda do retorno à experiência, aparecem com pesos\ndiferentes conforme o período, a medida de renda e o método. As evidências a favor e\ncontra estão listadas abaixo, cada uma com o artigo de origem.</p>",
+ "evidence_for": [
+  {
+   "text": "O aumento real do salário mínimo de <a class=\"dado\" href=\"#dado-28\" id=\"ref-28\">128%</a> entre 1996 e 2018 explica <a class=\"dado\" href=\"#dado-29\" id=\"ref-29\">45%</a> da queda da desigualdade dos rendimentos do trabalho, com efeitos pequenos sobre emprego e produto, segundo um modelo de equilíbrio do mercado de trabalho.",
+   "references": [
+    "10.1257/aer.20181506"
+   ]
+  },
+  {
+   "text": "Transferências condicionadas de renda representavam <a class=\"dado\" href=\"#dado-30\" id=\"ref-30\">menos de 1%</a> da renda total, mas, por serem bem focalizadas, responderam por cerca de <a class=\"dado\" href=\"#dado-31\" id=\"ref-31\">21%</a> da queda do Gini no Brasil e no México entre meados dos anos 1990 e meados dos anos 2000 (decomposição contábil).",
+   "references": [
+    "10.24201/ee.v0i0.387"
+   ]
+  },
+  {
+   "text": "O Bolsa Família ajudou a reduzir a desigualdade e a extrema pobreza e melhorou resultados educacionais, sem impacto negativo sobre a participação no mercado de trabalho; em saúde e nutrição o efeito esperado não apareceu, por limitações da oferta de serviços.",
+   "references": [
+    "10.1017/S0023879100009390"
+   ]
+  }
+ ],
+ "evidence_against": [
+  {
+   "text": "A queda dos rendimentos do trabalho entre 1995 e 2012 se deve sobretudo à redução do retorno à experiência no mercado de trabalho, responsável por <a class=\"dado\" href=\"#dado-32\" id=\"ref-32\">53%</a> da queda do Gini dos rendimentos do trabalho, mais do que à queda do prêmio da educação. Isso aponta para mudanças no mercado de trabalho, e não só para políticas específicas.",
+   "references": [
+    "10.1093/wber/lhab005"
+   ]
+  },
+  {
+   "text": "Com dados do Imposto de Renda, a concentração de renda no topo é substancialmente maior do que nas pesquisas domiciliares e permaneceu, em termos gerais, estável entre 2006 e 2012. A queda medida pelas pesquisas pode exagerar a redução da desigualdade total.",
+   "references": [
+    "10.1590/00115258201537"
+   ]
+  },
+  {
+   "text": "Há evidências sugestivas de que algumas famílias reduziram a oferta de trabalho para se tornarem elegíveis ao Bolsa Família, sobretudo mulheres chefes de família, segundo dados da PNAD de 2006. O resultado contrasta com estudos que não encontram efeito negativo sobre a participação no mercado de trabalho.",
+   "references": [
+    "10.1016/j.econ.2014.09.001"
+   ]
+  },
+  {
+   "text": "Considerando o sistema fiscal como um todo, por volta de 2010, quando aposentadorias não são tratadas como transferência, a política fiscal aumentava a pobreza no Brasil por causa dos impostos sobre o consumo de bens básicos, embora sempre reduzisse a desigualdade.",
+   "references": [
+    "10.1515/jgd-2016-0015"
+   ]
+  }
+ ],
+ "limitations": [
+  "As séries da PNAD antiga e da PNAD Contínua não são comparáveis em nível e não foram emendadas. A comparação entre períodos deve ser feita dentro de cada série.",
+  "Pesquisas domiciliares subestimam as rendas do topo; o nível e talvez a tendência da desigualdade total são diferentes com dados tributários.",
+  "Comparações regionais usam o Gini do Banco Mundial, que para a Argentina cobre só a população urbana, e cujas pesquisas mudam de ano para ano em vários países.",
+  "As frações da queda atribuídas a salário mínimo, transferências e mercado de trabalho vêm de estudos com períodos, medidas de renda e métodos diferentes; não se somam.",
+  "A coincidência temporal entre uma política e a queda da desigualdade não demonstra que a política causou a queda (ver a metodologia do site)."
+ ],
+ "charts": [
+  {
+   "id": "gini-brasil",
+   "title": "Índice de Gini no Brasil, por pesquisa",
+   "alt": "Linhas do Gini da renda domiciliar per capita: PNAD antiga de 1976 a 2014 e PNAD Contínua de 2012 em diante, com intervalo de confiança na PNAD Contínua e faixas dos governos ao fundo.",
+   "indicators": [
+    "ipeadata.disoc_rdcg",
+    "ibge_sidra.gini_pnadc"
+   ],
+   "geographies": [
+    "BRA"
+   ],
+   "log_scale": false
+  },
+  {
+   "id": "gini-regiao",
+   "title": "Gini no Brasil e em países vizinhos (Banco Mundial)",
+   "alt": "Linhas do Gini do Banco Mundial para Brasil, Argentina, Chile, Colômbia e México desde 1981.",
+   "indicators": [
+    "wdi.si_pov_gini"
+   ],
+   "geographies": [
+    "BRA",
+    "ARG",
+    "CHL",
+    "COL",
+    "MEX"
+   ],
+   "log_scale": false
+  },
+  {
+   "id": "pobreza-brasil",
+   "title": "Pobreza no Brasil: linha nacional (Ipea) e internacional (Banco Mundial)",
+   "alt": "Duas linhas de taxa de pobreza no Brasil: linhas regionais do Ipea de 1976 a 2014 e linha internacional de pobreza extrema do Banco Mundial.",
+   "indicators": [
+    "ipeadata.disoc_ppy",
+    "wdi.si_pov_dday"
+   ],
+   "geographies": [
+    "BRA"
+   ],
+   "log_scale": false
+  },
+  {
+   "id": "idh-desigualdade",
+   "title": "IDH e IDH ajustado à desigualdade no Brasil",
+   "alt": "Linhas do IDH desde 1990 e do IDH ajustado à desigualdade desde 2010 no Brasil; a distância entre elas é a perda por desigualdade.",
+   "indicators": [
+    "undp_hdr.hdi",
+    "undp_hdr.ihdi"
+   ],
+   "geographies": [
+    "BRA"
+   ],
+   "log_scale": false
+  }
+ ],
+ "related_policies": [
+  "progresa-oportunidades"
+ ],
+ "references": [
+  {
+   "citation": "Engbom, N., & Moser, C. (2022). Earnings inequality and the minimum wage: evidence from Brazil. American Economic Review, 112(12), 3803–3847.",
+   "doi": "10.1257/aer.20181506",
+   "url": null,
+   "bibtex": "@article{Engbom_2022, title={Earnings Inequality and the Minimum Wage: Evidence from Brazil}, volume={112}, ISSN={0002-8282}, url={http://dx.doi.org/10.1257/aer.20181506}, DOI={10.1257/aer.20181506}, number={12}, journal={American Economic Review}, publisher={American Economic Association}, author={Engbom, Niklas and Moser, Christian}, year={2022}, month=Dec, pages={3803–3847} }"
+  },
+  {
+   "citation": "Soares, S., Osório, R. G., Soares, F. V., Medeiros, M., & Zepeda, E. (2009). Conditional cash transfers in Brazil, Chile and Mexico: impacts upon inequality. Estudios Económicos, 207–224.",
+   "doi": "10.24201/ee.v0i0.387",
+   "url": null,
+   "bibtex": "@article{Soares_2009, title={Conditional cash transfers in Brazil, Chile and Mexico: Impacts upon inequality}, ISSN={0188-6916}, url={http://dx.doi.org/10.24201/ee.v0i0.387}, DOI={10.24201/ee.v0i0.387}, journal={Estudios Económicos de El Colegio de México}, publisher={El Colegio de Mexico, A.C.}, author={Soares, Sergei and Guerreiro Osório, Rafael and Veras Soares, Fábio and Medeiros, Marcelo and Zepeda, Eduardo}, year={2009}, month=Jan, pages={207–224} }"
+  },
+  {
+   "citation": "Soares, F. V., Ribas, R. P., & Osório, R. G. (2010). Evaluating the impact of Brazil's Bolsa Família: cash transfer programs in comparative perspective. Latin American Research Review, 45(2), 173–190.",
+   "doi": "10.1017/S0023879100009390",
+   "url": null,
+   "bibtex": "@article{Soares_2010, title={Evaluating the Impact of Brazil’s Bolsa Família: Cash Transfer Programs in Comparative Perspective}, volume={45}, ISSN={1542-4278}, url={http://dx.doi.org/10.1017/s0023879100009390}, DOI={10.1017/s0023879100009390}, number={2}, journal={Latin American Research Review}, publisher={Cambridge University Press (CUP)}, author={Soares, Fábio Veras and Ribas, Rafael Perez and Osório, Rafael Guerreiro}, year={2010}, pages={173–190} }"
+  },
+  {
+   "citation": "Ferreira, F. H. G., Firpo, S. P., & Messina, J. (2021). Labor market experience and falling earnings inequality in Brazil: 1995–2012. The World Bank Economic Review, 36(1), 37–67.",
+   "doi": "10.1093/wber/lhab005",
+   "url": null,
+   "bibtex": "@article{Ferreira_2021, title={Labor Market Experience and Falling Earnings Inequality in Brazil: 1995–2012}, volume={36}, ISSN={1564-698X}, url={http://dx.doi.org/10.1093/wber/lhab005}, DOI={10.1093/wber/lhab005}, number={1}, journal={The World Bank Economic Review}, publisher={Oxford University Press (OUP)}, author={Ferreira, Francisco H G and Firpo, Sergio P and Messina, Julián}, year={2021}, month=Mar, pages={37–67} }"
+  },
+  {
+   "citation": "Medeiros, M., Souza, P. H. G. F., & Castro, F. A. (2015). O topo da distribuição de renda no Brasil: primeiras estimativas com dados tributários e comparação com pesquisas domiciliares (2006–2012). Dados, 58(1), 7–36.",
+   "doi": "10.1590/00115258201537",
+   "url": null,
+   "bibtex": "@article{Medeiros_2015, title={O Topo da Distribuição de Renda no Brasil: Primeiras Estimativas com Dados Tributários e Comparação com Pesquisas Domiciliares (2006-2012)}, volume={58}, ISSN={0011-5258}, url={http://dx.doi.org/10.1590/00115258201537}, DOI={10.1590/00115258201537}, number={1}, journal={Dados}, publisher={FapUNIFESP (SciELO)}, author={Medeiros, Marcelo and Souza, Pedro H. G. Ferreira de and Castro, Fábio Avila de}, year={2015}, month=Mar, pages={7–36} }"
+  },
+  {
+   "citation": "Firpo, S., Pieri, R., Pedroso, E., & Souza, A. P. (2014). Evidence of eligibility manipulation for conditional cash transfer programs. EconomiA, 15(3), 243–260.",
+   "doi": "10.1016/j.econ.2014.09.001",
+   "url": null,
+   "bibtex": "@article{Firpo_2014, title={Evidence of eligibility manipulation for conditional cash transfer programs}, volume={15}, ISSN={1517-7580}, url={http://dx.doi.org/10.1016/j.econ.2014.09.001}, DOI={10.1016/j.econ.2014.09.001}, number={3}, journal={EconomiA}, publisher={Emerald}, author={Firpo, Sergio and Pieri, Renan and Pedroso, Euclides and Souza, André Portela}, year={2014}, month=Sept, pages={243–260} }"
+  },
+  {
+   "citation": "Lustig, N. (2016). Inequality and fiscal redistribution in middle income countries: Brazil, Chile, Colombia, Indonesia, Mexico, Peru and South Africa. Journal of Globalization and Development, 7(1), 17–60.",
+   "doi": "10.1515/jgd-2016-0015",
+   "url": null,
+   "bibtex": "@article{Lustig_2016, title={Inequality and Fiscal Redistribution in Middle Income Countries: Brazil, Chile, Colombia, Indonesia, Mexico, Peru and South Africa}, volume={7}, ISSN={2194-6353}, url={http://dx.doi.org/10.1515/jgd-2016-0015}, DOI={10.1515/jgd-2016-0015}, number={1}, journal={Journal of Globalization and Development}, publisher={Walter de Gruyter GmbH}, author={Lustig, Nora}, year={2016}, month=June, pages={17–60} }"
+  },
+  {
+   "citation": "Barros, R. P., Henriques, R., & Mendonça, R. (2000). Desigualdade e pobreza no Brasil: retrato de uma estabilidade inaceitável. Revista Brasileira de Ciências Sociais, 15(42), 123–142.",
+   "doi": "10.1590/S0102-69092000000100009",
+   "url": null,
+   "bibtex": "@article{Barros_2000, title={Desigualdade e pobreza no Brasil: retrato de uma estabilidade inaceitável}, volume={15}, ISSN={0102-6909}, url={http://dx.doi.org/10.1590/s0102-69092000000100009}, DOI={10.1590/s0102-69092000000100009}, number={42}, journal={Revista Brasileira de Ciências Sociais}, publisher={FapUNIFESP (SciELO)}, author={Barros, Ricardo Paes de and Henriques, Ricardo and Mendonça, Rosane}, year={2000}, month=Feb, pages={123–142} }"
+  }
+ ],
+ "numbers": [
+  {
+   "ref": 1,
+   "text": "0,584",
+   "function": "v",
+   "args": [
+    "ipeadata.disoc_rdcg",
+    "BRA",
+    1981
+   ],
+   "indicator_id": "ipeadata.disoc_rdcg",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 2,
+   "text": "0,636",
+   "function": "v",
+   "args": [
+    "ipeadata.disoc_rdcg",
+    "BRA",
+    1989
+   ],
+   "indicator_id": "ipeadata.disoc_rdcg",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 3,
+   "text": "−5,0%",
+   "function": "pct",
+   "args": [
+    "wdi.ny_gdp_pcap_kd",
+    "BRA",
+    1980,
+    1990
+   ],
+   "indicator_id": "wdi.ny_gdp_pcap_kd",
+   "source_id": "wdi",
+   "source_version": "2026-10-08",
+   "retrieved_at": "2026-10-26T01:01:36+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 4,
+   "text": "1.430,7",
+   "function": "v",
+   "args": [
+    "wdi.fp_cpi_totl_zg",
+    "BRA",
+    1989
+   ],
+   "indicator_id": "wdi.fp_cpi_totl_zg",
+   "source_id": "wdi",
+   "source_version": "2026-10-08",
+   "retrieved_at": "2026-10-26T01:01:36+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 5,
+   "text": "43,0",
+   "function": "v",
+   "args": [
+    "ipeadata.disoc_ppy",
+    "BRA",
+    1993
+   ],
+   "indicator_id": "ipeadata.disoc_ppy",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 6,
+   "text": "35,1",
+   "function": "v",
+   "args": [
+    "ipeadata.disoc_ppy",
+    "BRA",
+    1995
+   ],
+   "indicator_id": "ipeadata.disoc_ppy",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 7,
+   "text": "0,604",
+   "function": "v",
+   "args": [
+    "ipeadata.disoc_rdcg",
+    "BRA",
+    1993
+   ],
+   "indicator_id": "ipeadata.disoc_rdcg",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 8,
+   "text": "0,601",
+   "function": "v",
+   "args": [
+    "ipeadata.disoc_rdcg",
+    "BRA",
+    1995
+   ],
+   "indicator_id": "ipeadata.disoc_rdcg",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 9,
+   "text": "−0,078",
+   "function": "diff",
+   "args": [
+    "ipeadata.disoc_rdcg",
+    "BRA",
+    2001,
+    2014
+   ],
+   "indicator_id": "ipeadata.disoc_rdcg",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 10,
+   "text": "0,596",
+   "function": "v",
+   "args": [
+    "ipeadata.disoc_rdcg",
+    "BRA",
+    2001
+   ],
+   "indicator_id": "ipeadata.disoc_rdcg",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 11,
+   "text": "0,518",
+   "function": "v",
+   "args": [
+    "ipeadata.disoc_rdcg",
+    "BRA",
+    2014
+   ],
+   "indicator_id": "ipeadata.disoc_rdcg",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 12,
+   "text": "35,8",
+   "function": "v",
+   "args": [
+    "ipeadata.disoc_ppy",
+    "BRA",
+    2003
+   ],
+   "indicator_id": "ipeadata.disoc_ppy",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 13,
+   "text": "13,3",
+   "function": "v",
+   "args": [
+    "ipeadata.disoc_ppy",
+    "BRA",
+    2014
+   ],
+   "indicator_id": "ipeadata.disoc_ppy",
+   "source_id": "ipeadata",
+   "source_version": "2016-01-06",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 14,
+   "text": "0,540",
+   "function": "v",
+   "args": [
+    "ibge_sidra.gini_pnadc",
+    "BRA",
+    2012
+   ],
+   "indicator_id": "ibge_sidra.gini_pnadc",
+   "source_id": "ibge_sidra",
+   "source_version": "2026-05-08",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 15,
+   "text": "−8,1%",
+   "function": "pct",
+   "args": [
+    "wdi.ny_gdp_pcap_kd",
+    "BRA",
+    2014,
+    2016
+   ],
+   "indicator_id": "wdi.ny_gdp_pcap_kd",
+   "source_id": "wdi",
+   "source_version": "2026-10-08",
+   "retrieved_at": "2026-10-26T01:01:36+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 16,
+   "text": "0,545",
+   "function": "v",
+   "args": [
+    "ibge_sidra.gini_pnadc",
+    "BRA",
+    2018
+   ],
+   "indicator_id": "ibge_sidra.gini_pnadc",
+   "source_id": "ibge_sidra",
+   "source_version": "2026-05-08",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 17,
+   "text": "0,523",
+   "function": "v",
+   "args": [
+    "ibge_sidra.gini_pnadc",
+    "BRA",
+    2020
+   ],
+   "indicator_id": "ibge_sidra.gini_pnadc",
+   "source_id": "ibge_sidra",
+   "source_version": "2026-05-08",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 18,
+   "text": "0,543",
+   "function": "v",
+   "args": [
+    "ibge_sidra.gini_pnadc",
+    "BRA",
+    2021
+   ],
+   "indicator_id": "ibge_sidra.gini_pnadc",
+   "source_id": "ibge_sidra",
+   "source_version": "2026-05-08",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 19,
+   "text": "0,504",
+   "function": "v",
+   "args": [
+    "ibge_sidra.gini_pnadc",
+    "BRA",
+    2024
+   ],
+   "indicator_id": "ibge_sidra.gini_pnadc",
+   "source_id": "ibge_sidra",
+   "source_version": "2026-05-08",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 20,
+   "text": "95%",
+   "function": "lit",
+   "args": [
+    "95%",
+    "nível de confiança do intervalo calculado a partir do coeficiente de variação do IBGE; ver o catálogo"
+   ],
+   "indicator_id": null,
+   "source_id": null,
+   "source_version": null,
+   "retrieved_at": null,
+   "doi": null,
+   "note": "nível de confiança do intervalo calculado a partir do coeficiente de variação do IBGE; ver o catálogo"
+  },
+  {
+   "ref": 21,
+   "text": "0 a 100",
+   "function": "lit",
+   "args": [
+    "0 a 100",
+    "escala do índice publicada pelo Banco Mundial"
+   ],
+   "indicator_id": null,
+   "source_id": null,
+   "source_version": null,
+   "retrieved_at": null,
+   "doi": null,
+   "note": "escala do índice publicada pelo Banco Mundial"
+  },
+  {
+   "ref": 22,
+   "text": "−6,0",
+   "function": "diff",
+   "args": [
+    "wdi.si_pov_gini",
+    "BRA",
+    2002,
+    2014
+   ],
+   "indicator_id": "wdi.si_pov_gini",
+   "source_id": "wdi",
+   "source_version": "2026-10-08",
+   "retrieved_at": "2026-10-26T01:01:36+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 23,
+   "text": "−1,7",
+   "function": "diff",
+   "args": [
+    "wdi.si_pov_gini",
+    "MEX",
+    2002,
+    2014
+   ],
+   "indicator_id": "wdi.si_pov_gini",
+   "source_id": "wdi",
+   "source_version": "2026-10-08",
+   "retrieved_at": "2026-10-26T01:01:36+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 24,
+   "text": "−2,4",
+   "function": "diff",
+   "args": [
+    "wdi.si_pov_gini",
+    "COL",
+    2002,
+    2014
+   ],
+   "indicator_id": "wdi.si_pov_gini",
+   "source_id": "wdi",
+   "source_version": "2026-10-08",
+   "retrieved_at": "2026-10-26T01:01:36+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 25,
+   "text": "−9,2",
+   "function": "diff",
+   "args": [
+    "wdi.si_pov_gini",
+    "ARG",
+    2003,
+    2014
+   ],
+   "indicator_id": "wdi.si_pov_gini",
+   "source_id": "wdi",
+   "source_version": "2026-10-08",
+   "retrieved_at": "2026-10-26T01:01:36+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 26,
+   "text": "0,786",
+   "function": "v",
+   "args": [
+    "undp_hdr.hdi",
+    "BRA",
+    2023
+   ],
+   "indicator_id": "undp_hdr.hdi",
+   "source_id": "undp_hdr",
+   "source_version": "HDR 2025",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 27,
+   "text": "0,594",
+   "function": "v",
+   "args": [
+    "undp_hdr.ihdi",
+    "BRA",
+    2023
+   ],
+   "indicator_id": "undp_hdr.ihdi",
+   "source_id": "undp_hdr",
+   "source_version": "HDR 2025",
+   "retrieved_at": "2026-10-26T01:07:55+00:00",
+   "doi": null,
+   "note": null
+  },
+  {
+   "ref": 28,
+   "text": "128%",
+   "function": "cite",
+   "args": [
+    "128%",
+    "10.1257/aer.20181506",
+    "resumo"
+   ],
+   "indicator_id": null,
+   "source_id": null,
+   "source_version": null,
+   "retrieved_at": null,
+   "doi": "10.1257/aer.20181506",
+   "note": "resumo"
+  },
+  {
+   "ref": 29,
+   "text": "45%",
+   "function": "cite",
+   "args": [
+    "45%",
+    "10.1257/aer.20181506",
+    "resumo"
+   ],
+   "indicator_id": null,
+   "source_id": null,
+   "source_version": null,
+   "retrieved_at": null,
+   "doi": "10.1257/aer.20181506",
+   "note": "resumo"
+  },
+  {
+   "ref": 30,
+   "text": "menos de 1%",
+   "function": "cite",
+   "args": [
+    "menos de 1%",
+    "10.24201/ee.v0i0.387",
+    "resumo"
+   ],
+   "indicator_id": null,
+   "source_id": null,
+   "source_version": null,
+   "retrieved_at": null,
+   "doi": "10.24201/ee.v0i0.387",
+   "note": "resumo"
+  },
+  {
+   "ref": 31,
+   "text": "21%",
+   "function": "cite",
+   "args": [
+    "21%",
+    "10.24201/ee.v0i0.387",
+    "resumo"
+   ],
+   "indicator_id": null,
+   "source_id": null,
+   "source_version": null,
+   "retrieved_at": null,
+   "doi": "10.24201/ee.v0i0.387",
+   "note": "resumo"
+  },
+  {
+   "ref": 32,
+   "text": "53%",
+   "function": "cite",
+   "args": [
+    "53%",
+    "10.1093/wber/lhab005",
+    "resumo"
+   ],
+   "indicator_id": null,
+   "source_id": null,
+   "source_version": null,
+   "retrieved_at": null,
+   "doi": "10.1093/wber/lhab005",
+   "note": "resumo"
+  }
+ ]
+}

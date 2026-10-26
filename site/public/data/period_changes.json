@@ -1,0 +1,4832 @@
+[
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1979,
+  "end_year": 1984,
+  "change": -3.7453094111599805,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1980,
+  "end_year": 1985,
+  "change": -4.717220515002429,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1981,
+  "end_year": 1986,
+  "change": 7.253112638887038,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1979,
+  "end_year": 1984,
+  "change": -2.320322822406673,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1980,
+  "end_year": 1985,
+  "change": -5.1398711022716315,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1981,
+  "end_year": 1986,
+  "change": -2.73608297091148,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1979,
+  "end_year": 1984,
+  "change": -15.100000000000009,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1980,
+  "end_year": 1985,
+  "change": -14.400000000000006,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1981,
+  "end_year": 1986,
+  "change": -13.499999999999993,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1979,
+  "end_year": 1984,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1980,
+  "end_year": 1985,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1981,
+  "end_year": 1986,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1979,
+  "end_year": 1984,
+  "change": 2.1879999999999953,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1980,
+  "end_year": 1985,
+  "change": 2.1609999999999943,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1981,
+  "end_year": 1986,
+  "change": 2.121999999999993,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1979,
+  "end_year": 1984,
+  "change": 1.9847731553972991,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1980,
+  "end_year": 1985,
+  "change": 1.827866265017299,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1981,
+  "end_year": 1986,
+  "change": 2.0570133626310962,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1979,
+  "end_year": 1984,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1980,
+  "end_year": 1985,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1981,
+  "end_year": 1986,
+  "change": 0.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1979,
+  "end_year": 1984,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1980,
+  "end_year": 1985,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1981,
+  "end_year": 1986,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1979,
+  "end_year": 1984,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1980,
+  "end_year": 1985,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1981,
+  "end_year": 1986,
+  "change": -14.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1979,
+  "end_year": 1984,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1980,
+  "end_year": 1985,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "figueiredo",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1981,
+  "end_year": 1986,
+  "change": -3.3000000000000007,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1984,
+  "end_year": 1989,
+  "change": 12.045635424176492,
+  "relative": true,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1985,
+  "end_year": 1990,
+  "change": -0.28610472444120516,
+  "relative": true,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1986,
+  "end_year": 1991,
+  "change": -5.953423474948538,
+  "relative": true,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1984,
+  "end_year": 1989,
+  "change": 1.8610237690071418,
+  "relative": true,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1985,
+  "end_year": 1990,
+  "change": -1.135041285245253,
+  "relative": true,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1986,
+  "end_year": 1991,
+  "change": -1.3146264009091801,
+  "relative": true,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1984,
+  "end_year": 1989,
+  "change": -10.799999999999997,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1985,
+  "end_year": 1990,
+  "change": -10.399999999999999,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1986,
+  "end_year": 1991,
+  "change": -10.300000000000004,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1984,
+  "end_year": 1989,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1985,
+  "end_year": 1990,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1986,
+  "end_year": 1991,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1984,
+  "end_year": 1989,
+  "change": 1.9609999999999985,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1985,
+  "end_year": 1990,
+  "change": 1.881999999999998,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1986,
+  "end_year": 1991,
+  "change": 1.8140000000000072,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1984,
+  "end_year": 1989,
+  "change": 1.884936403788899,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1985,
+  "end_year": 1990,
+  "change": 2.029398668947394,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1986,
+  "end_year": 1991,
+  "change": 1.7049607630417967,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1984,
+  "end_year": 1989,
+  "change": 4.900000000000006,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1985,
+  "end_year": 1990,
+  "change": 5.0,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1986,
+  "end_year": 1991,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1984,
+  "end_year": 1989,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1985,
+  "end_year": 1990,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1986,
+  "end_year": 1991,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1984,
+  "end_year": 1989,
+  "change": -11.2,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1985,
+  "end_year": 1990,
+  "change": -2.099999999999998,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1986,
+  "end_year": 1991,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1984,
+  "end_year": 1989,
+  "change": -4.199999999999999,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1985,
+  "end_year": 1990,
+  "change": -1.1000000000000014,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "sarney",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1986,
+  "end_year": 1991,
+  "change": 3.400000000000002,
+  "relative": false,
+  "mixed_years": [
+   1985
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1989,
+  "end_year": 1992,
+  "change": -8.730416031416777,
+  "relative": true,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1990,
+  "end_year": 1993,
+  "change": 0.286071714747127,
+  "relative": true,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1991,
+  "end_year": 1994,
+  "change": 5.231475993783596,
+  "relative": true,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1989,
+  "end_year": 1992,
+  "change": 0.08103186648014127,
+  "relative": true,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1990,
+  "end_year": 1993,
+  "change": 4.672916640744829,
+  "relative": true,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1991,
+  "end_year": 1994,
+  "change": 6.702521465949696,
+  "relative": true,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1989,
+  "end_year": 1992,
+  "change": -6.600000000000001,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1990,
+  "end_year": 1993,
+  "change": -7.0,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1991,
+  "end_year": 1994,
+  "change": -7.399999999999999,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1989,
+  "end_year": 1992,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1990,
+  "end_year": 1993,
+  "change": -5.5,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1991,
+  "end_year": 1994,
+  "change": -5.599999999999994,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1989,
+  "end_year": 1992,
+  "change": 1.0250000000000057,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1990,
+  "end_year": 1993,
+  "change": 1.0300000000000011,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1991,
+  "end_year": 1994,
+  "change": 1.0900000000000034,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1989,
+  "end_year": 1992,
+  "change": 0.9193895501814069,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1990,
+  "end_year": 1993,
+  "change": 0.9196891912888105,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1991,
+  "end_year": 1994,
+  "change": 0.9764894069173096,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1989,
+  "end_year": 1992,
+  "change": -10.100000000000001,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1990,
+  "end_year": 1993,
+  "change": -0.3999999999999986,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1991,
+  "end_year": 1994,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1989,
+  "end_year": 1992,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1990,
+  "end_year": 1993,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1991,
+  "end_year": 1994,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1989,
+  "end_year": 1992,
+  "change": 3.6999999999999993,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1990,
+  "end_year": 1993,
+  "change": -2.1000000000000014,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1991,
+  "end_year": 1994,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1989,
+  "end_year": 1992,
+  "change": 1.0,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1990,
+  "end_year": 1993,
+  "change": -0.5999999999999979,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "collor",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1991,
+  "end_year": 1994,
+  "change": -0.6000000000000014,
+  "relative": false,
+  "mixed_years": [
+   1990,
+   1992
+  ]
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1992,
+  "end_year": 1994,
+  "change": 7.585997049504201,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1993,
+  "end_year": 1995,
+  "change": 6.953830926495019,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1994,
+  "end_year": 1996,
+  "change": 3.3227379966921378,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1992,
+  "end_year": 1994,
+  "change": 5.800697447526737,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1993,
+  "end_year": 1995,
+  "change": 2.514038194656254,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1994,
+  "end_year": 1996,
+  "change": 1.470730901736994,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1992,
+  "end_year": 1994,
+  "change": -5.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1993,
+  "end_year": 1995,
+  "change": -5.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1994,
+  "end_year": 1996,
+  "change": -4.899999999999999,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1992,
+  "end_year": 1994,
+  "change": -3.6999999999999957,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1993,
+  "end_year": 1995,
+  "change": -3.6000000000000014,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1994,
+  "end_year": 1996,
+  "change": -3.4000000000000057,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1992,
+  "end_year": 1994,
+  "change": 0.7540000000000049,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1993,
+  "end_year": 1995,
+  "change": 0.8089999999999975,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1994,
+  "end_year": 1996,
+  "change": 0.8149999999999977,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1992,
+  "end_year": 1994,
+  "change": 0.7093536388562995,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1993,
+  "end_year": 1995,
+  "change": 0.7597094430797995,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1994,
+  "end_year": 1996,
+  "change": 0.7655590353942898,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1992,
+  "end_year": 1994,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1993,
+  "end_year": 1995,
+  "change": -0.6000000000000014,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1994,
+  "end_year": 1996,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1992,
+  "end_year": 1994,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1993,
+  "end_year": 1995,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1994,
+  "end_year": 1996,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1992,
+  "end_year": 1994,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1993,
+  "end_year": 1995,
+  "change": -8.7,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1994,
+  "end_year": 1996,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1992,
+  "end_year": 1994,
+  "change": -0.6999999999999993,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1993,
+  "end_year": 1995,
+  "change": -1.6000000000000014,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "itamar",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1994,
+  "end_year": 1996,
+  "change": 0.3999999999999986,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1994,
+  "end_year": 1998,
+  "change": 4.050402522138463,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1995,
+  "end_year": 1999,
+  "change": 0.38356197736577613,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1996,
+  "end_year": 2000,
+  "change": 2.666232689954917,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1994,
+  "end_year": 1998,
+  "change": 6.722639356254589,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1995,
+  "end_year": 1999,
+  "change": 6.4392042956349815,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1996,
+  "end_year": 2000,
+  "change": 6.343456667299252,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1994,
+  "end_year": 1998,
+  "change": -9.299999999999997,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1995,
+  "end_year": 1999,
+  "change": -8.799999999999997,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1996,
+  "end_year": 2000,
+  "change": -8.399999999999999,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1994,
+  "end_year": 1998,
+  "change": -6.5000000000000036,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1995,
+  "end_year": 1999,
+  "change": -6.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1996,
+  "end_year": 2000,
+  "change": -6.199999999999996,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1994,
+  "end_year": 1998,
+  "change": 1.5549999999999926,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1995,
+  "end_year": 1999,
+  "change": 1.5100000000000051,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1996,
+  "end_year": 2000,
+  "change": 1.475999999999999,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1994,
+  "end_year": 1998,
+  "change": 1.3594494798191903,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1995,
+  "end_year": 1999,
+  "change": 1.3629123568489945,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1996,
+  "end_year": 2000,
+  "change": 1.303289037958507,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1994,
+  "end_year": 1998,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1995,
+  "end_year": 1999,
+  "change": -0.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1996,
+  "end_year": 2000,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1994,
+  "end_year": 1998,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1995,
+  "end_year": 1999,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1996,
+  "end_year": 2000,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1994,
+  "end_year": 1998,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1995,
+  "end_year": 1999,
+  "change": 0.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 1996,
+  "end_year": 2000,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1994,
+  "end_year": 1998,
+  "change": -0.3000000000000007,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1995,
+  "end_year": 1999,
+  "change": 1.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 1996,
+  "end_year": 2000,
+  "change": -1.7999999999999972,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1998,
+  "end_year": 2002,
+  "change": 3.8449094975065545,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1999,
+  "end_year": 2003,
+  "change": 4.829677410980349,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2000,
+  "end_year": 2004,
+  "change": 6.468342136134919,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1998,
+  "end_year": 2002,
+  "change": -0.8774790543031097,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1999,
+  "end_year": 2003,
+  "change": 1.0132342931031157,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2000,
+  "end_year": 2004,
+  "change": 3.274503929017092,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1998,
+  "end_year": 2002,
+  "change": -7.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1999,
+  "end_year": 2003,
+  "change": -7.100000000000001,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2000,
+  "end_year": 2004,
+  "change": -6.700000000000003,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1998,
+  "end_year": 2002,
+  "change": -5.599999999999998,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1999,
+  "end_year": 2003,
+  "change": -5.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2000,
+  "end_year": 2004,
+  "change": -4.700000000000003,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1998,
+  "end_year": 2002,
+  "change": 1.5480000000000018,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1999,
+  "end_year": 2003,
+  "change": 1.6730000000000018,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2000,
+  "end_year": 2004,
+  "change": 1.777000000000001,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1998,
+  "end_year": 2002,
+  "change": 1.4031575949877038,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1999,
+  "end_year": 2003,
+  "change": 1.329392279156707,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2000,
+  "end_year": 2004,
+  "change": 1.334681700729604,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1998,
+  "end_year": 2002,
+  "change": -1.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1999,
+  "end_year": 2003,
+  "change": -1.3999999999999986,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2000,
+  "end_year": 2004,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1998,
+  "end_year": 2002,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1999,
+  "end_year": 2003,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2000,
+  "end_year": 2004,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 1998,
+  "end_year": 2002,
+  "change": -2.900000000000002,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 1999,
+  "end_year": 2003,
+  "change": -2.8999999999999986,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2000,
+  "end_year": 2004,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 1998,
+  "end_year": 2002,
+  "change": -2.099999999999998,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 1999,
+  "end_year": 2003,
+  "change": -2.8999999999999986,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "fhc-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2000,
+  "end_year": 2004,
+  "change": -2.8000000000000007,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2002,
+  "end_year": 2006,
+  "change": 9.754549092149013,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2003,
+  "end_year": 2007,
+  "change": 15.296733869840251,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2004,
+  "end_year": 2008,
+  "change": 14.768080494234702,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2002,
+  "end_year": 2006,
+  "change": 12.69502188236029,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2003,
+  "end_year": 2007,
+  "change": 16.23285806589545,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2004,
+  "end_year": 2008,
+  "change": 14.11547683631782,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2002,
+  "end_year": 2006,
+  "change": -5.900000000000002,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2003,
+  "end_year": 2007,
+  "change": -5.399999999999999,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2004,
+  "end_year": 2008,
+  "change": -4.799999999999997,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2002,
+  "end_year": 2006,
+  "change": -4.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2003,
+  "end_year": 2007,
+  "change": -3.6999999999999993,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2004,
+  "end_year": 2008,
+  "change": -3.299999999999997,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2002,
+  "end_year": 2006,
+  "change": 1.9000000000000057,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2003,
+  "end_year": 2007,
+  "change": 1.8460000000000036,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2004,
+  "end_year": 2008,
+  "change": 1.75,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2002,
+  "end_year": 2006,
+  "change": 1.270326170837805,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2003,
+  "end_year": 2007,
+  "change": 1.1810214216713888,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2004,
+  "end_year": 2008,
+  "change": 1.0523172131280916,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2002,
+  "end_year": 2006,
+  "change": -2.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2003,
+  "end_year": 2007,
+  "change": -2.700000000000003,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2004,
+  "end_year": 2008,
+  "change": -2.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2002,
+  "end_year": 2006,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2003,
+  "end_year": 2007,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2004,
+  "end_year": 2008,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2002,
+  "end_year": 2006,
+  "change": -4.799999999999999,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2003,
+  "end_year": 2007,
+  "change": -6.300000000000001,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2004,
+  "end_year": 2008,
+  "change": -6.200000000000001,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2002,
+  "end_year": 2006,
+  "change": -5.100000000000001,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2003,
+  "end_year": 2007,
+  "change": -5.800000000000001,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2004,
+  "end_year": 2008,
+  "change": -5.4,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2006,
+  "end_year": 2010,
+  "change": 15.358018049177137,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2007,
+  "end_year": 2011,
+  "change": 13.303826357344729,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2008,
+  "end_year": 2012,
+  "change": 10.043911708230269,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2006,
+  "end_year": 2010,
+  "change": 8.21036524533838,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2007,
+  "end_year": 2011,
+  "change": 7.395458683558931,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2008,
+  "end_year": 2012,
+  "change": 6.408555307895969,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2006,
+  "end_year": 2010,
+  "change": -3.6999999999999993,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2007,
+  "end_year": 2011,
+  "change": -3.3000000000000007,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2008,
+  "end_year": 2012,
+  "change": -2.8000000000000007,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2006,
+  "end_year": 2010,
+  "change": -2.1000000000000014,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2007,
+  "end_year": 2011,
+  "change": -2.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2008,
+  "end_year": 2012,
+  "change": -2.200000000000003,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2006,
+  "end_year": 2010,
+  "change": 1.4829999999999899,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2007,
+  "end_year": 2011,
+  "change": 1.316999999999993,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2008,
+  "end_year": 2012,
+  "change": 1.2239999999999895,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2006,
+  "end_year": 2010,
+  "change": 0.5760961075363014,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2007,
+  "end_year": 2011,
+  "change": 0.865562424654712,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2008,
+  "end_year": 2012,
+  "change": 0.9082539558989993,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2006,
+  "end_year": 2010,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2007,
+  "end_year": 2011,
+  "change": -2.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2008,
+  "end_year": 2012,
+  "change": -0.6000000000000014,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2006,
+  "end_year": 2010,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2007,
+  "end_year": 2011,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2008,
+  "end_year": 2012,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2006,
+  "end_year": 2010,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2007,
+  "end_year": 2011,
+  "change": -3.700000000000001,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2008,
+  "end_year": 2012,
+  "change": -2.6999999999999993,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2006,
+  "end_year": 2010,
+  "change": -3.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2007,
+  "end_year": 2011,
+  "change": -3.1000000000000005,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2008,
+  "end_year": 2012,
+  "change": -2.4000000000000004,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2010,
+  "end_year": 2014,
+  "change": 6.206426870035675,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2011,
+  "end_year": 2015,
+  "change": -1.453425735808067,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2012,
+  "end_year": 2016,
+  "change": -6.432020962285712,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2010,
+  "end_year": 2014,
+  "change": 6.825564493180525,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2011,
+  "end_year": 2015,
+  "change": 2.670014011786903,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2012,
+  "end_year": 2016,
+  "change": -0.591828416093898,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2010,
+  "end_year": 2014,
+  "change": -2.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2011,
+  "end_year": 2015,
+  "change": -1.6000000000000014,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2012,
+  "end_year": 2016,
+  "change": -0.20000000000000107,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2010,
+  "end_year": 2014,
+  "change": -2.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2011,
+  "end_year": 2015,
+  "change": -1.700000000000001,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2012,
+  "end_year": 2016,
+  "change": -0.9999999999999982,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2010,
+  "end_year": 2014,
+  "change": 1.043999999999997,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2011,
+  "end_year": 2015,
+  "change": 1.0589999999999975,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2012,
+  "end_year": 2016,
+  "change": 0.7460000000000093,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2010,
+  "end_year": 2014,
+  "change": 1.1515120914209973,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2011,
+  "end_year": 2015,
+  "change": 0.8183298870605995,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2012,
+  "end_year": 2016,
+  "change": 0.5130905178880028,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2010,
+  "end_year": 2014,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2011,
+  "end_year": 2015,
+  "change": -1.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2012,
+  "end_year": 2016,
+  "change": 0.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2010,
+  "end_year": 2014,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2011,
+  "end_year": 2015,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2012,
+  "end_year": 2016,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2010,
+  "end_year": 2014,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2011,
+  "end_year": 2015,
+  "change": -1.6999999999999993,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2012,
+  "end_year": 2016,
+  "change": 0.09999999999999964,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2010,
+  "end_year": 2014,
+  "change": -2.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2011,
+  "end_year": 2015,
+  "change": -1.7000000000000002,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-1",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2012,
+  "end_year": 2016,
+  "change": -1.2999999999999998,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2014,
+  "end_year": 2015,
+  "change": -4.306397559120678,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": -4.010127193547208,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.5876689287363401,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2014,
+  "end_year": 2015,
+  "change": -0.7350701678462301,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": -1.6635935496231102,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.638987772497579,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2014,
+  "end_year": 2015,
+  "change": -0.3000000000000007,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": 0.9000000000000004,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": -1.299999999999999,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2014,
+  "end_year": 2015,
+  "change": -0.40000000000000036,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": 0.3000000000000007,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": -0.5999999999999996,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2014,
+  "end_year": 2015,
+  "change": 0.28300000000000125,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": -0.024999999999991473,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.3019999999999925,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2014,
+  "end_year": 2015,
+  "change": 0.1823873223271022,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": -0.06573730593160576,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.15432390583319489,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2014,
+  "end_year": 2015,
+  "change": -0.20000000000000284,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": 1.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": -0.10000000000000142,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2014,
+  "end_year": 2015,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2014,
+  "end_year": 2015,
+  "change": 0.6000000000000005,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": 1.0999999999999996,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2014,
+  "end_year": 2015,
+  "change": -0.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": 0.20000000000000018,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "dilma-2",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": -4.010127193547208,
+  "relative": true,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.5876689287363401,
+  "relative": true,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2017,
+  "end_year": 2018,
+  "change": 1.0904086044716044,
+  "relative": true,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": -1.6635935496231102,
+  "relative": true,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.638987772497579,
+  "relative": true,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2017,
+  "end_year": 2018,
+  "change": 0.3690536836821412,
+  "relative": true,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": 0.9000000000000004,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": -1.299999999999999,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2017,
+  "end_year": 2018,
+  "change": -0.20000000000000107,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": 0.3000000000000007,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": -0.5999999999999996,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2017,
+  "end_year": 2018,
+  "change": -0.40000000000000036,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": -0.024999999999991473,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.3019999999999925,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2017,
+  "end_year": 2018,
+  "change": 0.25,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": -0.06573730593160576,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.15432390583319489,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2017,
+  "end_year": 2018,
+  "change": 0.22090840916970933,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": 1.5,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": -0.10000000000000142,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2017,
+  "end_year": 2018,
+  "change": 0.6000000000000014,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2017,
+  "end_year": 2018,
+  "change": null,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": 1.0999999999999996,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.5,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2017,
+  "end_year": 2018,
+  "change": -0.09999999999999964,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2015,
+  "end_year": 2016,
+  "change": 0.20000000000000018,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2016,
+  "end_year": 2017,
+  "change": 0.0,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer-interino",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2017,
+  "end_year": 2018,
+  "change": -0.10000000000000053,
+  "relative": false,
+  "mixed_years": [
+   2016
+  ]
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2016,
+  "end_year": 2018,
+  "change": 1.6844855257726943,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2017,
+  "end_year": 2019,
+  "change": 1.6595181245037116,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2018,
+  "end_year": 2020,
+  "change": -3.294127406264291,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2016,
+  "end_year": 2018,
+  "change": 1.0103996640923985,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2017,
+  "end_year": 2019,
+  "change": -0.12680076002076213,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2018,
+  "end_year": 2020,
+  "change": -7.970832094846014,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2016,
+  "end_year": 2018,
+  "change": -1.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2017,
+  "end_year": 2019,
+  "change": -0.40000000000000036,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2018,
+  "end_year": 2020,
+  "change": -0.29999999999999893,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2016,
+  "end_year": 2018,
+  "change": -1.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2017,
+  "end_year": 2019,
+  "change": -0.7000000000000011,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2018,
+  "end_year": 2020,
+  "change": -0.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2016,
+  "end_year": 2018,
+  "change": 0.5519999999999925,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2017,
+  "end_year": 2019,
+  "change": 0.42600000000000193,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2018,
+  "end_year": 2020,
+  "change": -1.1269999999999953,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2016,
+  "end_year": 2018,
+  "change": 0.3752323150029042,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2017,
+  "end_year": 2019,
+  "change": 0.37245107628081087,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2018,
+  "end_year": 2020,
+  "change": -1.8637804196752086,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2016,
+  "end_year": 2018,
+  "change": 0.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2017,
+  "end_year": 2019,
+  "change": 0.20000000000000284,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2018,
+  "end_year": 2020,
+  "change": -5.100000000000001,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2016,
+  "end_year": 2018,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2017,
+  "end_year": 2019,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2018,
+  "end_year": 2020,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2016,
+  "end_year": 2018,
+  "change": 0.40000000000000036,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2017,
+  "end_year": 2019,
+  "change": 0.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2018,
+  "end_year": 2020,
+  "change": -4.1000000000000005,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2016,
+  "end_year": 2018,
+  "change": -0.10000000000000053,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2017,
+  "end_year": 2019,
+  "change": 0.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "temer",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2018,
+  "end_year": 2020,
+  "change": -0.2999999999999998,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2018,
+  "end_year": 2022,
+  "change": 3.551210383515424,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2019,
+  "end_year": 2023,
+  "change": 5.889414640821,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2020,
+  "end_year": 2024,
+  "change": 13.417098048725506,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2018,
+  "end_year": 2022,
+  "change": 1.3769816353103703,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2019,
+  "end_year": 2023,
+  "change": 3.414712023209243,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2020,
+  "end_year": 2024,
+  "change": 13.549014493123025,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2018,
+  "end_year": 2022,
+  "change": -0.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2019,
+  "end_year": 2023,
+  "change": -0.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2020,
+  "end_year": 2024,
+  "change": -0.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2018,
+  "end_year": 2022,
+  "change": -1.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2019,
+  "end_year": 2023,
+  "change": -1.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2020,
+  "end_year": 2024,
+  "change": -1.0999999999999996,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2018,
+  "end_year": 2022,
+  "change": -0.7609999999999957,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2019,
+  "end_year": 2023,
+  "change": 0.03900000000000148,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2020,
+  "end_year": 2024,
+  "change": 1.516999999999996,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2018,
+  "end_year": 2022,
+  "change": -0.40550757571129736,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2019,
+  "end_year": 2023,
+  "change": 0.4392674702984891,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2020,
+  "end_year": 2024,
+  "change": 2.6289732233007044,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2018,
+  "end_year": 2022,
+  "change": -2.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2019,
+  "end_year": 2023,
+  "change": -2.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2020,
+  "end_year": 2024,
+  "change": 1.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2018,
+  "end_year": 2022,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2019,
+  "end_year": 2023,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2020,
+  "end_year": 2024,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2018,
+  "end_year": 2022,
+  "change": -2.0,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2019,
+  "end_year": 2023,
+  "change": -3.2,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2020,
+  "end_year": 2024,
+  "change": 0.20000000000000018,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2018,
+  "end_year": 2022,
+  "change": -1.0999999999999996,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2019,
+  "end_year": 2023,
+  "change": -1.6000000000000005,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "bolsonaro",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2020,
+  "end_year": 2024,
+  "change": -1.5,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2022,
+  "end_year": 2025,
+  "change": 7.926306900068436,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2023,
+  "end_year": 2026,
+  "change": null,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2024,
+  "end_year": 2027,
+  "change": null,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2022,
+  "end_year": 2025,
+  "change": 4.774552610997129,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2023,
+  "end_year": 2026,
+  "change": null,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.ny_gdp_pcap_kd",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2024,
+  "end_year": 2027,
+  "change": null,
+  "relative": true,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2022,
+  "end_year": 2025,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2023,
+  "end_year": 2026,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2024,
+  "end_year": 2027,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2022,
+  "end_year": 2025,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2023,
+  "end_year": 2026,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_imrt_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2024,
+  "end_year": 2027,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2022,
+  "end_year": 2025,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2023,
+  "end_year": 2026,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2024,
+  "end_year": 2027,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2022,
+  "end_year": 2025,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2023,
+  "end_year": 2026,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.sp_dyn_le00_in",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2024,
+  "end_year": 2027,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2022,
+  "end_year": 2025,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2023,
+  "end_year": 2026,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2024,
+  "end_year": 2027,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2022,
+  "end_year": 2025,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2023,
+  "end_year": 2026,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_gini",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2024,
+  "end_year": 2027,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 0,
+  "start_year": 2022,
+  "end_year": 2025,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 1,
+  "start_year": 2023,
+  "end_year": 2026,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "BRA",
+  "lag": 2,
+  "start_year": 2024,
+  "end_year": 2027,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 0,
+  "start_year": 2022,
+  "end_year": 2025,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 1,
+  "start_year": 2023,
+  "end_year": 2026,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ },
+ {
+  "period_id": "lula-3",
+  "indicator_id": "wdi.si_pov_dday",
+  "geo_code": "LCN",
+  "lag": 2,
+  "start_year": 2024,
+  "end_year": 2027,
+  "change": null,
+  "relative": false,
+  "mixed_years": []
+ }
+]

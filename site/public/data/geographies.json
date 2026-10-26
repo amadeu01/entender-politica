@@ -1,0 +1,58 @@
+[
+ {
+  "code": "BRA",
+  "level": "country",
+  "name": {
+   "pt": "Brasil",
+   "en": "Brazil"
+  }
+ },
+ {
+  "code": "ARG",
+  "level": "country",
+  "name": {
+   "pt": "Argentina",
+   "en": "Argentina"
+  }
+ },
+ {
+  "code": "CHL",
+  "level": "country",
+  "name": {
+   "pt": "Chile",
+   "en": "Chile"
+  }
+ },
+ {
+  "code": "COL",
+  "level": "country",
+  "name": {
+   "pt": "Colômbia",
+   "en": "Colombia"
+  }
+ },
+ {
+  "code": "MEX",
+  "level": "country",
+  "name": {
+   "pt": "México",
+   "en": "Mexico"
+  }
+ },
+ {
+  "code": "LCN",
+  "level": "aggregate",
+  "name": {
+   "pt": "América Latina e Caribe",
+   "en": "Latin America & Caribbean"
+  }
+ },
+ {
+  "code": "WLD",
+  "level": "aggregate",
+  "name": {
+   "pt": "Mundo",
+   "en": "World"
+  }
+ }
+]

@@ -1,0 +1,28 @@
+{
+ "analyses": [
+  {
+   "slug": "desigualdade-de-renda",
+   "lang": "pt",
+   "title": "Desigualdade de renda no Brasil desde 1980"
+  },
+  {
+   "slug": "desigualdade-de-renda",
+   "lang": "en",
+   "title": "Income inequality in Brazil since 1980"
+  }
+ ],
+ "policies": [
+  {
+   "slug": "progresa-oportunidades",
+   "lang": "pt",
+   "name": "Progresa/Oportunidades (México)",
+   "country": "MEX"
+  },
+  {
+   "slug": "progresa-oportunidades",
+   "lang": "en",
+   "name": "Progresa/Oportunidades (Mexico)",
+   "country": "MEX"
+  }
+ ]
+}

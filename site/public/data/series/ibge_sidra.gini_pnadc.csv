@@ -1,0 +1,15 @@
+geo_code,geo_level,year,indicator_id,value,lower,upper,unit,source_id,source_version,retrieved_at,license,series_break
+BRA,country,2012,ibge_sidra.gini_pnadc,0.54,0.5336496000000001,0.5463504,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2013,ibge_sidra.gini_pnadc,0.532,0.52574368,0.53825632,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2014,ibge_sidra.gini_pnadc,0.526,0.51981424,0.5321857600000001,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2015,ibge_sidra.gini_pnadc,0.524,0.5168107200000001,0.53118928,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2016,ibge_sidra.gini_pnadc,0.537,0.52857984,0.54542016,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2017,ibge_sidra.gini_pnadc,0.539,0.53160492,0.54639508,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2018,ibge_sidra.gini_pnadc,0.545,0.5353862,0.5546138,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2019,ibge_sidra.gini_pnadc,0.543,0.5355500400000001,0.55044996,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2020,ibge_sidra.gini_pnadc,0.523,0.51479936,0.53120064,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,True
+BRA,country,2021,ibge_sidra.gini_pnadc,0.543,0.5366143200000001,0.54938568,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2022,ibge_sidra.gini_pnadc,0.517,0.51092008,0.52307992,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,True
+BRA,country,2023,ibge_sidra.gini_pnadc,0.517,0.50990676,0.52409324,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2024,ibge_sidra.gini_pnadc,0.504,0.49807296,0.50992704,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2025,ibge_sidra.gini_pnadc,0.511,0.50499064,0.51700936,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False

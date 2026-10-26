@@ -1,0 +1,122 @@
+{
+ "indicator_id": "ibge_sidra.gini_pnadc",
+ "unit": "index_0_1",
+ "source_id": "ibge_sidra",
+ "source_version": "2026-05-08",
+ "retrieved_at": "2026-10-26T01:07:55+00:00",
+ "license": "LicenseRef-IBGE-reuse-with-attribution",
+ "observations": [
+  {
+   "geo_code": "BRA",
+   "year": 2012,
+   "value": 0.54,
+   "lower": 0.5336496000000001,
+   "upper": 0.5463504,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2013,
+   "value": 0.532,
+   "lower": 0.52574368,
+   "upper": 0.53825632,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2014,
+   "value": 0.526,
+   "lower": 0.51981424,
+   "upper": 0.5321857600000001,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2015,
+   "value": 0.524,
+   "lower": 0.5168107200000001,
+   "upper": 0.53118928,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2016,
+   "value": 0.537,
+   "lower": 0.52857984,
+   "upper": 0.54542016,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2017,
+   "value": 0.539,
+   "lower": 0.53160492,
+   "upper": 0.54639508,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2018,
+   "value": 0.545,
+   "lower": 0.5353862,
+   "upper": 0.5546138,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2019,
+   "value": 0.543,
+   "lower": 0.5355500400000001,
+   "upper": 0.55044996,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2020,
+   "value": 0.523,
+   "lower": 0.51479936,
+   "upper": 0.53120064,
+   "series_break": true
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2021,
+   "value": 0.543,
+   "lower": 0.5366143200000001,
+   "upper": 0.54938568,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2022,
+   "value": 0.517,
+   "lower": 0.51092008,
+   "upper": 0.52307992,
+   "series_break": true
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2023,
+   "value": 0.517,
+   "lower": 0.50990676,
+   "upper": 0.52409324,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2024,
+   "value": 0.504,
+   "lower": 0.49807296,
+   "upper": 0.50992704,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2025,
+   "value": 0.511,
+   "lower": 0.50499064,
+   "upper": 0.51700936,
+   "series_break": false
+  }
+ ]
+}
