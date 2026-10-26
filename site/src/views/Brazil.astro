@@ -1,0 +1,76 @@
+---
+import Base from "../layouts/Base.astro";
+import Chart from "../components/Chart.astro";
+import Notice from "../components/Notice.astro";
+import PeriodTable from "../components/PeriodTable.astro";
+import { indicator } from "../lib/data";
+import { UI, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const ALL = ["BRA", "ARG", "CHL", "COL", "MEX", "LCN"];
+const COUNTRIES = ["BRA", "ARG", "CHL", "COL", "MEX"];
+const charts: { id: string; geos: string[]; log?: boolean; extra?: string[] }[] = [
+  { id: "wdi.ny_gdp_pcap_kd", geos: ALL },
+  { id: "wdi.fp_cpi_totl_zg", geos: ["BRA", "ARG", "MEX", "LCN"], log: true },
+  { id: "wdi.sp_dyn_imrt_in", geos: ALL },
+  { id: "wdi.sp_dyn_le00_in", geos: ALL },
+  { id: "ipeadata.disoc_rdcg", geos: ["BRA"], extra: ["ibge_sidra.gini_pnadc"] },
+  { id: "wdi.si_pov_gini", geos: COUNTRIES },
+  { id: "wdi.si_pov_dday", geos: ALL },
+  { id: "undp_hdr.hdi", geos: COUNTRIES },
+  { id: "wgi.gov_wgi_va_est", geos: COUNTRIES },
+  { id: "wgi.gov_wgi_ge_est", geos: COUNTRIES },
+  { id: "wgi.gov_wgi_cc_est", geos: COUNTRIES },
+];
+const copy = {
+  pt: {
+    lede: "Indicadores do Brasil desde 1980, com as faixas de cada governo ao fundo e comparação com a América Latina. Se o Brasil e os vizinhos mudam juntos, a mudança provavelmente não é obra de um governo.",
+    table: "Variação durante cada período de governo",
+    tableLede: "Cada ano é atribuído ao governo em exercício em 1º de julho. A variação vai do ano anterior ao primeiro ano do período até o último; a defasagem desloca essa janela, porque efeitos de políticas aparecem depois. PIB per capita em variação percentual; os demais, em pontos.",
+    charts: "Linhas do tempo",
+    long: "Gini no Brasil: PNAD antiga e PNAD Contínua (séries não emendadas)",
+    alt: (name: string, geos: number) => `Linha do tempo de ${name} de 1975 até o último ano disponível para ${geos} geografias, com faixas dos períodos de governo ao fundo.`,
+  },
+  en: {
+    lede: "Brazilian indicators since 1980, with each government's period in the background and comparison with Latin America. If Brazil and its neighbors move together, the change is probably not the work of one government.",
+    table: "Change during each government period",
+    tableLede: "Each year is attributed to the government in office on July 1. The change runs from the year before the period's first year to its last year; the lag shifts this window, because policy effects show up later. GDP per capita as percent change; the others in points.",
+    charts: "Timelines",
+    long: "Gini in Brazil: old PNAD and Continuous PNAD (series not spliced)",
+    alt: (name: string, geos: number) => `Timeline of ${name} from 1975 to the latest available year for ${geos} geographies, with government period bands in the background.`,
+  },
+}[lang];
+---
+
+<Base lang={lang} title={t.nav.brazil} route="brazil">
+  <h1>{t.nav.brazil}</h1>
+  <p class="lede">{copy.lede}</p>
+  <Notice lang={lang} />
+
+  <h2>{copy.charts}</h2>
+  {
+    charts.map((c) => {
+      const ind = indicator(c.id);
+      const title = c.extra ? copy.long : ind.name[lang];
+      return (
+        <Chart
+          lang={lang}
+          id={c.id.replace(/\W/g, "-")}
+          title={title}
+          alt={copy.alt(title, c.geos.length)}
+          indicators={[c.id, ...(c.extra ?? [])]}
+          geographies={c.geos}
+          log={c.log}
+        />
+      );
+    })
+  }
+
+  <h2>{copy.table}</h2>
+  <p>{copy.tableLede}</p>
+  <Notice lang={lang} />
+  <PeriodTable lang={lang} />
+</Base>

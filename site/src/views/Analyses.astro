@@ -1,0 +1,33 @@
+---
+import Base from "../layouts/Base.astro";
+import { analysis, documents } from "../lib/data";
+import { UI, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const list = documents().analyses.filter((a) => a.lang === lang).map((a) => analysis(a.slug, lang));
+const lede = {
+  pt: "Cada análise parte de uma pergunta, declara a hipótese e o método, e mostra evidências a favor e contra, com as limitações escritas.",
+  en: "Each analysis starts from a question, states its hypothesis and method, and shows evidence for and against, with its limitations written out.",
+}[lang];
+---
+
+<Base lang={lang} title={t.nav.analyses} route="analyses">
+  <h1>{t.nav.analyses}</h1>
+  <p class="lede">{lede}</p>
+  <ul class="card-grid">
+    {
+      list.map((a) => (
+        <li class="card">
+          <h3>
+            <a href={url(lang, "analyses", a.slug)} set:html={a.title} />
+          </h3>
+          <p set:html={a.question} />
+          <p class="meta">{a.period.start}–{a.period.end}</p>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

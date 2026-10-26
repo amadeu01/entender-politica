@@ -1,0 +1,220 @@
+---
+// A time-series chart rendered in the browser by Observable Plot (src/scripts/chart.ts),
+// with its provenance, downloads and a table view rendered statically.
+import { governments, indicator, series, geoName } from "../lib/data";
+import {
+  asset,
+  REPO,
+  SOURCE_NAMES,
+  UI,
+  UNIT_DECIMALS,
+  UNIT_LABELS,
+  url,
+  type Lang,
+} from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  id: string;
+  title: string;
+  alt: string;
+  indicators: string[];
+  geographies: string[];
+  log?: boolean;
+}
+const { lang, id, title, alt, indicators, geographies, log = false } = Astro.props;
+const t = UI[lang];
+
+// Entities keep the same color on every chart (color follows the entity, not its rank).
+const GEO_ORDER = ["BRA", "ARG", "CHL", "COL", "MEX", "LCN", "WLD"];
+const byIndicator = indicators.length > 1;
+if (byIndicator && geographies.length > 1) {
+  throw new Error(`chart ${id}: several indicators need a single geography`);
+}
+const metas = indicators.map((i) => ({ ind: indicator(i), data: series(i) }));
+const keys = byIndicator
+  ? metas.map((m, n) => ({ key: m.ind.id, label: m.ind.name[lang], slot: n + 1 }))
+  : geographies.map((g) => ({ key: g, label: geoName(g, lang), slot: GEO_ORDER.indexOf(g) + 1 }));
+const unit = metas[0].ind.unit;
+if (metas.some((m) => m.ind.unit !== unit)) {
+  throw new Error(`chart ${id}: one axis only, indicators must share a unit`);
+}
+
+const points = metas.flatMap((m) =>
+  m.data.observations
+    .filter((o) => geographies.includes(o.geo_code))
+    .map((o) => ({ ...o, key: byIndicator ? m.ind.id : o.geo_code })),
+);
+const years = [...new Set(points.map((p) => p.year))].sort((a, b) => a - b);
+const config = {
+  lang,
+  log,
+  unitLabel: UNIT_LABELS[unit]?.[lang] ?? unit,
+  decimals: UNIT_DECIMALS[unit] ?? 2,
+  keys,
+  points,
+  periods: governments().periods.map((p) => ({ name: p.short_name, start: p.start, end: p.end })),
+  text: { year: t.year, seriesBreak: t.seriesBreak },
+};
+const cell = (key: string, year: number) => points.find((p) => p.key === key && p.year === year);
+const fmt = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", {
+  maximumFractionDigits: config.decimals,
+  minimumFractionDigits: config.decimals,
+});
+---
+
+<figure class="chart" id={`grafico-${id}`} aria-labelledby={`grafico-${id}-titulo`}>
+  <h3 id={`grafico-${id}-titulo`}>{title}</h3>
+  <ul class="legend" aria-hidden={keys.length < 2 ? "true" : undefined}>
+    {
+      keys.length > 1 &&
+        keys.map((k) => (
+          <li>
+            <span class="key" style={`--c: var(--series-${k.slot})`} />
+            {k.label}
+          </li>
+        ))
+    }
+  </ul>
+  <div class="plot" role="img" aria-label={alt} data-config={JSON.stringify(config)}>
+    <noscript>{alt}</noscript>
+  </div>
+  <figcaption>
+    <p class="meta">{config.unitLabel}. {t.governments}.</p>
+    <dl class="provenance">
+      {
+        metas.map((m) => {
+          const paper = m.ind.references.find((r) => r.doi);
+          const breaks = m.ind.series_breaks.filter(
+            (b) => b.geo === null || geographies.includes(b.geo),
+          );
+          return (
+            <>
+              <dt>
+                <a href={url(lang, "indicators", m.ind.id)}>{m.ind.name[lang]}</a>
+              </dt>
+              <dd>
+                {t.source}: {SOURCE_NAMES[m.data.source_id]?.[lang] ?? m.data.source_id} ·{" "}
+                {t.version}: {m.data.source_version} · {t.retrieved}:{" "}
+                {m.data.retrieved_at.slice(0, 10)} · {t.license}: {m.data.license}
+                {paper && (
+                  <>
+                    {" "}
+                    · {t.metricPaper}:{" "}
+                    <a href={`https://doi.org/${paper.doi}`}>{paper.citation.split(".")[0]}</a>
+                  </>
+                )}
+                {breaks.length > 0 && (
+                  <>
+                    <br />
+                    {t.seriesBreaks}: {breaks.map((b) => `${b.year}: ${b.note[lang]}`).join(" ")}
+                  </>
+                )}
+                <br />
+                <a href={asset(`data/series/${m.ind.id}.csv`)} download>
+                  {t.downloadCsv}
+                </a>{" "}
+                ·{" "}
+                <a href={`${REPO}/blob/main/site/src/scripts/chart.ts`}>{t.viewCode}</a>
+              </dd>
+            </>
+          );
+        })
+      }
+    </dl>
+    <details>
+      <summary>{t.tableView}</summary>
+      <div class="table-scroll">
+        <table class="data">
+          <thead>
+            <tr>
+              <th scope="col">{t.year}</th>
+              {keys.map((k) => <th scope="col" class="num">{k.label}</th>)}
+            </tr>
+          </thead>
+          <tbody>
+            {
+              years.map((y) => (
+                <tr>
+                  <th scope="row">{y}</th>
+                  {keys.map((k) => {
+                    const p = cell(k.key, y);
+                    return (
+                      <td class="num">
+                        {p ? fmt.format(p.value) : "–"}
+                        {p?.lower != null && p.upper != null
+                          ? ` (${fmt.format(p.lower)}–${fmt.format(p.upper)})`
+                          : ""}
+                        {p?.series_break ? " †" : ""}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="meta">† {t.seriesBreak}</p>
+    </details>
+  </figcaption>
+</figure>
+
+<style>
+  .chart {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    padding: 1rem 1rem 0.5rem;
+  }
+  .chart h3 {
+    margin: 0 0 0.5rem;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    list-style: none;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    font-size: 0.9rem;
+    color: var(--ink-2);
+  }
+  .key {
+    display: inline-block;
+    width: 1rem;
+    height: 2px;
+    background: var(--c);
+    vertical-align: middle;
+    margin-right: 0.35rem;
+  }
+  .plot {
+    min-height: 280px;
+    width: 100%;
+  }
+  .provenance {
+    font-size: 0.85rem;
+    color: var(--ink-2);
+    margin: 0.5rem 0;
+  }
+  .provenance dt {
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+  .provenance dd {
+    margin: 0;
+  }
+  details {
+    margin: 0.5rem 0;
+  }
+  summary {
+    cursor: pointer;
+    color: var(--link);
+  }
+</style>
+
+<script>
+  import { renderAll } from "../scripts/chart";
+  renderAll();
+</script>

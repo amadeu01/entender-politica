@@ -1,0 +1,103 @@
+---
+import Base from "../layouts/Base.astro";
+import Chart from "../components/Chart.astro";
+import Notice from "../components/Notice.astro";
+import Numbers from "../components/Numbers.astro";
+import References from "../components/References.astro";
+import { analysis, policy } from "../lib/data";
+import { METHOD_NAMES, UI, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+  slug: string;
+}
+const { lang, slug } = Astro.props;
+const t = UI[lang];
+const a = analysis(slug, lang);
+const plain = (html: string) => html.replace(/<[^>]+>/g, "");
+const evidence = (items: typeof a.evidence_for) => items;
+---
+
+<Base lang={lang} title={plain(a.title)} route="analyses" slug={slug} description={plain(a.question)}>
+  <article>
+    <h1 set:html={a.title} />
+    <dl class="facts">
+      <dt>{t.question}</dt>
+      <dd set:html={a.question} />
+      <dt>{t.hypothesis}</dt>
+      <dd set:html={a.hypothesis} />
+      <dt>{t.period}</dt>
+      <dd>{a.period.start}–{a.period.end}</dd>
+      <dt>{t.method}</dt>
+      <dd>
+        <span class="badge">{METHOD_NAMES[a.method]?.[lang] ?? a.method}</span>{" "}
+        <span set:html={a.method_description} />
+      </dd>
+      <dt>{t.causal}</dt>
+      <dd>{a.causal_claims ? (lang === "pt" ? "Sim" : "Yes") : t.descriptiveOnly}</dd>
+    </dl>
+    <Notice lang={lang} />
+
+    <Fragment set:html={a.body} />
+
+    {
+      a.charts.map((c) => (
+        <Chart
+          lang={lang}
+          id={c.id}
+          title={plain(c.title)}
+          alt={c.alt}
+          indicators={c.indicators}
+          geographies={c.geographies}
+          log={c.log_scale}
+        />
+      ))
+    }
+
+    <h2>{t.evidenceFor}</h2>
+    <ul>
+      {
+        evidence(a.evidence_for).map((e) => (
+          <li>
+            <span set:html={e.text} />{" "}
+            {e.references.map((d) => <a href={`https://doi.org/${d}`}>[doi:{d}]</a>)}
+          </li>
+        ))
+      }
+    </ul>
+    <h2>{t.evidenceAgainst}</h2>
+    <ul>
+      {
+        evidence(a.evidence_against).map((e) => (
+          <li>
+            <span set:html={e.text} />{" "}
+            {e.references.map((d) => <a href={`https://doi.org/${d}`}>[doi:{d}]</a>)}
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>{t.limitations}</h2>
+    <ul>{a.limitations.map((l) => <li set:html={l} />)}</ul>
+
+    {
+      a.related_policies.length > 0 && (
+        <>
+          <h2>{t.relatedPolicies}</h2>
+          <ul>
+            {a.related_policies.map((p) => (
+              <li>
+                <a href={url(lang, "policies", p)} set:html={policy(p, lang).name} />
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+
+    <h2 id="numeros">{t.numbers}</h2>
+    <Numbers lang={lang} numbers={a.numbers} />
+
+    <h2>{t.references}</h2>
+    <References refs={a.references} />
+  </article>
+</Base>

@@ -1,0 +1,79 @@
+---
+import Base from "../layouts/Base.astro";
+import Chart from "../components/Chart.astro";
+import { indicator, series } from "../lib/data";
+import { SOURCE_NAMES, UI, UNIT_LABELS, asset, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+  id: string;
+}
+const { lang, id } = Astro.props;
+const t = UI[lang];
+const ind = indicator(id);
+const data = series(id);
+const ORDER = ["BRA", "ARG", "CHL", "COL", "MEX", "LCN", "WLD"];
+const geos = ORDER.filter((g) => data.observations.some((o) => o.geo_code === g));
+const alt = {
+  pt: `Linha do tempo de ${ind.name.pt} por geografia, com faixas dos períodos de governo do Brasil ao fundo.`,
+  en: `Timeline of ${ind.name.en} by geography, with Brazil's government period bands in the background.`,
+}[lang];
+---
+
+<Base lang={lang} title={ind.name[lang]} route="indicators" slug={id} description={ind.definition[lang]}>
+  <h1>{ind.name[lang]}</h1>
+  <p class="meta">
+    <code>{ind.id}</code> · {SOURCE_NAMES[ind.source]?.[lang] ?? ind.source} · {ind.source_code}
+  </p>
+
+  <h2>{t.definition}</h2>
+  <p>{ind.definition[lang]}</p>
+  <dl class="facts">
+    <dt>{t.formula}</dt>
+    <dd>{ind.formula[lang]}</dd>
+    <dt>{t.unit}</dt>
+    <dd>{UNIT_LABELS[ind.unit]?.[lang] ?? ind.unit}</dd>
+    {
+      ind.uncertainty && (
+        <>
+          <dt>{t.uncertainty}</dt>
+          <dd>{ind.uncertainty[lang]}</dd>
+        </>
+      )
+    }
+    <dt>{t.license}</dt>
+    <dd>{data.license}</dd>
+  </dl>
+
+  <Chart lang={lang} id={id.replace(/\W/g, "-")} title={ind.name[lang]} alt={alt} indicators={[id]} geographies={geos} log={id === "wdi.fp_cpi_totl_zg"} />
+
+  <h2>{t.criticisms}</h2>
+  <ul>{ind.criticisms.map((c) => <li>{c[lang]}</li>)}</ul>
+
+  {
+    ind.series_breaks.length > 0 && (
+      <>
+        <h2>{t.seriesBreaks}</h2>
+        <ul>
+          {ind.series_breaks.map((b) => (
+            <li>
+              <strong>{b.year}{b.geo ? ` (${b.geo})` : ""}:</strong> {b.note[lang]}
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+
+  <h2>{t.references}</h2>
+  <ol class="refs">
+    {
+      ind.references.map((r) => (
+        <li>
+          {r.citation}{" "}
+          {r.doi ? <a href={`https://doi.org/${r.doi}`}>doi:{r.doi}</a> : r.url && <a href={r.url}>{r.url}</a>}
+        </li>
+      ))
+    }
+  </ol>
+  <p><a href={asset(`data/series/${id}.csv`)} download>{t.downloadCsv}</a></p>
+</Base>

@@ -1,0 +1,45 @@
+---
+// "Where each number comes from": one row per number cited in the text, in reading order.
+import type { Cited } from "../lib/data";
+import { SOURCE_NAMES, UI, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+  numbers: Cited[];
+}
+const { lang, numbers } = Astro.props;
+const t = UI[lang];
+const describe = (c: Cited): string => {
+  if (c.function === "cite") return `${c.note} · doi:${c.doi}`;
+  if (c.function === "lit") return c.note ?? "";
+  const [, geo, ...years] = c.args;
+  const source = SOURCE_NAMES[c.source_id ?? ""]?.[lang] ?? c.source_id;
+  const op = { v: "", diff: "Δ ", pct: "Δ% " }[c.function];
+  return `${op}${geo} ${years.join("→")} · ${source} · ${t.version} ${c.source_version} · ${t.retrieved} ${c.retrieved_at?.slice(0, 10)}`;
+};
+---
+
+<div class="table-scroll">
+  <table class="data">
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">{t.number}</th><th scope="col">{t.origin}</th></tr>
+    </thead>
+    <tbody>
+      {
+        numbers.map((c) => (
+          <tr id={`dado-${c.ref}`}>
+            <td><a href={`#ref-${c.ref}`}>{c.ref}</a></td>
+            <td class="num">{c.text}</td>
+            <td>
+              {c.indicator_id && (
+                <>
+                  <a href={url(lang, "indicators", c.indicator_id)}>{c.indicator_id}</a>{" "}
+                </>
+              )}
+              {describe(c)}
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

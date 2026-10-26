@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+import { asset, REPO, ROUTES, UI, url, type Lang, type Route } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description?: string;
+  route: Route;
+  slug?: string;
+}
+const { lang, title, description, route, slug } = Astro.props;
+const t = UI[lang];
+const other: Lang = lang === "pt" ? "en" : "pt";
+const navRoutes = Object.keys(ROUTES) as Route[];
+const pageTitle = route === "home" ? t.siteName : `${title} · ${t.siteName}`;
+---
+
+<!doctype html>
+<html lang={lang === "pt" ? "pt-BR" : "en"}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description ?? t.tagline} />
+    <link rel="alternate" hreflang={other === "pt" ? "pt-BR" : "en"} href={url(other, route, slug)} />
+    <link rel="icon" href={asset("favicon.svg")} type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">{t.skip}</a>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href={url(lang, "home")}>{t.siteName}</a>
+        <nav class="main" aria-label={lang === "pt" ? "Principal" : "Main"}>
+          <ul>
+            {
+              navRoutes
+                .filter((r) => r !== "home")
+                .map((r) => (
+                  <li>
+                    <a href={url(lang, r)} aria-current={r === route ? "page" : undefined}>
+                      {t.nav[r]}
+                    </a>
+                  </li>
+                ))
+            }
+            <li>
+              <a href={url(other, route, slug)} hreflang={t.otherLangCode} lang={t.otherLangCode}>
+                {t.otherLang}
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo" class="wrap">
+      <slot />
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <p>{t.footer} <a href={REPO}>GitHub</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+---
+// Change of each indicator during each presidency period, with a selectable lag (ADR 0003).
+import { geoName, governments, indicator, periodChanges } from "../lib/data";
+import { UI, UNIT_DECIMALS, formatNumber, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const changes = periodChanges();
+const periods = governments().periods;
+const indicators = [...new Set(changes.map((c) => c.indicator_id))].map(indicator);
+const geos = [...new Set(changes.map((c) => c.geo_code))];
+const lags = [...new Set(changes.map((c) => c.lag))];
+const periodIds = [...new Set(changes.map((c) => c.period_id))];
+const find = (p: string, i: string, g: string, l: number) =>
+  changes.find((c) => c.period_id === p && c.indicator_id === i && c.geo_code === g && c.lag === l);
+const show = (c: ReturnType<typeof find>, unit: string) => {
+  if (!c || c.change === null) return t.noData;
+  const sign = c.change > 0 ? "+" : c.change < 0 ? "−" : "";
+  const value = formatNumber(Math.abs(c.change), lang, c.relative ? 1 : UNIT_DECIMALS[unit] ?? 2);
+  return `${sign}${value}${c.relative ? "%" : ""}`;
+};
+---
+
+<div class="period-table" data-indicator={indicators[0].id} data-lag="0">
+  <div class="controls">
+    <span>
+      <label for="pt-indicator">{t.indicator}</label>
+      <select id="pt-indicator" data-control="indicator">
+        {indicators.map((i) => <option value={i.id}>{i.name[lang]}</option>)}
+      </select>
+    </span>
+    <span>
+      <label for="pt-lag">{t.lag}</label>
+      <select id="pt-lag" data-control="lag">
+        {lags.map((l) => <option value={String(l)}>{t.lagYears(l)}</option>)}
+      </select>
+    </span>
+  </div>
+  <div class="table-scroll">
+    <table class="data">
+      <thead>
+        <tr>
+          <th scope="col">{t.period}</th>
+          <th scope="col">{t.years}</th>
+          {geos.map((g) => <th scope="col" class="num">{geoName(g, lang)}</th>)}
+        </tr>
+      </thead>
+      {
+        indicators.map((ind) =>
+          lags.map((lag) => (
+            <tbody
+              data-indicator={ind.id}
+              data-lag={String(lag)}
+              hidden={!(ind.id === indicators[0].id && lag === lags[0])}
+            >
+              {periodIds.map((pid) => {
+                const p = periods.find((x) => x.id === pid)!;
+                const ref = find(pid, ind.id, geos[0], lag)!;
+                return (
+                  <tr>
+                    <th scope="row">
+                      {p.president}
+                      <span class="meta">
+                        {" "}
+                        {p.term[lang]}
+                        {p.condition === "interino" ? ` · ${t.acting}` : ""}
+                      </span>
+                    </th>
+                    <td>
+                      {ref.start_year}→{ref.end_year}
+                      {ref.mixed_years.length > 0 && (
+                        <span title={t.mixedYear} aria-label={t.mixedYear}>
+                          {" "}
+                          *
+                        </span>
+                      )}
+                    </td>
+                    {geos.map((g) => (
+                      <td class="num">{show(find(pid, ind.id, g, lag), ind.unit)}</td>
+                    ))}
+                  </tr>
+                );
+              })}
+            </tbody>
+          )),
+        )
+      }
+    </table>
+  </div>
+  <p class="meta">* {t.mixedYear}.</p>
+</div>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>(".period-table")) {
+    const update = () => {
+      const { indicator, lag } = root.dataset;
+      root.querySelectorAll<HTMLElement>("tbody").forEach((tb) => {
+        tb.hidden = !(tb.dataset.indicator === indicator && tb.dataset.lag === lag);
+      });
+    };
+    root.querySelectorAll<HTMLSelectElement>("select[data-control]").forEach((s) =>
+      s.addEventListener("change", () => {
+        root.dataset[s.dataset.control!] = s.value;
+        update();
+      }),
+    );
+    update();
+  }
+</script>

@@ -1,0 +1,37 @@
+---
+import Base from "../layouts/Base.astro";
+import { catalog } from "../lib/data";
+import { SOURCE_NAMES, UI, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const bySource = Map.groupBy(catalog(), (i) => i.source);
+const lede = {
+  pt: "Cada indicador traz definição, fórmula, fonte, o artigo que fundamenta a métrica e as críticas conhecidas a ela.",
+  en: "Each indicator has its definition, formula, source, the paper behind the metric and its known criticisms.",
+}[lang];
+---
+
+<Base lang={lang} title={t.nav.indicators} route="indicators">
+  <h1>{t.nav.indicators}</h1>
+  <p class="lede">{lede}</p>
+  {
+    [...bySource].map(([source, list]) => (
+      <section>
+        <h2>{SOURCE_NAMES[source]?.[lang] ?? source}</h2>
+        <ul class="card-grid">
+          {list.map((i) => (
+            <li class="card">
+              <h3>
+                <a href={url(lang, "indicators", i.id)}>{i.name[lang]}</a>
+              </h3>
+              <p class="meta">{i.definition[lang].split(". ")[0]}.</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>

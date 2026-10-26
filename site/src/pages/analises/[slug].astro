@@ -1,0 +1,11 @@
+---
+import View from "../../views/Analysis.astro";
+import { documents } from "../../lib/data";
+
+export function getStaticPaths() {
+  return documents().analyses.filter((a) => a.lang === "pt").map((a) => ({ params: { slug: a.slug } }));
+}
+const { slug } = Astro.params;
+---
+
+<View lang="pt" slug={slug} />
