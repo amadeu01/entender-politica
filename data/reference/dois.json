@@ -1,4 +1,17 @@
 {
+ "10.1007/s12116-018-9268-z": {
+  "doi": "10.1007/s12116-018-9268-z",
+  "title": "Measuring Polyarchy Across the Globe, 1900–2017",
+  "container": "Studies in Comparative International Development",
+  "year": 2018,
+  "authors": [
+   "Teorell",
+   "Coppedge",
+   "Lindberg",
+   "Skaaning"
+  ],
+  "bibtex": "@article{Teorell_2018, title={Measuring Polyarchy Across the Globe, 1900–2017}, volume={54}, ISSN={1936-6167}, url={http://dx.doi.org/10.1007/s12116-018-9268-z}, DOI={10.1007/s12116-018-9268-z}, number={1}, journal={Studies in Comparative International Development}, publisher={Springer Science and Business Media LLC}, author={Teorell, Jan and Coppedge, Michael and Lindberg, Staffan and Skaaning, Svend-Erik}, year={2018}, month=July, pages={71–95} }"
+ },
  "10.1016/0022-0531(70)90039-6": {
   "doi": "10.1016/0022-0531(70)90039-6",
   "title": "On the measurement of inequality",
@@ -53,6 +66,59 @@
    "Osório"
   ],
   "bibtex": "@article{Soares_2010, title={Evaluating the Impact of Brazil’s Bolsa Família: Cash Transfer Programs in Comparative Perspective}, volume={45}, ISSN={1542-4278}, url={http://dx.doi.org/10.1017/s0023879100009390}, DOI={10.1017/s0023879100009390}, number={2}, journal={Latin American Research Review}, publisher={Cambridge University Press (CUP)}, author={Soares, Fábio Veras and Ribas, Rafael Perez and Osório, Rafael Guerreiro}, year={2010}, pages={173–190} }"
+ },
+ "10.1017/s104909652300063x": {
+  "doi": "10.1017/s104909652300063x",
+  "title": "Measuring Democratic Backsliding",
+  "container": "PS: Political Science &amp; Politics",
+  "year": 2024,
+  "authors": [
+   "Little",
+   "Meng"
+  ],
+  "bibtex": "@article{Little_2024, title={Measuring Democratic Backsliding}, volume={57}, ISSN={1537-5935}, url={http://dx.doi.org/10.1017/s104909652300063x}, DOI={10.1017/s104909652300063x}, number={2}, journal={PS: Political Science &amp; Politics}, publisher={Cambridge University Press (CUP)}, author={Little, Andrew T. and Meng, Anne}, year={2024}, month=Jan, pages={149–161} }"
+ },
+ "10.1017/s104909652300077x": {
+  "doi": "10.1017/s104909652300077x",
+  "title": "Conceptual and Measurement Issues in Assessing Democratic Backsliding",
+  "container": "PS: Political Science &amp; Politics",
+  "year": 2024,
+  "authors": [
+   "Knutsen",
+   "Marquardt",
+   "Seim",
+   "Coppedge",
+   "Edgell",
+   "Medzihorsky",
+   "Pemstein",
+   "Teorell",
+   "Gerring",
+   "Lindberg"
+  ],
+  "bibtex": "@article{Knutsen_2024, title={Conceptual and Measurement Issues in Assessing Democratic Backsliding}, volume={57}, ISSN={1537-5935}, url={http://dx.doi.org/10.1017/s104909652300077x}, DOI={10.1017/s104909652300077x}, number={2}, journal={PS: Political Science &amp; Politics}, publisher={Cambridge University Press (CUP)}, author={Knutsen, Carl Henrik and Marquardt, Kyle L. and Seim, Brigitte and Coppedge, Michael and Edgell, Amanda B. and Medzihorsky, Juraj and Pemstein, Daniel and Teorell, Jan and Gerring, John and Lindberg, Staffan I.}, year={2024}, month=Jan, pages={162–177} }"
+ },
+ "10.1017/s1537592711000880": {
+  "doi": "10.1017/s1537592711000880",
+  "title": "Conceptualizing and Measuring Democracy: A New Approach",
+  "container": "Perspectives on Politics",
+  "year": 2011,
+  "authors": [
+   "Coppedge",
+   "Gerring",
+   "Altman",
+   "Bernhard",
+   "Fish",
+   "Hicken",
+   "Kroenig",
+   "Lindberg",
+   "McMann",
+   "Paxton",
+   "Semetko",
+   "Skaaning",
+   "Staton",
+   "Teorell"
+  ],
+  "bibtex": "@article{Coppedge_2011, title={Conceptualizing and Measuring Democracy: A New Approach}, volume={9}, ISSN={1541-0986}, url={http://dx.doi.org/10.1017/s1537592711000880}, DOI={10.1017/s1537592711000880}, number={2}, journal={Perspectives on Politics}, publisher={Cambridge University Press (CUP)}, author={Coppedge, Michael and Gerring, John and Altman, David and Bernhard, Michael and Fish, Steven and Hicken, Allen and Kroenig, Matthew and Lindberg, Staffan I. and McMann, Kelly and Paxton, Pamela and Semetko, Holli A. and Skaaning, Svend-Erik and Staton, Jeffrey and Teorell, Jan}, year={2011}, month=June, pages={247–267} }"
  },
  "10.1017/s1876404511200046": {
   "doi": "10.1017/s1876404511200046",

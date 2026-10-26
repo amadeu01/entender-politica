@@ -1,0 +1,58 @@
+id: vdem.v2x_libdem
+source: vdem
+source_code: v2x_libdem
+unit: index_0_1
+min: 0
+max: 1
+name:
+  pt: "Índice de democracia liberal (V-Dem)"
+  en: "Liberal democracy index (V-Dem)"
+definition:
+  pt: >-
+    Mede até que ponto o ideal de democracia liberal é alcançado: proteção de direitos
+    individuais e de minorias contra o Estado e contra a maioria, por meio de liberdades
+    civis garantidas, Estado de direito, Judiciário independente e freios e contrapesos ao
+    Executivo. Também incorpora o nível de democracia eleitoral. Vai de 0 a 1.
+  en: >-
+    Measures to what extent the ideal of liberal democracy is achieved: protection of
+    individual and minority rights against the state and the majority, through protected
+    civil liberties, rule of law, an independent judiciary and checks and balances on the
+    executive. It also incorporates the level of electoral democracy. Ranges from 0 to 1.
+formula:
+  pt: "0,25·P^1,585 + 0,25·L + 0,5·P^1,585·L, em que P é o índice de democracia eleitoral e L o componente liberal."
+  en: "0.25·P^1.585 + 0.25·L + 0.5·P^1.585·L, where P is the electoral democracy index and L the liberal component."
+uncertainty:
+  pt: "Intervalo de 68% de maior densidade posterior do modelo de medição do V-Dem (colunas codelow e codehigh), aproximadamente um desvio padrão."
+  en: "68% highest posterior density interval from the V-Dem measurement model (codelow and codehigh columns), roughly one standard deviation."
+criticisms:
+  - pt: >-
+      Baseado em avaliações de especialistas agregadas por um modelo estatístico. Um
+      debate recente discute se a tendência global de retrocesso democrático aparece em
+      indicadores objetivos (como desempenho eleitoral de quem está no poder) ou se pode
+      refletir viés dos avaliadores (Little e Meng, 2024; resposta em Knutsen et al., 2024).
+    en: >-
+      Based on expert assessments aggregated by a statistical model. A recent debate asks
+      whether the global trend of democratic backsliding shows up in objective indicators
+      (such as incumbent electoral performance) or may reflect coder bias (Little and Meng,
+      2024; reply in Knutsen et al., 2024).
+  - pt: >-
+      Os valores absolutos não são comparáveis entre versões do V-Dem: cada versão reestima
+      a série inteira. Compare apenas valores da mesma versão.
+    en: >-
+      Absolute values are not comparable across V-Dem versions: each version re-estimates
+      the whole series. Compare values from the same version only.
+  - pt: >-
+      Os intervalos são largos; diferenças pequenas entre anos vizinhos ou entre países
+      podem estar dentro da incerteza do modelo.
+    en: >-
+      Intervals are wide; small differences between adjacent years or countries may be
+      within the model's uncertainty.
+references:
+  - citation: "Coppedge, M., Gerring, J., Altman, D., Bernhard, M., Fish, S., Hicken, A., et al. (2011). Conceptualizing and measuring democracy: a new approach. Perspectives on Politics, 9(2), 247–267."
+    doi: 10.1017/S1537592711000880
+  - citation: "Little, A. T., & Meng, A. (2024). Measuring democratic backsliding. PS: Political Science & Politics, 57(2), 149–161."
+    doi: 10.1017/S104909652300063X
+  - citation: "Knutsen, C. H., Marquardt, K. L., Seim, B., Coppedge, M., Edgell, A. B., et al. (2024). Conceptual and measurement issues in assessing democratic backsliding. PS: Political Science & Politics, 57(2), 162–177."
+    doi: 10.1017/S104909652300077X
+  - citation: "Coppedge, M., Gerring, J., Knutsen, C. H., Lindberg, S. I., Teorell, J., et al. (2026). V-Dem Country-Year Dataset v16. Varieties of Democracy (V-Dem) Project."
+    url: https://doi.org/10.23696/vdemds26
