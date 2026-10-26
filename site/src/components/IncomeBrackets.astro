@@ -130,7 +130,7 @@ const shade =
         <ul class="meta">
           {data.sources.map((s) => (
             <li>
-              {SOURCE_NAMES[s.source_id]?.[lang] ?? s.source_id} · {s.indicator_id} · {t.version} {s.source_version} · {t.retrieved} {s.retrieved_at.slice(0, 10)}
+              {SOURCE_NAMES[s.source_id]?.[lang] ?? s.source_id} · {s.indicator_id} · {t.version}{" "}{s.source_version} · {t.retrieved}{" "}{s.retrieved_at.slice(0, 10)}
             </li>
           ))}
         </ul>

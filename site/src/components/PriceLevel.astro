@@ -54,7 +54,7 @@ const sources = [ppp, fx];
         {sources.map((s, n) => (
           <>
             {n > 0 && " · "}
-            {SOURCE_NAMES[s.source_id]?.[lang] ?? s.source_id} · {s.indicator_id} · {t.version} {s.source_version} · {t.retrieved} {s.retrieved_at.slice(0, 10)}
+            {SOURCE_NAMES[s.source_id]?.[lang] ?? s.source_id} · {s.indicator_id} · {t.version}{" "}{s.source_version} · {t.retrieved}{" "}{s.retrieved_at.slice(0, 10)}
           </>
         ))}
       </p>

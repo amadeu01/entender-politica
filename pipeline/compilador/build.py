@@ -94,7 +94,8 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     indicators = catalog.load(paths.indicators)
     df, versions = compile_observations(paths)
     report = validate(df, indicators, geography.load())
-    documents = compile_documents(df, indicators, paths)
+    bracket_cfg = bracket_config(paths, indicators)
+    documents = compile_documents(df, indicators, paths, bracket_cfg)
 
     previous = paths.processed / f"{OBSERVATIONS}.parquet"
     old = pd.read_parquet(previous) if previous.exists() else empty()
@@ -104,7 +105,7 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     df.to_parquet(previous, index=False)
     df.to_csv(paths.processed / f"{OBSERVATIONS}.csv", index=False)
     _write_json(paths.processed / "validation.json", report.to_dict())
-    export_site(df, indicators, paths.site, bracket_config(paths, indicators))
+    export_site(df, indicators, paths.site, bracket_cfg)
     for name, doc in documents.items():
         _write_json(paths.site / name, doc)
     registry = dois.load(paths.dois)
@@ -181,13 +182,15 @@ def citation_errors(paths: Paths, registry: dict[str, dict]) -> list[str]:
 
 
 def compile_documents(
-    df: pd.DataFrame, indicators: dict[str, catalog.Indicator], paths: Paths
+    df: pd.DataFrame,
+    indicators: dict[str, catalog.Indicator],
+    paths: Paths,
+    bracket_cfg: brackets.Config | None,
 ) -> dict[str, object]:
     """Check and render analyses, policy briefs and guides: {site path: JSON document}."""
     docs = analyses.load_analyses(paths.analyses)
     policies = analyses.load_policies(paths.policies)
     guide_docs = guides.load_guides(paths.guides)
-    bracket_cfg = bracket_config(paths, indicators)
     registry = dois.load(paths.dois)
     errors = analyses.check(docs, policies, indicators, set(geography.load()))
     errors += guides.check(guide_docs, indicators, {p.slug for p in policies}, bracket_cfg)

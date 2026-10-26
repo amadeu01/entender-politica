@@ -204,11 +204,9 @@ export const series = (id: string): Series => read(`series/${id}.json`);
 export const documents = (): Documents => read("documents.json");
 export const analysis = (slug: string, lang: Lang): Analysis => read(`analyses/${slug}.${lang}.json`);
 export const policy = (slug: string, lang: Lang): Policy => read(`policies/${slug}.${lang}.json`);
-/** The guide of an indicator, or null when it has none. */
-export const guide = (id: string, lang: Lang): Guide | null => {
-  const file = join(DATA_DIR, "guides", `${id}.${lang}.json`);
-  return existsSync(file) ? (JSON.parse(readFileSync(file, "utf-8")) as Guide) : null;
-};
+/** The guide of an indicator, or null when it has none. Stale files left by an old build are ignored. */
+export const guide = (id: string, lang: Lang): Guide | null =>
+  documents().guides.includes(id) ? read(`guides/${id}.${lang}.json`) : null;
 export const incomeBrackets = (): IncomeBrackets | null =>
   existsSync(join(DATA_DIR, "income_brackets.json")) ? read("income_brackets.json") : null;
 export const periodChanges = (): PeriodChange[] => read("period_changes.json");
