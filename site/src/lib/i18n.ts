@@ -63,7 +63,8 @@ export const UI = {
     viewCode: "Ver o código",
     tableView: "Ver os dados em tabela",
     year: "Ano",
-    governments: "Faixas ao fundo: períodos de governo",
+    governments: "Faixas ao fundo: presidentes do Brasil, não dos outros países",
+    coverage: "Anos com dado",
     seriesBreak: "quebra de série",
     seriesBreaks: "Quebras de série",
     notice:
@@ -150,7 +151,8 @@ export const UI = {
     viewCode: "View the code",
     tableView: "View the data as a table",
     year: "Year",
-    governments: "Background bands: government periods",
+    governments: "Background bands: Brazil's presidents, not the other countries'",
+    coverage: "Years with data",
     seriesBreak: "series break",
     seriesBreaks: "Series breaks",
     notice:

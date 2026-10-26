@@ -63,8 +63,17 @@ const config = {
   periods: governments().periods.map((p) => ({ name: p.short_name, start: p.start, end: p.end })),
   text: { seriesBreak: t.seriesBreak },
 };
+// Each series' first and last year, so a line that starts late (or stops early)
+// reads as missing data rather than as an event in that year.
+const coverage = keys
+  .map((k) => {
+    const years = points.filter((p) => p.key === k.key).map((p) => p.year);
+    return `${k.label} ${Math.min(...years)}–${Math.max(...years)}`;
+  })
+  .join("; ");
 const captionNote = [
   `${config.unitLabel}. ${t.governments}.`,
+  `${t.coverage}: ${coverage}.`,
   missing.length > 0 ? `${t.noDataFor}: ${missing.map((g) => geoName(g, lang)).join(", ")}.` : "",
   log && points.some((p) => p.value <= 0) ? t.logDropped : "",
 ]
