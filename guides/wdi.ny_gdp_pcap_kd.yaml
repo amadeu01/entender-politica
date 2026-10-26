@@ -6,8 +6,8 @@ understand:
     com a inflação já descontada, então dá para comparar um ano com outro.
 
     É uma média. Não diz quanto cada pessoa ganha, nem como a renda está dividida entre
-    ricos e pobres. Também deixa de fora o trabalho doméstico não pago, o tempo livre, a
-    saúde e o meio ambiente. O PIB per capita mede o tamanho da economia por pessoa, não o
+    ricos e pobres. Também deixa de fora o trabalho doméstico não pago, o tempo livre, o
+    estado de saúde e o meio ambiente. O PIB per capita mede o tamanho da economia por pessoa, não o
     bem-estar das pessoas.
   en: |-
     GDP per capita is the value of all final goods and services an economy produces in a
@@ -15,8 +15,8 @@ understand:
     already removed, so one year can be compared with another.
 
     It is an average. It does not say how much each person earns, nor how income is split
-    between rich and poor. It also leaves out unpaid household work, free time, health and
-    the environment. GDP per capita measures the size of the economy per person, not
+    between rich and poor. It also leaves out unpaid household work, free time, health
+    status and the environment. GDP per capita measures the size of the economy per person, not
     people's well-being.
 how_to_read:
   pt: |-
@@ -33,7 +33,7 @@ how_to_read:
 
     Compare sempre com os outros países do gráfico: se todos caíram ou subiram juntos, a
     causa provavelmente é comum a eles, como preços de commodities ou uma crise mundial.
-    Como está em dólares convertidos pelo câmbio de mercado, este indicador serve melhor
+    Como está em dólares convertidos ao câmbio de 2015, este indicador serve melhor
     para ver a tendência dentro de um país. Para comparar o nível entre países, use a
     versão em paridade de poder de compra, na seção Poder de compra.
   en: |-
@@ -50,7 +50,7 @@ how_to_read:
 
     Always compare with the other countries in the chart: if they all fell or rose
     together, the cause is probably common to them, such as commodity prices or a world
-    crisis. Because it is in dollars converted at the market exchange rate, this indicator
+    crisis. Because it is in dollars converted at 2015 exchange rates, this indicator
     is best for trends within a country. To compare levels across countries, use the
     purchasing power parity version, in the Purchasing power section.
 studies:
@@ -73,27 +73,25 @@ studies:
     references: [10.1257/aer.20110236]
   - text:
       pt: >-
-        Com a pesquisa Gallup World Poll de 2006, feita em
-        {{ cite("132 países", "10.1257/jep.22.2.53", "resumo") }}, Deaton encontra que a
-        satisfação média com a vida está fortemente associada à renda nacional per capita:
-        cada duplicação da renda está associada a
-        {{ cite("quase um ponto a mais numa escala de 0 a 10", "10.1257/jep.22.2.53", "resumo") }},
-        também entre os países ricos. Mas, para um mesmo nível de renda, crescimento
-        econômico maior aparece associado a satisfação menor, não maior. E nem a satisfação
-        com a vida nem a satisfação com a saúde respondem muito a medidas objetivas de
-        saúde, como a expectativa de vida.
+        Numa revisão das evidências, Sacks, Stevenson e Wolfers encontram que o bem-estar
+        declarado sobe com a renda quando se comparam pessoas num mesmo país e ano, quando se
+        comparam países e quando se acompanha o crescimento econômico de um mesmo país:
+        pessoas mais ricas relatam mais bem-estar, países mais ricos têm em média mais
+        bem-estar, e crescimento econômico e crescimento do bem-estar aparecem claramente
+        relacionados. Os dados não mostram um ponto de saciedade a partir do qual renda e
+        bem-estar deixem de estar relacionados. Essa conclusão parece apontar na direção
+        oposta à do estudo seguinte.
       en: >-
-        Using the 2006 Gallup World Poll, run in
-        {{ cite("132 countries", "10.1257/jep.22.2.53", "abstract") }}, Deaton finds that
-        average life satisfaction is strongly associated with national income per capita:
-        each doubling of income is associated with
-        {{ cite("almost a one-point increase on a scale from 0 to 10", "10.1257/jep.22.2.53", "abstract") }},
-        including among rich countries. But, for a given income level, faster economic
-        growth is associated with lower, not higher, satisfaction. And neither life
-        satisfaction nor health satisfaction responds strongly to objective health
-        measures such as life expectancy.
+        In a review of the evidence, Sacks, Stevenson and Wolfers find that reported
+        well-being rises with income whether people are compared within one country and
+        year, countries are compared with each other, or economic growth is followed within
+        a country: richer people report higher well-being, richer countries have higher
+        average well-being, and economic growth and growth in well-being are clearly
+        related. The data show no satiation point above which income and well-being stop
+        being related. This conclusion seems to point in the opposite direction from the
+        next study.
     method: observational
-    references: [10.1257/jep.22.2.53]
+    references: [10.1037/a0029873]
   - text:
       pt: >-
         Easterlin e coautores encontram que, no longo prazo
@@ -101,16 +99,16 @@ studies:
         felicidade média não sobe quando a renda do país cresce, em países desenvolvidos, em
         desenvolvimento e em transição do socialismo. No curto prazo, felicidade e renda
         andam juntas: caem nas recessões e sobem nas expansões. O resultado é contestado;
-        o artigo atribui as críticas a um artefato estatístico ou à confusão entre curto e
-        longo prazo.
+        os autores argumentam que as críticas resultam de um artefato estatístico ou da
+        confusão entre curto e longo prazo.
       en: >-
         Easterlin and coauthors find that, over the long term
         ({{ cite("10 years or more", "10.1073/pnas.1015962107", "abstract") }}), average
         happiness does not rise as a country's income grows, in developed, developing and
         post-socialist transition countries. In the short term, happiness and income move
         together: they fall in recessions and rise in expansions. The result is disputed;
-        the article attributes the critiques to a statistical artifact or to confusing the
-        short term with the long term.
+        the authors argue the critiques result from a statistical artifact or from
+        confusing the short term with the long term.
     method: observational
     references: [10.1073/pnas.1015962107]
 policies:
@@ -135,27 +133,26 @@ policies:
     direction: positive
     method: synthetic_control
     references: [10.5935/0034-7140.20170011]
-  - name: { pt: "Abertura comercial do início dos anos 1990", en: "Early 1990s trade liberalization" }
+  - name:
+      pt: "Abertura comercial de 1990–1994: efeitos regionais relativos sobre rendimentos e emprego formal"
+      en: "1990–1994 trade liberalization: relative regional effects on earnings and formal employment"
     country: BRA
     period: { start: 1990, end: 1994 }
     result:
       pt: >-
-        Comparando regiões com cortes maiores e menores nas tarifas de importação,
-        Dix-Carneiro e Kovak encontram que as regiões mais expostas tiveram quedas
-        prolongadas no emprego formal e nos rendimentos em relação às demais. O efeito
-        sobre os rendimentos regionais
+        Regiões mais expostas aos cortes de tarifas de importação se saíram pior do que as
+        menos expostas; o estudo não mede o efeito da abertura sobre o país como um todo.
+        Comparando essas regiões antes e depois da abertura, Dix-Carneiro e Kovak encontram
+        quedas prolongadas no emprego formal e nos rendimentos das mais expostas em relação
+        às demais. O efeito sobre os rendimentos regionais
         {{ cite("20 anos depois da abertura foi três vezes o efeito após 10 anos", "10.1257/aer.20161214", "resumo") }}.
-        O estudo mede emprego e rendimentos por região, não o PIB per capita do país: mostra
-        quais regiões perderam em relação às outras, não se a economia como um todo cresceu
-        mais ou menos.
       en: >-
-        Comparing regions with larger and smaller import tariff cuts, Dix-Carneiro and
-        Kovak find that the more exposed regions had prolonged declines in formal
-        employment and earnings relative to other regions. The effect on regional earnings
+        Regions more exposed to import tariff cuts fared worse than less exposed ones; the
+        study does not measure the effect of liberalization on the country as a whole.
+        Comparing these regions before and after liberalization, Dix-Carneiro and Kovak find
+        prolonged declines in formal employment and earnings in the more exposed regions
+        relative to the others. The effect on regional earnings
         {{ cite("20 years after liberalization was three times the effect after 10 years", "10.1257/aer.20161214", "abstract") }}.
-        The study measures employment and earnings by region, not the country's GDP per
-        capita: it shows which regions lost relative to others, not whether the economy as
-        a whole grew more or less.
     direction: negative
     method: difference_in_differences
     references: [10.1257/aer.20161214]
@@ -230,8 +227,8 @@ by_income:
         Comparando Brasil e Estados Unidos, Ferreira, Firpo e Galvao encontram que o
         crescimento do salário médio real foi decepcionante nos dois países, mas
         distribuído de forma muito diferente. No Brasil, os salários cresceram rápido
-        abaixo da mediana e caíram no topo, e a fatia dos salários subiu até o
-        {{ cite("percentil 65", "10.1002/jae.2663", "resumo") }}. Nos Estados Unidos, o
+        abaixo da mediana e caíram no topo, e subiu a fatia do total de salários recebida
+        pelos {{ cite("65% de baixo", "10.1002/jae.2663", "resumo") }}. Nos Estados Unidos, o
         crescimento foi medíocre para os {{ cite("80% de baixo", "10.1002/jae.2663", "resumo") }}
         e bem mais rápido para os {{ cite("20% de cima", "10.1002/jae.2663", "resumo") }}.
         O estudo trata de salários, não da renda domiciliar per capita usada nas faixas
@@ -240,8 +237,8 @@ by_income:
         Comparing Brazil and the United States, Ferreira, Firpo and Galvao find that growth
         in average real wages was disappointing in both countries, but distributed very
         differently. In Brazil, wages grew rapidly below the median and fell at the top,
-        and wage shares rose up to the
-        {{ cite("65th percentile", "10.1002/jae.2663", "abstract") }}. In the United States,
+        and the share of total wages received by the
+        {{ cite("bottom 65%", "10.1002/jae.2663", "abstract") }} rose. In the United States,
         growth was mediocre for the {{ cite("bottom 80%", "10.1002/jae.2663", "abstract") }}
         and much more rapid for the {{ cite("top 20%", "10.1002/jae.2663", "abstract") }}.
         The study is about wages, not the household income per capita used in the brackets
@@ -259,7 +256,7 @@ purchasing_power:
     Por isso, para comparar países, o PIB per capita em paridade de poder de compra (PPC) é
     mais adequado. Em 2024, o do Brasil foi de
     {{ v("wdi.ny_gdp_pcap_pp_kd", "BRA", 2024) }} dólares internacionais de 2021, contra
-    {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }} dólares de 2015 a câmbio de mercado. Os dois
+    {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }} dólares de 2015 ao câmbio de 2015. Os dois
     números usam anos-base diferentes e não devem ser divididos um pelo outro; compare a
     posição do Brasil em relação aos outros países nos dois gráficos abaixo.
 
@@ -267,8 +264,8 @@ purchasing_power:
     domiciliar per capita mediana (a da pessoa no meio da distribuição), medida pela PNAD
     Contínua, variou {{ pct("ibge_sidra.rdpc_mediana_real_pnadc", "BRA", 2012, 2024) }} em
     termos reais entre 2012 e 2024, enquanto o PIB per capita variou
-    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2012, 2024) }}. Entre 2014 e 2021, a mediana variou
-    {{ pct("ibge_sidra.rdpc_mediana_real_pnadc", "BRA", 2014, 2021) }}. São medidas
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2012, 2024) }}. Entre 2014 e 2019, a mediana variou
+    {{ pct("ibge_sidra.rdpc_mediana_real_pnadc", "BRA", 2014, 2019) }}. São medidas
     diferentes: o PIB conta toda a produção, inclusive lucros das empresas e impostos, e a
     PNAD mede a renda declarada pelas famílias. Por isso as duas podem andar em ritmos
     diferentes.
@@ -282,7 +279,7 @@ purchasing_power:
     That is why, to compare countries, GDP per capita at purchasing power parity (PPP) is
     more suitable. In 2024, Brazil's was
     {{ v("wdi.ny_gdp_pcap_pp_kd", "BRA", 2024) }} 2021 international dollars, against
-    {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }} 2015 dollars at market exchange rates. The
+    {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }} 2015 dollars at 2015 exchange rates. The
     two numbers use different base years and should not be divided by each other; compare
     Brazil's position relative to the other countries in the two charts below.
 
@@ -291,16 +288,16 @@ purchasing_power:
     measured by the Continuous PNAD, changed
     {{ pct("ibge_sidra.rdpc_mediana_real_pnadc", "BRA", 2012, 2024) }} in real terms
     between 2012 and 2024, while GDP per capita changed
-    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2012, 2024) }}. Between 2014 and 2021, the median
-    changed {{ pct("ibge_sidra.rdpc_mediana_real_pnadc", "BRA", 2014, 2021) }}. They are
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2012, 2024) }}. Between 2014 and 2019, the median
+    changed {{ pct("ibge_sidra.rdpc_mediana_real_pnadc", "BRA", 2014, 2019) }}. They are
     different measures: GDP counts all production, including company profits and taxes,
     and the PNAD measures the income households report. That is why the two can move at
     different paces.
 references:
   - citation: "Jones, C. I., & Klenow, P. J. (2016). Beyond GDP? Welfare across countries and time. American Economic Review, 106(9), 2426–2457."
     doi: 10.1257/aer.20110236
-  - citation: "Deaton, A. (2008). Income, health, and well-being around the world: evidence from the Gallup World Poll. Journal of Economic Perspectives, 22(2), 53–72."
-    doi: 10.1257/jep.22.2.53
+  - citation: "Sacks, D. W., Stevenson, B., & Wolfers, J. (2012). The new stylized facts about income and subjective well-being. Emotion, 12(6), 1181–1187."
+    doi: 10.1037/a0029873
   - citation: "Easterlin, R. A., McVey, L. A., Switek, M., Sawangfa, O., & Zweig, J. S. (2010). The happiness–income paradox revisited. Proceedings of the National Academy of Sciences, 107(52), 22463–22468."
     doi: 10.1073/pnas.1015962107
   - citation: "Possebom, V. (2017). Free Trade Zone of Manaus: an impact evaluation using the synthetic control method. Revista Brasileira de Economia, 71(2)."
