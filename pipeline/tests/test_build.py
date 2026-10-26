@@ -66,3 +66,10 @@ def test_build_end_to_end_is_idempotent_and_logs_revisions(tmp_path, gini):
     assert revised.changes.revised == ["wdi.si_pov_gini BRA 2012: 53.0 → 52.8"]
     log = paths.changelog.read_text()
     assert log.index("## 2026-10-25") < log.index("## 2026-10-24")
+
+
+def test_source_with_only_null_values_builds_an_empty_dataset(tmp_path, gini):
+    paths = _paths(tmp_path, gini)
+    _fetch(paths, [("BRA", 2011, None)], 24)
+    result = build.build(paths, today="2026-10-24")
+    assert result.observations.empty

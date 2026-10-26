@@ -4,7 +4,7 @@
 
 ## Checklist geral / General
 
-- [ ] Testes e lint passam (`uv run pytest`, `uv run ruff check .`) / Tests and lint pass
+- [ ] Testes e lint passam (`uv run pytest`, `uv run ruff check .`, `uv run ruff format --check .`) / Tests and lint pass
 - [ ] Conteúdo em pt-BR **e** inglês / Content in Portuguese **and** English
 - [ ] Decisão metodológica nova registrada em ADR / New methodological decision recorded as an ADR
 
