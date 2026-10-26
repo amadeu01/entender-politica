@@ -1,0 +1,35 @@
+---
+import Base from "../layouts/Base.astro";
+import { documents, geoName, policy } from "../lib/data";
+import { UI, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const list = documents().policies.filter((p) => p.lang === lang).map((p) => policy(p.slug, lang));
+const lede = {
+  pt: "Políticas públicas de outros países avaliadas com métodos rigorosos, com o nível de evidência, resultados nulos ou negativos e a discussão sobre se valem para o Brasil.",
+  en: "Public policies from other countries evaluated with rigorous methods, with their level of evidence, null or negative results and a discussion of whether they apply to Brazil.",
+}[lang];
+---
+
+<Base lang={lang} title={t.nav.policies} route="policies">
+  <h1>{t.nav.policies}</h1>
+  <p class="lede">{lede}</p>
+  <ul class="card-grid">
+    {
+      list.map((p) => (
+        <li class="card">
+          <h3>
+            <a href={url(lang, "policies", p.slug)} set:html={p.name} />
+          </h3>
+          <p class="meta">
+            {geoName(p.country, lang)} · {p.period.start}–{p.period.end} · {t.evidenceLevel}:{" "}
+            {t.levels[p.evidence_level]}
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

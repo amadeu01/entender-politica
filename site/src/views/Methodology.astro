@@ -1,0 +1,138 @@
+---
+import Base from "../layouts/Base.astro";
+import { REPO, UI, asset, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const adr = (n: string) => `${REPO}/blob/main/docs/adr/${n}`;
+---
+
+<Base lang={lang} title={t.nav.methodology} route="methodology">
+  <h1>{t.nav.methodology}</h1>
+  {
+    lang === "pt" ? (
+      <>
+        <h2>Do dado ao gráfico</h2>
+        <ol>
+          <li>
+            <strong>Coleta.</strong> O pipeline baixa os dados das fontes oficiais e guarda cada arquivo bruto
+            com URL, data de coleta, licença, versão da fonte e hash sha256.
+          </li>
+          <li>
+            <strong>Normalização.</strong> Tudo vira um formato comum: geografia, ano, indicador, valor,
+            intervalo de confiança quando existe, fonte, versão, licença e marca de quebra de série
+            (<a href={adr("0002-formato-comum.md")}>ADR 0002</a>).
+          </li>
+          <li>
+            <strong>Validação.</strong> Esquema, limites de cada indicador, anos faltantes e saltos atípicos.
+            Saltos reais, como a hiperinflação e a pandemia, viram avisos para revisão, nunca correções.
+          </li>
+          <li>
+            <strong>Publicação.</strong> O site é gerado só a partir dos arquivos versionados no repositório.
+            O CI confere que regerar tudo a partir dos dados brutos reproduz exatamente os dados publicados.
+          </li>
+        </ol>
+
+        <h2>Números rastreáveis</h2>
+        <p>
+          Nenhum número é digitado à mão nos textos. Eles vêm dos dados do repositório, de artigos revisados
+          por pares (com DOI e o local no artigo) ou de uma justificativa escrita. Cada número no texto é um
+          link para a tabela "de onde vem cada número". DOIs são conferidos na Crossref
+          (<a href={adr("0007-rastreabilidade-do-conteudo.md")}>ADR 0007</a>).
+        </p>
+
+        <h2>Governos e causalidade</h2>
+        <p>
+          As faixas de governo nos gráficos e a tabela de variação por período são descritivas. Um ano é
+          atribuído ao governo em exercício em 1º de julho. Efeitos de políticas aparecem com atraso, fatores
+          externos pesam e o Congresso, os estados e o Banco Central também decidem. Por isso o Brasil aparece
+          sempre ao lado de países vizinhos, e afirmações causais só aparecem em análises com desenho causal
+          (<a href={adr("0003-governos-e-causalidade.md")}>ADR 0003</a>).
+        </p>
+
+        <h2>Quebras de série e incerteza</h2>
+        <p>
+          Quando a metodologia de uma pesquisa muda, como na troca da PNAD pela PNAD Contínua, as séries não
+          são emendadas: aparecem separadas, com a quebra marcada no gráfico. Intervalos de confiança aparecem
+          como faixas claras quando a fonte publica a incerteza.
+        </p>
+
+        <h2>Neutralidade</h2>
+        <p>
+          Toda análise traz evidências a favor e contra a hipótese. Toda ficha de política traz algum resultado
+          nulo, negativo ou misto, ou documenta onde procurou evidência contrária.
+        </p>
+
+        <h2>Licenças</h2>
+        <p>
+          Cada observação carrega a licença da fonte (<a href={adr("0006-licencas-das-fontes.md")}>ADR 0006</a>).
+          Todas as decisões metodológicas estão em <a href={`${REPO}/tree/main/docs/adr`}>docs/adr</a>.
+          O changelog dos dados está em <a href={`${REPO}/blob/main/data/CHANGELOG.md`}>data/CHANGELOG.md</a>.
+        </p>
+      </>
+    ) : (
+      <>
+        <h2>From data to chart</h2>
+        <ol>
+          <li>
+            <strong>Collection.</strong> The pipeline downloads data from official sources and stores each raw
+            file with its URL, collection date, license, source version and sha256 hash.
+          </li>
+          <li>
+            <strong>Normalization.</strong> Everything becomes one format: geography, year, indicator, value,
+            confidence interval when available, source, version, license and a series-break flag
+            (<a href={adr("0002-formato-comum.md")}>ADR 0002</a>).
+          </li>
+          <li>
+            <strong>Validation.</strong> Schema, per-indicator bounds, missing years and atypical jumps. Real
+            jumps, such as hyperinflation and the pandemic, become warnings for review, never corrections.
+          </li>
+          <li>
+            <strong>Publication.</strong> The site is generated only from files versioned in the repository. CI
+            checks that regenerating everything from raw data reproduces exactly the published data.
+          </li>
+        </ol>
+
+        <h2>Traceable numbers</h2>
+        <p>
+          No number is typed by hand in the texts. Numbers come from repository data, from peer-reviewed papers
+          (with DOI and location in the paper) or from a written justification. Every number in the text links
+          to the "where each number comes from" table. DOIs are checked on Crossref
+          (<a href={adr("0007-rastreabilidade-do-conteudo.md")}>ADR 0007</a>).
+        </p>
+
+        <h2>Governments and causality</h2>
+        <p>
+          Government bands on charts and the per-period change table are descriptive. A year is attributed to
+          the government in office on July 1. Policy effects lag, external factors matter, and Congress, the
+          states and the central bank also decide. That is why Brazil is always shown alongside neighboring
+          countries, and causal claims appear only in analyses with a causal design
+          (<a href={adr("0003-governos-e-causalidade.md")}>ADR 0003</a>).
+        </p>
+
+        <h2>Series breaks and uncertainty</h2>
+        <p>
+          When a survey's methodology changes, as when PNAD was replaced by the Continuous PNAD, series are not
+          spliced: they are shown separately, with the break marked on the chart. Confidence intervals appear as
+          light bands when the source publishes uncertainty.
+        </p>
+
+        <h2>Neutrality</h2>
+        <p>
+          Every analysis includes evidence for and against its hypothesis. Every policy brief includes a null,
+          negative or mixed result, or documents where contrary evidence was sought.
+        </p>
+
+        <h2>Licenses</h2>
+        <p>
+          Each observation carries its source's license (<a href={adr("0006-licencas-das-fontes.md")}>ADR 0006</a>).
+          All methodological decisions are in <a href={`${REPO}/tree/main/docs/adr`}>docs/adr</a>. The data
+          changelog is in <a href={`${REPO}/blob/main/data/CHANGELOG.md`}>data/CHANGELOG.md</a>.
+        </p>
+      </>
+    )
+  }
+  <p><a href={asset("data/catalog.json")}>catalog.json</a> · <a href={asset("data/governments.json")}>governments.json</a></p>
+</Base>

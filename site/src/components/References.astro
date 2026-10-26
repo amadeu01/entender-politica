@@ -1,0 +1,22 @@
+---
+import type { RenderedReference } from "../lib/data";
+interface Props {
+  refs: RenderedReference[];
+}
+const { refs } = Astro.props;
+---
+
+<ol class="refs">
+  {
+    refs.map((r) => (
+      <li id={r.doi ? `ref-${r.doi.replace(/[^a-z0-9]/gi, "-")}` : undefined}>
+        {r.citation}{" "}
+        {r.doi ? (
+          <a href={`https://doi.org/${r.doi}`}>doi:{r.doi}</a>
+        ) : (
+          r.url && <a href={r.url}>{r.url}</a>
+        )}
+      </li>
+    ))
+  }
+</ol>

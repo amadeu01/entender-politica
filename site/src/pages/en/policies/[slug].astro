@@ -1,0 +1,11 @@
+---
+import View from "../../../views/Policy.astro";
+import { documents } from "../../../lib/data";
+
+export function getStaticPaths() {
+  return documents().policies.filter((p) => p.lang === "en").map((p) => ({ params: { slug: p.slug } }));
+}
+const { slug } = Astro.params;
+---
+
+<View lang="en" slug={slug} />

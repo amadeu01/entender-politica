@@ -1,0 +1,11 @@
+---
+import View from "../../../views/Indicator.astro";
+import { catalog } from "../../../lib/data";
+
+export function getStaticPaths() {
+  return catalog().map((i) => ({ params: { id: i.id } }));
+}
+const { id } = Astro.params;
+---
+
+<View lang="en" id={id} />

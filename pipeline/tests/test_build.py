@@ -12,7 +12,7 @@ def _paths(tmp_path, gini) -> build.Paths:
     indicators = tmp_path / "indicators"
     indicators.mkdir()
     data = gini.model_dump(mode="json") | {
-        "series_breaks": [{"year": 2012, "note": {"pt": "q", "en": "b"}}]
+        "series_breaks": [{"year": 2012, "geo": "BRA", "note": {"pt": "q", "en": "b"}}]
     }
     (indicators / f"{gini.id}.yaml").write_text(json.dumps(data))
     registry = tmp_path / "dois.json"
@@ -42,12 +42,13 @@ def _fetch(paths, rows, day):
 
 def test_build_end_to_end_is_idempotent_and_logs_revisions(tmp_path, gini):
     paths = _paths(tmp_path, gini)
-    _fetch(paths, [("BRA", 2011, 52.0), ("BRA", 2012, 53.0)], 24)
+    _fetch(paths, [("BRA", 2011, 52.0), ("BRA", 2012, 53.0), ("MEX", 2012, 49.0)], 24)
 
     first = build.build(paths, today="2026-10-24")
-    assert first.changes.added == 2
+    assert first.changes.added == 3
     processed = pd.read_parquet(paths.processed / "observations.parquet")
-    assert processed.set_index("year")["series_break"].to_dict() == {2011: False, 2012: True}
+    breaks = processed.set_index(["geo_code", "year"])["series_break"].to_dict()
+    assert breaks == {("BRA", 2011): False, ("BRA", 2012): True, ("MEX", 2012): False}
 
     series = json.loads((paths.site / "series" / "wdi.si_pov_gini.json").read_text())
     assert series["license"] == "CC-BY-4.0"
@@ -66,7 +67,7 @@ def test_build_end_to_end_is_idempotent_and_logs_revisions(tmp_path, gini):
     assert not again.changes
     assert paths.changelog.read_text().count("## ") == 1
 
-    _fetch(paths, [("BRA", 2011, 52.0), ("BRA", 2012, 52.8)], 25)
+    _fetch(paths, [("BRA", 2011, 52.0), ("BRA", 2012, 52.8), ("MEX", 2012, 49.0)], 25)
     revised = build.build(paths, today="2026-10-25")
     assert revised.changes.revised == ["wdi.si_pov_gini BRA 2012: 53.0 → 52.8"]
     log = paths.changelog.read_text()

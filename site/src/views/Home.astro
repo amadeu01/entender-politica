@@ -1,0 +1,90 @@
+---
+import Base from "../layouts/Base.astro";
+import { catalog, documents } from "../lib/data";
+import { UI, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const docs = documents();
+const analyses = docs.analyses.filter((a) => a.lang === lang);
+const policies = docs.policies.filter((p) => p.lang === lang);
+const nIndicators = catalog().length;
+const copy = {
+  pt: {
+    lede: "Um site para entender mudanças políticas e de políticas públicas no Brasil desde 1980 com dados abertos, métricas consagradas e artigos revisados por pares. Cada número leva à sua fonte.",
+    chainTitle: "Todo argumento segue a mesma estrutura",
+    chain: ["Afirmação", "Métrica", "Dados", "Fonte científica (DOI)", "Limitações"],
+    brazil: "Indicadores sociais e econômicos com as faixas de cada governo e comparação com países vizinhos.",
+    catalog: `${nIndicators} indicadores com definição, fórmula, fonte, críticas à métrica e dados para baixar.`,
+    analyses: "Análises",
+    policies: "Políticas de referência",
+    principles: "Princípios",
+    list: [
+      "Correlação não é causalidade: linhas do tempo por governo são descritivas.",
+      "Incerteza visível: intervalos de confiança e quebras de série nos gráficos.",
+      "Neutralidade: toda análise apresenta evidências a favor e contra.",
+      "Reprodutibilidade: todo gráfico pode ser regerado a partir do código aberto.",
+    ],
+  },
+  en: {
+    lede: "A site to understand political and public policy change in Brazil since 1980 with open data, established metrics and peer-reviewed research. Every number links to its source.",
+    chainTitle: "Every argument follows the same structure",
+    chain: ["Claim", "Metric", "Data", "Scientific source (DOI)", "Limitations"],
+    brazil: "Social and economic indicators with each government's period and comparison with neighboring countries.",
+    catalog: `${nIndicators} indicators with definition, formula, source, criticisms of the metric and downloadable data.`,
+    analyses: "Analyses",
+    policies: "Reference policies",
+    principles: "Principles",
+    list: [
+      "Correlation is not causation: timelines by government are descriptive.",
+      "Visible uncertainty: confidence intervals and series breaks on charts.",
+      "Neutrality: every analysis presents evidence for and against.",
+      "Reproducibility: every chart can be regenerated from the open code.",
+    ],
+  },
+}[lang];
+---
+
+<Base lang={lang} title={t.siteName} route="home">
+  <h1>{t.siteName}</h1>
+  <p class="lede">{copy.lede}</p>
+
+  <h2>{copy.chainTitle}</h2>
+  <ol class="chain">{copy.chain.map((c) => <li>{c}</li>)}</ol>
+
+  <ul class="card-grid">
+    <li class="card">
+      <h3><a href={url(lang, "brazil")}>{t.nav.brazil}</a></h3>
+      <p>{copy.brazil}</p>
+    </li>
+    <li class="card">
+      <h3><a href={url(lang, "indicators")}>{t.nav.indicators}</a></h3>
+      <p>{copy.catalog}</p>
+    </li>
+    {
+      analyses.map((a) => (
+        <li class="card">
+          <p class="meta">{copy.analyses}</p>
+          <h3>
+            <a href={url(lang, "analyses", a.slug)} set:html={a.title} />
+          </h3>
+        </li>
+      ))
+    }
+    {
+      policies.map((p) => (
+        <li class="card">
+          <p class="meta">{copy.policies}</p>
+          <h3>
+            <a href={url(lang, "policies", p.slug)} set:html={p.name} />
+          </h3>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>{copy.principles}</h2>
+  <ul>{copy.list.map((l) => <li>{l}</li>)}</ul>
+</Base>

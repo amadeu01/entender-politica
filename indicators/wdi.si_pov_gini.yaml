@@ -51,14 +51,17 @@ references:
     url: https://datanalytics.worldbank.org/PIP-Methodology/
 series_breaks:
   - year: 2012
+    geo: BRA
     note:
       pt: "Brasil: PNAD substituída pela PNAD Contínua. Os níveis não são diretamente comparáveis."
       en: "Brazil: PNAD replaced by the Continuous PNAD. Levels are not directly comparable."
   - year: 2020
+    geo: BRA
     note:
       pt: "Brasil: em 2020–2021 a renda vem da 5ª visita da PNAD Contínua (pandemia), não da 1ª."
       en: "Brazil: in 2020–2021 income comes from the Continuous PNAD 5th visit (pandemic), not the 1st."
   - year: 2022
+    geo: BRA
     note:
       pt: "Brasil: retorno à 1ª visita da PNAD Contínua."
       en: "Brazil: return to the Continuous PNAD 1st visit."

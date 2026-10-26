@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+import { REPO, UI, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const copy = {
+  pt: {
+    lede: "O projeto é aberto: dados, código e textos estão no GitHub e qualquer pessoa pode propor mudanças.",
+    items: [
+      "Nova fonte de dados: um conector no pipeline, com testes e manifesto de proveniência.",
+      "Novo indicador: definição, fórmula, fonte, artigo que fundamenta a métrica e críticas.",
+      "Nova análise: pergunta, hipótese, método, evidências a favor e contra, limitações, em português e inglês.",
+      "Nova ficha de política: desenho da avaliação, resultados com DOI, validade externa para o Brasil. Políticas que não funcionaram também são bem-vindas.",
+      "Correções de dados, tradução, acessibilidade e código.",
+    ],
+    review: "Todo pull request passa por um checklist científico: fonte, método, causalidade, incerteza, limitações, viés, linguagem neutra e tradução.",
+    guide: "Guia completo (CONTRIBUTING.md)",
+    issues: "Abrir uma issue",
+  },
+  en: {
+    lede: "The project is open: data, code and texts are on GitHub and anyone can propose changes.",
+    items: [
+      "New data source: a pipeline connector, with tests and a provenance manifest.",
+      "New indicator: definition, formula, source, the paper behind the metric and criticisms.",
+      "New analysis: question, hypothesis, method, evidence for and against, limitations, in Portuguese and English.",
+      "New policy brief: evaluation design, findings with DOI, external validity for Brazil. Policies that did not work are welcome too.",
+      "Fixes to data, translation, accessibility and code.",
+    ],
+    review: "Every pull request goes through a scientific checklist: source, method, causality, uncertainty, limitations, bias, neutral language and translation.",
+    guide: "Full guide (CONTRIBUTING.md)",
+    issues: "Open an issue",
+  },
+}[lang];
+---
+
+<Base lang={lang} title={t.nav.contribute} route="contribute">
+  <h1>{t.nav.contribute}</h1>
+  <p class="lede">{copy.lede}</p>
+  <ul>{copy.items.map((i) => <li>{i}</li>)}</ul>
+  <p>{copy.review}</p>
+  <p>
+    <a href={`${REPO}/blob/main/CONTRIBUTING.md`}>{copy.guide}</a> ·
+    <a href={`${REPO}/issues`}>{copy.issues}</a>
+  </p>
+</Base>

@@ -41,6 +41,7 @@ def _period(id_, start, end):
     return {
         "id": id_,
         "president": "X",
+        "short_name": "X",
         "condition": "titular",
         "term": {"pt": "t", "en": "t"},
         "start": start,
@@ -100,6 +101,7 @@ def test_inauguration_on_january_fifth_is_not_mid_year():
         return {
             "id": id_,
             "president": president,
+            "short_name": president,
             "condition": "titular",
             "term": {"pt": "t", "en": "t"},
             "start": start,

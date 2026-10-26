@@ -1,0 +1,11 @@
+---
+import { UI, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<p class="notice" role="note">
+  <a href={url(lang, "methodology")}>{UI[lang].notice}</a>
+</p>
