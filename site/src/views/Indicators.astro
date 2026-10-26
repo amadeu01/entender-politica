@@ -7,7 +7,10 @@ interface Props {
 }
 const { lang } = Astro.props;
 const t = UI[lang];
-const bySource = Map.groupBy(catalog(), (i) => i.source);
+const bySource = Map.groupBy(
+  catalog().filter((i) => i.listed !== false),
+  (i) => i.source,
+);
 const lede = {
   pt: "Cada indicador traz definição, fórmula, fonte, o artigo que fundamenta a métrica e as críticas conhecidas a ela.",
   en: "Each indicator has its definition, formula, source, the paper behind the metric and its known criticisms.",

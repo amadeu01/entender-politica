@@ -27,6 +27,7 @@ export type Indicator = {
   criticisms: Text[];
   references: Reference[];
   series_breaks: { year: number; geo: string | null; note: Text }[];
+  listed?: boolean;
 };
 export type Geography = { code: string; level: string; name: Text };
 export type Period = {

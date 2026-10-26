@@ -57,6 +57,8 @@ class Indicator(BaseModel):
     min: float | None = None
     max: float | None = None
     series_breaks: list[SeriesBreak] = []
+    # Unlisted indicators keep their page but are left out of the index and home count.
+    listed: bool = True
 
     @model_validator(mode="after")
     def _id_matches_source(self) -> "Indicator":

@@ -2,6 +2,8 @@
 
 Catalog entries set `source_params`: `table`, `variable` and, when IBGE publishes it,
 `cv_variable` (coefficient of variation, in %), turned into a 95% interval.
+Optional `classification` + `category` read one category of a SIDRA classification: the whole
+classification is fetched once (`/c{classification}/all`, category in `D4C`) and shared.
 https://apisidra.ibge.gov.br/
 """
 
@@ -36,7 +38,8 @@ class SidraSource:
         for ind in indicators:
             p = ind.source_params
             variables = ",".join(v for v in (p["variable"], p.get("cv_variable")) if v)
-            url = f"{VALUES_API}/t/{p['table']}/n1/all/v/{variables}/p/all?formato=json"
+            cls = f"/c{p['classification']}/all" if "classification" in p else ""
+            url = f"{VALUES_API}/t/{p['table']}/n1/all/v/{variables}/p/all{cls}?formato=json"
             files.append(RawFile(_values_file(ind), url, _get(client, url)))
 
             periods_url = f"{METADATA_API}/{p['table']}/periodos"
@@ -57,6 +60,8 @@ class SidraSource:
             p = ind.source_params
             # First record is the header row.
             records = json.loads(snapshot.read(_values_file(ind)))[1:]
+            if "classification" in p:
+                records = [r for r in records if r["D4C"] == p["category"]]
             values = _by_year(records, p["variable"])
             cvs = _by_year(records, p["cv_variable"]) if "cv_variable" in p else {}
             for year, value in values.items():
@@ -70,7 +75,9 @@ class SidraSource:
 
 
 def _values_file(ind: Indicator) -> str:
-    return f"{ind.source_params['table']}-{ind.source_params['variable']}.json"
+    p = ind.source_params
+    suffix = f"-c{p['classification']}" if "classification" in p else ""
+    return f"{p['table']}-{p['variable']}{suffix}.json"
 
 
 def _get(client: httpx.Client, url: str) -> bytes:
