@@ -116,3 +116,4 @@ def test_fetch_shares_one_file_per_table_classification():
 
     assert [f.name for f in files].count("7438-10769-c1019.json") == 1
     assert any("/t/7438/n1/all/v/10769/p/all/c1019/all" in u for u in seen)
+    assert len(seen) == 2  # one values request and one periods request, not one per indicator
