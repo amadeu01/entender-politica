@@ -1,0 +1,20 @@
+{
+  "source_id": "ibge_sidra",
+  "retrieved_at": "2026-10-26T01:07:55+00:00",
+  "source_version": "2026-05-08",
+  "license": "LicenseRef-IBGE-reuse-with-attribution",
+  "files": [
+    {
+      "name": "7435-10681.json",
+      "url": "https://apisidra.ibge.gov.br/values/t/7435/n1/all/v/10681,10682/p/all?formato=json",
+      "sha256": "4e1649bdc0835bdee1784906ec242b05c945ea4f45c00b5fcfa5b97795ffdc1a",
+      "bytes": 6487
+    },
+    {
+      "name": "7435-periodos.json",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/7435/periodos",
+      "sha256": "f025a0b2a1430109aec9f3ff11a581b77f451ec7422e79e1ccf322bc2c1d1334",
+      "bytes": 855
+    }
+  ]
+}

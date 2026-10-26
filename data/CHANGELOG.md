@@ -2,6 +2,46 @@
 
 ## 2026-10-26
 
+- Fonte / Source `ibge_sidra`: versão / version `2026-05-08`
+- Fonte / Source `ipeadata`: versão / version `2016-01-06`
+- Fonte / Source `undp_hdr`: versão / version `HDR 2025`
+- Fonte / Source `wdi`: versão / version `2026-10-08`
+- Fonte / Source `wgi`: versão / version `2026-09-25`
+- Séries novas / New series: 28
+  - `ibge_sidra.gini_pnadc BRA`
+  - `ipeadata.disoc_ppy BRA`
+  - `ipeadata.disoc_rdcg BRA`
+  - `undp_hdr.hdi ARG`
+  - `undp_hdr.hdi BRA`
+  - `undp_hdr.hdi CHL`
+  - `undp_hdr.hdi COL`
+  - `undp_hdr.hdi MEX`
+  - `undp_hdr.ihdi ARG`
+  - `undp_hdr.ihdi BRA`
+  - `undp_hdr.ihdi CHL`
+  - `undp_hdr.ihdi COL`
+  - `undp_hdr.ihdi MEX`
+  - `wgi.gov_wgi_cc_est ARG`
+  - `wgi.gov_wgi_cc_est BRA`
+  - `wgi.gov_wgi_cc_est CHL`
+  - `wgi.gov_wgi_cc_est COL`
+  - `wgi.gov_wgi_cc_est MEX`
+  - `wgi.gov_wgi_ge_est ARG`
+  - `wgi.gov_wgi_ge_est BRA`
+  - `wgi.gov_wgi_ge_est CHL`
+  - `wgi.gov_wgi_ge_est COL`
+  - `wgi.gov_wgi_ge_est MEX`
+  - `wgi.gov_wgi_va_est ARG`
+  - `wgi.gov_wgi_va_est BRA`
+  - `wgi.gov_wgi_va_est CHL`
+  - `wgi.gov_wgi_va_est COL`
+  - `wgi.gov_wgi_va_est MEX`
+- Observações adicionadas / Observations added: 727
+- Observações removidas / Observations removed: 0
+- Valores revisados pela fonte / Values revised upstream: 0
+
+## 2026-10-26
+
 - Fonte / Source `wdi`: versão / version `2026-10-08`
 - Séries novas / New series: 40
   - `wdi.fp_cpi_totl_zg ARG`

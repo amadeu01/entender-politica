@@ -1,0 +1,14 @@
+{
+  "source_id": "undp_hdr",
+  "retrieved_at": "2026-10-26T01:07:55+00:00",
+  "source_version": "HDR 2025",
+  "license": "CC-BY-3.0-IGO",
+  "files": [
+    {
+      "name": "composite_indices_time_series.csv",
+      "url": "https://hdr.undp.org/sites/default/files/2025_HDR/HDR25_Composite_indices_complete_time_series.csv",
+      "sha256": "61ed82e5b66c88dfca8ff9fac775c63981ecab6a254862af97acacc41c143117",
+      "bytes": 2001263
+    }
+  ]
+}

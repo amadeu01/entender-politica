@@ -1,0 +1,44 @@
+{
+  "source_id": "wgi",
+  "retrieved_at": "2026-10-26T01:07:55+00:00",
+  "source_version": "2026-09-25",
+  "license": "CC-BY-4.0",
+  "files": [
+    {
+      "name": "GOV_WGI_CC.EST.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/GOV_WGI_CC.EST?source=3&format=json&per_page=20000&date=1975:2026",
+      "sha256": "a08dd62be508757470407dd3edef0f2274f2223f555613526a237e4e68bc1cba",
+      "bytes": 33772
+    },
+    {
+      "name": "GOV_WGI_CC.SE.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/GOV_WGI_CC.SE?source=3&format=json&per_page=20000&date=1975:2026",
+      "sha256": "ec56ab99639b1dbc93bbd4738858f9b53df7f3440315d8f789879951a322fed6",
+      "bytes": 33408
+    },
+    {
+      "name": "GOV_WGI_GE.EST.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/GOV_WGI_GE.EST?source=3&format=json&per_page=20000&date=1975:2026",
+      "sha256": "744818d2cece33fb44c4e2b9014588549c6d3dc5f254340d6536bc3955fc7eb2",
+      "bytes": 34126
+    },
+    {
+      "name": "GOV_WGI_GE.SE.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/GOV_WGI_GE.SE?source=3&format=json&per_page=20000&date=1975:2026",
+      "sha256": "76e31efaa50fc1b2fea29b8ae4039d5dffc6488fd748b0b7f2d7485365887e70",
+      "bytes": 33809
+    },
+    {
+      "name": "GOV_WGI_VA.EST.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/GOV_WGI_VA.EST?source=3&format=json&per_page=20000&date=1975:2026",
+      "sha256": "845113cca06010b0eb30d7da479bee236d38ba113eb61b175da06777b094e74c",
+      "bytes": 34101
+    },
+    {
+      "name": "GOV_WGI_VA.SE.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/GOV_WGI_VA.SE?source=3&format=json&per_page=20000&date=1975:2026",
+      "sha256": "159b424b38c9414260ea89a76c792a7a9b0d839ffa2aaef13ffa67c634a72b0b",
+      "bytes": 33811
+    }
+  ]
+}

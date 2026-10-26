@@ -1,4 +1,326 @@
 geo_code,geo_level,year,indicator_id,value,lower,upper,unit,source_id,source_version,retrieved_at,license,series_break
+BRA,country,2012,ibge_sidra.gini_pnadc,0.54,0.5336496000000001,0.5463504,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2013,ibge_sidra.gini_pnadc,0.532,0.52574368,0.53825632,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2014,ibge_sidra.gini_pnadc,0.526,0.51981424,0.5321857600000001,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2015,ibge_sidra.gini_pnadc,0.524,0.5168107200000001,0.53118928,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2016,ibge_sidra.gini_pnadc,0.537,0.52857984,0.54542016,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2017,ibge_sidra.gini_pnadc,0.539,0.53160492,0.54639508,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2018,ibge_sidra.gini_pnadc,0.545,0.5353862,0.5546138,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2019,ibge_sidra.gini_pnadc,0.543,0.5355500400000001,0.55044996,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2020,ibge_sidra.gini_pnadc,0.523,0.51479936,0.53120064,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,True
+BRA,country,2021,ibge_sidra.gini_pnadc,0.543,0.5366143200000001,0.54938568,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2022,ibge_sidra.gini_pnadc,0.517,0.51092008,0.52307992,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,True
+BRA,country,2023,ibge_sidra.gini_pnadc,0.517,0.50990676,0.52409324,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2024,ibge_sidra.gini_pnadc,0.504,0.49807296,0.50992704,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,2025,ibge_sidra.gini_pnadc,0.511,0.50499064,0.51700936,index_0_1,ibge_sidra,2026-05-08,2026-10-26T01:07:55+00:00,LicenseRef-IBGE-reuse-with-attribution,False
+BRA,country,1976,ipeadata.disoc_ppy,42.1167229089763,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1977,ipeadata.disoc_ppy,39.0632294999594,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1978,ipeadata.disoc_ppy,42.7373321378275,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1979,ipeadata.disoc_ppy,38.7369003586032,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1981,ipeadata.disoc_ppy,40.78639940345,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1982,ipeadata.disoc_ppy,41.0037516344219,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1983,ipeadata.disoc_ppy,48.7335215214752,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1984,ipeadata.disoc_ppy,48.3048353200509,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1985,ipeadata.disoc_ppy,42.0075719474568,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1986,ipeadata.disoc_ppy,26.4111509231732,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1987,ipeadata.disoc_ppy,38.710240907139,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1988,ipeadata.disoc_ppy,43.5729318060916,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1989,ipeadata.disoc_ppy,41.3619770232427,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1990,ipeadata.disoc_ppy,41.9225995885211,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1992,ipeadata.disoc_ppy,42.0924280128688,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1993,ipeadata.disoc_ppy,42.9799209464312,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1995,ipeadata.disoc_ppy,35.0793952349548,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1996,ipeadata.disoc_ppy,34.7289732415829,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1997,ipeadata.disoc_ppy,35.175568555776,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1998,ipeadata.disoc_ppy,33.9746909389369,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1999,ipeadata.disoc_ppy,35.256397545013,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2001,ipeadata.disoc_ppy,35.0875861892043,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2002,ipeadata.disoc_ppy,34.3795326315975,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2003,ipeadata.disoc_ppy,35.7505476188909,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2004,ipeadata.disoc_ppy,33.7124643609299,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2005,ipeadata.disoc_ppy,30.8346965027347,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2006,ipeadata.disoc_ppy,26.7540597717612,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2007,ipeadata.disoc_ppy,25.3593083869705,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2008,ipeadata.disoc_ppy,22.6018304823834,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2009,ipeadata.disoc_ppy,21.4104851420814,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2011,ipeadata.disoc_ppy,18.4248186155223,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2012,ipeadata.disoc_ppy,15.9279205895065,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2013,ipeadata.disoc_ppy,15.0904096939302,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2014,ipeadata.disoc_ppy,13.2876791821472,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1976,ipeadata.disoc_rdcg,0.622740048269442,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1977,ipeadata.disoc_rdcg,0.624647679747385,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1978,ipeadata.disoc_rdcg,0.60390678461725,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1979,ipeadata.disoc_rdcg,0.593120828431272,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1981,ipeadata.disoc_rdcg,0.584201044440558,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1982,ipeadata.disoc_rdcg,0.591455990771572,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1983,ipeadata.disoc_rdcg,0.595971369477619,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1984,ipeadata.disoc_rdcg,0.589383324878664,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1985,ipeadata.disoc_rdcg,0.597667918377497,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1986,ipeadata.disoc_rdcg,0.588044931437123,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1987,ipeadata.disoc_rdcg,0.600557448310031,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1988,ipeadata.disoc_rdcg,0.616371706324988,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1989,ipeadata.disoc_rdcg,0.635569534688695,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1990,ipeadata.disoc_rdcg,0.613884134032126,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1992,ipeadata.disoc_rdcg,0.582522412942549,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1993,ipeadata.disoc_rdcg,0.604436889650206,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1995,ipeadata.disoc_rdcg,0.60050664738202,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1996,ipeadata.disoc_rdcg,0.602054079464361,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1997,ipeadata.disoc_rdcg,0.602091840088784,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1998,ipeadata.disoc_rdcg,0.60015496820972,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1999,ipeadata.disoc_rdcg,0.593973924815284,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2001,ipeadata.disoc_rdcg,0.595782270759072,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2002,ipeadata.disoc_rdcg,0.589286530265019,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2003,ipeadata.disoc_rdcg,0.583019477516815,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2004,ipeadata.disoc_rdcg,0.57245923760349,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2005,ipeadata.disoc_rdcg,0.56952641427141,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2006,ipeadata.disoc_rdcg,0.562974276364698,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2007,ipeadata.disoc_rdcg,0.555952195335968,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2008,ipeadata.disoc_rdcg,0.546182206326333,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2009,ipeadata.disoc_rdcg,0.542581475366305,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2011,ipeadata.disoc_rdcg,0.531389367431006,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2012,ipeadata.disoc_rdcg,0.529710654306152,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2013,ipeadata.disoc_rdcg,0.527496734249119,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2014,ipeadata.disoc_rdcg,0.517949507143333,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+ARG,country,1990,undp_hdr.hdi,0.733,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,1991,undp_hdr.hdi,0.739,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,1992,undp_hdr.hdi,0.743,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,1993,undp_hdr.hdi,0.748,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,1994,undp_hdr.hdi,0.753,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,1995,undp_hdr.hdi,0.754,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,1996,undp_hdr.hdi,0.76,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,1997,undp_hdr.hdi,0.768,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,1998,undp_hdr.hdi,0.772,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,1999,undp_hdr.hdi,0.783,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2000,undp_hdr.hdi,0.789,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2001,undp_hdr.hdi,0.795,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2002,undp_hdr.hdi,0.795,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2003,undp_hdr.hdi,0.804,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2004,undp_hdr.hdi,0.808,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2005,undp_hdr.hdi,0.812,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2006,undp_hdr.hdi,0.822,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2007,undp_hdr.hdi,0.825,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2008,undp_hdr.hdi,0.833,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2009,undp_hdr.hdi,0.835,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2010,undp_hdr.hdi,0.844,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2011,undp_hdr.hdi,0.852,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2012,undp_hdr.hdi,0.85,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2013,undp_hdr.hdi,0.852,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2014,undp_hdr.hdi,0.855,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2015,undp_hdr.hdi,0.859,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2016,undp_hdr.hdi,0.857,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2017,undp_hdr.hdi,0.861,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2018,undp_hdr.hdi,0.861,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2019,undp_hdr.hdi,0.861,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2020,undp_hdr.hdi,0.851,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2021,undp_hdr.hdi,0.847,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2022,undp_hdr.hdi,0.858,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2023,undp_hdr.hdi,0.865,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,1990,undp_hdr.hdi,0.641,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,1991,undp_hdr.hdi,0.645,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,1992,undp_hdr.hdi,0.648,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,1993,undp_hdr.hdi,0.654,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,1994,undp_hdr.hdi,0.659,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,1995,undp_hdr.hdi,0.666,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,1996,undp_hdr.hdi,0.671,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,1997,undp_hdr.hdi,0.676,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,1998,undp_hdr.hdi,0.68,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,1999,undp_hdr.hdi,0.684,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2000,undp_hdr.hdi,0.69,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2001,undp_hdr.hdi,0.694,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2002,undp_hdr.hdi,0.7,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2003,undp_hdr.hdi,0.705,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2004,undp_hdr.hdi,0.712,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2005,undp_hdr.hdi,0.718,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2006,undp_hdr.hdi,0.725,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2007,undp_hdr.hdi,0.732,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2008,undp_hdr.hdi,0.739,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2009,undp_hdr.hdi,0.742,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2010,undp_hdr.hdi,0.748,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2011,undp_hdr.hdi,0.753,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2012,undp_hdr.hdi,0.758,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2013,undp_hdr.hdi,0.762,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2014,undp_hdr.hdi,0.765,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2015,undp_hdr.hdi,0.764,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2016,undp_hdr.hdi,0.765,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2017,undp_hdr.hdi,0.77,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2018,undp_hdr.hdi,0.774,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2019,undp_hdr.hdi,0.776,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2020,undp_hdr.hdi,0.77,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2021,undp_hdr.hdi,0.768,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2022,undp_hdr.hdi,0.78,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2023,undp_hdr.hdi,0.786,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,1990,undp_hdr.hdi,0.718,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,1991,undp_hdr.hdi,0.723,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,1992,undp_hdr.hdi,0.73,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,1993,undp_hdr.hdi,0.725,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,1994,undp_hdr.hdi,0.73,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,1995,undp_hdr.hdi,0.739,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,1996,undp_hdr.hdi,0.745,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,1997,undp_hdr.hdi,0.752,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,1998,undp_hdr.hdi,0.759,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,1999,undp_hdr.hdi,0.766,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2000,undp_hdr.hdi,0.771,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2001,undp_hdr.hdi,0.778,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2002,undp_hdr.hdi,0.784,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2003,undp_hdr.hdi,0.789,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2004,undp_hdr.hdi,0.797,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2005,undp_hdr.hdi,0.804,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2006,undp_hdr.hdi,0.804,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2007,undp_hdr.hdi,0.812,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2008,undp_hdr.hdi,0.82,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2009,undp_hdr.hdi,0.819,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2010,undp_hdr.hdi,0.823,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2011,undp_hdr.hdi,0.823,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2012,undp_hdr.hdi,0.832,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2013,undp_hdr.hdi,0.845,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2014,undp_hdr.hdi,0.849,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2015,undp_hdr.hdi,0.855,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2016,undp_hdr.hdi,0.859,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2017,undp_hdr.hdi,0.862,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2018,undp_hdr.hdi,0.866,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2019,undp_hdr.hdi,0.867,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2020,undp_hdr.hdi,0.856,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2021,undp_hdr.hdi,0.865,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2022,undp_hdr.hdi,0.869,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2023,undp_hdr.hdi,0.878,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,1990,undp_hdr.hdi,0.623,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,1991,undp_hdr.hdi,0.63,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,1992,undp_hdr.hdi,0.639,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,1993,undp_hdr.hdi,0.645,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,1994,undp_hdr.hdi,0.65,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,1995,undp_hdr.hdi,0.655,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,1996,undp_hdr.hdi,0.663,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,1997,undp_hdr.hdi,0.67,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,1998,undp_hdr.hdi,0.676,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,1999,undp_hdr.hdi,0.673,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2000,undp_hdr.hdi,0.679,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2001,undp_hdr.hdi,0.681,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2002,undp_hdr.hdi,0.684,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2003,undp_hdr.hdi,0.691,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2004,undp_hdr.hdi,0.699,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2005,undp_hdr.hdi,0.711,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2006,undp_hdr.hdi,0.712,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2007,undp_hdr.hdi,0.724,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2008,undp_hdr.hdi,0.731,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2009,undp_hdr.hdi,0.736,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2010,undp_hdr.hdi,0.741,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2011,undp_hdr.hdi,0.747,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2012,undp_hdr.hdi,0.748,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2013,undp_hdr.hdi,0.76,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2014,undp_hdr.hdi,0.763,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2015,undp_hdr.hdi,0.767,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2016,undp_hdr.hdi,0.772,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2017,undp_hdr.hdi,0.774,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2018,undp_hdr.hdi,0.775,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2019,undp_hdr.hdi,0.777,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2020,undp_hdr.hdi,0.764,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2021,undp_hdr.hdi,0.762,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2022,undp_hdr.hdi,0.782,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2023,undp_hdr.hdi,0.788,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,1990,undp_hdr.hdi,0.668,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,1991,undp_hdr.hdi,0.67,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,1992,undp_hdr.hdi,0.672,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,1993,undp_hdr.hdi,0.675,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,1994,undp_hdr.hdi,0.68,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,1995,undp_hdr.hdi,0.68,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,1996,undp_hdr.hdi,0.687,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,1997,undp_hdr.hdi,0.694,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,1998,undp_hdr.hdi,0.701,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,1999,undp_hdr.hdi,0.706,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2000,undp_hdr.hdi,0.712,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2001,undp_hdr.hdi,0.715,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2002,undp_hdr.hdi,0.722,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2003,undp_hdr.hdi,0.728,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2004,undp_hdr.hdi,0.732,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2005,undp_hdr.hdi,0.736,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2006,undp_hdr.hdi,0.745,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2007,undp_hdr.hdi,0.747,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2008,undp_hdr.hdi,0.75,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2009,undp_hdr.hdi,0.749,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2010,undp_hdr.hdi,0.751,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2011,undp_hdr.hdi,0.757,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2012,undp_hdr.hdi,0.764,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2013,undp_hdr.hdi,0.765,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2014,undp_hdr.hdi,0.769,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2015,undp_hdr.hdi,0.773,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2016,undp_hdr.hdi,0.778,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2017,undp_hdr.hdi,0.781,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2018,undp_hdr.hdi,0.785,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2019,undp_hdr.hdi,0.788,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2020,undp_hdr.hdi,0.763,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2021,undp_hdr.hdi,0.761,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2022,undp_hdr.hdi,0.783,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2023,undp_hdr.hdi,0.789,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2010,undp_hdr.ihdi,0.723,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2011,undp_hdr.ihdi,0.732,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2012,undp_hdr.ihdi,0.739,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2013,undp_hdr.ihdi,0.741,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2014,undp_hdr.ihdi,0.744,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2015,undp_hdr.ihdi,0.748,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2016,undp_hdr.ihdi,0.747,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2017,undp_hdr.ihdi,0.752,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2018,undp_hdr.ihdi,0.75,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2019,undp_hdr.ihdi,0.75,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2020,undp_hdr.ihdi,0.742,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2021,undp_hdr.ihdi,0.743,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2022,undp_hdr.ihdi,0.754,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+ARG,country,2023,undp_hdr.ihdi,0.761,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2010,undp_hdr.ihdi,0.566,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2011,undp_hdr.ihdi,0.569,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2012,undp_hdr.ihdi,0.529,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2013,undp_hdr.ihdi,0.539,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2014,undp_hdr.ihdi,0.545,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2015,undp_hdr.ihdi,0.549,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2016,undp_hdr.ihdi,0.579,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2017,undp_hdr.ihdi,0.581,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2018,undp_hdr.ihdi,0.585,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2019,undp_hdr.ihdi,0.589,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2020,undp_hdr.ihdi,0.598,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2021,undp_hdr.ihdi,0.582,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2022,undp_hdr.ihdi,0.589,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+BRA,country,2023,undp_hdr.ihdi,0.594,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2010,undp_hdr.ihdi,0.67,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2011,undp_hdr.ihdi,0.679,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2012,undp_hdr.ihdi,0.686,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2013,undp_hdr.ihdi,0.702,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2014,undp_hdr.ihdi,0.706,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2015,undp_hdr.ihdi,0.717,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2016,undp_hdr.ihdi,0.721,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2017,undp_hdr.ihdi,0.72,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2018,undp_hdr.ihdi,0.724,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2019,undp_hdr.ihdi,0.725,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2020,undp_hdr.ihdi,0.701,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2021,undp_hdr.ihdi,0.708,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2022,undp_hdr.ihdi,0.715,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+CHL,country,2023,undp_hdr.ihdi,0.723,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2010,undp_hdr.ihdi,0.543,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2011,undp_hdr.ihdi,0.552,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2012,undp_hdr.ihdi,0.56,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2013,undp_hdr.ihdi,0.568,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2014,undp_hdr.ihdi,0.574,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2015,undp_hdr.ihdi,0.585,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2016,undp_hdr.ihdi,0.591,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2017,undp_hdr.ihdi,0.598,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2018,undp_hdr.ihdi,0.599,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2019,undp_hdr.ihdi,0.595,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2020,undp_hdr.ihdi,0.574,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2021,undp_hdr.ihdi,0.571,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2022,undp_hdr.ihdi,0.587,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+COL,country,2023,undp_hdr.ihdi,0.593,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2010,undp_hdr.ihdi,0.578,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2011,undp_hdr.ihdi,0.583,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2012,undp_hdr.ihdi,0.588,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2013,undp_hdr.ihdi,0.589,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2014,undp_hdr.ihdi,0.597,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2015,undp_hdr.ihdi,0.601,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2016,undp_hdr.ihdi,0.613,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2017,undp_hdr.ihdi,0.616,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2018,undp_hdr.ihdi,0.63,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2019,undp_hdr.ihdi,0.633,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2020,undp_hdr.ihdi,0.618,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2021,undp_hdr.ihdi,0.616,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2022,undp_hdr.ihdi,0.639,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
+MEX,country,2023,undp_hdr.ihdi,0.646,,,index_0_1,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
 ARG,country,2018,wdi.fp_cpi_totl_zg,34.2772237131003,,,percent,wdi,2026-10-08,2026-10-26T01:01:36+00:00,CC-BY-4.0,False
 ARG,country,2019,wdi.fp_cpi_totl_zg,53.5483043492339,,,percent,wdi,2026-10-08,2026-10-26T01:01:36+00:00,CC-BY-4.0,False
 ARG,country,2020,wdi.fp_cpi_totl_zg,42.0150947376509,,,percent,wdi,2026-10-08,2026-10-26T01:01:36+00:00,CC-BY-4.0,False
@@ -1700,3 +2022,408 @@ WLD,aggregate,2021,wdi.sp_dyn_le00_in,71.2160780260296,,,years,wdi,2026-10-08,20
 WLD,aggregate,2022,wdi.sp_dyn_le00_in,72.9689585478052,,,years,wdi,2026-10-08,2026-10-26T01:01:36+00:00,CC-BY-4.0,False
 WLD,aggregate,2023,wdi.sp_dyn_le00_in,73.3302230276375,,,years,wdi,2026-10-08,2026-10-26T01:01:36+00:00,CC-BY-4.0,False
 WLD,aggregate,2024,wdi.sp_dyn_le00_in,73.4818184164654,,,years,wdi,2026-10-08,2026-10-26T01:01:36+00:00,CC-BY-4.0,False
+ARG,country,1996,wgi.gov_wgi_cc_est,-0.2281248,-0.5585607204999999,0.10231112049999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,1998,wgi.gov_wgi_cc_est,-0.4219243,-0.7523602205,-0.0914883795,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2000,wgi.gov_wgi_cc_est,-0.3066534,-0.6370893205,0.02378252049999996,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2002,wgi.gov_wgi_cc_est,-0.5649709,-0.8953283540000001,-0.23461344600000006,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2003,wgi.gov_wgi_cc_est,-0.5499264,-0.880283854,-0.21956894600000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2004,wgi.gov_wgi_cc_est,-0.4059561,-0.7012391929999999,-0.11067300699999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2005,wgi.gov_wgi_cc_est,-0.3896209,-0.684903993,-0.094337807,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2006,wgi.gov_wgi_cc_est,-0.320894,-0.6118982835,-0.029889716499999996,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2007,wgi.gov_wgi_cc_est,-0.4151959,-0.7049881474999999,-0.12540365250000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2008,wgi.gov_wgi_cc_est,-0.4125706,-0.7023628475,-0.12277835250000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2009,wgi.gov_wgi_cc_est,-0.3943504,-0.680005308,-0.10869549199999995,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2010,wgi.gov_wgi_cc_est,-0.3648003,-0.6504552080000001,-0.07914539199999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2011,wgi.gov_wgi_cc_est,-0.3361817,-0.594257525,-0.07810587500000005,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2012,wgi.gov_wgi_cc_est,-0.5363017,-0.7974163335,-0.2751870665,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2013,wgi.gov_wgi_cc_est,-0.5382434,-0.8010484355,-0.27543836450000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2014,wgi.gov_wgi_cc_est,-0.6640614,-0.9268664355,-0.4012563645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2015,wgi.gov_wgi_cc_est,-0.6423059,-0.9051109355,-0.3795008645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2016,wgi.gov_wgi_cc_est,-0.2198226,-0.4826276355,0.0429824355,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2017,wgi.gov_wgi_cc_est,-0.1768645,-0.4396695355,0.0859405355,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2018,wgi.gov_wgi_cc_est,-0.0094702,-0.2722752355,0.2533348355,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2019,wgi.gov_wgi_cc_est,-0.0824917,-0.3452967355,0.1803133355,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2020,wgi.gov_wgi_cc_est,-0.1363057,-0.3991107355,0.1264993355,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2021,wgi.gov_wgi_cc_est,-0.3247968,-0.5876018355,-0.06199176449999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2022,wgi.gov_wgi_cc_est,-0.3392719,-0.6020769355,-0.07646686450000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2023,wgi.gov_wgi_cc_est,-0.3360465,-0.6042435165,-0.06784948350000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2024,wgi.gov_wgi_cc_est,-0.3250713,-0.5939026285,-0.05623997150000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2025,wgi.gov_wgi_cc_est,-0.3860634,-0.652569521,-0.11955727899999996,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,1996,wgi.gov_wgi_cc_est,0.1170523,-0.21338362049999998,0.4474882205,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,1998,wgi.gov_wgi_cc_est,0.1648803,-0.16555562049999997,0.4953162205,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2000,wgi.gov_wgi_cc_est,0.1083783,-0.2220576205,0.43881422049999996,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2002,wgi.gov_wgi_cc_est,0.0962031,-0.234154354,0.426560554,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2003,wgi.gov_wgi_cc_est,0.052878,-0.277479454,0.383235454,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2004,wgi.gov_wgi_cc_est,-0.1077507,-0.403033793,0.187532393,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2005,wgi.gov_wgi_cc_est,-0.2508875,-0.546170593,0.04439559300000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2006,wgi.gov_wgi_cc_est,-0.2193516,-0.5103558835,0.07165268350000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2007,wgi.gov_wgi_cc_est,-0.2877246,-0.5775168475,0.0020676474999999916,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2008,wgi.gov_wgi_cc_est,-0.0905943,-0.3803865475,0.19919794749999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2009,wgi.gov_wgi_cc_est,-0.0366836,-0.323105407,0.24973820700000005,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2010,wgi.gov_wgi_cc_est,-0.0114011,-0.29705600800000004,0.27425380800000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2011,wgi.gov_wgi_cc_est,0.2152481,-0.04282772499999998,0.473323925,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2012,wgi.gov_wgi_cc_est,-0.0242705,-0.28538513349999994,0.23684413349999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2013,wgi.gov_wgi_cc_est,-0.0761893,-0.3389943355,0.1866157355,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2014,wgi.gov_wgi_cc_est,-0.2552721,-0.5180771355,0.007532935500000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2015,wgi.gov_wgi_cc_est,-0.3492221,-0.6120271355,-0.08641706449999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2016,wgi.gov_wgi_cc_est,-0.3354755,-0.5982805355,-0.07267046449999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2017,wgi.gov_wgi_cc_est,-0.4668159,-0.7296209355000001,-0.2040108645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2018,wgi.gov_wgi_cc_est,-0.4299065,-0.6927115355,-0.16710146450000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2019,wgi.gov_wgi_cc_est,-0.3724397,-0.6352447354999999,-0.10963466449999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2020,wgi.gov_wgi_cc_est,-0.3371524,-0.5999574355,-0.07434736450000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2021,wgi.gov_wgi_cc_est,-0.4038381,-0.6666431355,-0.14103306449999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2022,wgi.gov_wgi_cc_est,-0.4565665,-0.7193715355,-0.19376146449999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2023,wgi.gov_wgi_cc_est,-0.4394541,-0.7076511165,-0.17125708350000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2024,wgi.gov_wgi_cc_est,-0.3958138,-0.6646451284999999,-0.12698247150000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2025,wgi.gov_wgi_cc_est,-0.3810545,-0.6476017460000001,-0.114507254,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,1996,wgi.gov_wgi_cc_est,1.58943,1.2589940794999999,1.9198659205,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,1998,wgi.gov_wgi_cc_est,1.3735381,1.0431021795,1.7039740205,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2000,wgi.gov_wgi_cc_est,1.5369673,1.2065313795,1.8674032205,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2002,wgi.gov_wgi_cc_est,1.5521165,1.2217590459999998,1.882473954,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2003,wgi.gov_wgi_cc_est,1.1745275,0.8441700459999999,1.504884954,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2004,wgi.gov_wgi_cc_est,1.2655433,0.9694130320000001,1.561673568,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2005,wgi.gov_wgi_cc_est,1.5030024,1.207719307,1.7982854929999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2006,wgi.gov_wgi_cc_est,1.4715552,1.1794469570000001,1.763663443,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2007,wgi.gov_wgi_cc_est,1.3959547,1.1038464570000002,1.688062943,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2008,wgi.gov_wgi_cc_est,1.3977395,1.1079472524999998,1.6875317475,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2009,wgi.gov_wgi_cc_est,1.4232351,1.1334428525,1.7130273475000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2010,wgi.gov_wgi_cc_est,1.5102365,1.2131661145,1.8073068855,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2011,wgi.gov_wgi_cc_est,1.5447953,1.2783942945,1.8111963055000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2012,wgi.gov_wgi_cc_est,1.479868,1.2134669945,1.7462690054999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2013,wgi.gov_wgi_cc_est,1.4312515,1.1630544834999998,1.6994485165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2014,wgi.gov_wgi_cc_est,1.3859956,1.1177985835,1.6541926165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2015,wgi.gov_wgi_cc_est,1.1458708,0.8776737834999999,1.4140678165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2016,wgi.gov_wgi_cc_est,1.1288752,0.8606781834999999,1.3970722165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2017,wgi.gov_wgi_cc_est,1.1137707,0.8455736834999998,1.3819677165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2018,wgi.gov_wgi_cc_est,1.1019812,0.8337841834999999,1.3701782165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2019,wgi.gov_wgi_cc_est,1.1579819,0.8897848835,1.4261789165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2020,wgi.gov_wgi_cc_est,1.2173713,0.9491742834999999,1.4855683165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2021,wgi.gov_wgi_cc_est,1.148412,0.8802149834999999,1.4166090165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2022,wgi.gov_wgi_cc_est,1.1468266,0.8786295835,1.4150236165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2023,wgi.gov_wgi_cc_est,1.0570234,0.7888263835,1.3252204165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2024,wgi.gov_wgi_cc_est,1.1425214,0.8736900715,1.4113527284999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2025,wgi.gov_wgi_cc_est,1.0992872,0.832739954,1.365834446,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,1996,wgi.gov_wgi_cc_est,-0.5189476,-0.8493835205,-0.18851167949999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,1998,wgi.gov_wgi_cc_est,-0.5945943,-0.9250302205,-0.26415837950000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2000,wgi.gov_wgi_cc_est,-0.6252783,-0.9557142205,-0.2948423795,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2002,wgi.gov_wgi_cc_est,-0.235209,-0.565566454,0.095148454,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2003,wgi.gov_wgi_cc_est,-0.1809985,-0.511355954,0.149358954,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2004,wgi.gov_wgi_cc_est,-0.0731881,-0.36368687499999997,0.21731067499999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2005,wgi.gov_wgi_cc_est,-0.0996347,-0.38933351150000006,0.19006411150000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2006,wgi.gov_wgi_cc_est,-0.2038926,-0.4917651325,0.08397993249999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2007,wgi.gov_wgi_cc_est,-0.2644655,-0.5501204080000001,0.02118940800000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2008,wgi.gov_wgi_cc_est,-0.2288895,-0.514544408,0.056765408000000045,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2009,wgi.gov_wgi_cc_est,-0.2879776,-0.573632508,-0.0023226919999999596,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2010,wgi.gov_wgi_cc_est,-0.374115,-0.659769908,-0.08846009199999993,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2011,wgi.gov_wgi_cc_est,-0.2029364,-0.46101222499999994,0.05513942499999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2012,wgi.gov_wgi_cc_est,-0.4079967,-0.6691113335,-0.14688206650000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2013,wgi.gov_wgi_cc_est,-0.4406799,-0.7034849355,-0.1778748645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2014,wgi.gov_wgi_cc_est,-0.3709047,-0.6337097355,-0.10809966449999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2015,wgi.gov_wgi_cc_est,-0.3168336,-0.5796386355,-0.05402856449999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2016,wgi.gov_wgi_cc_est,-0.3685615,-0.6313665355,-0.10575646449999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2017,wgi.gov_wgi_cc_est,-0.40964,-0.6724450355,-0.1468349645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2018,wgi.gov_wgi_cc_est,-0.3177104,-0.5805154355,-0.0549053645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2019,wgi.gov_wgi_cc_est,-0.2722205,-0.5350255355,-0.00941546449999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2020,wgi.gov_wgi_cc_est,-0.2565109,-0.5193159355,0.00629413550000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2021,wgi.gov_wgi_cc_est,-0.2699708,-0.5327758355000001,-0.007165764500000005,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2022,wgi.gov_wgi_cc_est,-0.2582072,-0.5210122355,0.00459783549999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2023,wgi.gov_wgi_cc_est,-0.2953488,-0.5612368945,-0.029460705500000017,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2024,wgi.gov_wgi_cc_est,-0.2821944,-0.548700521,-0.01568827899999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2025,wgi.gov_wgi_cc_est,-0.3085373,-0.575084546,-0.041990054,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,1996,wgi.gov_wgi_cc_est,-0.6640195,-0.9944554205,-0.3335835795,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,1998,wgi.gov_wgi_cc_est,-0.4153787,-0.7458146205,-0.08494277950000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2000,wgi.gov_wgi_cc_est,-0.0528131,-0.3832490205,0.2776228205,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2002,wgi.gov_wgi_cc_est,-0.3286603,-0.659017754,0.0016971539999999785,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2003,wgi.gov_wgi_cc_est,-0.3277092,-0.658066654,0.0026482540000000165,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2004,wgi.gov_wgi_cc_est,-0.4598634,-0.7538803365,-0.16584646349999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2005,wgi.gov_wgi_cc_est,-0.4360003,-0.7300172364999999,-0.14198336350000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2006,wgi.gov_wgi_cc_est,-0.3413474,-0.6311396475,-0.051555152500000034,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2007,wgi.gov_wgi_cc_est,-0.405634,-0.6954262474999999,-0.1158417525,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2008,wgi.gov_wgi_cc_est,-0.3899818,-0.6797740475,-0.1001895525,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2009,wgi.gov_wgi_cc_est,-0.3161464,-0.601801308,-0.030491491999999953,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2010,wgi.gov_wgi_cc_est,-0.3823777,-0.6680326080000001,-0.09672279199999995,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2011,wgi.gov_wgi_cc_est,-0.4246397,-0.682715525,-0.16656387500000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2012,wgi.gov_wgi_cc_est,-0.4872013,-0.7483159335,-0.22608666650000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2013,wgi.gov_wgi_cc_est,-0.5629754,-0.8257804355,-0.3001703645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2014,wgi.gov_wgi_cc_est,-0.7907342,-1.0535392355000002,-0.5279291645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2015,wgi.gov_wgi_cc_est,-0.8427141,-1.1055191355,-0.5799090645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2016,wgi.gov_wgi_cc_est,-0.8093964,-1.0722014355,-0.5465913645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2017,wgi.gov_wgi_cc_est,-0.9494821,-1.2122871355,-0.6866770645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2018,wgi.gov_wgi_cc_est,-0.961137,-1.2239420355,-0.6983319645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2019,wgi.gov_wgi_cc_est,-0.8924061,-1.1552111355,-0.6296010645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2020,wgi.gov_wgi_cc_est,-0.8568578,-1.1196628355,-0.5940527645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2021,wgi.gov_wgi_cc_est,-0.8747726,-1.1375776355,-0.6119675645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2022,wgi.gov_wgi_cc_est,-0.8785122,-1.1413172354999999,-0.6157071645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2023,wgi.gov_wgi_cc_est,-0.9210263,-1.1869143945,-0.6551382054999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2024,wgi.gov_wgi_cc_est,-0.9251219,-1.191628021,-0.658615779,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2025,wgi.gov_wgi_cc_est,-0.942445,-1.208992246,-0.675897754,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,1996,wgi.gov_wgi_ge_est,0.258256,-0.15671318050000005,0.6732251805,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,1998,wgi.gov_wgi_ge_est,0.077215,-0.33775418050000006,0.4921841805,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2000,wgi.gov_wgi_ge_est,0.0302816,-0.3846875805,0.44525078050000005,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2002,wgi.gov_wgi_ge_est,-0.1949453,-0.5809611645,0.19107056450000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2003,wgi.gov_wgi_ge_est,-0.1124474,-0.4984632645,0.27356846450000005,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2004,wgi.gov_wgi_ge_est,0.0149839,-0.35498696350000003,0.3849547635,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2005,wgi.gov_wgi_ge_est,0.0544303,-0.31554056350000004,0.4244011635,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2006,wgi.gov_wgi_ge_est,0.094084,-0.272376269,0.460544269,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2007,wgi.gov_wgi_ge_est,0.0463793,-0.320080969,0.412839569,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2008,wgi.gov_wgi_ge_est,-0.0161725,-0.382632769,0.350287769,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2009,wgi.gov_wgi_ge_est,-0.0054131,-0.371873369,0.361047169,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2010,wgi.gov_wgi_ge_est,0.0739395,-0.292520769,0.440399769,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2011,wgi.gov_wgi_ge_est,0.1310805,-0.23537976900000002,0.497540769,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2012,wgi.gov_wgi_ge_est,0.0685533,-0.297906969,0.435013569,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2013,wgi.gov_wgi_ge_est,0.0537935,-0.312666769,0.420253769,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2014,wgi.gov_wgi_ge_est,0.2310158,-0.135444469,0.597476069,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2015,wgi.gov_wgi_ge_est,0.1439524,-0.222507869,0.510412669,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2016,wgi.gov_wgi_ge_est,0.3509353,-0.015524969,0.717395569,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2017,wgi.gov_wgi_ge_est,0.3104807,-0.05597956900000001,0.676940969,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2018,wgi.gov_wgi_ge_est,0.2987842,-0.067676069,0.665244469,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2019,wgi.gov_wgi_ge_est,0.3062953,-0.06016496900000001,0.672755569,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2020,wgi.gov_wgi_ge_est,0.1889768,-0.177483469,0.555437069,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2021,wgi.gov_wgi_ge_est,0.1346725,-0.231787769,0.501132769,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2022,wgi.gov_wgi_ge_est,0.1192888,-0.23296459099999997,0.47154219099999994,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2023,wgi.gov_wgi_ge_est,0.0347051,-0.331312006,0.40072220599999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2024,wgi.gov_wgi_ge_est,0.194177,-0.171840106,0.560194106,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2025,wgi.gov_wgi_ge_est,0.2757855,-0.08832044500000003,0.6398914450000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,1996,wgi.gov_wgi_ge_est,-0.0491183,-0.46408748050000004,0.36585088050000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,1998,wgi.gov_wgi_ge_est,-0.2505556,-0.6655247805,0.16441358050000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2000,wgi.gov_wgi_ge_est,-0.229614,-0.6445831805000001,0.18535518050000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2002,wgi.gov_wgi_ge_est,-0.11074,-0.49675586450000003,0.2752758645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2003,wgi.gov_wgi_ge_est,-0.1601345,-0.5461503645000001,0.22588136450000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2004,wgi.gov_wgi_ge_est,-0.2251549,-0.5951257635,0.14481596350000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2005,wgi.gov_wgi_ge_est,-0.3335397,-0.7035105635000001,0.03643116350000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2006,wgi.gov_wgi_ge_est,-0.3718123,-0.738272569,-0.005352030999999979,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2007,wgi.gov_wgi_ge_est,-0.3768965,-0.743356769,-0.010436231000000018,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2008,wgi.gov_wgi_ge_est,0.1085416,-0.257918669,0.475001869,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2009,wgi.gov_wgi_ge_est,0.1910058,-0.175454469,0.557466069,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2010,wgi.gov_wgi_ge_est,0.193878,-0.172582269,0.560338269,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2011,wgi.gov_wgi_ge_est,0.1699521,-0.196508169,0.536412369,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2012,wgi.gov_wgi_ge_est,0.1938658,-0.172594469,0.560326069,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2013,wgi.gov_wgi_ge_est,0.2797499,-0.08671036900000001,0.646210169,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2014,wgi.gov_wgi_ge_est,0.1380177,-0.228442569,0.504477969,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2015,wgi.gov_wgi_ge_est,0.0397274,-0.326732869,0.40618766900000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2016,wgi.gov_wgi_ge_est,0.0251685,-0.341291769,0.391628769,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2017,wgi.gov_wgi_ge_est,-0.0418302,-0.408290469,0.324630069,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2018,wgi.gov_wgi_ge_est,-0.1412291,-0.507689369,0.225231169,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2019,wgi.gov_wgi_ge_est,0.0853751,-0.281085169,0.451835369,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2020,wgi.gov_wgi_ge_est,-0.0212269,-0.387687169,0.345233369,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2021,wgi.gov_wgi_ge_est,-0.0104637,-0.376923969,0.355996569,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2022,wgi.gov_wgi_ge_est,-0.1979051,-0.5501584909999999,0.15434829099999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2023,wgi.gov_wgi_ge_est,-0.2500394,-0.6160565060000001,0.11597770599999996,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2024,wgi.gov_wgi_ge_est,-0.1860013,-0.552018406,0.18001580599999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2025,wgi.gov_wgi_ge_est,-0.0356251,-0.39973104500000006,0.328480845,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,1996,wgi.gov_wgi_ge_est,1.0134214,0.5984522194999999,1.4283905805,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,1998,wgi.gov_wgi_ge_est,0.9237448,0.5087756194999999,1.3387139805000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2000,wgi.gov_wgi_ge_est,0.9578534,0.5428842194999999,1.3728225805,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2002,wgi.gov_wgi_ge_est,1.0982633,0.7122474354999999,1.4842791645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2003,wgi.gov_wgi_ge_est,1.1483204,0.7623045355,1.5343362645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2004,wgi.gov_wgi_ge_est,1.1428491,0.7728782365,1.5128199635000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2005,wgi.gov_wgi_ge_est,1.2953117,0.9253408365,1.6652825635000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2006,wgi.gov_wgi_ge_est,1.2736093,0.9071490309999999,1.640069569,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2007,wgi.gov_wgi_ge_est,1.2808682,0.914407931,1.647328469,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2008,wgi.gov_wgi_ge_est,1.2664846,0.900024331,1.6329448690000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2009,wgi.gov_wgi_ge_est,1.333997,0.967536731,1.7004572690000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2010,wgi.gov_wgi_ge_est,1.2083876,0.826354116,1.590421084,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2011,wgi.gov_wgi_ge_est,1.2731834,0.8911499159999999,1.655216884,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2012,wgi.gov_wgi_ge_est,1.3079018,0.925868316,1.6899352840000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2013,wgi.gov_wgi_ge_est,1.2777127,0.8956792159999999,1.6597461839999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2014,wgi.gov_wgi_ge_est,1.1779137,0.7958802159999999,1.5599471839999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2015,wgi.gov_wgi_ge_est,1.1198481,0.737814616,1.501881584,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2016,wgi.gov_wgi_ge_est,1.0533135,0.671280016,1.4353469840000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2017,wgi.gov_wgi_ge_est,1.0363271,0.654293616,1.4183605840000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2018,wgi.gov_wgi_ge_est,1.0985906,0.716557116,1.480624084,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2019,wgi.gov_wgi_ge_est,1.1067349,0.7247014159999999,1.4887683840000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2020,wgi.gov_wgi_ge_est,0.9318715,0.5498380159999999,1.313904984,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2021,wgi.gov_wgi_ge_est,0.9124462,0.530412716,1.2944796840000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2022,wgi.gov_wgi_ge_est,0.9289252,0.562908094,1.294942306,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2023,wgi.gov_wgi_ge_est,1.0056495,0.6396323940000002,1.371666606,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2024,wgi.gov_wgi_ge_est,1.0140437,0.6480265940000001,1.380060806,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2025,wgi.gov_wgi_ge_est,1.0424726,0.6783666549999999,1.406578545,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,1996,wgi.gov_wgi_ge_est,-0.0346235,-0.4495926805,0.38034568050000006,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,1998,wgi.gov_wgi_ge_est,-0.4116195,-0.8265886805,0.0033496805000000074,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2000,wgi.gov_wgi_ge_est,-0.4404204,-0.8553895805,-0.025451219499999955,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2002,wgi.gov_wgi_ge_est,-0.7912951,-1.1773109645000002,-0.4052792355,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2003,wgi.gov_wgi_ge_est,-0.4837646,-0.8697804645,-0.09774873549999996,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2004,wgi.gov_wgi_ge_est,-0.2863499,-0.6563207635,0.08362096350000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2005,wgi.gov_wgi_ge_est,-0.3376676,-0.7076384635,0.03230326350000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2006,wgi.gov_wgi_ge_est,-0.2410073,-0.607467569,0.125452969,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2007,wgi.gov_wgi_ge_est,-0.2298176,-0.596277869,0.136642669,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2008,wgi.gov_wgi_ge_est,-0.0885108,-0.454971069,0.277949469,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2009,wgi.gov_wgi_ge_est,-0.149716,-0.516176269,0.21674426900000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2010,wgi.gov_wgi_ge_est,-0.0340002,-0.400460469,0.332460069,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2011,wgi.gov_wgi_ge_est,0.0677342,-0.298726069,0.434194469,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2012,wgi.gov_wgi_ge_est,0.0313668,-0.33509346900000003,0.397827069,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2013,wgi.gov_wgi_ge_est,0.0632522,-0.303208069,0.429712469,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2014,wgi.gov_wgi_ge_est,-0.0672041,-0.433664369,0.299256169,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2015,wgi.gov_wgi_ge_est,-0.0012165,-0.367676769,0.365243769,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2016,wgi.gov_wgi_ge_est,0.0162303,-0.35022996900000003,0.382690569,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2017,wgi.gov_wgi_ge_est,-0.0263499,-0.392810169,0.340110369,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2018,wgi.gov_wgi_ge_est,-0.0053583,-0.371818569,0.361101969,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2019,wgi.gov_wgi_ge_est,0.0282031,-0.338257169,0.394663369,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2020,wgi.gov_wgi_ge_est,-0.0183306,-0.384790869,0.34812966900000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2021,wgi.gov_wgi_ge_est,-0.0243614,-0.390821669,0.342098869,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2022,wgi.gov_wgi_ge_est,0.0185649,-0.333688491,0.37081829099999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2023,wgi.gov_wgi_ge_est,-0.0408261,-0.404932045,0.32327984500000007,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2024,wgi.gov_wgi_ge_est,-0.0380875,-0.40219344500000004,0.32601844500000005,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2025,wgi.gov_wgi_ge_est,-0.0934617,-0.457567645,0.27064424500000006,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,1996,wgi.gov_wgi_ge_est,-0.458301,-0.8732701805,-0.04333181949999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,1998,wgi.gov_wgi_ge_est,0.0482857,-0.36668348050000005,0.4632548805,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2000,wgi.gov_wgi_ge_est,0.0309484,-0.38402078050000005,0.4459175805,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2002,wgi.gov_wgi_ge_est,-0.3429396,-0.7289554645,0.04307626450000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2003,wgi.gov_wgi_ge_est,-0.3009889,-0.6870047645,0.08502696450000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2004,wgi.gov_wgi_ge_est,-0.2446442,-0.6146150635000001,0.12532666350000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2005,wgi.gov_wgi_ge_est,-0.1405651,-0.5105359635,0.22940576350000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2006,wgi.gov_wgi_ge_est,-0.0958788,-0.462339069,0.270581469,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2007,wgi.gov_wgi_ge_est,-0.1737217,-0.540181969,0.192738569,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2008,wgi.gov_wgi_ge_est,0.143898,-0.222562269,0.510358269,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2009,wgi.gov_wgi_ge_est,0.228862,-0.137598269,0.595322269,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2010,wgi.gov_wgi_ge_est,0.0700301,-0.296430169,0.436490369,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2011,wgi.gov_wgi_ge_est,0.2122526,-0.154207669,0.5787128690000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2012,wgi.gov_wgi_ge_est,0.3024831,-0.063977169,0.668943369,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2013,wgi.gov_wgi_ge_est,0.305982,-0.06047826900000003,0.672442269,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2014,wgi.gov_wgi_ge_est,0.1897215,-0.17673876900000002,0.5561817689999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2015,wgi.gov_wgi_ge_est,0.1614725,-0.20498776900000001,0.527932769,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2016,wgi.gov_wgi_ge_est,0.1836197,-0.182840569,0.550079969,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2017,wgi.gov_wgi_ge_est,0.0927696,-0.273690669,0.459229869,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2018,wgi.gov_wgi_ge_est,0.0375159,-0.328944369,0.403976169,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2019,wgi.gov_wgi_ge_est,0.0548906,-0.311569669,0.421350869,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2020,wgi.gov_wgi_ge_est,0.0117015,-0.35475876900000003,0.378161769,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2021,wgi.gov_wgi_ge_est,-0.02505,-0.391510269,0.341410269,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2022,wgi.gov_wgi_ge_est,-0.0936313,-0.44588469099999994,0.258622091,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2023,wgi.gov_wgi_ge_est,-0.1119496,-0.476055545,0.25215634500000006,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2024,wgi.gov_wgi_ge_est,-0.1853724,-0.549478345,0.17873354500000005,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2025,wgi.gov_wgi_ge_est,-0.1806742,-0.544780145,0.18343174500000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,1996,wgi.gov_wgi_va_est,0.2888136,-0.017922311999999996,0.5955495120000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,1998,wgi.gov_wgi_va_est,0.1772529,-0.129483012,0.483988812,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2000,wgi.gov_wgi_va_est,0.3105986,0.003862688000000003,0.617334512,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2002,wgi.gov_wgi_va_est,0.3443184,0.07975206300000004,0.608884737,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2003,wgi.gov_wgi_va_est,0.4352994,0.17073306300000002,0.699865737,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2004,wgi.gov_wgi_va_est,0.4921394,0.228446887,0.755831913,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2005,wgi.gov_wgi_va_est,0.5399215,0.27903650850000006,0.8008064915,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2006,wgi.gov_wgi_va_est,0.5341526,0.2857761885,0.7825290115,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2007,wgi.gov_wgi_va_est,0.5340209,0.28565962250000004,0.7823821774999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2008,wgi.gov_wgi_va_est,0.460876,0.21251472250000003,0.7092372775,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2009,wgi.gov_wgi_va_est,0.4501891,0.2311532375,0.6692249625,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2010,wgi.gov_wgi_va_est,0.5112091,0.29217323749999996,0.7302449625,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2011,wgi.gov_wgi_va_est,0.4383538,0.23318002350000003,0.6435275765,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2012,wgi.gov_wgi_va_est,0.4291095,0.20043541799999995,0.657783582,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2013,wgi.gov_wgi_va_est,0.3415709,0.103556179,0.579585621,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2014,wgi.gov_wgi_va_est,0.3785035,0.14048877899999998,0.616518221,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2015,wgi.gov_wgi_va_est,0.4312963,0.193281579,0.6693110210000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2016,wgi.gov_wgi_va_est,0.4995183,0.261503579,0.7375330210000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2017,wgi.gov_wgi_va_est,0.6014504,0.36343567900000007,0.839465121,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2018,wgi.gov_wgi_va_est,0.6537489,0.4024914355,0.9050063644999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2019,wgi.gov_wgi_va_est,0.6284291,0.3771716355,0.8796865644999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2020,wgi.gov_wgi_va_est,0.6300506,0.378037587,0.882063613,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2021,wgi.gov_wgi_va_est,0.578893,0.326879987,0.830906013,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2022,wgi.gov_wgi_va_est,0.5418299,0.28981688699999997,0.793842913,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2023,wgi.gov_wgi_va_est,0.5327879,0.279029213,0.7865465869999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2024,wgi.gov_wgi_va_est,0.4273618,0.181342838,0.6733807620000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+ARG,country,2025,wgi.gov_wgi_va_est,0.4476404,0.201621438,0.693659362,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,1996,wgi.gov_wgi_va_est,0.1485905,-0.158145412,0.455326412,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,1998,wgi.gov_wgi_va_est,0.1316306,-0.175105312,0.438366512,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2000,wgi.gov_wgi_va_est,0.2441917,-0.06254421199999999,0.550927612,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2002,wgi.gov_wgi_va_est,0.4117245,0.147158163,0.676290837,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2003,wgi.gov_wgi_va_est,0.4159082,0.15134186300000002,0.680474537,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2004,wgi.gov_wgi_va_est,0.4995826,0.23589008699999997,0.763275113,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2005,wgi.gov_wgi_va_est,0.6718742,0.4109892085,0.9327591915,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2006,wgi.gov_wgi_va_est,0.6695413,0.4211648885,0.9179177115,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2007,wgi.gov_wgi_va_est,0.6543369,0.4059756225,0.9026981775,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2008,wgi.gov_wgi_va_est,0.7558684,0.5075071225000001,1.0042296775,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2009,wgi.gov_wgi_va_est,0.6840381,0.46500223749999997,0.9030739624999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2010,wgi.gov_wgi_va_est,0.7252045,0.5061686375000001,0.9442403625,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2011,wgi.gov_wgi_va_est,0.6314093,0.42623552349999994,0.8365830765,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2012,wgi.gov_wgi_va_est,0.710812,0.48213791799999994,0.9394860820000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2013,wgi.gov_wgi_va_est,0.591705,0.35369027900000005,0.829719721,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2014,wgi.gov_wgi_va_est,0.5655299,0.32751517900000005,0.803544621,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2015,wgi.gov_wgi_va_est,0.5837251,0.345710379,0.821739821,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2016,wgi.gov_wgi_va_est,0.5425851,0.30457037900000006,0.780599821,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2017,wgi.gov_wgi_va_est,0.5214075,0.28981436550000006,0.7530006345,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2018,wgi.gov_wgi_va_est,0.3952101,0.1514722595,0.6389479405,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2019,wgi.gov_wgi_va_est,0.3209495,0.0772116595,0.5646873405,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2020,wgi.gov_wgi_va_est,0.2862822,0.04185493999999998,0.53070946,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2021,wgi.gov_wgi_va_est,0.1629575,-0.08146976,0.40738476,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2022,wgi.gov_wgi_va_est,0.1158359,-0.12859136,0.36026316,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2023,wgi.gov_wgi_va_est,0.2848618,0.03884283799999999,0.530880762,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2024,wgi.gov_wgi_va_est,0.4018924,0.15587343799999998,0.647911362,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+BRA,country,2025,wgi.gov_wgi_va_est,0.4223661,0.17634713800000001,0.668385062,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,1996,wgi.gov_wgi_va_est,0.7900488,0.483312888,1.096784712,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,1998,wgi.gov_wgi_va_est,0.6219529,0.31521698800000003,0.9286888120000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2000,wgi.gov_wgi_va_est,0.8603011,0.5535651880000001,1.167037012,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2002,wgi.gov_wgi_va_est,1.1971923,0.932625963,1.461758637,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2003,wgi.gov_wgi_va_est,1.1527853,0.8882189629999999,1.4173516369999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2004,wgi.gov_wgi_va_est,1.1375798,0.8738872869999998,1.401272313,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2005,wgi.gov_wgi_va_est,1.280841,1.0171484869999998,1.544533513,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2006,wgi.gov_wgi_va_est,1.2808384,1.017581154,1.544095646,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2007,wgi.gov_wgi_va_est,1.2919239,1.028666654,1.555181146,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2008,wgi.gov_wgi_va_est,1.180389,0.9296089144999999,1.4311690854999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2009,wgi.gov_wgi_va_est,1.2077884,0.9594271225000002,1.4561496775,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2010,wgi.gov_wgi_va_est,1.1790103,0.9299193005,1.4281012995000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2011,wgi.gov_wgi_va_est,1.104673,0.875429748,1.333916252,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2012,wgi.gov_wgi_va_est,1.0891833,0.8599400479999999,1.318426552,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2013,wgi.gov_wgi_va_est,1.0964034,0.8577466355000001,1.3350601645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2014,wgi.gov_wgi_va_est,1.105745,0.8670882355,1.3444017645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2015,wgi.gov_wgi_va_est,1.0813879,0.8427311355,1.3200446645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2016,wgi.gov_wgi_va_est,1.0883483,0.8496915355000001,1.3270050645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2017,wgi.gov_wgi_va_est,1.0820717,0.8434149355,1.3207284645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2018,wgi.gov_wgi_va_est,1.0784428,0.8264297869999999,1.330455813,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2019,wgi.gov_wgi_va_est,1.0282657,0.7762526869999999,1.280278713,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2020,wgi.gov_wgi_va_est,1.0427331,0.790720087,1.294746113,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2021,wgi.gov_wgi_va_est,0.9991393,0.747126287,1.251152313,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2022,wgi.gov_wgi_va_est,1.0191262,0.7671131870000001,1.271139213,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2023,wgi.gov_wgi_va_est,1.0355912,0.7818325130000001,1.289349887,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2024,wgi.gov_wgi_va_est,1.0174547,0.7636960130000001,1.271213387,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+CHL,country,2025,wgi.gov_wgi_va_est,1.0353151,0.7815564130000001,1.289073787,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,1996,wgi.gov_wgi_va_est,-0.5629671,-0.869703012,-0.25623118800000005,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,1998,wgi.gov_wgi_va_est,-0.5091265,-0.815862412,-0.20239058800000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2000,wgi.gov_wgi_va_est,-0.538555,-0.8452909120000001,-0.231819088,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2002,wgi.gov_wgi_va_est,-0.5080933,-0.772659637,-0.24352696299999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2003,wgi.gov_wgi_va_est,-0.5150729,-0.7796392369999999,-0.25050656299999996,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2004,wgi.gov_wgi_va_est,-0.281523,-0.5108476795000001,-0.052198320500000006,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2005,wgi.gov_wgi_va_est,-0.2753205,-0.5027912645,-0.047849735500000046,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2006,wgi.gov_wgi_va_est,-0.2249477,-0.45215049399999996,0.0022550939999999853,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2007,wgi.gov_wgi_va_est,-0.1800005,-0.3990363625,0.039035362500000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2008,wgi.gov_wgi_va_est,-0.1032219,-0.32225776250000004,0.1158139625,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2009,wgi.gov_wgi_va_est,-0.1214052,-0.3404410625,0.0976306625,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2010,wgi.gov_wgi_va_est,-0.1191783,-0.3382141625,0.09985756250000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2011,wgi.gov_wgi_va_est,-0.0019345,-0.2071082765,0.20323927649999998,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2012,wgi.gov_wgi_va_est,-0.0099224,-0.23859648200000003,0.21875168200000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2013,wgi.gov_wgi_va_est,-0.0674505,-0.305465221,0.17056422100000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2014,wgi.gov_wgi_va_est,-0.0225365,-0.260551221,0.21547822100000003,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2015,wgi.gov_wgi_va_est,0.045082,-0.19293272100000003,0.283096721,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2016,wgi.gov_wgi_va_est,0.0836893,-0.15432542100000002,0.321704021,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2017,wgi.gov_wgi_va_est,0.0695066,-0.168508121,0.307521321,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2018,wgi.gov_wgi_va_est,0.1163068,-0.13495066449999998,0.36756426449999996,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2019,wgi.gov_wgi_va_est,0.1262896,-0.12496786449999997,0.3775470645,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2020,wgi.gov_wgi_va_est,0.1148704,-0.13714261300000002,0.366883413,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2021,wgi.gov_wgi_va_est,0.0182683,-0.233744713,0.270281313,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2022,wgi.gov_wgi_va_est,0.1182491,-0.133763913,0.370262113,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2023,wgi.gov_wgi_va_est,0.1188095,-0.13494918699999997,0.372568187,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2024,wgi.gov_wgi_va_est,0.1243577,-0.12940098699999997,0.378116387,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+COL,country,2025,wgi.gov_wgi_va_est,0.0425768,-0.21118188699999998,0.296335487,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,1996,wgi.gov_wgi_va_est,-0.1452181,-0.45195401199999996,0.161517812,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,1998,wgi.gov_wgi_va_est,-0.0920334,-0.398769312,0.214702512,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2000,wgi.gov_wgi_va_est,0.1345719,-0.172164012,0.441307812,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2002,wgi.gov_wgi_va_est,0.2894813,0.024914963000000012,0.554047637,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2003,wgi.gov_wgi_va_est,0.3255652,0.060998863000000014,0.590131537,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2004,wgi.gov_wgi_va_est,0.3681779,0.10450348199999998,0.631852318,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2005,wgi.gov_wgi_va_est,0.3799328,0.11906541000000004,0.64080019,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2006,wgi.gov_wgi_va_est,0.265563,0.017201722500000016,0.5139242774999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2007,wgi.gov_wgi_va_est,0.2260815,-0.022279777499999986,0.47444277749999997,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2008,wgi.gov_wgi_va_est,0.2410901,-0.007271177499999976,0.4894513775,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2009,wgi.gov_wgi_va_est,0.3478562,0.1288203375,0.5668920625,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2010,wgi.gov_wgi_va_est,0.3688509,0.14981503749999997,0.5878867624999999,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2011,wgi.gov_wgi_va_est,0.2279356,0.0227618235,0.4331093765,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2012,wgi.gov_wgi_va_est,0.1673895,-0.06128458200000003,0.396063582,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2013,wgi.gov_wgi_va_est,0.1502347,-0.08778002100000001,0.38824942100000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2014,wgi.gov_wgi_va_est,0.0571894,-0.180825321,0.29520412100000004,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2015,wgi.gov_wgi_va_est,-0.008149,-0.246163721,0.22986572100000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2016,wgi.gov_wgi_va_est,-0.0277664,-0.265781121,0.21024832100000002,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2017,wgi.gov_wgi_va_est,-0.082801,-0.3143941345,0.1487921345,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2018,wgi.gov_wgi_va_est,0.0181155,-0.2256223405,0.2618533405,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2019,wgi.gov_wgi_va_est,0.0146049,-0.2291329405,0.2583427405,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2020,wgi.gov_wgi_va_est,-0.0153884,-0.25981566,0.22903886,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2021,wgi.gov_wgi_va_est,-0.1225986,-0.36702586000000004,0.12182866,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2022,wgi.gov_wgi_va_est,-0.1404157,-0.38484296,0.10401156,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2023,wgi.gov_wgi_va_est,-0.1632709,-0.409289862,0.08274806200000001,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2024,wgi.gov_wgi_va_est,-0.2410541,-0.487073062,0.004964862000000014,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False
+MEX,country,2025,wgi.gov_wgi_va_est,-0.2820937,-0.5281126620000001,-0.036074737999999995,wgi_estimate,wgi,2026-09-25,2026-10-26T01:07:55+00:00,CC-BY-4.0,False

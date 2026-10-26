@@ -1,0 +1,7 @@
+{
+  "@odata.context":"http://www.ipeadata.gov.br/api/odata4/$metadata#Metadados","value":[
+    {
+      "SERCODIGO":"DISOC_RDCG","SERNOME":"Renda - desigualdade - coeficiente de Gini - INATIVA","SERCOMENTARIO":"Mede o grau de desigualdade na distribui\u00e7\u00e3o da renda domiciliar per capita entre os indiv\u00edduos. S\u00e9rie calculada a partir das respostas \u00e0 Pesquisa Nacional por Amostra de Domic\u00edlios (Pnad/IBGE). \r\nObs.: dados n\u00e3o calculados para os anos de Censo Demogr\u00e1fico, em que a Pnad foi interrompida pelo IBGE. \r\nS\u00c9RIE INTERROMPIDA. \r\n<p>Para acessar DADOS ATUALIZADOS da s\u00e9rie pela Pnad Cont\u00ednua, utilize os links a seguir: \r\n<a href=\"http://www.ipeadata.gov.br/ExibeSerieR.aspx?stub=1&serid=2096726935&MINDATA=2015&MAXDATA=2025&TNIVID=0&TPAID=1&module=S\"><b> Gini - Pnad Cont\u00ednua</b>.\r\n<p>Outras s\u00e9ries correlatas: <a href=http://www.ipeadata.gov.br/ExibeSerieR.aspx?stub=1&serid=40037&MINDATA=1970&MAXDATA=2025&TNIVID=0&TPAID=1&module=S><b>IDHM - \u00cdndice de Desenvolvimento Humano</b></a> | \r\n<a href=http://www.ipeadata.gov.br/ExibeSerieR.aspx?stub=1&serid=2096727495&MINDATA=2012&MAXDATA=2025&TNIVID=0&TPAID=1&module=S><b>IVS - \u00cdndice de Vulderabilidade Social</b></a>.","SERATUALIZACAO":"2016-01-06T19:33:38-02:00","BASNOME":"Macroecon\u00f4mico","FNTSIGLA":"IPEA","FNTNOME":"Instituto de Pesquisa Econ\u00f4mica Aplicada","FNTURL":"www.ipea.gov.br","PERNOME":"Anual","UNINOME":"-","MULNOME":null,"SERSTATUS":"I","TEMCODIGO":15,"PAICODIGO":"BRA","SERNUMERICA":true
+    }
+  ]
+}
