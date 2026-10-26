@@ -40,13 +40,15 @@ Todo argumento do site segue a mesma estrutura:
 ```sh
 uv sync
 uv run pytest
+uv run ruff check . && uv run ruff format --check .
 uv run compilador build          # dados brutos -> dados processados e arquivos do site (offline)
 uv run compilador fetch          # baixa novos snapshots das fontes (rede)
 uv run compilador verify-dois    # confere DOIs novos na Crossref (rede)
 cd site && npm ci && npm run dev # site em http://localhost:4321/entender-politica/
 ```
 
-Site publicado: <https://amadeu01.github.io/entender-politica/>. Automação:
+Site: <https://amadeu01.github.io/entender-politica/> (no ar depois do primeiro deploy, com o
+GitHub Pages configurado para "GitHub Actions"). Automação:
 [ADR 0008](docs/adr/0008-automacao-e-publicacao.md).
 
 ## Contribuir
@@ -75,8 +77,9 @@ CI); timelines by government are descriptive, not causal
 shown; evidence for and against is presented; everything is reproducible from code; all
 content exists in Portuguese and English.
 
-Run locally with `uv sync && uv run compilador build`, then `cd site && npm ci && npm run dev`.
-Published site: <https://amadeu01.github.io/entender-politica/>. See
+Run locally with `uv sync && uv run pytest && uv run compilador build`, then
+`cd site && npm ci && npm run dev`. Site: <https://amadeu01.github.io/entender-politica/>
+(live after the first deploy, with GitHub Pages set to "GitHub Actions"). See
 [CONTRIBUTING.md](CONTRIBUTING.md).
 
 License: code [MIT](LICENSE), content [CC BY 4.0](LICENSE-CONTENT.md), data under each

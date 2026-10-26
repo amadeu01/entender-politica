@@ -2,6 +2,8 @@ name: Update data
 
 # Weekly refresh. New data never goes straight to the site: it opens a pull request
 # with the data changelog, so a person reviews revisions before they are published.
+# Pull requests opened with GITHUB_TOKEN do not trigger other workflows, so this job runs
+# the same checks as CI (tests, site build) before opening the pull request.
 on:
   schedule:
     - cron: "0 6 * * 1"
@@ -11,37 +13,54 @@ permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: site/package-lock.json
       - run: uv sync --locked
       - run: uv run compilador fetch
       - id: build
         run: |
           uv run compilador build | tee build.log
           if grep -q "^data changed" build.log; then echo "changed=true" >> "$GITHUB_OUTPUT"; fi
-      # Keep only the new snapshot directories when nothing changed upstream.
-      - if: steps.build.outputs.changed != 'true'
-        run: git checkout -- data && git clean -fdq data
+      - if: steps.build.outputs.changed == 'true'
+        run: uv run pytest
+      - if: steps.build.outputs.changed == 'true'
+        run: npm ci && npm run build
+        working-directory: site
       - if: steps.build.outputs.changed == 'true'
         id: notes
         run: |
+          delimiter="EOF_$(openssl rand -hex 8)"
           {
-            echo "body<<EOF"
+            echo "body<<$delimiter"
             echo "Atualização automática dos dados / Automated data refresh."
             echo
+            echo "Testes e build do site já rodaram neste workflow. / Tests and site build already ran in this workflow."
             echo "Revise os valores revisados pelas fontes antes de aprovar. / Review upstream revisions before approving."
             echo
             awk '/^## /{n++} n==1' data/CHANGELOG.md
-            echo "EOF"
+            echo "$delimiter"
           } >> "$GITHUB_OUTPUT"
       - if: steps.build.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v7
+        # Third-party action with write access: pinned to the commit of v7.0.11.
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676
         with:
           branch: dados/atualizacao-automatica
           commit-message: "data: automated refresh of source snapshots"

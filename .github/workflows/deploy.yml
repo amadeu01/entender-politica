@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -30,7 +28,8 @@ jobs:
       - run: uv sync --locked
       # The site is built from committed raw snapshots only, never from a live fetch.
       - run: uv run compilador build
-      - run: git diff --exit-code -- data/
+      - name: Check committed data is unchanged (including new files)
+        run: test -z "$(git status --porcelain -- data/)" || (git status --porcelain -- data/; exit 1)
       - run: npm ci
         working-directory: site
       - run: npm run build
@@ -42,6 +41,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
