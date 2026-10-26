@@ -20,17 +20,25 @@ definition:
     between elections, freedom of expression and an independent media. Ranges from 0 to 1.
 formula:
   pt: >-
-    Média entre a média ponderada e a interação multiplicativa de cinco subíndices:
-    liberdade de associação, eleições limpas, liberdade de expressão e fontes
-    alternativas de informação, cargos eletivos e sufrágio.
+    0,5·(C·L·A·S·E) + 0,5·(C/8 + L/4 + A/4 + S/8 + E/4), em que C = cargos eletivos,
+    L = eleições limpas, A = liberdade de associação, S = sufrágio e E = liberdade de
+    expressão e fontes alternativas de informação (codebook V-Dem v16, seção 2.1.1).
   en: >-
-    Average of the weighted average and the multiplicative interaction of five
-    sub-indices: freedom of association, clean elections, freedom of expression and
-    alternative sources of information, elected officials and suffrage.
+    0.5·(C·L·A·S·E) + 0.5·(C/8 + L/4 + A/4 + S/8 + E/4), where C = elected officials,
+    L = clean elections, A = freedom of association, S = suffrage and E = freedom of
+    expression and alternative sources of information (V-Dem codebook v16, section 2.1.1).
 uncertainty:
   pt: "Intervalo de 68% de maior densidade posterior do modelo de medição do V-Dem (colunas codelow e codehigh), aproximadamente um desvio padrão."
   en: "68% highest posterior density interval from the V-Dem measurement model (codelow and codehigh columns), roughly one standard deviation."
 criticisms:
+  - pt: >-
+      Os pesos e a combinação meio aditiva, meio multiplicativa são escolhas dos autores:
+      um compromisso entre permitir compensação entre componentes e punir o "elo mais
+      fraco". Outras escolhas mudariam a posição dos países.
+    en: >-
+      The weights and the half-additive, half-multiplicative combination are the authors'
+      choices: a compromise between allowing compensation across components and punishing
+      the "weakest link". Other choices would change countries' positions.
   - pt: >-
       Baseado em avaliações de especialistas agregadas por um modelo estatístico. Um
       debate recente discute se a tendência global de retrocesso democrático aparece em
@@ -54,7 +62,7 @@ criticisms:
       Intervals are wide; small differences between adjacent years or countries may be
       within the model's uncertainty.
 references:
-  - citation: "Teorell, J., Coppedge, M., Lindberg, S., & Skaaning, S.-E. (2018). Measuring polyarchy across the globe, 1900–2017. Studies in Comparative International Development, 54(1), 71–95."
+  - citation: "Teorell, J., Coppedge, M., Lindberg, S., & Skaaning, S.-E. (2018). Measuring polyarchy across the globe, 1900–2017. Studies in Comparative International Development, 54(1) [2019], 71–95."
     doi: 10.1007/s12116-018-9268-z
   - citation: "Coppedge, M., Gerring, J., Altman, D., Bernhard, M., Fish, S., Hicken, A., et al. (2011). Conceptualizing and measuring democracy: a new approach. Perspectives on Politics, 9(2), 247–267."
     doi: 10.1017/S1537592711000880

@@ -26,6 +26,14 @@ uncertainty:
   en: "68% highest posterior density interval from the V-Dem measurement model (codelow and codehigh columns), roughly one standard deviation."
 criticisms:
   - pt: >-
+      O expoente 1,585 e os pesos da fórmula são escolhas de agregação dos autores; o
+      índice combina democracia eleitoral e componente liberal, então uma queda pode vir de
+      qualquer um dos dois.
+    en: >-
+      The 1.585 exponent and the formula's weights are the authors' aggregation choices;
+      the index combines electoral democracy and the liberal component, so a fall can come
+      from either.
+  - pt: >-
       Baseado em avaliações de especialistas agregadas por um modelo estatístico. Um
       debate recente discute se a tendência global de retrocesso democrático aparece em
       indicadores objetivos (como desempenho eleitoral de quem está no poder) ou se pode

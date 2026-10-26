@@ -55,6 +55,17 @@
   ],
   "bibtex": "@article{Ravallion_2012, title={Troubling tradeoffs in the Human Development Index}, volume={99}, ISSN={0304-3878}, url={http://dx.doi.org/10.1016/j.jdeveco.2012.01.003}, DOI={10.1016/j.jdeveco.2012.01.003}, number={2}, journal={Journal of Development Economics}, publisher={Elsevier BV}, author={Ravallion, Martin}, year={2012}, month=Nov, pages={201–209} }"
  },
+ "10.1017/psrm.2018.6": {
+  "doi": "10.1017/psrm.2018.6",
+  "title": "Democracy for All: Conceptualizing and Measuring Egalitarian Democracy",
+  "container": "Political Science Research and Methods",
+  "year": 2018,
+  "authors": [
+   "Sigman",
+   "Lindberg"
+  ],
+  "bibtex": "@article{Sigman_2018, title={Democracy for All: Conceptualizing and Measuring Egalitarian Democracy}, volume={7}, ISSN={2049-8489}, url={http://dx.doi.org/10.1017/psrm.2018.6}, DOI={10.1017/psrm.2018.6}, number={3}, journal={Political Science Research and Methods}, publisher={Cambridge University Press (CUP)}, author={Sigman, Rachel and Lindberg, Staffan I.}, year={2018}, month=Apr, pages={595–612} }"
+ },
  "10.1017/s0023879100009390": {
   "doi": "10.1017/s0023879100009390",
   "title": "Evaluating the Impact of Brazil's Bolsa Família: Cash Transfer Programs in Comparative Perspective",

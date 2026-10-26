@@ -26,6 +26,16 @@ uncertainty:
   en: "68% highest posterior density interval from the V-Dem measurement model (codelow and codehigh columns), roughly one standard deviation."
 criticisms:
   - pt: >-
+      Inclui na definição de democracia a distribuição de recursos entre grupos sociais
+      (por exemplo, acesso a saúde e educação). Quem adota uma definição procedimental de
+      democracia considera isso um resultado de políticas, não uma dimensão do regime;
+      comparar este índice com indicadores sociais tem, por isso, alguma circularidade.
+    en: >-
+      Includes in the definition of democracy the distribution of resources across social
+      groups (e.g. access to health and education). Those who adopt a procedural
+      definition of democracy see this as a policy outcome, not a dimension of the regime;
+      comparing this index with social indicators is therefore partly circular.
+  - pt: >-
       Baseado em avaliações de especialistas agregadas por um modelo estatístico. Um
       debate recente discute se a tendência global de retrocesso democrático aparece em
       indicadores objetivos (como desempenho eleitoral de quem está no poder) ou se pode
@@ -48,6 +58,8 @@ criticisms:
       Intervals are wide; small differences between adjacent years or countries may be
       within the model's uncertainty.
 references:
+  - citation: "Sigman, R., & Lindberg, S. I. (2018). Democracy for all: conceptualizing and measuring egalitarian democracy. Political Science Research and Methods, 7(3) [2019], 595–612."
+    doi: 10.1017/psrm.2018.6
   - citation: "Coppedge, M., Gerring, J., Altman, D., Bernhard, M., Fish, S., Hicken, A., et al. (2011). Conceptualizing and measuring democracy: a new approach. Perspectives on Politics, 9(2), 247–267."
     doi: 10.1017/S1537592711000880
   - citation: "Little, A. T., & Meng, A. (2024). Measuring democratic backsliding. PS: Political Science & Politics, 57(2), 149–161."
