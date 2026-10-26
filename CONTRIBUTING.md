@@ -7,8 +7,9 @@ então o processo de revisão é mais rigoroso do que o comum.
 
 ## Tipos de contribuição
 
-1. **Nova fonte de dados:** um conector em `pipeline/compilador/sources/`, com testes que
-   usam respostas gravadas (sem acesso à rede no CI) e um manifesto com URL, licença e
+1. **Nova fonte de dados:** um conector em `pipeline/compilador/sources/`, com testes sem
+   acesso à rede (respostas sintéticas no formato da fonte) e um snapshot real commitado
+   em `data/raw/`, que o CI reprocessa a cada PR; o manifesto registra URL, licença e
    versão da fonte.
 2. **Novo indicador:** um arquivo em `indicators/` com definição, fórmula, fonte, DOI do
    artigo que fundamenta a métrica e críticas conhecidas à métrica.
@@ -49,8 +50,9 @@ precisam de pelo menos uma revisão de alguém que não seja o autor.
 Thank you for helping. This project only works if every claim can be verified, so the
 review process is stricter than usual.
 
-**Contribution types:** data source connectors (with recorded-response tests and a
-manifest), indicators (definition, formula, source, DOI, known criticisms), analyses
+**Contribution types:** data source connectors (network-free tests with synthetic
+responses in the source's format, plus a committed real snapshot in `data/raw/` that CI
+rebuilds on every PR), indicators (definition, formula, source, DOI, known criticisms), analyses
 (`analise.yaml` + `texto.pt.md` + `texto.en.md`, numbers only through `{{ v(...) }}`
 placeholders), policy briefs (evaluation design, effect size, confidence interval, DOI,
 external validity for Brazil; policies that did **not** work are equally welcome), and

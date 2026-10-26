@@ -3,11 +3,11 @@
   "https://www.biblioteca.presidencia.gov.br/presidencia/ex-presidentes",
   "https://www.gov.br/planalto/pt-br/conheca-a-presidencia/acervo/galeria-de-presidentes"
  ],
+ "verified_on": "2026-10-25",
  "periods": [
   {
    "id": "figueiredo",
    "president": "João Figueiredo",
-   "short_name": "Figueiredo",
    "condition": "titular",
    "term": {
     "pt": "1979–1985",
@@ -15,16 +15,11 @@
    },
    "start": "1979-03-15",
    "end": "1985-03-15",
-   "regime": {
-    "pt": "Regime militar",
-    "en": "Military regime"
-   },
    "note": null
   },
   {
    "id": "sarney-interino",
    "president": "José Sarney",
-   "short_name": "Sarney",
    "condition": "interino",
    "term": {
     "pt": "1985 (exercício por doença de Tancredo Neves)",
@@ -32,10 +27,6 @@
    },
    "start": "1985-03-15",
    "end": "1985-04-21",
-   "regime": {
-    "pt": "Democracia (eleição indireta)",
-    "en": "Democracy (indirect election)"
-   },
    "note": {
     "pt": "Tancredo Neves, eleito pelo Colégio Eleitoral, adoeceu antes da posse e morreu em 21/04/1985.",
     "en": "Tancredo Neves, elected by the Electoral College, fell ill before taking office and died on 1985-04-21."
@@ -44,7 +35,6 @@
   {
    "id": "sarney",
    "president": "José Sarney",
-   "short_name": "Sarney",
    "condition": "titular",
    "term": {
     "pt": "1985–1990",
@@ -52,16 +42,11 @@
    },
    "start": "1985-04-21",
    "end": "1990-03-15",
-   "regime": {
-    "pt": "Democracia (eleição indireta)",
-    "en": "Democracy (indirect election)"
-   },
    "note": null
   },
   {
    "id": "collor",
    "president": "Fernando Collor",
-   "short_name": "Collor",
    "condition": "titular",
    "term": {
     "pt": "1990–1992",
@@ -69,10 +54,6 @@
    },
    "start": "1990-03-15",
    "end": "1992-10-02",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": {
     "pt": "Afastado em 02/10/1992 pela abertura do processo de impeachment; renunciou em 29/12/1992.",
     "en": "Suspended on 1992-10-02 when impeachment proceedings opened; resigned on 1992-12-29."
@@ -81,7 +62,6 @@
   {
    "id": "itamar-interino",
    "president": "Itamar Franco",
-   "short_name": "Itamar",
    "condition": "interino",
    "term": {
     "pt": "1992 (exercício durante o impeachment)",
@@ -89,16 +69,11 @@
    },
    "start": "1992-10-02",
    "end": "1992-12-29",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   },
   {
    "id": "itamar",
    "president": "Itamar Franco",
-   "short_name": "Itamar",
    "condition": "titular",
    "term": {
     "pt": "1992–1994",
@@ -106,16 +81,11 @@
    },
    "start": "1992-12-29",
    "end": "1995-01-01",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   },
   {
    "id": "fhc-1",
    "president": "Fernando Henrique Cardoso",
-   "short_name": "FHC",
    "condition": "titular",
    "term": {
     "pt": "1º mandato (1995–1998)",
@@ -123,16 +93,11 @@
    },
    "start": "1995-01-01",
    "end": "1999-01-01",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   },
   {
    "id": "fhc-2",
    "president": "Fernando Henrique Cardoso",
-   "short_name": "FHC",
    "condition": "titular",
    "term": {
     "pt": "2º mandato (1999–2002)",
@@ -140,16 +105,11 @@
    },
    "start": "1999-01-01",
    "end": "2003-01-01",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   },
   {
    "id": "lula-1",
    "president": "Luiz Inácio Lula da Silva",
-   "short_name": "Lula",
    "condition": "titular",
    "term": {
     "pt": "1º mandato (2003–2006)",
@@ -157,16 +117,11 @@
    },
    "start": "2003-01-01",
    "end": "2007-01-01",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   },
   {
    "id": "lula-2",
    "president": "Luiz Inácio Lula da Silva",
-   "short_name": "Lula",
    "condition": "titular",
    "term": {
     "pt": "2º mandato (2007–2010)",
@@ -174,16 +129,11 @@
    },
    "start": "2007-01-01",
    "end": "2011-01-01",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   },
   {
    "id": "dilma-1",
    "president": "Dilma Rousseff",
-   "short_name": "Dilma",
    "condition": "titular",
    "term": {
     "pt": "1º mandato (2011–2014)",
@@ -191,16 +141,11 @@
    },
    "start": "2011-01-01",
    "end": "2015-01-01",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   },
   {
    "id": "dilma-2",
    "president": "Dilma Rousseff",
-   "short_name": "Dilma",
    "condition": "titular",
    "term": {
     "pt": "2º mandato (2015–2016)",
@@ -208,10 +153,6 @@
    },
    "start": "2015-01-01",
    "end": "2016-05-12",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": {
     "pt": "Afastada em 12/05/2016 pela abertura do processo de impeachment no Senado; destituída em 31/08/2016.",
     "en": "Suspended on 2016-05-12 when the Senate opened impeachment proceedings; removed on 2016-08-31."
@@ -220,7 +161,6 @@
   {
    "id": "temer-interino",
    "president": "Michel Temer",
-   "short_name": "Temer",
    "condition": "interino",
    "term": {
     "pt": "2016 (exercício durante o impeachment)",
@@ -228,16 +168,11 @@
    },
    "start": "2016-05-12",
    "end": "2016-08-31",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   },
   {
    "id": "temer",
    "president": "Michel Temer",
-   "short_name": "Temer",
    "condition": "titular",
    "term": {
     "pt": "2016–2018",
@@ -245,16 +180,11 @@
    },
    "start": "2016-08-31",
    "end": "2019-01-01",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   },
   {
    "id": "bolsonaro",
    "president": "Jair Bolsonaro",
-   "short_name": "Bolsonaro",
    "condition": "titular",
    "term": {
     "pt": "2019–2022",
@@ -262,16 +192,11 @@
    },
    "start": "2019-01-01",
    "end": "2023-01-01",
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   },
   {
    "id": "lula-3",
    "president": "Luiz Inácio Lula da Silva",
-   "short_name": "Lula",
    "condition": "titular",
    "term": {
     "pt": "3º mandato (2023–)",
@@ -279,10 +204,6 @@
    },
    "start": "2023-01-01",
    "end": null,
-   "regime": {
-    "pt": "Democracia",
-    "en": "Democracy"
-   },
    "note": null
   }
  ]

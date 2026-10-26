@@ -1,5 +1,7 @@
 {
  "warnings": [
+  "wdi.si_pov_gini LCN: no observations",
+  "wdi.si_pov_gini WLD: no observations",
   "wdi.fp_cpi_totl_zg BRA 1983: atypical year-over-year change (robust z=8.6, value=135.027682230472)",
   "wdi.fp_cpi_totl_zg BRA 1984: atypical year-over-year change (robust z=14.2, value=192.12173313205)",
   "wdi.fp_cpi_totl_zg BRA 1985: atypical year-over-year change (robust z=8.4, value=225.989665211895)",

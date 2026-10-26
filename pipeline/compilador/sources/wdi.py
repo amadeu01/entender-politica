@@ -4,7 +4,7 @@ https://datahelpdesk.worldbank.org/knowledgebase/articles/889392
 """
 
 import json
-from datetime import date
+from datetime import UTC, datetime
 
 import httpx
 import pandas as pd
@@ -32,7 +32,7 @@ def fetch(
     for ind in indicators:
         url = (
             f"{API}/country/{codes}/indicator/{ind.source_code}"
-            f"?format=json&per_page={PER_PAGE}&date={START_YEAR}:{date.today().year}"
+            f"?format=json&per_page={PER_PAGE}&date={START_YEAR}:{datetime.now(UTC).year}"
         )
         resp = client.get(url)
         resp.raise_for_status()

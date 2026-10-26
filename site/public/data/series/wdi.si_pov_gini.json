@@ -204,7 +204,7 @@
    "value": 41.4,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "ARG",
@@ -260,7 +260,7 @@
    "value": 42.7,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "ARG",
@@ -276,7 +276,7 @@
    "value": 40.7,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "ARG",
@@ -732,7 +732,7 @@
    "value": 47.0,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "CHL",
@@ -740,7 +740,7 @@
    "value": 43.2,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "CHL",
@@ -892,7 +892,7 @@
    "value": 53.6,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "COL",
@@ -956,7 +956,7 @@
    "value": 54.4,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "COL",
@@ -972,7 +972,7 @@
    "value": 54.8,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "COL",
@@ -1100,7 +1100,7 @@
    "value": 49.6,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "MEX",
@@ -1132,7 +1132,7 @@
    "value": 44.6,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "MEX",
@@ -1140,7 +1140,7 @@
    "value": 43.5,
    "lower": null,
    "upper": null,
-   "series_break": false
+   "series_break": true
   },
   {
    "geo_code": "MEX",
