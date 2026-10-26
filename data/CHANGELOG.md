@@ -1,0 +1,49 @@
+# Changelog dos dados / Data changelog
+
+## 2026-10-26
+
+- Fonte / Source `wdi`: versão / version `2026-10-08`
+- Séries novas / New series: 40
+  - `wdi.fp_cpi_totl_zg ARG`
+  - `wdi.fp_cpi_totl_zg BRA`
+  - `wdi.fp_cpi_totl_zg CHL`
+  - `wdi.fp_cpi_totl_zg COL`
+  - `wdi.fp_cpi_totl_zg LCN`
+  - `wdi.fp_cpi_totl_zg MEX`
+  - `wdi.fp_cpi_totl_zg WLD`
+  - `wdi.ny_gdp_pcap_kd ARG`
+  - `wdi.ny_gdp_pcap_kd BRA`
+  - `wdi.ny_gdp_pcap_kd CHL`
+  - `wdi.ny_gdp_pcap_kd COL`
+  - `wdi.ny_gdp_pcap_kd LCN`
+  - `wdi.ny_gdp_pcap_kd MEX`
+  - `wdi.ny_gdp_pcap_kd WLD`
+  - `wdi.si_pov_dday ARG`
+  - `wdi.si_pov_dday BRA`
+  - `wdi.si_pov_dday CHL`
+  - `wdi.si_pov_dday COL`
+  - `wdi.si_pov_dday LCN`
+  - `wdi.si_pov_dday MEX`
+  - `wdi.si_pov_dday WLD`
+  - `wdi.si_pov_gini ARG`
+  - `wdi.si_pov_gini BRA`
+  - `wdi.si_pov_gini CHL`
+  - `wdi.si_pov_gini COL`
+  - `wdi.si_pov_gini MEX`
+  - `wdi.sp_dyn_imrt_in ARG`
+  - `wdi.sp_dyn_imrt_in BRA`
+  - `wdi.sp_dyn_imrt_in CHL`
+  - `wdi.sp_dyn_imrt_in COL`
+  - `wdi.sp_dyn_imrt_in LCN`
+  - `wdi.sp_dyn_imrt_in MEX`
+  - `wdi.sp_dyn_imrt_in WLD`
+  - `wdi.sp_dyn_le00_in ARG`
+  - `wdi.sp_dyn_le00_in BRA`
+  - `wdi.sp_dyn_le00_in CHL`
+  - `wdi.sp_dyn_le00_in COL`
+  - `wdi.sp_dyn_le00_in LCN`
+  - `wdi.sp_dyn_le00_in MEX`
+  - `wdi.sp_dyn_le00_in WLD`
+- Observações adicionadas / Observations added: 1701
+- Observações removidas / Observations removed: 0
+- Valores revisados pela fonte / Values revised upstream: 0

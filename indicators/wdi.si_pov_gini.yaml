@@ -1,0 +1,64 @@
+id: wdi.si_pov_gini
+source: wdi
+source_code: SI.POV.GINI
+unit: index_0_100
+min: 0
+max: 100
+name:
+  pt: "Índice de Gini (renda ou consumo)"
+  en: "Gini index (income or consumption)"
+definition:
+  pt: >-
+    Mede quanto a distribuição de renda (ou consumo) entre pessoas se afasta de uma
+    distribuição perfeitamente igual. 0 significa igualdade perfeita; 100, que uma só
+    pessoa tem toda a renda. Calculado pelo Banco Mundial (Poverty and Inequality
+    Platform) a partir de pesquisas domiciliares; no Brasil, a PNAD e a PNAD Contínua.
+  en: >-
+    Measures how far the distribution of income (or consumption) among individuals
+    departs from a perfectly equal distribution. 0 means perfect equality; 100 means one
+    person has all income. Computed by the World Bank (Poverty and Inequality Platform)
+    from household surveys; for Brazil, PNAD and the Continuous PNAD.
+formula:
+  pt: "G = 1 − 2·∫₀¹ L(p) dp, em que L(p) é a curva de Lorenz; multiplicado por 100."
+  en: "G = 1 − 2·∫₀¹ L(p) dp, where L(p) is the Lorenz curve; multiplied by 100."
+criticisms:
+  - pt: >-
+      Pesquisas domiciliares captam mal as rendas mais altas. Com dados do Imposto de
+      Renda, a concentração no topo no Brasil é bem maior e mais estável do que a PNAD
+      indica (Medeiros, Souza e Castro, 2015).
+    en: >-
+      Household surveys under-capture top incomes. Using income tax data, top-income
+      concentration in Brazil is much higher and more stable than PNAD suggests
+      (Medeiros, Souza and Castro, 2015).
+  - pt: >-
+      Um único número esconde onde a mudança ocorreu: o Gini é mais sensível a mudanças
+      no meio da distribuição do que nas pontas (Atkinson, 1970).
+    en: >-
+      A single number hides where change happened: Gini is more sensitive to changes in
+      the middle of the distribution than at the tails (Atkinson, 1970).
+  - pt: >-
+      Brasil usa renda; muitos países usam consumo, que costuma ser menos desigual.
+      Comparações internacionais diretas devem considerar essa diferença.
+    en: >-
+      Brazil uses income; many countries use consumption, which tends to be less unequal.
+      Direct international comparisons must account for this.
+references:
+  - citation: "Atkinson, A. B. (1970). On the measurement of inequality. Journal of Economic Theory, 2(3), 244–263."
+    doi: 10.1016/0022-0531(70)90039-6
+  - citation: "Medeiros, M., Souza, P. H. G. F., & Castro, F. A. (2015). O topo da distribuição de renda no Brasil: primeiras estimativas com dados tributários e comparação com pesquisas domiciliares (2006–2012). Dados, 58(1)."
+    doi: 10.1590/00115258201537
+  - citation: "World Bank. Poverty and Inequality Platform — Methodology Handbook."
+    url: https://datanalytics.worldbank.org/PIP-Methodology/
+series_breaks:
+  - year: 2012
+    note:
+      pt: "Brasil: PNAD substituída pela PNAD Contínua. Os níveis não são diretamente comparáveis."
+      en: "Brazil: PNAD replaced by the Continuous PNAD. Levels are not directly comparable."
+  - year: 2020
+    note:
+      pt: "Brasil: em 2020–2021 a renda vem da 5ª visita da PNAD Contínua (pandemia), não da 1ª."
+      en: "Brazil: in 2020–2021 income comes from the Continuous PNAD 5th visit (pandemic), not the 1st."
+  - year: 2022
+    note:
+      pt: "Brasil: retorno à 1ª visita da PNAD Contínua."
+      en: "Brazil: return to the Continuous PNAD 1st visit."

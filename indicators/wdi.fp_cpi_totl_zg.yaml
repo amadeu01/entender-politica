@@ -1,0 +1,36 @@
+id: wdi.fp_cpi_totl_zg
+source: wdi
+source_code: FP.CPI.TOTL.ZG
+unit: percent
+min: -100
+name:
+  pt: "Inflação ao consumidor (% ao ano)"
+  en: "Consumer price inflation (annual %)"
+definition:
+  pt: >-
+    Variação anual do índice de preços ao consumidor: quanto mais cara ficou, em média,
+    uma cesta fixa de bens e serviços. No Brasil chegou a milhares por cento ao ano antes
+    do Plano Real (1994); use escala logarítmica para ler a série.
+  en: >-
+    Annual change in the consumer price index: how much more expensive, on average, a
+    fixed basket of goods and services became. In Brazil it reached thousands of percent
+    a year before the Real Plan (1994); read the series on a log scale.
+formula:
+  pt: "πₜ = (IPCₜ / IPCₜ₋₁ − 1) × 100."
+  en: "πₜ = (CPIₜ / CPIₜ₋₁ − 1) × 100."
+criticisms:
+  - pt: >-
+      Uma cesta fixa superestima o custo de vida: consumidores substituem produtos que
+      encarecem e a qualidade dos produtos melhora (Boskin et al., 1998).
+    en: >-
+      A fixed basket overstates the cost of living: consumers substitute away from goods
+      that become pricier, and product quality improves (Boskin et al., 1998).
+  - pt: >-
+      Nos planos de estabilização dos anos 1980 e 1990 houve congelamentos e trocas de
+      moeda; os índices oficiais desses meses são contestados.
+    en: >-
+      Stabilization plans in the 1980s and 1990s involved price freezes and currency
+      changes; official indices for those months are contested.
+references:
+  - citation: "Boskin, M. J., Dulberger, E. R., Gordon, R. J., Griliches, Z., & Jorgenson, D. W. (1998). Consumer prices, the consumer price index, and the cost of living. Journal of Economic Perspectives, 12(1), 3–26."
+    doi: 10.1257/jep.12.1.3

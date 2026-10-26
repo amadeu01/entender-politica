@@ -6,9 +6,16 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
+    "httpx>=0.28.1",
+    "pandas>=3.1.0",
+    "pandera>=0.35.0",
+    "pyarrow>=26.0.0",
     "pydantic>=2.9",
     "pyyaml>=6.0",
 ]
+
+[project.scripts]
+compilador = "compilador.cli:main"
 
 [dependency-groups]
 dev = [
@@ -25,6 +32,7 @@ packages = ["pipeline/compilador"]
 
 [tool.pytest.ini_options]
 testpaths = ["pipeline/tests"]
+pythonpath = ["pipeline"]
 
 [tool.ruff]
 line-length = 100
@@ -34,4 +42,4 @@ target-version = "py312"
 select = ["E", "F", "W", "I", "B", "UP", "SIM"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["compilador"]
+known-first-party = ["compilador", "tests"]

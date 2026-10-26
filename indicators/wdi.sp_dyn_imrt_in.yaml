@@ -1,0 +1,37 @@
+id: wdi.sp_dyn_imrt_in
+source: wdi
+source_code: SP.DYN.IMRT.IN
+unit: per_1000_live_births
+min: 0
+max: 1000
+name:
+  pt: "Mortalidade infantil (por 1.000 nascidos vivos)"
+  en: "Infant mortality (per 1,000 live births)"
+definition:
+  pt: >-
+    Número de crianças que morrem antes de completar um ano, para cada 1.000 nascidas
+    vivas no ano. Estimativa do Grupo Interagências da ONU (UN IGME).
+  en: >-
+    Number of children dying before age one per 1,000 live births in the year. Estimate
+    from the UN Inter-agency Group for Child Mortality Estimation (UN IGME).
+formula:
+  pt: "TMI = óbitos de menores de 1 ano / nascidos vivos × 1.000 (estimada por modelo)."
+  en: "IMR = deaths under age 1 / live births × 1,000 (model-based estimate)."
+criticisms:
+  - pt: >-
+      Os valores são estimados por modelo que suaviza a série e combina fontes; mudanças
+      bruscas aparecem atenuadas e a série inteira é revisada a cada edição
+      (Alkema e New, 2014).
+    en: >-
+      Values come from a model that smooths the series and combines sources; abrupt
+      changes appear damped and the whole series is revised each edition
+      (Alkema and New, 2014).
+  - pt: >-
+      Nos anos 1980 o sub-registro de óbitos e nascimentos no Brasil era alto,
+      sobretudo no Norte e no Nordeste; o nível dessa década é mais incerto.
+    en: >-
+      In the 1980s under-registration of deaths and births in Brazil was high,
+      especially in the North and Northeast; levels for that decade are more uncertain.
+references:
+  - citation: "Alkema, L., & New, J. R. (2014). Global estimation of child mortality using a Bayesian B-spline bias-reduction model. The Annals of Applied Statistics, 8(4), 2122–2149."
+    doi: 10.1214/14-AOAS768

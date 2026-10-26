@@ -1,0 +1,36 @@
+id: wdi.sp_dyn_le00_in
+source: wdi
+source_code: SP.DYN.LE00.IN
+unit: years
+min: 0
+max: 100
+name:
+  pt: "Expectativa de vida ao nascer (anos)"
+  en: "Life expectancy at birth (years)"
+definition:
+  pt: >-
+    Quantos anos viveria, em média, uma pessoa nascida no ano se as taxas de mortalidade
+    por idade daquele ano se mantivessem por toda a sua vida. Estimativa da Divisão de
+    População da ONU (World Population Prospects).
+  en: >-
+    How many years a person born in the year would live on average if that year's
+    age-specific mortality rates held throughout their life. Estimate from the UN
+    Population Division (World Population Prospects).
+formula:
+  pt: "e₀ = T₀ / l₀, calculado a partir de uma tábua de vida de período."
+  en: "e₀ = T₀ / l₀, computed from a period life table."
+criticisms:
+  - pt: >-
+      É uma medida de período, não a vida real de uma geração: choques de um ano, como a
+      pandemia em 2020–2021, derrubam o indicador mesmo que as gerações mais novas venham
+      a viver mais.
+    en: >-
+      It is a period measure, not the actual lifespan of a cohort: one-year shocks such
+      as the 2020–2021 pandemic pull it down even if younger cohorts end up living longer.
+  - pt: "Valores interpolados ou modelados em anos sem dados de registro confiáveis."
+    en: "Values are interpolated or modeled in years without reliable registration data."
+references:
+  - citation: "Oeppen, J., & Vaupel, J. W. (2002). Broken limits to life expectancy. Science, 296(5570), 1029–1031."
+    doi: 10.1126/science.1069675
+  - citation: "United Nations, Department of Economic and Social Affairs, Population Division. World Population Prospects — Methodology."
+    url: https://population.un.org/wpp/

@@ -1,0 +1,52 @@
+id: wdi.si_pov_dday
+source: wdi
+source_code: SI.POV.DDAY
+unit: percent
+min: 0
+max: 100
+name:
+  pt: "Pobreza extrema: população abaixo de US$ 3,00 por dia (PPC de 2021)"
+  en: "Extreme poverty: population below $3.00 a day (2021 PPP)"
+definition:
+  pt: >-
+    Percentual da população que vive com menos de US$ 3,00 por dia, em paridade de poder
+    de compra (PPC) de 2021. É a linha internacional de pobreza extrema do Banco Mundial.
+  en: >-
+    Share of the population living on less than $3.00 a day at 2021 purchasing power
+    parity (PPP). This is the World Bank's international extreme poverty line.
+formula:
+  pt: "P₀ = (1/N)·Σ 1[yᵢ < z], com z = US$ 3,00/dia PPC 2021 (índice FGT com α = 0)."
+  en: "P₀ = (1/N)·Σ 1[yᵢ < z], with z = $3.00/day 2021 PPP (FGT index with α = 0)."
+criticisms:
+  - pt: >-
+      A taxa de incidência ignora quão abaixo da linha as pessoas estão; os índices FGT
+      com α = 1 e α = 2 capturam profundidade e severidade (Foster, Greer e Thorbecke, 1984).
+    en: >-
+      The headcount ignores how far below the line people are; FGT indices with α = 1 and
+      α = 2 capture depth and severity (Foster, Greer and Thorbecke, 1984).
+  - pt: >-
+      A linha internacional foi desenhada a partir de países de baixa renda e é baixa para
+      um país de renda média como o Brasil (Ravallion, Chen e Sangraula, 2009).
+    en: >-
+      The international line is derived from low-income countries and is low for a
+      middle-income country such as Brazil (Ravallion, Chen and Sangraula, 2009).
+  - pt: "Revisões da PPC mudam o nível de toda a série retroativamente."
+    en: "PPP revisions shift the level of the whole series retroactively."
+references:
+  - citation: "Foster, J., Greer, J., & Thorbecke, E. (1984). A class of decomposable poverty measures. Econometrica, 52(3), 761–766."
+    doi: 10.2307/1913475
+  - citation: "Ravallion, M., Chen, S., & Sangraula, P. (2009). Dollar a day revisited. The World Bank Economic Review, 23(2), 163–184."
+    doi: 10.1093/wber/lhp007
+series_breaks:
+  - year: 2012
+    note:
+      pt: "Brasil: PNAD substituída pela PNAD Contínua."
+      en: "Brazil: PNAD replaced by the Continuous PNAD."
+  - year: 2020
+    note:
+      pt: "Brasil: em 2020–2021 a renda vem da 5ª visita da PNAD Contínua (pandemia)."
+      en: "Brazil: in 2020–2021 income comes from the Continuous PNAD 5th visit (pandemic)."
+  - year: 2022
+    note:
+      pt: "Brasil: retorno à 1ª visita da PNAD Contínua."
+      en: "Brazil: return to the Continuous PNAD 1st visit."
