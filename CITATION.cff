@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Se usar este projeto, cite-o assim. / If you use this project, please cite it as below."
+title: "Entender Política: dados abertos e evidência científica sobre políticas públicas no Brasil"
+type: software
+authors:
+  - family-names: Cavalcante
+    given-names: Amadeu
+repository-code: "https://github.com/amadeu01/entender-politica"
+url: "https://amadeu01.github.io/entender-politica/"
+license: MIT
+version: 0.1.0
+date-released: 2026-10-25
+keywords:
+  - public policy
+  - Brazil
+  - open data
+  - reproducibility
+  - inequality
