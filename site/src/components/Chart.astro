@@ -63,8 +63,27 @@ const config = {
   periods: governments().periods.map((p) => ({ name: p.short_name, start: p.start, end: p.end })),
   text: { seriesBreak: t.seriesBreak },
 };
+// Each series' first and last year, and how many years in between have data, so a line
+// that starts late or has gaps reads as missing data rather than as an event. Counts only
+// what is drawn (the log scale drops values at or below zero).
+const drawn = log ? points.filter((p) => p.value > 0) : points;
+const spans = keys.map((k) => {
+  const years = drawn.filter((p) => p.key === k.key).map((p) => p.year);
+  if (years.length === 0) return { label: k.label, text: `: ${t.noData}` };
+  const [first, last] = [Math.min(...years), Math.max(...years)];
+  const range = `${first}–${last}`;
+  const gaps = years.length < last - first + 1 ? ` (${t.yearsCount(years.length)})` : "";
+  // A label that already names its period ("PNAD, 1976–2014") gets only the gap count.
+  return { label: k.label, text: (k.label.includes(range) ? "" : `: ${range}`) + gaps };
+});
+const sameSpan = spans.length > 1 && spans.every((s) => s.text === spans[0].text);
+const coverage = sameSpan
+  ? `${t.allSeries}${spans[0].text}`
+  : spans.map((s) => s.label + s.text).join("; ");
+const othersShown = geographies.some((g) => g !== "BRA");
 const captionNote = [
-  `${config.unitLabel}. ${t.governments}.`,
+  `${config.unitLabel}. ${t.governments}${othersShown ? `, ${t.governmentsOthers}` : ""}.`,
+  `${t.coverage}: ${coverage}.`,
   missing.length > 0 ? `${t.noDataFor}: ${missing.map((g) => geoName(g, lang)).join(", ")}.` : "",
   log && points.some((p) => p.value <= 0) ? t.logDropped : "",
 ]
