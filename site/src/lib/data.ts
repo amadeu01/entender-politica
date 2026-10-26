@@ -132,6 +132,54 @@ export type PeriodChange = {
   relative: boolean;
   mixed_years: number[];
 };
+export type Translation = {
+  cut: number;
+  side: "bottom" | "top";
+  year: number;
+  limit_brl: number;
+  limit_usd_ppp: number;
+  bracket: string;
+};
+export type Guide = {
+  indicator: string;
+  lang: Lang;
+  understand: string;
+  how_to_read: string;
+  studies: { text: string; method: string; references: string[] }[];
+  policies: {
+    name: string;
+    country: string;
+    period: { start: number; end: number };
+    result: string;
+    direction: "positive" | "null" | "negative" | "mixed";
+    method: string;
+    evidence_level: "high" | "moderate" | "low";
+    brief: string | null;
+    references: string[];
+  }[];
+  by_income: {
+    text: string;
+    study_period: { start: number; end: number };
+    references: string[];
+    translation: Translation | null;
+  }[];
+  show_income: boolean;
+  purchasing_power: string | null;
+  contrary_evidence_search: string | null;
+  references_indicator: RenderedReference[];
+  references_policies: RenderedReference[];
+  numbers: Cited[];
+};
+export type IncomeBrackets = {
+  config: { thresholds_usd_ppp: number[]; ppp_base_year: number; labels: string[]; method: string };
+  years: {
+    year: number;
+    reais_per_usd_ppp: number;
+    thresholds_brl: number[];
+    brackets: { label: string; low: number; high: number }[];
+  }[];
+  sources: { indicator_id: string; source_id: string; source_version: string; retrieved_at: string }[];
+};
 type Documents = {
   analyses: { slug: string; lang: Lang; title: string }[];
   policies: { slug: string; lang: Lang; name: string; country: string }[];
@@ -149,6 +197,13 @@ export const series = (id: string): Series => read(`series/${id}.json`);
 export const documents = (): Documents => read("documents.json");
 export const analysis = (slug: string, lang: Lang): Analysis => read(`analyses/${slug}.${lang}.json`);
 export const policy = (slug: string, lang: Lang): Policy => read(`policies/${slug}.${lang}.json`);
+/** The guide of an indicator, or null when it has none. */
+export const guide = (id: string, lang: Lang): Guide | null => {
+  const file = join(DATA_DIR, "guides", `${id}.${lang}.json`);
+  return existsSync(file) ? (JSON.parse(readFileSync(file, "utf-8")) as Guide) : null;
+};
+export const incomeBrackets = (): IncomeBrackets | null =>
+  existsSync(join(DATA_DIR, "income_brackets.json")) ? read("income_brackets.json") : null;
 export const periodChanges = (): PeriodChange[] => read("period_changes.json");
 
 export const geoName = (code: string, lang: Lang): string =>

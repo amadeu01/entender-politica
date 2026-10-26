@@ -1,9 +1,22 @@
 ---
 import Base from "../layouts/Base.astro";
 import Chart from "../components/Chart.astro";
+import IncomeBrackets from "../components/IncomeBrackets.astro";
 import Notice from "../components/Notice.astro";
-import { indicator, series } from "../lib/data";
-import { GEO_ORDER, SOURCE_NAMES, UI, UNIT_LABELS, asset, type Lang } from "../lib/i18n";
+import Numbers from "../components/Numbers.astro";
+import References from "../components/References.astro";
+import { geoName, guide as loadGuide, incomeBrackets, indicator, series } from "../lib/data";
+import {
+  GEO_ORDER,
+  METHOD_NAMES,
+  SOURCE_NAMES,
+  UI,
+  UNIT_LABELS,
+  asset,
+  formatNumber,
+  url,
+  type Lang,
+} from "../lib/i18n";
 interface Props {
   lang: Lang;
   id: string;
@@ -17,6 +30,19 @@ const alt = {
   pt: `Linha do tempo de ${ind.name.pt} por geografia, com faixas dos períodos de governo do Brasil ao fundo.`,
   en: `Timeline of ${ind.name.en} by geography, with Brazil's government period bands in the background.`,
 }[lang];
+const guide = loadGuide(id, lang);
+const brackets = incomeBrackets();
+const ICON = { positive: "▲", null: "●", negative: "▼", mixed: "◆" };
+const usdPpp = (n: number) => `${t.ppp} ${formatNumber(n, lang, 0)}`;
+const bracketText = (label: string): string => {
+  const th = brackets?.config.thresholds_usd_ppp ?? [];
+  const i = brackets?.config.labels.indexOf(label) ?? -1;
+  if (i < 0) return label;
+  if (i === 0) return t.upTo(usdPpp(th[0]));
+  if (i === th.length) return t.moreThan(usdPpp(th[th.length - 1]));
+  return t.fromTo(usdPpp(th[i - 1]), usdPpp(th[i]));
+};
+const ppGeos = GEO_ORDER.filter((g) => series("wdi.ny_gdp_pcap_pp_kd").observations.some((o) => o.geo_code === g));
 ---
 
 <Base lang={lang} title={ind.name[lang]} route="indicators" slug={id} description={ind.definition[lang]}>
@@ -24,6 +50,17 @@ const alt = {
   <p class="meta">
     <code>{ind.id}</code> · {SOURCE_NAMES[ind.source]?.[lang] ?? ind.source} · {ind.source_code}
   </p>
+
+  {
+    guide && (
+      <>
+        <h2>{t.guideUnderstand}</h2>
+        <div set:html={guide.understand} />
+        <h2>{t.guideHowToRead}</h2>
+        <div set:html={guide.how_to_read} />
+      </>
+    )
+  }
 
   <h2>{t.definition}</h2>
   <p>{ind.definition[lang]}</p>
@@ -65,7 +102,103 @@ const alt = {
     )
   }
 
-  <h2>{t.references}</h2>
+  {
+    guide && (
+      <>
+        <h2>{t.guideStudies}</h2>
+        <ul>
+          {guide.studies.map((st) => (
+            <li>
+              <p>
+                <span class="badge">{METHOD_NAMES[st.method]?.[lang] ?? st.method}</span>
+              </p>
+              <p>
+                <span set:html={st.text} />{" "}
+                {st.references.map((d) => <a href={`https://doi.org/${d}`}>[doi:{d}]</a>)}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        <h2>{t.guidePolicies}</h2>
+        <ul>
+          {guide.policies.map((p) => (
+            <li>
+              <p>
+                <strong set:html={p.name} /> · {geoName(p.country, lang)} · {p.period.start}–{p.period.end}
+              </p>
+              <p>
+                <span class="direction">
+                  <span aria-hidden="true">{ICON[p.direction]}</span> {t.directions[p.direction]}
+                </span>{" "}
+                · <span class="badge">{METHOD_NAMES[p.method]?.[lang] ?? p.method}</span> ·{" "}
+                {t.evidenceLevel}: <span class="badge">{t.levels[p.evidence_level]}</span>
+              </p>
+              <p>
+                <span set:html={p.result} />{" "}
+                {p.references.map((d) => <a href={`https://doi.org/${d}`}>[doi:{d}]</a>)}
+                {p.brief && (
+                  <>
+                    {" "}
+                    <a href={url(lang, "policies", p.brief)}>{t.briefLink}</a>
+                  </>
+                )}
+              </p>
+            </li>
+          ))}
+        </ul>
+        {guide.contrary_evidence_search && (
+          <>
+            <h3>{t.contrarySearch}</h3>
+            <p set:html={guide.contrary_evidence_search} />
+          </>
+        )}
+
+        {guide.show_income && (
+          <>
+            <h2>{t.guideIncome}</h2>
+            {guide.by_income.length === 0 && <p>{t.guideIncomeNone}</p>}
+            <ul>
+              {guide.by_income.map((e) => (
+                <li>
+                  <p>
+                    <span set:html={e.text} /> ({e.study_period.start}–{e.study_period.end}){" "}
+                    {e.references.map((d) => <a href={`https://doi.org/${d}`}>[doi:{d}]</a>)}
+                  </p>
+                  {e.translation && (
+                    <aside class="translation">
+                      <strong>{t.translationTitle}:</strong> {t.translationGroup(e.translation.side, e.translation.cut)}.{" "}
+                      {t.translationText(
+                        e.translation.year,
+                        `R$ ${formatNumber(e.translation.limit_brl, lang, 0)}`,
+                        usdPpp(e.translation.limit_usd_ppp),
+                        bracketText(e.translation.bracket),
+                      )}
+                    </aside>
+                  )}
+                </li>
+              ))}
+            </ul>
+            <IncomeBrackets lang={lang} />
+          </>
+        )}
+
+        {guide.show_income && guide.purchasing_power && (
+          <>
+            <h2>{t.guidePurchasing}</h2>
+            <div set:html={guide.purchasing_power} />
+            <p class="meta">{t.ppNote}</p>
+            <Chart lang={lang} id="pib-ppc" title={t.ppTitle} alt={t.ppAlt} indicators={["wdi.ny_gdp_pcap_pp_kd"]} geographies={ppGeos} />
+            <Chart lang={lang} id="pib-2015" title={t.nominalTitle} alt={t.ppNominalAlt} indicators={["wdi.ny_gdp_pcap_kd"]} geographies={ppGeos} />
+          </>
+        )}
+      </>
+    )
+  }
+
+  <h2>{guide ? t.guideRefsImpacts : t.references}</h2>
+  {guide && <References refs={guide.references_policies} />}
+  {guide && <h2>{t.guideRefsIndicator}</h2>}
   <ol class="refs">
     {
       ind.references.map((r) => (
@@ -76,5 +209,25 @@ const alt = {
       ))
     }
   </ol>
+  {guide && guide.references_indicator.length > 0 && <References refs={guide.references_indicator} />}
   <p><a href={asset(`data/series/${id}.csv`)} download>{t.downloadCsv}</a></p>
+
+  {
+    guide && guide.numbers.length > 0 && (
+      <>
+        <h2>{t.numbers}</h2>
+        <Numbers lang={lang} numbers={guide.numbers} />
+      </>
+    )
+  }
 </Base>
+
+<style>
+  .translation {
+    border-left: 3px solid var(--border);
+    margin: 0.5rem 0 1rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.95rem;
+    color: var(--ink-2);
+  }
+</style>
