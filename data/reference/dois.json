@@ -103,6 +103,17 @@
   ],
   "bibtex": "@article{Ravallion_2009, title={Dollar a Day Revisited}, volume={23}, ISSN={0258-6770}, url={http://dx.doi.org/10.1093/wber/lhp007}, DOI={10.1093/wber/lhp007}, number={2}, journal={The World Bank Economic Review}, publisher={Oxford University Press (OUP)}, author={Ravallion, Martin and Chen, Shaohua and Sangraula, Prem}, year={2009}, month=Jan, pages={163–184} }"
  },
+ "10.1126/science.1069675": {
+  "doi": "10.1126/science.1069675",
+  "title": "Broken Limits to Life Expectancy",
+  "container": "Science",
+  "year": 2002,
+  "authors": [
+   "Oeppen",
+   "Vaupel"
+  ],
+  "bibtex": "@article{Oeppen_2002, title={Broken Limits to Life Expectancy}, volume={296}, ISSN={1095-9203}, url={http://dx.doi.org/10.1126/science.1069675}, DOI={10.1126/science.1069675}, number={5570}, journal={Science}, publisher={American Association for the Advancement of Science (AAAS)}, author={Oeppen, Jim and Vaupel, James W.}, year={2002}, month=May, pages={1029–1031} }"
+ },
  "10.1214/14-aoas768": {
   "doi": "10.1214/14-aoas768",
   "title": "Global estimation of child mortality using a Bayesian B-spline Bias-reduction model",

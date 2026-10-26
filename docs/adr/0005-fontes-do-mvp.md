@@ -20,6 +20,10 @@ O MVP usa quatro fontes:
 | IBGE/SIDRA | PNAD Contínua (renda, Gini, desemprego) | desde 2012 |
 | Ipeadata | séries longas do Brasil (Gini e pobreza pela PNAD antiga, salário mínimo real) | desde 1976 |
 
+Nesta fase entram, das séries citadas acima, o Gini da PNAD Contínua (SIDRA) e o Gini e a
+taxa de pobreza da PNAD antiga (Ipeadata). Renda média e desemprego da PNAD Contínua e
+salário mínimo real do Ipeadata ficam para um PR seguinte.
+
 ### Consequências
 - A série brasileira de Gini e pobreza combina PNAD (até 2015) e PNAD Contínua (desde
   2012). As séries **não** são emendadas: aparecem como séries separadas, com a quebra
@@ -37,6 +41,9 @@ continuous PNAD on SIDRA in 2012.
 ### Decision
 The MVP uses four sources: World Bank (WDI, WGI), UNDP (HDI, inequality-adjusted HDI),
 IBGE/SIDRA (continuous PNAD, from 2012) and Ipeadata (long Brazilian series from 1976).
+This phase adds the Continuous PNAD Gini (SIDRA) and the old-PNAD Gini and poverty rate
+(Ipeadata); Continuous PNAD mean income and unemployment and Ipeadata's real minimum wage
+come in a later PR.
 
 ### Consequences
 Brazilian Gini and poverty combine the old PNAD (to 2015) and the continuous PNAD (from

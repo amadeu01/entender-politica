@@ -1,6 +1,6 @@
 """Ipeadata (Ipea), OData v4 API. Annual national series only.
 
-http://www.ipeadata.gov.br/api/
+https://www.ipeadata.gov.br/api/
 """
 
 import json
@@ -37,7 +37,10 @@ class IpeadataSource:
                 resp = client.get(url)
                 resp.raise_for_status()
                 files.append(RawFile(name, url, resp.content))
-            (meta,) = json.loads(files[-1].content)["value"]
+            records = json.loads(files[-1].content)["value"]
+            if len(records) != 1:
+                raise RuntimeError(f"Ipeadata metadata for {code}: expected 1 record")
+            (meta,) = records
             versions.append(meta["SERATUALIZACAO"][:10])
         return files, max(versions)
 

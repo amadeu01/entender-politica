@@ -25,7 +25,7 @@ from compilador import (
 )
 from compilador.analyses import ANALYSES_DIR, POLICIES_DIR
 from compilador.dois import DOIS_FILE
-from compilador.schema import empty, tidy
+from compilador.schema import COLUMNS, empty, tidy
 from compilador.sources import SOURCES
 from compilador.validate import Report, ValidationError, validate
 
@@ -72,7 +72,8 @@ def compile_observations(paths: Paths) -> tuple[pd.DataFrame, dict[str, str]]:
         snap = snapshot.latest(source_id, paths.raw)
         if snap is None:
             raise FileNotFoundError(f"no raw snapshot for '{source_id}': run `compilador fetch`")
-        frames.append(source.normalize(snap, wanted, geos))
+        # A source may return no rows at all (e.g. every value null); keep the columns.
+        frames.append(source.normalize(snap, wanted, geos).reindex(columns=COLUMNS))
         versions[source_id] = snap.source_version
     df = pd.concat(frames, ignore_index=True) if frames else empty()
     _mark_series_breaks(df, indicators)
@@ -84,14 +85,12 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     today = today or datetime.now(UTC).strftime("%Y-%m-%d")
     indicators = catalog.load(paths.indicators)
     df, versions = compile_observations(paths)
-    report = validate(df, indicators)
+    report = validate(df, indicators, geography.load())
     documents = compile_documents(df, indicators, paths)
 
     previous = paths.processed / f"{OBSERVATIONS}.parquet"
     old = pd.read_parquet(previous) if previous.exists() else empty()
     changes = changelog.diff(old, df)
-    if changes:
-        _prepend_changelog(paths.changelog, changelog.render(changes, today, versions))
 
     paths.processed.mkdir(parents=True, exist_ok=True)
     df.to_parquet(previous, index=False)
@@ -100,6 +99,9 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     export_site(df, indicators, paths.site)
     for name, doc in documents.items():
         _write_json(paths.site / name, doc)
+    # Logged last, so a failed write never leaves a changelog entry for data that is not there.
+    if changes:
+        _prepend_changelog(paths.changelog, changelog.render(changes, today, versions))
     return Result(df, report, changes)
 
 

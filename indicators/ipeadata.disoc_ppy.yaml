@@ -12,15 +12,16 @@ definition:
     Percentual de pessoas com renda domiciliar per capita abaixo da linha de pobreza
     calculada pelo Ipea, que é o dobro da linha de extrema pobreza (custo de uma cesta
     alimentar com as calorias mínimas recomendadas por FAO e OMS), com valores diferentes
-    para 24 regiões do país. Calculada a partir da antiga PNAD; interrompida em 2014.
+    para 24 regiões do país. Calculada a partir da antiga PNAD; o Ipea parou de atualizá-la
+    em 2014.
   en: >-
     Share of people with household income per capita below the poverty line computed by
     Ipea, set at twice the extreme poverty line (cost of a food basket meeting FAO/WHO
     minimum calorie recommendations), with different values for 24 regions of the
-    country. Computed from the old PNAD; discontinued in 2014.
+    country. Computed from the old PNAD; Ipea stopped updating it in 2014.
 formula:
-  pt: "P₀ = (1/N)·Σ 1[yᵢ < zᵣ], com linha zᵣ específica da região r (índice FGT com α = 0)."
-  en: "P₀ = (1/N)·Σ 1[yᵢ < zᵣ], with a line zᵣ specific to region r (FGT index with α = 0)."
+  pt: "P₀ = Σ wᵢ·1[yᵢ < zᵣ] / Σ wᵢ, com pesos amostrais wᵢ e linha zᵣ específica da região r (índice FGT com α = 0)."
+  en: "P₀ = Σ wᵢ·1[yᵢ < zᵣ] / Σ wᵢ, with survey weights wᵢ and a line zᵣ specific to region r (FGT index with α = 0)."
 criticisms:
   - pt: >-
       Linhas de pobreza nacionais e internacionais dão níveis muito diferentes; compare
@@ -43,3 +44,12 @@ references:
     doi: 10.1590/S0102-69092000000100009
   - citation: "Ipeadata — série DISOC_PPY."
     url: http://www.ipeadata.gov.br/
+series_breaks:
+  - year: 1992
+    note:
+      pt: "PNAD reformulada em 1992 (novo questionário e conceitos de trabalho e renda)."
+      en: "PNAD redesigned in 1992 (new questionnaire and labor and income concepts)."
+  - year: 2004
+    note:
+      pt: "A PNAD passa a cobrir a área rural da região Norte (exceto Tocantins, já coberto)."
+      en: "PNAD starts covering the rural North region (except Tocantins, already covered)."

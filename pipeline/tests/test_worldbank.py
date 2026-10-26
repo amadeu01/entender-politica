@@ -91,3 +91,9 @@ def test_wgi_fetches_estimate_and_standard_error(geos):
     ) as client:
         files, _ = wgi.fetch([va], geos, client)
     assert [f.name for f in files] == ["GOV_WGI_VA.EST.json", "GOV_WGI_VA.SE.json"]
+
+
+def test_wgi_requires_estimate_code(geos):
+    bad = make_indicator(id="wgi.gov_wgi_va", source="wgi", source_code="GOV_WGI_VA.SC")
+    with pytest.raises(ValueError, match=".EST"):
+        wgi.fetch([bad], geos, httpx.Client())
