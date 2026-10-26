@@ -1,0 +1,36 @@
+id: wdi.ny_gdp_pcap_kd
+source: wdi
+source_code: NY.GDP.PCAP.KD
+unit: usd_2015
+min: 0
+name:
+  pt: "PIB per capita (US$ constantes de 2015)"
+  en: "GDP per capita (constant 2015 US$)"
+definition:
+  pt: >-
+    Produto Interno Bruto dividido pela população no meio do ano, em dólares americanos
+    constantes de 2015 (sem efeito da inflação). Mede o tamanho da economia por pessoa.
+  en: >-
+    Gross domestic product divided by midyear population, in constant 2015 US dollars
+    (inflation removed). Measures the size of the economy per person.
+formula:
+  pt: "PIB real (US$ de 2015) / população."
+  en: "Real GDP (2015 US$) / population."
+criticisms:
+  - pt: >-
+      Não mede bem-estar: ignora distribuição, lazer, expectativa de vida e produção fora
+      do mercado. Jones e Klenow (2016) mostram que rankings de bem-estar divergem muito
+      dos de PIB per capita.
+    en: >-
+      Does not measure welfare: ignores distribution, leisure, life expectancy and
+      non-market production. Jones and Klenow (2016) show welfare rankings diverge
+      substantially from GDP per capita rankings.
+  - pt: >-
+      Em dólares a câmbio de mercado, não em paridade de poder de compra; comparações de
+      nível entre países são distorcidas. Use para tendências dentro de um país.
+    en: >-
+      In market-exchange-rate dollars, not purchasing power parity; cross-country level
+      comparisons are distorted. Use for trends within a country.
+references:
+  - citation: "Jones, C. I., & Klenow, P. J. (2016). Beyond GDP? Welfare across countries and time. American Economic Review, 106(9), 2426–2457."
+    doi: 10.1257/aer.20110236
