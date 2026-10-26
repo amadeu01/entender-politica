@@ -5,6 +5,22 @@
 Dados abertos e evidência científica para entender mudanças políticas e de políticas
 públicas no Brasil, de 1980 até hoje, com comparações internacionais.
 
+## Acessar o site
+
+**<https://amadeu01.github.io/entender-politica/>** (em inglês:
+<https://amadeu01.github.io/entender-politica/en/>)
+
+| Página | Endereço |
+|---|---|
+| Brasil 1980–hoje (linhas do tempo por governo) | [/brasil/](https://amadeu01.github.io/entender-politica/brasil/) |
+| Catálogo de indicadores | [/indicadores/](https://amadeu01.github.io/entender-politica/indicadores/) |
+| Análises | [/analises/](https://amadeu01.github.io/entender-politica/analises/) |
+| Políticas de referência | [/politicas/](https://amadeu01.github.io/entender-politica/politicas/) |
+| Metodologia | [/metodologia/](https://amadeu01.github.io/entender-politica/metodologia/) |
+
+O site é publicado pelo GitHub Pages a cada merge na `main` (workflow `Deploy site`).
+Cada gráfico tem link para baixar os dados em CSV.
+
 Todo argumento do site segue a mesma estrutura:
 
 > **Afirmação → Métrica → Dados → Fonte científica (DOI) → Limitações**
@@ -47,9 +63,8 @@ uv run compilador verify-dois    # confere DOIs novos na Crossref (rede)
 cd site && npm ci && npm run dev # site em http://localhost:4321/entender-politica/
 ```
 
-Site: <https://amadeu01.github.io/entender-politica/> (no ar depois do primeiro deploy, com o
-GitHub Pages configurado para "GitHub Actions"). Automação:
-[ADR 0008](docs/adr/0008-automacao-e-publicacao.md).
+Para ver o site localmente, rode o último comando acima e abra o endereço indicado.
+Publicação e automação: [ADR 0008](docs/adr/0008-automacao-e-publicacao.md).
 
 ## Contribuir
 
@@ -67,6 +82,10 @@ fonte original. Como citar: [CITATION.cff](CITATION.cff).
 Open data and peer-reviewed evidence to understand political and public policy change in
 Brazil from 1980 to the present, with international comparisons.
 
+**Site:** <https://amadeu01.github.io/entender-politica/en/> (Portuguese:
+<https://amadeu01.github.io/entender-politica/>). Published by GitHub Pages on every merge
+to `main`; every chart links to its data as CSV.
+
 Every argument on the site follows the same structure:
 
 > **Claim → Metric → Data → Scientific source (DOI) → Limitations**
@@ -78,9 +97,7 @@ shown; evidence for and against is presented; everything is reproducible from co
 content exists in Portuguese and English.
 
 Run locally with `uv sync && uv run pytest && uv run compilador build`, then
-`cd site && npm ci && npm run dev`. Site: <https://amadeu01.github.io/entender-politica/>
-(live after the first deploy, with GitHub Pages set to "GitHub Actions"). See
-[CONTRIBUTING.md](CONTRIBUTING.md).
+`cd site && npm ci && npm run dev`. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 License: code [MIT](LICENSE), content [CC BY 4.0](LICENSE-CONTENT.md), data under each
 source's license.
