@@ -172,8 +172,8 @@ charts:
   - id: gini-brasil
     title: { pt: "Índice de Gini no Brasil, por pesquisa", en: "Gini index in Brazil, by survey" }
     alt:
-      pt: "Linhas do Gini da renda domiciliar per capita: PNAD antiga de 1976 a 2014 e PNAD Contínua de 2012 em diante, com intervalo de confiança na PNAD Contínua e faixas dos governos ao fundo."
-      en: "Lines of the Gini of household income per capita: old PNAD from 1976 to 2014 and Continuous PNAD from 2012 on, with confidence interval for the Continuous PNAD and government bands in the background."
+      pt: "Linhas do Gini da renda domiciliar per capita: PNAD antiga de 1976 a 2014 e PNAD Contínua de 2012 em diante, com intervalo de confiança na PNAD Contínua e faixas dos presidentes do Brasil ao fundo."
+      en: "Lines of the Gini of household income per capita: old PNAD from 1976 to 2014 and Continuous PNAD from 2012 on, with confidence interval for the Continuous PNAD and Brazil's presidents as background bands."
     indicators: [ipeadata.disoc_rdcg, ibge_sidra.gini_pnadc]
     geographies: [BRA]
   - id: gini-regiao
