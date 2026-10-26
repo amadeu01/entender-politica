@@ -1,0 +1,27 @@
+{
+  "url": "https://v-dem.net/media/datasets/V-Dem-CY-Core-v16_csv.zip",
+  "member": "V-Dem-CY-Core-v16.csv",
+  "sha256": "9055455c4adacd1ad9e78f1a7f3ac0768bdf26992e7651c0602a43ca7bdd4506",
+  "bytes": 16365124,
+  "filter": {
+    "countries": [
+      "ARG",
+      "BRA",
+      "CHL",
+      "COL",
+      "MEX"
+    ],
+    "from_year": 1975,
+    "columns": [
+      "v2x_egaldem",
+      "v2x_egaldem_codelow",
+      "v2x_egaldem_codehigh",
+      "v2x_libdem",
+      "v2x_libdem_codelow",
+      "v2x_libdem_codehigh",
+      "v2x_polyarchy",
+      "v2x_polyarchy_codelow",
+      "v2x_polyarchy_codehigh"
+    ]
+  }
+}
