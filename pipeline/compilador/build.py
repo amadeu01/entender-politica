@@ -15,6 +15,7 @@ from compilador import (
     DATA_DIR,
     REPO_ROOT,
     analyses,
+    brackets,
     catalog,
     changelog,
     content,
@@ -47,6 +48,7 @@ class Paths:
     analyses: Path = ANALYSES_DIR
     policies: Path = POLICIES_DIR
     dois: Path = DOIS_FILE
+    brackets: Path = brackets.BRACKETS_FILE
 
 
 @dataclass(frozen=True)
@@ -100,7 +102,7 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     df.to_parquet(previous, index=False)
     df.to_csv(paths.processed / f"{OBSERVATIONS}.csv", index=False)
     _write_json(paths.processed / "validation.json", report.to_dict())
-    export_site(df, indicators, paths.site)
+    export_site(df, indicators, paths.site, bracket_config(paths, indicators))
     for name, doc in documents.items():
         _write_json(paths.site / name, doc)
     registry = dois.load(paths.dois)
@@ -111,6 +113,38 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     if changes:
         _prepend_changelog(paths.changelog, changelog.render(changes, today, versions))
     return Result(df, report, changes)
+
+
+ICP_GUARD_INDICATOR = "wdi.ny_gdp_pcap_pp_kd"
+
+
+def bracket_config(
+    paths: Paths, indicators: dict[str, catalog.Indicator]
+) -> brackets.Config | None:
+    """Income bracket config, or None when its input indicators are not in the catalog.
+
+    Also guards against the World Bank moving to a new ICP round: the WDI name of the
+    PPP series must still mention the base year the brackets are expressed in.
+    """
+    config = brackets.load(paths.brackets)
+    if not set(config.input_indicators) <= set(indicators):
+        return None
+    config = brackets.load(paths.brackets, indicators)
+    if ICP_GUARD_INDICATOR in indicators:
+        snap = snapshot.latest("wdi", paths.raw)
+        code = indicators[ICP_GUARD_INDICATOR].source_code
+        if snap is not None and f"{code}.json" in snap.files:
+            payload = json.loads(snap.read(f"{code}.json"))
+            name = payload[1][0]["indicator"]["value"] if len(payload) > 1 and payload[1] else ""
+            if str(config.ppp_base_year) not in name:
+                raise ValidationError(
+                    [
+                        f"WDI names {code} '{name}', which lacks the PPP base year "
+                        f"{config.ppp_base_year}: the ICP round changed, review "
+                        f"{paths.brackets.name}"
+                    ]
+                )
+    return config
 
 
 def all_dois(paths: Paths) -> set[str]:
@@ -186,7 +220,12 @@ def _write_json(path: Path, obj: object) -> None:
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=1, default=str) + "\n")
 
 
-def export_site(df: pd.DataFrame, indicators: dict[str, catalog.Indicator], out: Path) -> None:
+def export_site(
+    df: pd.DataFrame,
+    indicators: dict[str, catalog.Indicator],
+    out: Path,
+    bracket_cfg: brackets.Config | None = None,
+) -> None:
     """Write the JSON/CSV files the static site reads."""
     _write_json(out / "catalog.json", [i.model_dump(mode="json") for i in indicators.values()])
     govs = governments.load()
@@ -195,6 +234,16 @@ def export_site(df: pd.DataFrame, indicators: dict[str, catalog.Indicator], out:
     last_year = int(df["year"].max()) if len(df) else govs.periods[0].start.year
     if set(periods.TABLE_INDICATORS) <= set(units):
         _write_json(out / "period_changes.json", periods.changes(df, govs, units, last_year))
+    if bracket_cfg is not None:
+        _write_json(
+            out / "income_brackets.json",
+            {
+                "config": bracket_cfg.model_dump(mode="json")
+                | {"labels": bracket_cfg.labels, "method": "linear_interpolation"},
+                "years": brackets.distribution(df, bracket_cfg),
+                "sources": brackets.sources(df, bracket_cfg),
+            },
+        )
     _write_json(
         out / "geographies.json", [g.model_dump(mode="json") for g in geography.load().values()]
     )
