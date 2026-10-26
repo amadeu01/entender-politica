@@ -136,6 +136,10 @@ trocar rigor por didática.
   renda domiciliar **per capita** (PNAD Contínua, tabela 7438). O piloto usa renda por
   pessoa da família, com os mesmos limites US$1 mil, 2 mil, 5 mil, 10 mil por pessoa;
   renda familiar total (microdados, ADR 0010) fica para depois. Escolha do usuário.
+- **Limites revistos no planejamento (2026-10-26):** com renda por pessoa, US$1k/2k/5k/10k
+  punha cerca de 82% da população na primeira faixa (2024). O usuário escolheu US$250,
+  500, 1 mil e 2 mil por pessoa, mais "acima de US$2 mil" (2024: cerca de 25,5 / 31,2 /
+  25,5 / 12,3 / 5,5%). Os valores ficam num único arquivo de configuração.
 - Ordem dos projetos: guia primeiro (proposta minha, aceita ao seguir adiante).
 - Faixas em **dólar PPC** (Banco Mundial) de um ano-base fixo, com o equivalente em reais
   do ano exibido.
@@ -226,7 +230,8 @@ build. Every DOI verified on Crossref; every quoted number read in the source.
 
 User: lay audience; the content list above; household income, revised during planning to
 **household income per capita** (IBGE publishes only that distribution; total household
-income needs microdata, deferred); brackets US$1k/2k/5k/10k;
+income needs microdata, deferred); brackets revised to US$250/500/1k/2k per person plus
+above 2k, after the per capita 2024 distribution put about 82% under US$1k;
 PPP dollars of a fixed base year with the reais equivalent shown; study-group-to-bracket
 translation allowed with visible conversion; **peer-reviewed studies only** (ADR 0007
 unchanged; existing indicator fields stay outside the bare-number check).

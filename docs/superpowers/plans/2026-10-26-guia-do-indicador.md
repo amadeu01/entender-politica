@@ -17,7 +17,7 @@
 - Peer-reviewed studies only, as guide evidence. Every DOI goes through `uv run compilador verify-dois`, and every quoted number is read in the source (abstract, table, page), never recalled.
 - No causal claim without a causal design. Never attribute a change to a government (ADR 0003).
 - Neutrality: each guide's policy list has at least one null, negative or mixed result, or a `contrary_evidence_search`.
-- Brackets: monthly household income **per capita** of up to US$1,000, 2,000, 5,000 and 10,000, plus above 10,000, in **2021 PPP dollars** (World Bank household-consumption PPP), with the reais equivalent per year shown. The threshold values live only in `data/reference/faixas-de-renda.yaml`.
+- Brackets: monthly household income **per capita** of up to US$250, 500, 1,000 and 2,000, plus above 2,000 (user's choice after seeing the 2024 distribution), in **2021 PPP dollars** (World Bank household-consumption PPP), with the reais equivalent per year shown. The threshold values live only in `data/reference/faixas-de-renda.yaml`.
 - Existing indicator fields (`definition`, `formula`, `criticisms`) stay outside the bare-number check.
 - Offline build. New data enters only via `compilador fetch` snapshots.
 - Stage explicit paths and never use `git add -A`. Commit messages are Conventional Commits ending with `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
@@ -114,7 +114,7 @@ Verified ids: table 7540 has variable 10846, CV 10847, classification 1043, P50 
 - Produces:
   - `Config` (pydantic) loaded by `load(path=BRACKETS_FILE) -> Config`, with fields:
     - `ppp_base_year: int` (2021);
-    - `thresholds_usd_ppp: list[int]` (`[1000, 2000, 5000, 10000]`);
+    - `thresholds_usd_ppp: list[int]` (`[250, 500, 1000, 2000]`);
     - `percentile_indicators: dict[int, str]` (`{5: "ibge_sidra.rdpc_p05_pnadc", …}`);
     - `ppp_indicator: str`;
     - `cpi_indicator: str`;
@@ -122,7 +122,7 @@ Verified ids: table 7540 has variable 10846, CV 10847, classification 1043, P50 
   - `Share(low: float, high: float)`: a percent of people. `low == high` is a **point estimate by linear interpolation** between IBGE percentiles, not an exact value. The page and `income_brackets.json` (`"method": "linear_interpolation"`) say so.
   - `reais_per_usd_ppp(df, config, year) -> float | None` returns `PPP[base] * CPI[year] / CPI[base]`, or `None` when any input is missing.
   - `share_below(limits: dict[int, float], value: float) -> Share` interpolates linearly between known `(percentile, limit)` points. It returns `Share(0, 5)` when `value < limits[5]` and `Share(99, 100)` when `value > limits[99]`. When two adjacent percentiles have the same limit and `value` equals it, it returns `Share(lower_pct, upper_pct)` instead of dividing by zero.
-  - `distribution(df, config) -> list[dict]`, one dict per year that has all inputs: `{"year", "reais_per_usd_ppp", "thresholds_brl": [..], "brackets": [{"label": "ate_1000"|…|"acima_10000", "low", "high"}]}`. A bracket's share is `(F_hi.low − F_lo.high, F_hi.high − F_lo.low)`, clipped at 0. `ate_1000` uses `F_lo = Share(0, 0)` and `acima_10000` uses `F_hi = Share(100, 100)`.
+  - `distribution(df, config) -> list[dict]`, one dict per year that has all inputs: `{"year", "reais_per_usd_ppp", "thresholds_brl": [..], "brackets": [{"label": "ate_250"|"ate_500"|"ate_1000"|"ate_2000"|"acima_2000", "low", "high"}]}`. A bracket's share is `(F_hi.low − F_lo.high, F_hi.high − F_lo.low)`, clipped at 0. `ate_250` uses `F_lo = Share(0, 0)` and `acima_2000` uses `F_hi = Share(100, 100)`.
   - `translate(df, config, cut: int, side: Literal["bottom", "top"], year: int) -> dict` returns `{"cut", "side", "year", "limit_brl", "limit_usd_ppp", "bracket"}`. `cut` is always the **percentile cut point**: "bottom 40%" is `cut=40, side="bottom"` (people below P40); "top 10%" is `cut=90, side="top"` (people above P90). For `bottom`, `bracket` is the one containing the group's upper limit; for `top`, the one where the group starts. It raises `BracketError` when the year lacks data or `cut` is not in `percentile_indicators`.
   - `load` raises when an id in `percentile_indicators`, `ppp_indicator`, `cpi_indicator` or `income_indicators` is not in the catalog, and when the WDI snapshot's name for `ppp_indicator`'s companion `wdi.ny_gdp_pcap_pp_kd` does not contain `ppp_base_year` (guards against WDI moving to a new ICP round).
   - Deferred, recorded in ADR 0011: decile groups not bounded by a published percentile, and poverty-line groups (a natural fit for `share_below`).
@@ -151,7 +151,7 @@ def test_year_without_cpi_is_skipped(df_missing_cpi_2025):
 
 def test_translate_bottom_40_maps_limit_to_bracket(df):
     t = translate(df, config, 40, "bottom", 2024)
-    assert t["bracket"] == "ate_1000" and t["limit_usd_ppp"] == pytest.approx(1100 / 2.94)
+    assert t["bracket"] == "ate_500" and t["limit_usd_ppp"] == pytest.approx(1100 / 2.94)
 
 def test_translate_year_without_data_raises(df):
     with pytest.raises(BracketError, match="2011"):
@@ -166,16 +166,16 @@ def test_tied_percentiles_do_not_divide_by_zero():
 
 def test_real_2024_shares():
     # table 7438 2024 percentiles, PPP 2021 = 2.4499, CPI 2024 = 223.216, CPI 2021 = 187.117
+    # P5..P99 = 276, 405, 626, 815, 1029, 1328, 1526, 1964, 2607, 4026, 6027, 13316
     b = distribution(real_2024_df, config)[-1]["brackets"]
-    assert [round(x["low"], 1) for x in b[:2]] == [82.2, 12.3]
-    assert (round(b[2]["low"], 1), round(b[2]["high"], 1)) == (4.5, 5.5)
-    assert [(x["low"], x["high"]) for x in b[3:]] == [(0, 1), (0, 1)]
+    assert [round(x["low"], 1) for x in b] == [25.5, 31.2, 25.5, 12.3, 5.5]
+    assert all(x["low"] == x["high"] for x in b)
 ```
 
 - [ ] **Step 2: Run** `uv run pytest pipeline/tests/test_brackets.py -v`. Expected: FAIL (module missing).
 - [ ] **Step 3: Implement** `brackets.py` and the YAML. Add `BRACKETS_FILE = DATA_DIR / "reference" / "faixas-de-renda.yaml"` and `Paths.brackets`. Build the `real_2024_df` fixture from the real values (fetch them once from SIDRA table 7438 and copy them into the test).
 - [ ] **Step 4: Export.** `export_site` writes `income_brackets.json` = `{"config": {...}, "years": distribution(...), "sources": [...]}`, where `sources` holds each input indicator's `source_id`, `source_version` and `retrieved_at`, taken from the observations. Like `period_changes`, it is skipped when the input indicators are not in the catalog, so existing `test_build` fixtures keep passing. Add a test in `test_build.py` that the file exists after a build with the inputs present.
-- [ ] **Step 5: Run** `uv run pytest && uv run compilador build`. Expected: PASS. Spot-check the latest year in `site/public/data/income_brackets.json`; under the Global Constraints values, most people should fall in the first bracket.
+- [ ] **Step 5: Run** `uv run pytest && uv run compilador build`. Expected: PASS. Spot-check 2024 in `site/public/data/income_brackets.json`: about 25.5 / 31.2 / 25.5 / 12.3 / 5.5%.
 - [ ] **Step 6: Commit** `feat(pipeline): compute per capita income bracket shares in PPP dollars`.
 
 ### Task 4: Guide content type
@@ -288,7 +288,7 @@ Load the `dataviz` skill before touching the bracket display.
   - `understand`, `how_to_read` (with a real `v`/`pct` example for BRA), at least 2 `studies`, at least 3 `policies` (Brazil and elsewhere, at least one not positive), and `by_income` items only where a study reports results by group. Pre-2012 studies keep `study_period` and either omit `group` or translate to a 2012+ year.
   - `purchasing_power` uses `v("wdi.pa_nus_prvt_pp", "BRA", Y)` beside `v("wdi.pa_nus_fcrf", "BRA", Y)`, `v("wdi.ny_gdp_pcap_pp_kd", …)`, and the change in the real median from `ibge_sidra.rdpc_mediana_real_pnadc` via `pct`/`diff` only (its price base moves every IBGE release, so `v` of a past year would go stale).
   - No causal wording for observational studies.
-- [ ] **Step 4: Build and check.** Run `uv run compilador build && cd site && npm run build`, then render the page with `google-chrome-stable --headless=new --screenshot=...` against `npx astro preview`, in pt and en. Expected: all sections present; bracket table shows ranges for thresholds above P99.
+- [ ] **Step 4: Build and check.** Run `uv run compilador build && cd site && npm run build`, then render the page with `google-chrome-stable --headless=new --screenshot=...` against `npx astro preview`, in pt and en. Expected: all sections present; 2024 bracket shares match the Task 3 spot-check.
 - [ ] **Step 5: Review.** Dispatch a reviewer to check every `cite` against its source passage and to look for causal wording and one-sided selection. Fix valid findings.
 - [ ] **Step 6: Commit** `content: add GDP per capita guide`.
 
