@@ -8,15 +8,17 @@ summary:
   pt: >-
     Programa mexicano de transferência condicionada de renda criado em 1997 (depois chamado
     Oportunidades e Prospera). Pagava às famílias pobres, sobretudo às mães, com a condição
-    de que os filhos frequentassem a escola e a família fosse a consultas de saúde. Foi
-    avaliado desde o início com um experimento aleatorizado e serviu de modelo para
-    dezenas de países, inclusive para o Bolsa Família.
+    de que os filhos frequentassem a escola e a família fosse a consultas de saúde. Sua
+    avaliação inicial com desenho experimental fez dele um modelo para os
+    {{ cite("mais de sessenta países", "10.1257/jel.20151233", "resumo") }} que hoje têm
+    transferências condicionadas.
   en: >-
     Mexican conditional cash transfer program created in 1997 (later called Oportunidades
     and Prospera). It paid poor families, mostly mothers, on the condition that children
-    attend school and the family attend health checkups. It was evaluated from the start
-    with a randomized experiment and served as a model for dozens of countries, including
-    for Bolsa Família.
+    attend school and the family attend health checkups. Its initial evaluation with an
+    experimental design made it a model for the
+    {{ cite("over sixty countries", "10.1257/jel.20151233", "abstract") }} that now have
+    conditional cash transfers.
 mechanism:
   pt: >-
     Dinheiro alivia a pobreza imediata; as condicionalidades incentivam investimento em
@@ -38,14 +40,14 @@ findings:
         enforced conditions have substantively larger effects
         ({{ cite("60% improvement in the odds of enrollment", "10.1080/19439342.2014.890362", "abstract") }}).
     direction: positive
-    method: review
+    method: systematic_review
     references: [10.1080/19439342.2014.890362]
   - outcome: { pt: "Aprendizado (notas em testes)", en: "Learning (test scores)" }
     result:
       pt: "Na mesma revisão, o efeito das transferências sobre notas em testes é pequeno, na melhor das hipóteses."
       en: "In the same review, the effect of cash transfers on test scores is small at best."
     direction: "null"
-    method: review
+    method: systematic_review
     references: [10.1080/19439342.2014.890362]
   - outcome: { pt: "Desigualdade de renda", en: "Income inequality" }
     result:
@@ -65,25 +67,24 @@ findings:
 external_validity:
   pt: >-
     O Progresa começou em comunidades rurais pobres e foi avaliado ali. O Bolsa Família é
-    nacional, majoritariamente urbano, e tem características de desenho e implementação que
-    o afastam de um programa de condicionalidades estritas; o monitoramento das condições é
-    mais fraco. Como a revisão sistemática mostra efeitos maiores quando as condições são
-    monitoradas e cobradas, os resultados do Progresa não se transferem automaticamente.
+    nacional e tem características de desenho e implementação que o afastam de um programa
+    de transferência condicionada voltado estritamente ao capital humano (Soares, Ribas e
+    Osório, 2010). Como a revisão sistemática encontra efeitos maiores quando as condições
+    são explícitas, monitoradas e cobradas, os resultados do Progresa não se transferem
+    automaticamente para o Brasil.
   en: >-
     Progresa started in poor rural communities and was evaluated there. Bolsa Família is
-    national, mostly urban, and has design and implementation features that set it apart
-    from a strict conditionality program; monitoring of conditions is weaker. Since the
-    systematic review finds larger effects when conditions are monitored and enforced,
-    Progresa's results do not transfer automatically.
+    national and has design and implementation features that set it apart from a
+    conditional cash transfer strictly focused on human capital (Soares, Ribas and Osório,
+    2010). Since the systematic review finds larger effects when conditions are explicit,
+    monitored and enforced, Progresa's results do not transfer automatically to Brazil.
 limitations:
   - pt: >-
-      O experimento original comparou comunidades tratadas mais cedo e mais tarde; o grupo
-      de controle também passou a receber o programa, o que limita a avaliação de efeitos
-      de longo prazo.
+      A revisão sistemática combina estudos de vários programas e países; o efeito sobre
+      matrícula não é uma estimativa isolada do Progresa.
     en: >-
-      The original experiment compared communities treated earlier and later; the control
-      group also started receiving the program, which limits evaluation of long-term
-      effects.
+      The systematic review pools studies of several programs and countries; the enrollment
+      effect is not an estimate for Progresa alone.
   - pt: >-
       A fração da queda da desigualdade atribuída às transferências vem de decomposição
       contábil, não de estimativa causal.
@@ -91,11 +92,20 @@ limitations:
       The share of the fall in inequality attributed to transfers comes from an accounting
       decomposition, not a causal estimate.
   - pt: >-
-      Muitos resultados do programa foram testados ao mesmo tempo; revisões recentes
-      corrigem para testes múltiplos e alguns efeitos deixam de ser significativos.
+      Muitos resultados do programa foram testados ao mesmo tempo. A revisão de Parker e
+      Todd (2017) reavalia os efeitos corrigindo para testes múltiplos; consulte-a antes de
+      citar um efeito isolado.
     en: >-
-      Many program outcomes were tested at once; recent reviews correct for multiple
-      hypothesis testing and some effects lose significance.
+      Many program outcomes were tested at once. The review by Parker and Todd (2017)
+      re-examines effects correcting for multiple hypothesis testing; check it before
+      citing a single effect.
+  - pt: >-
+      Esta ficha ainda não resume os resultados do experimento original do Progresa em
+      educação e saúde; isso exige a leitura dos artigos completos e entra numa revisão
+      futura.
+    en: >-
+      This brief does not yet summarize the original Progresa experiment's education and
+      health results; that requires reading the full papers and comes in a future revision.
 references:
   - citation: "Baird, S., Ferreira, F. H. G., Özler, B., & Woolcock, M. (2014). Conditional, unconditional and everything in between: a systematic review of the effects of cash transfer programmes on schooling outcomes. Journal of Development Effectiveness, 6(1), 1–43."
     doi: 10.1080/19439342.2014.890362

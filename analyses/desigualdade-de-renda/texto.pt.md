@@ -16,7 +16,8 @@ do Ipea passou de {{ v("ipeadata.disoc_ppy", "BRA", 1993) }}% para
 {{ v("ipeadata.disoc_ppy", "BRA", 1995) }}%. O Gini quase não se moveu:
 {{ v("ipeadata.disoc_rdcg", "BRA", 1993) }} em 1993 e
 {{ v("ipeadata.disoc_rdcg", "BRA", 1995) }} em 1995. Barros, Henriques e Mendonça (2000)
-descreveram esse quadro como uma "estabilidade inaceitável" da desigualdade.
+descreveram esse quadro, nas palavras e no juízo dos autores, como uma "estabilidade
+inaceitável" da desigualdade.
 
 ### De 2001 a 2014: queda contínua
 
