@@ -6,7 +6,7 @@ https://datahelpdesk.worldbank.org/knowledgebase/articles/889392
 
 import json
 from dataclasses import dataclass
-from datetime import date
+from datetime import UTC, datetime
 
 import httpx
 import pandas as pd
@@ -45,7 +45,7 @@ class WorldBankSource:
         for code in [c for ind in indicators for c in self._codes(ind)]:
             url = (
                 f"{API}/country/{geo_codes}/indicator/{code}?source={self.api_source}"
-                f"&format=json&per_page={PER_PAGE}&date={START_YEAR}:{date.today().year}"
+                f"&format=json&per_page={PER_PAGE}&date={START_YEAR}:{datetime.now(UTC).year}"
             )
             resp = client.get(url)
             resp.raise_for_status()
@@ -80,6 +80,8 @@ class WorldBankSource:
 
 
 def _se_code(ind: Indicator) -> str:
+    if not ind.source_code.endswith(".EST"):
+        raise ValueError(f"{ind.id}: WGI source_code must end in .EST, got {ind.source_code}")
     return ind.source_code.removesuffix(".EST") + ".SE"
 
 

@@ -12,7 +12,9 @@ const periods = governments().periods;
 const indicators = [...new Set(changes.map((c) => c.indicator_id))].map(indicator);
 const geos = [...new Set(changes.map((c) => c.geo_code))];
 const lags = [...new Set(changes.map((c) => c.lag))];
-const periodIds = [...new Set(changes.map((c) => c.period_id))];
+const periodIds = new Set(changes.map((c) => c.period_id));
+const firstYear = Math.min(...changes.map((c) => c.start_year));
+const shown = periods.filter((p) => p.end === null || Number(p.end.slice(0, 4)) >= firstYear);
 const find = (p: string, i: string, g: string, l: number) =>
   changes.find((c) => c.period_id === p && c.indicator_id === i && c.geo_code === g && c.lag === l);
 const show = (c: ReturnType<typeof find>, unit: string) => {
@@ -55,9 +57,8 @@ const show = (c: ReturnType<typeof find>, unit: string) => {
               data-lag={String(lag)}
               hidden={!(ind.id === indicators[0].id && lag === lags[0])}
             >
-              {periodIds.map((pid) => {
-                const p = periods.find((x) => x.id === pid)!;
-                const ref = find(pid, ind.id, geos[0], lag)!;
+              {shown.map((p) => {
+                const ref = find(p.id, ind.id, geos[0], lag);
                 return (
                   <tr>
                     <th scope="row">
@@ -68,18 +69,26 @@ const show = (c: ReturnType<typeof find>, unit: string) => {
                         {p.condition === "interino" ? ` · ${t.acting}` : ""}
                       </span>
                     </th>
-                    <td>
-                      {ref.start_year}→{ref.end_year}
-                      {ref.mixed_years.length > 0 && (
-                        <span title={t.mixedYear} aria-label={t.mixedYear}>
-                          {" "}
-                          *
-                        </span>
-                      )}
-                    </td>
-                    {geos.map((g) => (
-                      <td class="num">{show(find(pid, ind.id, g, lag), ind.unit)}</td>
-                    ))}
+                    {ref && periodIds.has(p.id) ? (
+                      <>
+                        <td>
+                          {ref.start_year}→{ref.end_year}
+                          {ref.mixed_years.length > 0 && (
+                            <>
+                              <span aria-hidden="true"> *</span>
+                              <span class="sr-only"> ({t.mixedYear})</span>
+                            </>
+                          )}
+                        </td>
+                        {geos.map((g) => (
+                          <td class="num">{show(find(p.id, ind.id, g, lag), ind.unit)}</td>
+                        ))}
+                      </>
+                    ) : (
+                      <td colspan={geos.length + 1} class="meta">
+                        {t.unassigned}
+                      </td>
+                    )}
                   </tr>
                 );
               })}

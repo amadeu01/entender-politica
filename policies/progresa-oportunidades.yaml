@@ -8,15 +8,17 @@ summary:
   pt: >-
     Programa mexicano de transferência condicionada de renda criado em 1997 (depois chamado
     Oportunidades e Prospera). Pagava às famílias pobres, sobretudo às mães, com a condição
-    de que os filhos frequentassem a escola e a família fosse a consultas de saúde. Foi
-    avaliado desde o início com um experimento aleatorizado e serviu de modelo para
-    dezenas de países, inclusive para o Bolsa Família.
+    de que os filhos frequentassem a escola e a família fosse a consultas de saúde. Sua
+    avaliação inicial com desenho experimental fez dele um modelo para os
+    {{ cite("mais de sessenta países", "10.1257/jel.20151233", "resumo") }} que hoje têm
+    transferências condicionadas.
   en: >-
     Mexican conditional cash transfer program created in 1997 (later called Oportunidades
     and Prospera). It paid poor families, mostly mothers, on the condition that children
-    attend school and the family attend health checkups. It was evaluated from the start
-    with a randomized experiment and served as a model for dozens of countries, including
-    for Bolsa Família.
+    attend school and the family attend health checkups. Its initial evaluation with an
+    experimental design made it a model for the
+    {{ cite("over sixty countries", "10.1257/jel.20151233", "abstract") }} that now have
+    conditional cash transfers.
 mechanism:
   pt: >-
     Dinheiro alivia a pobreza imediata; as condicionalidades incentivam investimento em
@@ -38,14 +40,14 @@ findings:
         enforced conditions have substantively larger effects
         ({{ cite("60% improvement in the odds of enrollment", "10.1080/19439342.2014.890362", "abstract") }}).
     direction: positive
-    method: review
+    method: systematic_review
     references: [10.1080/19439342.2014.890362]
   - outcome: { pt: "Aprendizado (notas em testes)", en: "Learning (test scores)" }
     result:
       pt: "Na mesma revisão, o efeito das transferências sobre notas em testes é pequeno, na melhor das hipóteses."
       en: "In the same review, the effect of cash transfers on test scores is small at best."
     direction: "null"
-    method: review
+    method: systematic_review
     references: [10.1080/19439342.2014.890362]
   - outcome: { pt: "Desigualdade de renda", en: "Income inequality" }
     result:
@@ -97,6 +99,13 @@ limitations:
       Many program outcomes were tested at once. The review by Parker and Todd (2017)
       re-examines effects correcting for multiple hypothesis testing; check it before
       citing a single effect.
+  - pt: >-
+      Esta ficha ainda não resume os resultados do experimento original do Progresa em
+      educação e saúde; isso exige a leitura dos artigos completos e entra numa revisão
+      futura.
+    en: >-
+      This brief does not yet summarize the original Progresa experiment's education and
+      health results; that requires reading the full papers and comes in a future revision.
 references:
   - citation: "Baird, S., Ferreira, F. H. G., Özler, B., & Woolcock, M. (2014). Conditional, unconditional and everything in between: a systematic review of the effects of cash transfer programmes on schooling outcomes. Journal of Development Effectiveness, 6(1), 1–43."
     doi: 10.1080/19439342.2014.890362

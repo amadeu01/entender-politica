@@ -19,7 +19,7 @@ type Config = {
   keys: { key: string; label: string; slot: number }[];
   points: Point[];
   periods: { name: string; start: string; end: string | null }[];
-  text: { year: string; seriesBreak: string };
+  text: { seriesBreak: string };
 };
 
 const css = (name: string) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();

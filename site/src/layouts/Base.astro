@@ -31,7 +31,7 @@ const pageTitle = route === "home" ? t.siteName : `${title} · ${t.siteName}`;
     <header class="site">
       <div class="wrap">
         <a class="brand" href={url(lang, "home")}>{t.siteName}</a>
-        <nav class="main" aria-label={lang === "pt" ? "Principal" : "Main"}>
+        <nav class="main" aria-label={t.mainNav}>
           <ul>
             {
               navRoutes

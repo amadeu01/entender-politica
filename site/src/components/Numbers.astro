@@ -14,7 +14,14 @@ const describe = (c: Cited): string => {
   const [, geo, ...years] = c.args;
   const source = SOURCE_NAMES[c.source_id ?? ""]?.[lang] ?? c.source_id;
   const op = { v: "", diff: "Δ ", pct: "Δ% " }[c.function];
-  return `${op}${geo} ${years.join("→")} · ${source} · ${t.version} ${c.source_version} · ${t.retrieved} ${c.retrieved_at?.slice(0, 10)}`;
+  return [
+    `${op}${geo} ${years.join("→")}`,
+    source,
+    c.source_version && `${t.version} ${c.source_version}`,
+    c.retrieved_at && `${t.retrieved} ${c.retrieved_at.slice(0, 10)}`,
+  ]
+    .filter(Boolean)
+    .join(" · ");
 };
 ---
 

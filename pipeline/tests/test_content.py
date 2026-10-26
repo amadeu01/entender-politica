@@ -14,16 +14,27 @@ from tests.test_validate import obs
         "the 1980s and the 3rd term",
         "COVID-19 and the G20",
         'valor {{ v("wdi.si_pov_gini", "BRA", 2001) }}',
-        "see `code 42` and [link](https://x.org/42)",
+        "see [link](https://x.org/42)",
+        "1. first item\n2. second item",
     ],
 )
 def test_allowed_text_has_no_bare_numbers(text):
     assert content.bare_numbers(text) == []
 
 
-@pytest.mark.parametrize(("text", "token"), [("caiu 10%", "10"), ("de 0,58 para", "0,58")])
+@pytest.mark.parametrize(
+    ("text", "token"),
+    [
+        ("caiu 10%", "10"),
+        ("de 0,58 para", "0,58"),
+        ("caiu -5%", "5"),
+        ("entre 10-20 pontos", "20"),
+        ("em `42%` dos casos", "42"),
+        ("cerca de 5thousand", "5thousand"),
+    ],
+)
 def test_hand_typed_numbers_are_reported(text, token):
-    assert content.bare_numbers(text) == [f"line 1: '{token}'"]
+    assert f"line 1: '{token}'" in content.bare_numbers(text)
 
 
 def test_unknown_placeholder_function_is_rejected():
@@ -91,3 +102,20 @@ def test_placeholders_against_empty_data_are_reported(resolver):
     empty = Resolver(pd.DataFrame(columns=obs({2000: 1.0}).columns), {}, [], "pt")
     with pytest.raises(ContentError, match="not in the catalog"):
         empty.render('{{ v("wdi.si_pov_gini", "BRA", 2001) }}')
+
+
+def test_malformed_placeholder_is_reported():
+    assert content.bare_numbers('{{ v ("a.b", "BRA", 2000) }}') == ["line 1: malformed placeholder"]
+
+
+def test_placeholder_arguments_are_type_checked(resolver):
+    with pytest.raises(ContentError, match="strings"):
+        resolver("en").render('{{ cite(21, "10.1257/aer.20181506", "abstract") }}')
+    with pytest.raises(ContentError, match="year"):
+        resolver("en").render('{{ v("wdi.si_pov_gini", "BRA", "2001") }}')
+
+
+def test_text_around_placeholders_is_html_escaped(resolver):
+    text, _ = resolver("en").render('<script>x</script> {{ lit("<b>", "reason") }}')
+    assert "<script>" not in text and "&lt;script&gt;" in text
+    assert "&lt;b&gt;" in text

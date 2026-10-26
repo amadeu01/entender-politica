@@ -7,13 +7,30 @@ question:
   en: "How has income inequality in Brazil evolved since 1980, and what does peer-reviewed research attribute the changes to?"
 hypothesis:
   pt: >-
-    A queda da desigualdade a partir de 2001 coincidiu com políticas de salário mínimo e de
-    transferência de renda, mas também com uma queda parecida em outros países da região e
-    com mudanças no mercado de trabalho; nenhum fator isolado explica toda a queda.
+    Políticas de renda, sobretudo a valorização do salário mínimo e as transferências
+    focalizadas, explicam a maior parte da queda da desigualdade de renda no Brasil a
+    partir de 2001.
   en: >-
-    The fall in inequality from 2001 coincided with minimum wage and cash transfer policies,
-    but also with a similar fall in other countries of the region and with labor market
-    changes; no single factor explains the whole fall.
+    Income policies, especially the rising minimum wage and targeted transfers, explain
+    most of the fall in income inequality in Brazil from 2001 on.
+result:
+  pt: >-
+    A desigualdade medida por pesquisas domiciliares subiu nos anos 1980, ficou estável
+    nos anos 1990 e caiu de forma contínua de 2001 a 2014: o Gini da PNAD antiga passou
+    de {{ v("ipeadata.disoc_rdcg", "BRA", 2001) }} para
+    {{ v("ipeadata.disoc_rdcg", "BRA", 2014) }}. Estudos atribuem parte relevante da queda
+    ao salário mínimo e às transferências, mas também a mudanças no mercado de trabalho, e
+    dados tributários indicam que a concentração no topo pouco mudou. A evidência
+    disponível não permite afirmar com segurança que as políticas de renda explicam a
+    maior parte da queda.
+  en: >-
+    Inequality measured by household surveys rose in the 1980s, was stable in the 1990s
+    and fell steadily from 2001 to 2014: the old PNAD Gini went from
+    {{ v("ipeadata.disoc_rdcg", "BRA", 2001) }} to
+    {{ v("ipeadata.disoc_rdcg", "BRA", 2014) }}. Studies attribute a relevant part of the
+    fall to the minimum wage and transfers, but also to labor market changes, and tax data
+    suggest top-income concentration changed little. The available evidence does not
+    allow a confident claim that income policies explain most of the fall.
 indicators:
   - ipeadata.disoc_rdcg
   - ibge_sidra.gini_pnadc
@@ -42,16 +59,19 @@ causal_claims: false
 evidence_for:
   - text:
       pt: >-
-        O aumento real do salário mínimo de {{ cite("128%", "10.1257/aer.20181506", "resumo") }}
-        entre 1996 e 2018 explica {{ cite("45%", "10.1257/aer.20181506", "resumo") }} da
-        queda da desigualdade dos rendimentos do trabalho, com efeitos pequenos sobre
-        emprego e produto, segundo um modelo de equilíbrio do mercado de trabalho.
+        Segundo um modelo estrutural do mercado de trabalho, o aumento real do salário
+        mínimo de {{ cite("128%", "10.1257/aer.20181506", "resumo") }} entre 1996 e 2018
+        responde por {{ cite("45%", "10.1257/aer.20181506", "resumo") }} da queda da
+        desigualdade dos rendimentos do trabalho, com efeitos pequenos sobre emprego e
+        produto. A fração depende das hipóteses do modelo e se refere a rendimentos do
+        trabalho, não à renda domiciliar total.
       en: >-
-        The {{ cite("128%", "10.1257/aer.20181506", "abstract") }} real increase in the
-        minimum wage between 1996 and 2018 accounts for
+        According to a structural model of the labor market, the
+        {{ cite("128%", "10.1257/aer.20181506", "abstract") }} real increase in the minimum
+        wage between 1996 and 2018 accounts for
         {{ cite("45%", "10.1257/aer.20181506", "abstract") }} of the fall in labor earnings
-        inequality, with muted effects on employment and output, according to an
-        equilibrium model of the labor market.
+        inequality, with muted effects on employment and output. The share depends on the
+        model's assumptions and refers to labor earnings, not total household income.
     references: [10.1257/aer.20181506]
   - text:
       pt: >-
@@ -59,74 +79,50 @@ evidence_for:
         {{ cite("menos de 1%", "10.24201/ee.v0i0.387", "resumo") }} da renda total, mas, por
         serem bem focalizadas, responderam por cerca de
         {{ cite("21%", "10.24201/ee.v0i0.387", "resumo") }} da queda do Gini no Brasil e no
-        México entre meados dos anos 1990 e meados dos anos 2000 (decomposição contábil).
+        México entre meados dos anos 1990 e meados dos anos 2000, numa decomposição contábil
+        (não causal).
       en: >-
         Conditional cash transfers were
         {{ cite("less than 1%", "10.24201/ee.v0i0.387", "abstract") }} of total income but,
         being well targeted, accounted for about
         {{ cite("21%", "10.24201/ee.v0i0.387", "abstract") }} of the fall in the Gini in
-        Brazil and Mexico between the mid-1990s and the mid-2000s (accounting decomposition).
+        Brazil and Mexico between the mid-1990s and the mid-2000s, in an accounting
+        (not causal) decomposition.
     references: [10.24201/ee.v0i0.387]
   - text:
       pt: >-
-        O Bolsa Família ajudou a reduzir a desigualdade e a extrema pobreza e melhorou
-        resultados educacionais, sem impacto negativo sobre a participação no mercado de
-        trabalho; em saúde e nutrição o efeito esperado não apareceu, por limitações da
-        oferta de serviços.
+        Uma revisão comparativa conclui que o Bolsa Família ajudou a reduzir a desigualdade
+        e a extrema pobreza, sem impacto negativo sobre a participação no mercado de
+        trabalho.
       en: >-
-        Bolsa Família helped reduce inequality and extreme poverty and improved education
-        outcomes, with no negative impact on labor force participation; in health and
-        nutrition the intended effect did not appear, due to supply-side constraints.
+        A comparative review concludes that Bolsa Família helped reduce inequality and
+        extreme poverty, with no negative impact on labor force participation.
     references: [10.1017/S0023879100009390]
 evidence_against:
   - text:
       pt: >-
-        A queda dos rendimentos do trabalho entre 1995 e 2012 se deve sobretudo à redução
-        do retorno à experiência no mercado de trabalho, responsável por
-        {{ cite("53%", "10.1093/wber/lhab005", "resumo") }} da queda do Gini dos
-        rendimentos do trabalho, mais do que à queda do prêmio da educação. Isso aponta
-        para mudanças no mercado de trabalho, e não só para políticas específicas.
+        Numa decomposição dos rendimentos do trabalho entre 1995 e 2012, o principal fator
+        da queda do Gini foi a redução do retorno à experiência no mercado de trabalho,
+        responsável por {{ cite("53%", "10.1093/wber/lhab005", "resumo") }} da queda, mais do
+        que a queda do prêmio da educação. Esse fator não é uma política de renda.
       en: >-
-        The fall in labor earnings inequality between 1995 and 2012 is mostly due to lower
-        returns to labor market experience, accounting for
-        {{ cite("53%", "10.1093/wber/lhab005", "abstract") }} of the fall in the labor
-        earnings Gini, more than the falling education premium. This points to labor
-        market changes, not only to specific policies.
+        In a decomposition of labor earnings between 1995 and 2012, the main driver of the
+        fall in the Gini was lower returns to labor market experience, accounting for
+        {{ cite("53%", "10.1093/wber/lhab005", "abstract") }} of the fall, more than the
+        falling education premium. This factor is not an income policy.
     references: [10.1093/wber/lhab005]
   - text:
       pt: >-
         Com dados do Imposto de Renda, a concentração de renda no topo é substancialmente
         maior do que nas pesquisas domiciliares e permaneceu, em termos gerais, estável
         entre 2006 e 2012. A queda medida pelas pesquisas pode exagerar a redução da
-        desigualdade total.
+        desigualdade total, e com ela o papel atribuído a qualquer política.
       en: >-
         With income tax data, top-income concentration is substantially higher than in
         household surveys and remained broadly stable between 2006 and 2012. The fall
-        measured by surveys may overstate the reduction in overall inequality.
+        measured by surveys may overstate the reduction in overall inequality, and with it
+        the role attributed to any policy.
     references: [10.1590/00115258201537]
-  - text:
-      pt: >-
-        Há evidências sugestivas de que algumas famílias reduziram a oferta de trabalho para
-        se tornarem elegíveis ao Bolsa Família, sobretudo mulheres chefes de família,
-        segundo dados da PNAD de 2006. O resultado contrasta com estudos que não encontram
-        efeito negativo sobre a participação no mercado de trabalho.
-      en: >-
-        There is suggestive evidence that some families reduced labor supply to become
-        eligible for Bolsa Família, especially female heads of household, according to
-        2006 PNAD data. This contrasts with studies that find no negative effect on labor
-        force participation.
-    references: [10.1016/j.econ.2014.09.001]
-  - text:
-      pt: >-
-        Considerando o sistema fiscal como um todo, por volta de 2010, quando aposentadorias
-        não são tratadas como transferência, a política fiscal aumentava a pobreza no Brasil
-        por causa dos impostos sobre o consumo de bens básicos, embora sempre reduzisse a
-        desigualdade.
-      en: >-
-        Considering the whole fiscal system around 2010, when pensions are not treated as
-        transfers, fiscal policy increased poverty in Brazil because of consumption taxes
-        on basic goods, although it always reduced inequality.
-    references: [10.1515/jgd-2016-0015]
 limitations:
   - pt: >-
       As séries da PNAD antiga e da PNAD Contínua não são comparáveis em nível e não foram
@@ -170,10 +166,6 @@ references:
     doi: 10.1093/wber/lhab005
   - citation: "Medeiros, M., Souza, P. H. G. F., & Castro, F. A. (2015). O topo da distribuição de renda no Brasil: primeiras estimativas com dados tributários e comparação com pesquisas domiciliares (2006–2012). Dados, 58(1), 7–36."
     doi: 10.1590/00115258201537
-  - citation: "Firpo, S., Pieri, R., Pedroso, E., & Souza, A. P. (2014). Evidence of eligibility manipulation for conditional cash transfer programs. EconomiA, 15(3), 243–260."
-    doi: 10.1016/j.econ.2014.09.001
-  - citation: "Lustig, N. (2016). Inequality and fiscal redistribution in middle income countries: Brazil, Chile, Colombia, Indonesia, Mexico, Peru and South Africa. Journal of Globalization and Development, 7(1), 17–60."
-    doi: 10.1515/jgd-2016-0015
   - citation: "Barros, R. P., Henriques, R., & Mendonça, R. (2000). Desigualdade e pobreza no Brasil: retrato de uma estabilidade inaceitável. Revista Brasileira de Ciências Sociais, 15(42), 123–142."
     doi: 10.1590/S0102-69092000000100009
 charts:

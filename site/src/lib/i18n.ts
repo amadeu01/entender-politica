@@ -42,6 +42,14 @@ export const UI = {
       references: "Referências",
       contribute: "Como contribuir",
     },
+    mainNav: "Principal",
+    yes: "Sim",
+    usedIn: "Usado em",
+    result: "Resultado",
+    noDataFor: "Sem dado nesta fonte",
+    logDropped: "Valores menores ou iguais a zero não aparecem na escala logarítmica; ver a tabela.",
+    unassigned: "nenhum ano atribuído (menos de seis meses, sem 1º de julho)",
+    viewSourceCode: "código da coleta",
     otherLang: "English",
     otherLangCode: "en",
     footer: "Código sob licença MIT. Conteúdo sob CC BY 4.0. Dados sob a licença de cada fonte.",
@@ -94,7 +102,7 @@ export const UI = {
     },
     period: "Período",
     country: "País",
-    bibtex: "Baixar todas as referências (BibTeX)",
+    bibtex: "Baixar as referências com DOI (BibTeX)",
     lag: "Defasagem",
     lagYears: (n: number) => (n === 0 ? "sem defasagem" : n === 1 ? "1 ano" : `${n} anos`),
     indicator: "Indicador",
@@ -120,6 +128,14 @@ export const UI = {
       references: "References",
       contribute: "Contribute",
     },
+    mainNav: "Main",
+    yes: "Yes",
+    usedIn: "Used in",
+    result: "Result",
+    noDataFor: "No data in this source",
+    logDropped: "Values at or below zero are not shown on the log scale; see the table.",
+    unassigned: "no year assigned (under six months, no July 1)",
+    viewSourceCode: "collection code",
     otherLang: "Português",
     otherLangCode: "pt-BR",
     footer: "Code under the MIT license. Content under CC BY 4.0. Data under each source's license.",
@@ -172,7 +188,7 @@ export const UI = {
     },
     period: "Period",
     country: "Country",
-    bibtex: "Download all references (BibTeX)",
+    bibtex: "Download references with a DOI (BibTeX)",
     lag: "Lag",
     lagYears: (n: number) => (n === 0 ? "no lag" : n === 1 ? "1 year" : `${n} years`),
     indicator: "Indicator",
@@ -197,7 +213,7 @@ export const SOURCE_NAMES: Record<string, Record<Lang, string>> = {
 export const METHOD_NAMES: Record<string, Record<Lang, string>> = {
   descriptive: { pt: "Descritivo", en: "Descriptive" },
   decomposition: { pt: "Decomposição", en: "Decomposition" },
-  review: { pt: "Revisão sistemática", en: "Systematic review" },
+  systematic_review: { pt: "Revisão sistemática", en: "Systematic review" },
   rct: { pt: "Experimento aleatorizado", en: "Randomized experiment" },
   difference_in_differences: { pt: "Diferenças em diferenças", en: "Difference-in-differences" },
   regression_discontinuity: { pt: "Regressão descontínua", en: "Regression discontinuity" },
@@ -205,6 +221,29 @@ export const METHOD_NAMES: Record<string, Record<Lang, string>> = {
   instrumental_variables: { pt: "Variáveis instrumentais", en: "Instrumental variables" },
   observational: { pt: "Observacional", en: "Observational" },
 };
+
+/** Pipeline module that collects each source, linked from every chart. */
+export const SOURCE_CODE: Record<string, string> = {
+  wdi: "pipeline/compilador/sources/worldbank.py",
+  wgi: "pipeline/compilador/sources/worldbank.py",
+  undp_hdr: "pipeline/compilador/sources/undp_hdr.py",
+  ibge_sidra: "pipeline/compilador/sources/sidra.py",
+  ipeadata: "pipeline/compilador/sources/ipeadata.py",
+};
+
+/** Entities keep the same color on every chart (color follows the entity, not its rank). */
+export const GEO_ORDER = ["BRA", "ARG", "CHL", "COL", "MEX", "LCN", "WLD"];
+
+/** Rendered HTML to plain text for <title>, meta tags and attributes. */
+export function plain(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, "")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, "&");
+}
 
 export function formatNumber(value: number, lang: Lang, decimals: number): string {
   return new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", {

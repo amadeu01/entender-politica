@@ -37,7 +37,6 @@ export type Period = {
   term: Text;
   start: string;
   end: string | null;
-  regime: Text;
   note: Text | null;
 };
 export type Observation = {
@@ -84,6 +83,7 @@ export type Analysis = {
   title: string;
   question: string;
   hypothesis: string;
+  result: string;
   indicators: string[];
   period: { start: number; end: number };
   method: string;

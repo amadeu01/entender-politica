@@ -9,6 +9,7 @@ from dataclasses import asdict, dataclass, field
 import pandas as pd
 
 from compilador.catalog import Indicator
+from compilador.geography import Geography
 
 # A year-over-year change is atypical when its robust z-score exceeds this.
 JUMP_Z = 5.0
@@ -31,9 +32,18 @@ class Report:
         return asdict(self)
 
 
-def validate(df: pd.DataFrame, indicators: dict[str, Indicator]) -> Report:
+def validate(
+    df: pd.DataFrame, indicators: dict[str, Indicator], geos: dict[str, Geography] | None = None
+) -> Report:
     errors: list[str] = []
     report = Report()
+
+    # Missing values at the series level: a catalog indicator with no data for a geography.
+    present = set(zip(df["indicator_id"], df["geo_code"], strict=True))
+    for ind_id in sorted(indicators):
+        for geo in sorted(geos or {}):
+            if (ind_id, geo) not in present:
+                report.warnings.append(f"{ind_id} {geo}: no observations")
 
     unknown = sorted(set(df["indicator_id"]) - set(indicators))
     if unknown:
