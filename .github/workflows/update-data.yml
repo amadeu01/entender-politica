@@ -1,0 +1,51 @@
+name: Update data
+
+# Weekly refresh. New data never goes straight to the site: it opens a pull request
+# with the data changelog, so a person reviews revisions before they are published.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run compilador fetch
+      - id: build
+        run: |
+          uv run compilador build | tee build.log
+          if grep -q "^data changed" build.log; then echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+      # Keep only the new snapshot directories when nothing changed upstream.
+      - if: steps.build.outputs.changed != 'true'
+        run: git checkout -- data && git clean -fdq data
+      - if: steps.build.outputs.changed == 'true'
+        id: notes
+        run: |
+          {
+            echo "body<<EOF"
+            echo "Atualização automática dos dados / Automated data refresh."
+            echo
+            echo "Revise os valores revisados pelas fontes antes de aprovar. / Review upstream revisions before approving."
+            echo
+            awk '/^## /{n++} n==1' data/CHANGELOG.md
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+      - if: steps.build.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: dados/atualizacao-automatica
+          commit-message: "data: automated refresh of source snapshots"
+          title: "Dados: atualização automática / Data: automated refresh"
+          body: ${{ steps.notes.outputs.body }}
+          add-paths: data
+          delete-branch: true
