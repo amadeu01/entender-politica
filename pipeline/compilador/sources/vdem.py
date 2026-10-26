@@ -22,15 +22,17 @@ from compilador.geography import Geography, Level
 from compilador.schema import row
 from compilador.snapshot import RawFile, Snapshot
 
+# New V-Dem versions re-estimate the whole series (values are not comparable across
+# versions), so the version is pinned here and changed deliberately.
 VERSION = "v16"
-URL = "https://v-dem.net/media/datasets/V-Dem-CY-Core-v16_csv.zip"
-MEMBER = "V-Dem-CY-Core-v16.csv"
+URL = f"https://v-dem.net/media/datasets/V-Dem-CY-Core-{VERSION}_csv.zip"
+MEMBER = f"V-Dem-CY-Core-{VERSION}.csv"
 EXTRACT = "vdem-extract.csv"
 UPSTREAM = "upstream.json"
 KEYS = ["country_text_id", "year"]
 
 
-def _columns(indicators: list[Indicator]) -> list[str]:
+def _source_columns(indicators: list[Indicator]) -> list[str]:
     # `_codelow`/`_codehigh` bound the 68% highest posterior density interval.
     return [f"{i.source_code}{s}" for i in indicators for s in ("", "_codelow", "_codehigh")]
 
@@ -53,10 +55,11 @@ class VdemSource:
     def fetch(
         self, indicators: list[Indicator], geos: dict[str, Geography], client: httpx.Client
     ) -> tuple[list[RawFile], str]:
+        # The archive is ~16 MB: allow longer than the CLI's default per-request timeout.
         resp = client.get(URL, follow_redirects=True, timeout=300)
         resp.raise_for_status()
         archive = resp.content
-        columns = _columns(indicators)
+        columns = _source_columns(indicators)
         countries = sorted(c for c, g in geos.items() if g.level == Level.COUNTRY)
         upstream = {
             "url": URL,
@@ -66,35 +69,31 @@ class VdemSource:
             "filter": {"countries": countries, "from_year": START_YEAR, "columns": columns},
         }
         return [
-            RawFile(EXTRACT, URL, extract(archive, columns, countries)),
+            # Derived from the archive at URL; upstream.json says how.
+            RawFile(EXTRACT, f"{URL}#extract-see-{UPSTREAM}", extract(archive, columns, countries)),
             RawFile(UPSTREAM, URL, (json.dumps(upstream, indent=2) + "\n").encode()),
         ], VERSION
 
     def normalize(
         self, snapshot: Snapshot, indicators: list[Indicator], geos: dict[str, Geography]
     ) -> pd.DataFrame:
-        table = pd.read_csv(io.BytesIO(snapshot.read(EXTRACT)))
+        # Read exactly as written by `extract`: text, with empty cells for missing values.
+        table = pd.read_csv(io.BytesIO(snapshot.read(EXTRACT)), dtype=str, keep_default_na=False)
         records = table.to_dict("records")
         rows = []
         for ind in indicators:
             code = ind.source_code
             for r in records:
                 geo = geos.get(r["country_text_id"])
-                if geo is None or pd.isna(r[code]):
+                if geo is None or r[code] == "":
                     continue
-                low, high = r[f"{code}_codelow"], r[f"{code}_codehigh"]
-                rows.append(
-                    row(
-                        snapshot,
-                        ind,
-                        geo,
-                        int(r["year"]),
-                        float(r[code]),
-                        None if pd.isna(low) else float(low),
-                        None if pd.isna(high) else float(high),
-                    )
-                )
+                low, high = (_number(r[f"{code}{s}"]) for s in ("_codelow", "_codehigh"))
+                rows.append(row(snapshot, ind, geo, int(r["year"]), float(r[code]), low, high))
         return pd.DataFrame(rows)
+
+
+def _number(text: str) -> float | None:
+    return float(text) if text else None
 
 
 vdem = VdemSource()

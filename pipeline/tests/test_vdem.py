@@ -8,7 +8,7 @@ import pandas as pd
 import pytest
 
 from compilador import geography, snapshot
-from compilador.sources.vdem import EXTRACT, MEMBER, UPSTREAM, vdem
+from compilador.sources.vdem import EXTRACT, MEMBER, UPSTREAM, extract, vdem
 from tests.helpers import make_indicator
 
 POLYARCHY = make_indicator(
@@ -22,6 +22,7 @@ CSV = (
     "Brazil,BRA,1980,0.251,0.221,0.277,9\n"
     "Sweden,SWE,1990,0.9,0.85,0.95,9\n"
     "Mexico,MEX,1990,0.4,,,9\n"
+    "Mexico,MEX,1991,,0.3,0.5,9\n"
 )
 
 
@@ -52,6 +53,7 @@ def test_extract_keeps_covered_countries_catalog_columns_and_years_sorted(fetche
         "BRA,1980,0.251,0.221,0.277\n"
         "BRA,1990,0.814,0.772,0.868\n"
         "MEX,1990,0.4,,\n"
+        "MEX,1991,,0.3,0.5\n"
     )
 
 
@@ -70,3 +72,16 @@ def test_normalize_uses_68_percent_hpd_interval(fetched):
     assert df.loc[("BRA", 1990), ["value", "lower", "upper"]].tolist() == [0.814, 0.772, 0.868]
     assert pd.isna(df.loc[("MEX", 1990), "lower"])
     assert df.loc[("BRA", 1990), "license"] == "CC-BY-SA-4.0"
+
+
+def test_point_without_estimate_is_skipped_even_with_interval(fetched):
+    _, snap = fetched
+    df = vdem.normalize(snap, [POLYARCHY], geography.load())
+    assert 1991 not in df[df["geo_code"] == "MEX"]["year"].tolist()
+
+
+def test_extract_is_deterministic():
+    data = archive()
+    columns = ["v2x_polyarchy", "v2x_polyarchy_codelow", "v2x_polyarchy_codehigh"]
+    first = extract(data, columns, ["MEX", "BRA"])
+    assert first == extract(data, columns, ["BRA", "MEX"])
