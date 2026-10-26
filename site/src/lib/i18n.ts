@@ -210,7 +210,7 @@ export const SOURCE_NAMES: Record<string, Record<Lang, string>> = {
   undp_hdr: { pt: "PNUD — Relatório de Desenvolvimento Humano", en: "UNDP — Human Development Report" },
   ibge_sidra: { pt: "IBGE — SIDRA (PNAD Contínua)", en: "IBGE — SIDRA (Continuous PNAD)" },
   ipeadata: { pt: "Ipea — Ipeadata", en: "Ipea — Ipeadata" },
-  vdem: { pt: "V-Dem — Varieties of Democracy (v16)", en: "V-Dem — Varieties of Democracy (v16)" },
+  vdem: { pt: "V-Dem — Varieties of Democracy", en: "V-Dem — Varieties of Democracy" },
 };
 
 export const METHOD_NAMES: Record<string, Record<Lang, string>> = {

@@ -2,7 +2,8 @@
 
 **pt-BR** — Textos, análises, fichas de políticas, catálogo de indicadores e gráficos
 deste repositório (pastas `analyses/`, `policies/`, `indicators/`, `docs/` e o site gerado)
-estão licenciados sob a [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.pt-br).
+estão licenciados sob a [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.pt-br),
+**exceto** gráficos e dados derivados do V-Dem, que seguem a [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br).
 O código-fonte está sob a licença MIT (ver `LICENSE`).
 
 Os **dados** em `data/` mantêm a licença da fonte original, registrada no manifesto de
@@ -12,7 +13,8 @@ licença da fonte.
 
 **English** — Texts, analyses, policy briefs, the indicator catalog and charts in this
 repository (`analyses/`, `policies/`, `indicators/`, `docs/` and the generated site) are
-licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode).
+licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode),
+**except** V-Dem-derived charts and data, which follow [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 Source code is under the MIT license (see `LICENSE`).
 
 **Data** in `data/` keeps the original source's license, recorded in each collection
