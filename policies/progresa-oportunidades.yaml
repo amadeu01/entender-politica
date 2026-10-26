@@ -1,0 +1,109 @@
+slug: progresa-oportunidades
+name:
+  pt: "Progresa/Oportunidades (México)"
+  en: "Progresa/Oportunidades (Mexico)"
+country: MEX
+period: { start: 1997, end: 2019 }
+summary:
+  pt: >-
+    Programa mexicano de transferência condicionada de renda criado em 1997 (depois chamado
+    Oportunidades e Prospera). Pagava às famílias pobres, sobretudo às mães, com a condição
+    de que os filhos frequentassem a escola e a família fosse a consultas de saúde. Foi
+    avaliado desde o início com um experimento aleatorizado e serviu de modelo para
+    dezenas de países, inclusive para o Bolsa Família.
+  en: >-
+    Mexican conditional cash transfer program created in 1997 (later called Oportunidades
+    and Prospera). It paid poor families, mostly mothers, on the condition that children
+    attend school and the family attend health checkups. It was evaluated from the start
+    with a randomized experiment and served as a model for dozens of countries, including
+    for Bolsa Família.
+mechanism:
+  pt: >-
+    Dinheiro alivia a pobreza imediata; as condicionalidades incentivam investimento em
+    educação e saúde dos filhos, com a expectativa de reduzir a pobreza da geração seguinte.
+  en: >-
+    Cash relieves immediate poverty; conditions encourage investment in children's
+    education and health, with the aim of reducing poverty in the next generation.
+findings:
+  - outcome: { pt: "Matrícula e frequência escolar", en: "School enrollment and attendance" }
+    result:
+      pt: >-
+        Numa revisão sistemática de programas de transferência, os condicionados e os não
+        condicionados aumentam matrícula e frequência; programas com condições explícitas,
+        monitoradas e com penalidade têm efeitos substancialmente maiores
+        ({{ cite("60% de aumento nas chances de matrícula", "10.1080/19439342.2014.890362", "resumo") }}).
+      en: >-
+        In a systematic review of cash transfer programs, both conditional and unconditional
+        transfers raise enrollment and attendance; programs with explicit, monitored and
+        enforced conditions have substantively larger effects
+        ({{ cite("60% improvement in the odds of enrollment", "10.1080/19439342.2014.890362", "abstract") }}).
+    direction: positive
+    method: review
+    references: [10.1080/19439342.2014.890362]
+  - outcome: { pt: "Aprendizado (notas em testes)", en: "Learning (test scores)" }
+    result:
+      pt: "Na mesma revisão, o efeito das transferências sobre notas em testes é pequeno, na melhor das hipóteses."
+      en: "In the same review, the effect of cash transfers on test scores is small at best."
+    direction: "null"
+    method: review
+    references: [10.1080/19439342.2014.890362]
+  - outcome: { pt: "Desigualdade de renda", en: "Income inequality" }
+    result:
+      pt: >-
+        Numa decomposição do Gini, as transferências condicionadas responderam por cerca de
+        {{ cite("21%", "10.24201/ee.v0i0.387", "resumo") }} da queda da desigualdade no
+        México entre meados dos anos 1990 e meados dos anos 2000, apesar de representarem
+        {{ cite("menos de 1%", "10.24201/ee.v0i0.387", "resumo") }} da renda total.
+      en: >-
+        In a Gini decomposition, conditional transfers accounted for about
+        {{ cite("21%", "10.24201/ee.v0i0.387", "abstract") }} of the fall in inequality in
+        Mexico between the mid-1990s and the mid-2000s, despite being
+        {{ cite("less than 1%", "10.24201/ee.v0i0.387", "abstract") }} of total income.
+    direction: positive
+    method: decomposition
+    references: [10.24201/ee.v0i0.387]
+external_validity:
+  pt: >-
+    O Progresa começou em comunidades rurais pobres e foi avaliado ali. O Bolsa Família é
+    nacional, majoritariamente urbano, e tem características de desenho e implementação que
+    o afastam de um programa de condicionalidades estritas; o monitoramento das condições é
+    mais fraco. Como a revisão sistemática mostra efeitos maiores quando as condições são
+    monitoradas e cobradas, os resultados do Progresa não se transferem automaticamente.
+  en: >-
+    Progresa started in poor rural communities and was evaluated there. Bolsa Família is
+    national, mostly urban, and has design and implementation features that set it apart
+    from a strict conditionality program; monitoring of conditions is weaker. Since the
+    systematic review finds larger effects when conditions are monitored and enforced,
+    Progresa's results do not transfer automatically.
+limitations:
+  - pt: >-
+      O experimento original comparou comunidades tratadas mais cedo e mais tarde; o grupo
+      de controle também passou a receber o programa, o que limita a avaliação de efeitos
+      de longo prazo.
+    en: >-
+      The original experiment compared communities treated earlier and later; the control
+      group also started receiving the program, which limits evaluation of long-term
+      effects.
+  - pt: >-
+      A fração da queda da desigualdade atribuída às transferências vem de decomposição
+      contábil, não de estimativa causal.
+    en: >-
+      The share of the fall in inequality attributed to transfers comes from an accounting
+      decomposition, not a causal estimate.
+  - pt: >-
+      Muitos resultados do programa foram testados ao mesmo tempo; revisões recentes
+      corrigem para testes múltiplos e alguns efeitos deixam de ser significativos.
+    en: >-
+      Many program outcomes were tested at once; recent reviews correct for multiple
+      hypothesis testing and some effects lose significance.
+references:
+  - citation: "Baird, S., Ferreira, F. H. G., Özler, B., & Woolcock, M. (2014). Conditional, unconditional and everything in between: a systematic review of the effects of cash transfer programmes on schooling outcomes. Journal of Development Effectiveness, 6(1), 1–43."
+    doi: 10.1080/19439342.2014.890362
+  - citation: "Soares, S., Osório, R. G., Soares, F. V., Medeiros, M., & Zepeda, E. (2009). Conditional cash transfers in Brazil, Chile and Mexico: impacts upon inequality. Estudios Económicos, 207–224."
+    doi: 10.24201/ee.v0i0.387
+  - citation: "Parker, S. W., & Todd, P. E. (2017). Conditional cash transfers: the case of Progresa/Oportunidades. Journal of Economic Literature, 55(3), 866–915."
+    doi: 10.1257/jel.20151233
+  - citation: "Schultz, T. P. (2004). School subsidies for the poor: evaluating the Mexican Progresa poverty program. Journal of Development Economics, 74(1), 199–250."
+    doi: 10.1016/j.jdeveco.2003.12.009
+  - citation: "Soares, F. V., Ribas, R. P., & Osório, R. G. (2010). Evaluating the impact of Brazil's Bolsa Família: cash transfer programs in comparative perspective. Latin American Research Review, 45(2), 173–190."
+    doi: 10.1017/S0023879100009390
