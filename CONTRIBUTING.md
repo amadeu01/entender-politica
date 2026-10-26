@@ -61,7 +61,7 @@ fixes.
 a design that supports them; new methodological decisions get an ADR in `docs/adr/`;
 small commits using Conventional Commits.
 
-**Setup:** `uv sync && uv run pytest && uv run ruff check .`
+**Setup:** `uv sync && uv run pytest && uv run ruff check . && uv run ruff format --check .`
 
 **Review:** every PR goes through the scientific checklist in the template. Analyses and
 policy briefs need at least one review by someone other than the author.

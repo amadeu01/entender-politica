@@ -1,0 +1,2570 @@
+{
+ "indicator_id": "wdi.sp_dyn_imrt_in",
+ "unit": "per_1000_live_births",
+ "source_id": "wdi",
+ "source_version": "2026-10-08",
+ "retrieved_at": "2026-10-26T01:01:36+00:00",
+ "license": "CC-BY-4.0",
+ "observations": [
+  {
+   "geo_code": "ARG",
+   "year": 1975,
+   "value": 53.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1976,
+   "value": 50.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1977,
+   "value": 47.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1978,
+   "value": 43.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1979,
+   "value": 39.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1980,
+   "value": 36.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1981,
+   "value": 33.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1982,
+   "value": 31.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1983,
+   "value": 29.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1984,
+   "value": 27.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1985,
+   "value": 26.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1986,
+   "value": 25.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1987,
+   "value": 25.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1988,
+   "value": 24.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1989,
+   "value": 24.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1990,
+   "value": 24.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1991,
+   "value": 24.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1992,
+   "value": 23.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1993,
+   "value": 23.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1994,
+   "value": 22.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1995,
+   "value": 20.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1996,
+   "value": 19.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1997,
+   "value": 18.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1998,
+   "value": 18.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 1999,
+   "value": 17.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2000,
+   "value": 16.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2001,
+   "value": 16.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2002,
+   "value": 15.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2003,
+   "value": 15.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2004,
+   "value": 14.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2005,
+   "value": 14.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2006,
+   "value": 14.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2007,
+   "value": 13.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2008,
+   "value": 13.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2009,
+   "value": 12.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2010,
+   "value": 12.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2011,
+   "value": 11.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2012,
+   "value": 11.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2013,
+   "value": 10.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2014,
+   "value": 10.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2015,
+   "value": 10.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2016,
+   "value": 9.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2017,
+   "value": 9.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2018,
+   "value": 9.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2019,
+   "value": 8.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2020,
+   "value": 8.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2021,
+   "value": 8.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2022,
+   "value": 8.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2023,
+   "value": 8.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "ARG",
+   "year": 2024,
+   "value": 8.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1975,
+   "value": 90.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1976,
+   "value": 88.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1977,
+   "value": 85.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1978,
+   "value": 82.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1979,
+   "value": 79.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1980,
+   "value": 76.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1981,
+   "value": 73.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1982,
+   "value": 70.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1983,
+   "value": 67.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1984,
+   "value": 64.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1985,
+   "value": 62.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1986,
+   "value": 60.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1987,
+   "value": 58.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1988,
+   "value": 56.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1989,
+   "value": 54.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1990,
+   "value": 51.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1991,
+   "value": 49.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1992,
+   "value": 47.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1993,
+   "value": 44.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1994,
+   "value": 42.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1995,
+   "value": 39.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1996,
+   "value": 37.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1997,
+   "value": 35.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1998,
+   "value": 33.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 1999,
+   "value": 31.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2000,
+   "value": 29.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2001,
+   "value": 27.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2002,
+   "value": 25.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2003,
+   "value": 24.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2004,
+   "value": 22.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2005,
+   "value": 21.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2006,
+   "value": 19.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2007,
+   "value": 18.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2008,
+   "value": 17.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2009,
+   "value": 16.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2010,
+   "value": 16.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2011,
+   "value": 15.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2012,
+   "value": 14.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2013,
+   "value": 14.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2014,
+   "value": 14.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2015,
+   "value": 13.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2016,
+   "value": 14.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2017,
+   "value": 13.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2018,
+   "value": 13.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2019,
+   "value": 12.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2020,
+   "value": 12.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2021,
+   "value": 12.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2022,
+   "value": 12.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2023,
+   "value": 12.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "BRA",
+   "year": 2024,
+   "value": 12.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1975,
+   "value": 55.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1976,
+   "value": 48.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1977,
+   "value": 41.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1978,
+   "value": 35.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1979,
+   "value": 31.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1980,
+   "value": 28.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1981,
+   "value": 25.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1982,
+   "value": 22.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1983,
+   "value": 20.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1984,
+   "value": 19.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1985,
+   "value": 18.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1986,
+   "value": 18.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1987,
+   "value": 18.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1988,
+   "value": 18.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1989,
+   "value": 17.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1990,
+   "value": 15.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1991,
+   "value": 14.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1992,
+   "value": 13.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1993,
+   "value": 12.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1994,
+   "value": 11.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1995,
+   "value": 10.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1996,
+   "value": 10.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1997,
+   "value": 10.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1998,
+   "value": 10.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 1999,
+   "value": 9.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2000,
+   "value": 9.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2001,
+   "value": 8.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2002,
+   "value": 8.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2003,
+   "value": 8.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2004,
+   "value": 7.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2005,
+   "value": 7.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2006,
+   "value": 7.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2007,
+   "value": 7.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2008,
+   "value": 7.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2009,
+   "value": 7.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2010,
+   "value": 7.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2011,
+   "value": 7.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2012,
+   "value": 7.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2013,
+   "value": 7.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2014,
+   "value": 6.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2015,
+   "value": 6.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2016,
+   "value": 6.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2017,
+   "value": 6.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2018,
+   "value": 6.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2019,
+   "value": 6.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2020,
+   "value": 5.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2021,
+   "value": 5.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2022,
+   "value": 5.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2023,
+   "value": 5.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "CHL",
+   "year": 2024,
+   "value": 5.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1975,
+   "value": 60.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1976,
+   "value": 57.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1977,
+   "value": 54.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1978,
+   "value": 51.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1979,
+   "value": 49.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1980,
+   "value": 46.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1981,
+   "value": 43.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1982,
+   "value": 41.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1983,
+   "value": 39.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1984,
+   "value": 37.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1985,
+   "value": 37.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1986,
+   "value": 34.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1987,
+   "value": 32.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1988,
+   "value": 31.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1989,
+   "value": 30.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1990,
+   "value": 29.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1991,
+   "value": 28.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1992,
+   "value": 27.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1993,
+   "value": 27.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1994,
+   "value": 26.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1995,
+   "value": 25.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1996,
+   "value": 24.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1997,
+   "value": 23.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1998,
+   "value": 23.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 1999,
+   "value": 22.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2000,
+   "value": 21.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2001,
+   "value": 21.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2002,
+   "value": 20.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2003,
+   "value": 19.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2004,
+   "value": 19.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2005,
+   "value": 18.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2006,
+   "value": 18.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2007,
+   "value": 17.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2008,
+   "value": 17.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2009,
+   "value": 16.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2010,
+   "value": 16.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2011,
+   "value": 15.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2012,
+   "value": 15.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2013,
+   "value": 14.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2014,
+   "value": 14.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2015,
+   "value": 13.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2016,
+   "value": 13.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2017,
+   "value": 13.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2018,
+   "value": 12.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2019,
+   "value": 12.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2020,
+   "value": 11.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2021,
+   "value": 11.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2022,
+   "value": 11.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2023,
+   "value": 10.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "COL",
+   "year": 2024,
+   "value": 10.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 1990,
+   "value": 44.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 1991,
+   "value": 42.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 1992,
+   "value": 40.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 1993,
+   "value": 38.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 1994,
+   "value": 36.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 1995,
+   "value": 35.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 1996,
+   "value": 33.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 1997,
+   "value": 31.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 1998,
+   "value": 30.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 1999,
+   "value": 28.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2000,
+   "value": 27.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2001,
+   "value": 25.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2002,
+   "value": 24.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2003,
+   "value": 23.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2004,
+   "value": 22.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2005,
+   "value": 21.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2006,
+   "value": 20.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2007,
+   "value": 19.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2008,
+   "value": 19.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2009,
+   "value": 18.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2010,
+   "value": 18.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2011,
+   "value": 17.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2012,
+   "value": 16.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2013,
+   "value": 16.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2014,
+   "value": 16.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2015,
+   "value": 15.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2016,
+   "value": 15.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2017,
+   "value": 15.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2018,
+   "value": 14.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2019,
+   "value": 14.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2020,
+   "value": 14.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2021,
+   "value": 14.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2022,
+   "value": 13.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2023,
+   "value": 13.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "LCN",
+   "year": 2024,
+   "value": 13.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1975,
+   "value": 70.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1976,
+   "value": 68.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1977,
+   "value": 66.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1978,
+   "value": 63.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1979,
+   "value": 61.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1980,
+   "value": 58.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1981,
+   "value": 56.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1982,
+   "value": 54.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1983,
+   "value": 51.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1984,
+   "value": 49.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1985,
+   "value": 47.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1986,
+   "value": 45.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1987,
+   "value": 43.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1988,
+   "value": 41.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1989,
+   "value": 39.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1990,
+   "value": 38.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1991,
+   "value": 36.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1992,
+   "value": 34.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1993,
+   "value": 33.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1994,
+   "value": 31.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1995,
+   "value": 30.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1996,
+   "value": 28.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1997,
+   "value": 27.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1998,
+   "value": 26.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 1999,
+   "value": 25.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2000,
+   "value": 24.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2001,
+   "value": 22.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2002,
+   "value": 21.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2003,
+   "value": 21.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2004,
+   "value": 20.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2005,
+   "value": 19.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2006,
+   "value": 18.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2007,
+   "value": 18.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2008,
+   "value": 17.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2009,
+   "value": 17.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2010,
+   "value": 17.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2011,
+   "value": 16.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2012,
+   "value": 16.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2013,
+   "value": 15.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2014,
+   "value": 15.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2015,
+   "value": 15.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2016,
+   "value": 14.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2017,
+   "value": 14.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2018,
+   "value": 14.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2019,
+   "value": 13.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2020,
+   "value": 13.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2021,
+   "value": 13.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2022,
+   "value": 12.8,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2023,
+   "value": 12.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "MEX",
+   "year": 2024,
+   "value": 12.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 1990,
+   "value": 64.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 1991,
+   "value": 64.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 1992,
+   "value": 63.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 1993,
+   "value": 62.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 1994,
+   "value": 61.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 1995,
+   "value": 60.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 1996,
+   "value": 59.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 1997,
+   "value": 58.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 1998,
+   "value": 57.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 1999,
+   "value": 55.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2000,
+   "value": 53.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2001,
+   "value": 51.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2002,
+   "value": 49.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2003,
+   "value": 48.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2004,
+   "value": 46.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2005,
+   "value": 44.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2006,
+   "value": 42.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2007,
+   "value": 40.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2008,
+   "value": 39.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2009,
+   "value": 38.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2010,
+   "value": 36.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2011,
+   "value": 35.9,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2012,
+   "value": 34.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2013,
+   "value": 33.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2014,
+   "value": 32.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2015,
+   "value": 31.5,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2016,
+   "value": 30.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2017,
+   "value": 30.0,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2018,
+   "value": 29.6,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2019,
+   "value": 29.2,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2020,
+   "value": 29.1,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2021,
+   "value": 29.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2022,
+   "value": 29.3,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2023,
+   "value": 28.4,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  },
+  {
+   "geo_code": "WLD",
+   "year": 2024,
+   "value": 27.7,
+   "lower": null,
+   "upper": null,
+   "series_break": false
+  }
+ ]
+}

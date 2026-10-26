@@ -1,4 +1,4 @@
-"""Compilador: pipeline de dados do Entender Política."""
+"""Compilador: the Entender Política data pipeline."""
 
 from pathlib import Path
 

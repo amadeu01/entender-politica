@@ -45,7 +45,6 @@ def _period(id_, start, end):
         "term": {"pt": "t", "en": "t"},
         "start": start,
         "end": end,
-        "regime": {"pt": "r", "en": "r"},
     }
 
 
@@ -54,6 +53,7 @@ def test_gap_between_periods_is_rejected():
         governments.Governments.model_validate(
             {
                 "sources": ["https://example.org"],
+                "verified_on": "2026-10-25",
                 "periods": [
                     _period("a", "2000-01-01", "2001-01-01"),
                     _period("b", "2001-01-02", None),
@@ -67,7 +67,7 @@ def test_missing_translation_is_rejected():
     bad["term"] = {"pt": "t", "en": ""}
     with pytest.raises(ValidationError):
         governments.Governments.model_validate(
-            {"sources": ["https://example.org"], "periods": [bad]}
+            {"sources": ["https://example.org"], "verified_on": "2026-10-25", "periods": [bad]}
         )
 
 
@@ -81,7 +81,39 @@ def test_for_year_uses_july_first(govs, year, expected):
 
 @pytest.mark.parametrize(
     ("year", "changed"),
-    [(1985, True), (1990, True), (1992, True), (2016, True), (2003, False), (2010, False)],
+    [
+        (1985, True),
+        (1990, True),
+        (1992, True),
+        (2016, True),
+        (2003, False),
+        (2010, False),
+        (1999, False),
+    ],
 )
-def test_changes_in_year_ignores_january_first_inaugurations(govs, year, changed):
+def test_changes_in_year_ignores_regular_inaugurations_and_same_person(govs, year, changed):
     assert govs.changes_in_year(year) is changed
+
+
+def test_inauguration_on_january_fifth_is_not_mid_year():
+    def period(id_, president, start, end):
+        return {
+            "id": id_,
+            "president": president,
+            "condition": "titular",
+            "term": {"pt": "t", "en": "t"},
+            "start": start,
+            "end": end,
+        }
+
+    govs = governments.Governments.model_validate(
+        {
+            "sources": ["https://example.org"],
+            "verified_on": "2026-10-25",
+            "periods": [
+                period("a", "A", "2023-01-01", "2027-01-05"),
+                period("b", "B", "2027-01-05", None),
+            ],
+        }
+    )
+    assert govs.changes_in_year(2027) is False
