@@ -1,0 +1,317 @@
+indicator: wdi.ny_gdp_pcap_kd
+understand:
+  pt: |-
+    O PIB per capita é o valor de todos os bens e serviços finais que a economia de um país
+    produz num ano, dividido pelo número de habitantes. Aqui ele está em dólares de 2015,
+    com a inflação já descontada, então dá para comparar um ano com outro.
+
+    É uma média. Não diz quanto cada pessoa ganha, nem como a renda está dividida entre
+    ricos e pobres. Também deixa de fora o trabalho doméstico não pago, o tempo livre, a
+    saúde e o meio ambiente. O PIB per capita mede o tamanho da economia por pessoa, não o
+    bem-estar das pessoas.
+  en: |-
+    GDP per capita is the value of all final goods and services an economy produces in a
+    year, divided by the number of inhabitants. Here it is in 2015 dollars, with inflation
+    already removed, so one year can be compared with another.
+
+    It is an average. It does not say how much each person earns, nor how income is split
+    between rich and poor. It also leaves out unpaid household work, free time, health and
+    the environment. GDP per capita measures the size of the economy per person, not
+    people's well-being.
+how_to_read:
+  pt: |-
+    Cada linha do gráfico é um país ou região. O eixo vertical mostra dólares de 2015 por
+    pessoa por ano. As faixas ao fundo marcam os períodos de governo do Brasil apenas como
+    referência de tempo: elas não mostram que um governo causou a subida ou a queda.
+
+    Exemplo com o dado do site: em 2024, o PIB per capita do Brasil foi de
+    US$ {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }}. Entre 2014 e 2016 a variação foi de
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2014, 2016) }}, e entre 2016 e 2024 foi de
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2016, 2024) }}. Uma queda quer dizer que a economia
+    produziu menos por habitante; não quer dizer que a renda de cada pessoa caiu na mesma
+    proporção.
+
+    Compare sempre com os outros países do gráfico: se todos caíram ou subiram juntos, a
+    causa provavelmente é comum a eles, como preços de commodities ou uma crise mundial.
+    Como está em dólares convertidos pelo câmbio de mercado, este indicador serve melhor
+    para ver a tendência dentro de um país. Para comparar o nível entre países, use a
+    versão em paridade de poder de compra, na seção Poder de compra.
+  en: |-
+    Each line in the chart is a country or region. The vertical axis shows 2015 dollars per
+    person per year. The bands in the background mark Brazil's government periods only as
+    a time reference: they do not show that a government caused the rise or fall.
+
+    Example with the site's data: in 2024, Brazil's GDP per capita was
+    US$ {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }}. Between 2014 and 2016 the change was
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2014, 2016) }}, and between 2016 and 2024 it was
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2016, 2024) }}. A fall means the economy produced
+    less per inhabitant; it does not mean each person's income fell in the same
+    proportion.
+
+    Always compare with the other countries in the chart: if they all fell or rose
+    together, the cause is probably common to them, such as commodity prices or a world
+    crisis. Because it is in dollars converted at the market exchange rate, this indicator
+    is best for trends within a country. To compare levels across countries, use the
+    purchasing power parity version, in the Purchasing power section.
+studies:
+  - text:
+      pt: >-
+        Jones e Klenow propõem uma medida de bem-estar que combina consumo, lazer,
+        mortalidade e desigualdade, e a calculam para muitos países. O bem-estar é muito
+        correlacionado com o PIB per capita, mas os desvios costumam ser grandes: a Europa
+        Ocidental fica bem mais perto dos Estados Unidos do que pelo PIB, a Ásia emergente
+        alcançou menos, e muitos países em desenvolvimento ficam mais atrás. A mortalidade
+        é o componente que mais pesa nessas diferenças.
+      en: >-
+        Jones and Klenow propose a welfare measure that combines consumption, leisure,
+        mortality and inequality, and compute it for many countries. Welfare is highly
+        correlated with GDP per capita, but deviations are often large: Western Europe
+        looks much closer to the United States than by GDP, emerging Asia has caught up
+        less, and many developing countries are further behind. Mortality is the component
+        that weighs most in these differences.
+    method: descriptive
+    references: [10.1257/aer.20110236]
+  - text:
+      pt: >-
+        Com a pesquisa Gallup World Poll de 2006, feita em
+        {{ cite("132 países", "10.1257/jep.22.2.53", "resumo") }}, Deaton encontra que a
+        satisfação média com a vida está fortemente associada à renda nacional per capita:
+        cada duplicação da renda está associada a
+        {{ cite("quase um ponto a mais numa escala de 0 a 10", "10.1257/jep.22.2.53", "resumo") }},
+        também entre os países ricos. Mas, para um mesmo nível de renda, crescimento
+        econômico maior aparece associado a satisfação menor, não maior. E nem a satisfação
+        com a vida nem a satisfação com a saúde respondem muito a medidas objetivas de
+        saúde, como a expectativa de vida.
+      en: >-
+        Using the 2006 Gallup World Poll, run in
+        {{ cite("132 countries", "10.1257/jep.22.2.53", "abstract") }}, Deaton finds that
+        average life satisfaction is strongly associated with national income per capita:
+        each doubling of income is associated with
+        {{ cite("almost a one-point increase on a scale from 0 to 10", "10.1257/jep.22.2.53", "abstract") }},
+        including among rich countries. But, for a given income level, faster economic
+        growth is associated with lower, not higher, satisfaction. And neither life
+        satisfaction nor health satisfaction responds strongly to objective health
+        measures such as life expectancy.
+    method: observational
+    references: [10.1257/jep.22.2.53]
+  - text:
+      pt: >-
+        Easterlin e coautores encontram que, no longo prazo
+        ({{ cite("10 anos ou mais", "10.1073/pnas.1015962107", "resumo") }}), a
+        felicidade média não sobe quando a renda do país cresce, em países desenvolvidos, em
+        desenvolvimento e em transição do socialismo. No curto prazo, felicidade e renda
+        andam juntas: caem nas recessões e sobem nas expansões. O resultado é contestado;
+        o artigo atribui as críticas a um artefato estatístico ou à confusão entre curto e
+        longo prazo.
+      en: >-
+        Easterlin and coauthors find that, over the long term
+        ({{ cite("10 years or more", "10.1073/pnas.1015962107", "abstract") }}), average
+        happiness does not rise as a country's income grows, in developed, developing and
+        post-socialist transition countries. In the short term, happiness and income move
+        together: they fall in recessions and rise in expansions. The result is disputed;
+        the article attributes the critiques to a statistical artifact or to confusing the
+        short term with the long term.
+    method: observational
+    references: [10.1073/pnas.1015962107]
+policies:
+  - name: { pt: "Zona Franca de Manaus", en: "Manaus Free Trade Zone" }
+    country: BRA
+    period: { start: 1967, end: 1999 }
+    result:
+      pt: >-
+        Com controle sintético e dados de áreas municipais de 1920 a 1999, Possebom estima
+        que a Zona Franca teve efeito positivo e significativo sobre o PIB per capita real e
+        a produção de serviços per capita da região de Manaus, e efeito negativo e
+        significativo sobre a produção agrícola per capita. O autor conclui que o subsídio
+        promoveu crescimento regional ao custo de má alocação de recursos entre setores, e
+        diz não ter informação suficiente para uma análise de custo-benefício.
+      en: >-
+        Using synthetic control and data for municipal areas from 1920 to 1999, Possebom
+        estimates that the Free Trade Zone had a significantly positive effect on real GDP
+        per capita and services output per capita in the Manaus area, and a significantly
+        negative effect on agricultural output per capita. The author concludes that the
+        subsidy promoted regional growth at the cost of misallocating resources across
+        sectors, and says there is not enough information for a cost-benefit analysis.
+    direction: positive
+    method: synthetic_control
+    references: [10.5935/0034-7140.20170011]
+  - name: { pt: "Abertura comercial do início dos anos 1990", en: "Early 1990s trade liberalization" }
+    country: BRA
+    period: { start: 1990, end: 1994 }
+    result:
+      pt: >-
+        Comparando regiões com cortes maiores e menores nas tarifas de importação,
+        Dix-Carneiro e Kovak encontram que as regiões mais expostas tiveram quedas
+        prolongadas no emprego formal e nos rendimentos em relação às demais. O efeito
+        sobre os rendimentos regionais
+        {{ cite("20 anos depois da abertura foi três vezes o efeito após 10 anos", "10.1257/aer.20161214", "resumo") }}.
+        O estudo mede emprego e rendimentos por região, não o PIB per capita do país: mostra
+        quais regiões perderam em relação às outras, não se a economia como um todo cresceu
+        mais ou menos.
+      en: >-
+        Comparing regions with larger and smaller import tariff cuts, Dix-Carneiro and
+        Kovak find that the more exposed regions had prolonged declines in formal
+        employment and earnings relative to other regions. The effect on regional earnings
+        {{ cite("20 years after liberalization was three times the effect after 10 years", "10.1257/aer.20161214", "abstract") }}.
+        The study measures employment and earnings by region, not the country's GDP per
+        capita: it shows which regions lost relative to others, not whether the economy as
+        a whole grew more or less.
+    direction: negative
+    method: difference_in_differences
+    references: [10.1257/aer.20161214]
+  - name: { pt: "Reunificação alemã (efeito na Alemanha Ocidental)", en: "German reunification (effect on West Germany)" }
+    country: DEU
+    period: { start: 1990, end: 2003 }
+    result:
+      pt: >-
+        Com controle sintético, Abadie, Diamond e Hainmueller comparam a Alemanha Ocidental
+        com uma combinação de países da OCDE que se pareciam com ela antes de 1990. Estimam
+        que a reunificação reduziu o PIB per capita da Alemanha Ocidental em cerca de
+        {{ cite("1.600 dólares por ano", "10.1111/ajps.12116", "p. 496") }} em média entre
+        1990 e 2003, {{ cite("aproximadamente 8% do nível de 1990", "10.1111/ajps.12116", "p. 496") }}.
+      en: >-
+        Using synthetic control, Abadie, Diamond and Hainmueller compare West Germany with
+        a combination of OECD countries that resembled it before 1990. They estimate that
+        reunification reduced West German GDP per capita by about
+        {{ cite("1,600 US dollars per year", "10.1111/ajps.12116", "p. 496") }} on average
+        over 1990–2003, {{ cite("approximately 8% of the 1990 baseline level", "10.1111/ajps.12116", "p. 496") }}.
+    direction: negative
+    method: synthetic_control
+    references: [10.1111/ajps.12116]
+  - name: { pt: "Liberalização econômica (vários países)", en: "Economic liberalization (many countries)" }
+    country: WLD
+    period: { start: 1963, end: 2005 }
+    result:
+      pt: >-
+        Aplicando controle sintético a episódios de liberalização econômica no mundo todo,
+        Billmeier e Nannicini encontram efeito positivo sobre o PIB per capita real na
+        maioria das regiões, mas nenhum impacto significativo nas liberalizações mais
+        recentes, nos anos 1990 e sobretudo na África.
+      en: >-
+        Applying synthetic control to economic liberalization episodes worldwide, Billmeier
+        and Nannicini find a positive effect on real GDP per capita in most regions, but no
+        significant impact for more recent liberalizations, in the 1990s and mainly in
+        Africa.
+    direction: mixed
+    method: synthetic_control
+    references: [10.1162/REST_a_00324]
+by_income:
+  - text:
+      pt: >-
+        No Brasil, o coeficiente de Gini subiu de
+        {{ cite("0,57 em 1981 para 0,63 em 1989", "10.1017/S1365100507070137", "resumo") }}
+        e caiu para {{ cite("0,56 em 2004", "10.1017/S1365100507070137", "resumo") }}; a
+        incidência de pobreza passou de
+        {{ cite("0,30 em 1981 para 0,33 em 1993", "10.1017/S1365100507070137", "resumo") }}
+        e caiu para {{ cite("0,22 em 2004", "10.1017/S1365100507070137", "resumo") }}.
+        Ferreira, Leite e Litchfield associam a queda da desigualdade desde 1993 à queda da
+        inflação e, segundo sua investigação preliminar, a quatro mudanças: menor retorno
+        da escolaridade, convergência entre áreas rurais e urbanas, aumento das
+        transferências de assistência social focadas nos pobres e uma possível queda da
+        desigualdade racial. Concluem que a queda da desigualdade contribuiu
+        substancialmente para reduzir a pobreza. É um estudo descritivo, sem desenho causal.
+      en: >-
+        In Brazil, the Gini coefficient rose from
+        {{ cite("0.57 in 1981 to 0.63 in 1989", "10.1017/S1365100507070137", "abstract") }}
+        and fell to {{ cite("0.56 in 2004", "10.1017/S1365100507070137", "abstract") }};
+        poverty incidence went from
+        {{ cite("0.30 in 1981 to 0.33 in 1993", "10.1017/S1365100507070137", "abstract") }}
+        and fell to {{ cite("0.22 in 2004", "10.1017/S1365100507070137", "abstract") }}.
+        Ferreira, Leite and Litchfield associate the decline in inequality since 1993 with
+        declining inflation and, in their preliminary investigation, with four changes:
+        declining returns to education, rural-urban convergence, larger social assistance
+        transfers targeted to the poor, and a possible decline in racial inequality. They
+        conclude that falling inequality contributed substantially to poverty reduction.
+        It is a descriptive study, without a causal design.
+    study_period: { start: 1981, end: 2004 }
+    references: [10.1017/S1365100507070137]
+  - text:
+      pt: >-
+        Comparando Brasil e Estados Unidos, Ferreira, Firpo e Galvao encontram que o
+        crescimento do salário médio real foi decepcionante nos dois países, mas
+        distribuído de forma muito diferente. No Brasil, os salários cresceram rápido
+        abaixo da mediana e caíram no topo, e a fatia dos salários subiu até o
+        {{ cite("percentil 65", "10.1002/jae.2663", "resumo") }}. Nos Estados Unidos, o
+        crescimento foi medíocre para os {{ cite("80% de baixo", "10.1002/jae.2663", "resumo") }}
+        e bem mais rápido para os {{ cite("20% de cima", "10.1002/jae.2663", "resumo") }}.
+        O estudo trata de salários, não da renda domiciliar per capita usada nas faixas
+        abaixo; por isso os grupos não são traduzidos para as faixas.
+      en: >-
+        Comparing Brazil and the United States, Ferreira, Firpo and Galvao find that growth
+        in average real wages was disappointing in both countries, but distributed very
+        differently. In Brazil, wages grew rapidly below the median and fell at the top,
+        and wage shares rose up to the
+        {{ cite("65th percentile", "10.1002/jae.2663", "abstract") }}. In the United States,
+        growth was mediocre for the {{ cite("bottom 80%", "10.1002/jae.2663", "abstract") }}
+        and much more rapid for the {{ cite("top 20%", "10.1002/jae.2663", "abstract") }}.
+        The study is about wages, not the household income per capita used in the brackets
+        below, so its groups are not translated into the brackets.
+    study_period: { start: 1995, end: 2007 }
+    references: [10.1002/jae.2663]
+purchasing_power:
+  pt: |-
+    Em 2024, o câmbio médio foi de R$ {{ v("wdi.pa_nus_fcrf", "BRA", 2024) }} por dólar.
+    Mas, pelo cálculo do Banco Mundial, bastavam R$ {{ v("wdi.pa_nus_prvt_pp", "BRA", 2024) }}
+    para comprar no Brasil a mesma cesta de consumo das famílias que um dólar compra nos
+    Estados Unidos. Ou seja, convertidos pelo câmbio, os preços no Brasil são mais baixos, e
+    um dólar trocado por reais compra mais aqui do que lá.
+
+    Por isso, para comparar países, o PIB per capita em paridade de poder de compra (PPC) é
+    mais adequado. Em 2024, o do Brasil foi de
+    {{ v("wdi.ny_gdp_pcap_pp_kd", "BRA", 2024) }} dólares internacionais de 2021, contra
+    {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }} dólares de 2015 a câmbio de mercado. Os dois
+    números usam anos-base diferentes e não devem ser divididos um pelo outro; compare a
+    posição do Brasil em relação aos outros países nos dois gráficos abaixo.
+
+    Dentro do Brasil, o que pesa no bolso é a renda descontada a inflação. A renda
+    domiciliar per capita mediana (a da pessoa no meio da distribuição), medida pela PNAD
+    Contínua, variou {{ pct("ibge_sidra.rdpc_mediana_real_pnadc", "BRA", 2012, 2024) }} em
+    termos reais entre 2012 e 2024, enquanto o PIB per capita variou
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2012, 2024) }}. Entre 2014 e 2021, a mediana variou
+    {{ pct("ibge_sidra.rdpc_mediana_real_pnadc", "BRA", 2014, 2021) }}. São medidas
+    diferentes: o PIB conta toda a produção, inclusive lucros das empresas e impostos, e a
+    PNAD mede a renda declarada pelas famílias. Por isso as duas podem andar em ritmos
+    diferentes.
+  en: |-
+    In 2024, the average exchange rate was R$ {{ v("wdi.pa_nus_fcrf", "BRA", 2024) }} per
+    dollar. But, by the World Bank's calculation, R$ {{ v("wdi.pa_nus_prvt_pp", "BRA", 2024) }}
+    was enough to buy in Brazil the same household consumption basket that one dollar buys
+    in the United States. In other words, converted at the exchange rate, prices in Brazil
+    are lower, and a dollar exchanged for reais buys more here than there.
+
+    That is why, to compare countries, GDP per capita at purchasing power parity (PPP) is
+    more suitable. In 2024, Brazil's was
+    {{ v("wdi.ny_gdp_pcap_pp_kd", "BRA", 2024) }} 2021 international dollars, against
+    {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }} 2015 dollars at market exchange rates. The
+    two numbers use different base years and should not be divided by each other; compare
+    Brazil's position relative to the other countries in the two charts below.
+
+    Within Brazil, what matters for the household budget is income after inflation. Median
+    household income per capita (that of the person in the middle of the distribution),
+    measured by the Continuous PNAD, changed
+    {{ pct("ibge_sidra.rdpc_mediana_real_pnadc", "BRA", 2012, 2024) }} in real terms
+    between 2012 and 2024, while GDP per capita changed
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2012, 2024) }}. Between 2014 and 2021, the median
+    changed {{ pct("ibge_sidra.rdpc_mediana_real_pnadc", "BRA", 2014, 2021) }}. They are
+    different measures: GDP counts all production, including company profits and taxes,
+    and the PNAD measures the income households report. That is why the two can move at
+    different paces.
+references:
+  - citation: "Jones, C. I., & Klenow, P. J. (2016). Beyond GDP? Welfare across countries and time. American Economic Review, 106(9), 2426–2457."
+    doi: 10.1257/aer.20110236
+  - citation: "Deaton, A. (2008). Income, health, and well-being around the world: evidence from the Gallup World Poll. Journal of Economic Perspectives, 22(2), 53–72."
+    doi: 10.1257/jep.22.2.53
+  - citation: "Easterlin, R. A., McVey, L. A., Switek, M., Sawangfa, O., & Zweig, J. S. (2010). The happiness–income paradox revisited. Proceedings of the National Academy of Sciences, 107(52), 22463–22468."
+    doi: 10.1073/pnas.1015962107
+  - citation: "Possebom, V. (2017). Free Trade Zone of Manaus: an impact evaluation using the synthetic control method. Revista Brasileira de Economia, 71(2)."
+    doi: 10.5935/0034-7140.20170011
+  - citation: "Dix-Carneiro, R., & Kovak, B. K. (2017). Trade liberalization and regional dynamics. American Economic Review, 107(10), 2908–2946."
+    doi: 10.1257/aer.20161214
+  - citation: "Abadie, A., Diamond, A., & Hainmueller, J. (2014). Comparative politics and the synthetic control method. American Journal of Political Science, 59(2), 495–510."
+    doi: 10.1111/ajps.12116
+  - citation: "Billmeier, A., & Nannicini, T. (2013). Assessing economic liberalization episodes: a synthetic control approach. Review of Economics and Statistics, 95(3), 983–1001."
+    doi: 10.1162/REST_a_00324
+  - citation: "Ferreira, F. H. G., Leite, P. G., & Litchfield, J. A. (2008). The rise and fall of Brazilian inequality: 1981–2004. Macroeconomic Dynamics, 12(S2), 199–230."
+    doi: 10.1017/S1365100507070137
+  - citation: "Ferreira, F. H. G., Firpo, S., & Galvao, A. F. (2018). Actual and counterfactual growth incidence and delta Lorenz curves: estimation and inference. Journal of Applied Econometrics, 34(3), 385–402."
+    doi: 10.1002/jae.2663
