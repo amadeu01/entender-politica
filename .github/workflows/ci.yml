@@ -24,3 +24,22 @@ jobs:
       # the committed processed data or changelog.
       - run: uv run compilador build
       - run: git diff --exit-code -- data/
+
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: uv sync --locked
+      - run: uv run compilador build
+      - run: npm ci
+        working-directory: site
+      - run: npm run build
+        working-directory: site
