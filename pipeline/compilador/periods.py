@@ -19,7 +19,8 @@ TABLE_INDICATORS = [
     "wdi.si_pov_gini",
     "wdi.si_pov_dday",
 ]
-TABLE_GEOGRAPHIES = ["BRA", "LCN"]
+# Brazil next to the reference countries and the regional average (ADR 0003).
+TABLE_GEOGRAPHIES = ["BRA", "ARG", "CHL", "COL", "MEX", "LCN"]
 
 
 def years_by_period(govs: Governments, first: int, last: int) -> dict[str, list[int]]:
@@ -36,12 +37,14 @@ def changes(
     first_year = govs.periods[0].start.year + 1
     rows = []
     for period_id, years in years_by_period(govs, first_year, last_year).items():
-        for ind in TABLE_INDICATORS:
-            for geo in TABLE_GEOGRAPHIES:
-                for lag in LAGS:
-                    start, end = years[0] - 1 + lag, years[-1] + lag
+        for lag in LAGS:
+            start, end = years[0] - 1 + lag, years[-1] + lag
+            # Flag any year in the compared window, baseline included, with two presidents.
+            mixed = [y for y in range(start, end + 1) if govs.changes_in_year(y)]
+            for ind in TABLE_INDICATORS:
+                relative = units[ind] in RELATIVE_UNITS
+                for geo in TABLE_GEOGRAPHIES:
                     a, b = values.get((ind, geo, start)), values.get((ind, geo, end))
-                    relative = units[ind] in RELATIVE_UNITS
                     change = None
                     if a is not None and b is not None:
                         change = (b / a - 1) * 100 if relative else b - a
@@ -55,7 +58,7 @@ def changes(
                             "end_year": end,
                             "change": change,
                             "relative": relative,
-                            "mixed_years": [y for y in years if govs.changes_in_year(y)],
+                            "mixed_years": mixed,
                         }
                     )
     return rows
