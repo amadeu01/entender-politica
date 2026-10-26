@@ -47,6 +47,10 @@ copiados, arredondados ou desatualizados. A verificação precisa ser automátic
   cada `cite` e `lit`, e os dados se conferem sozinhos.
 - O verificador não entende semântica: ele garante a origem do número, não que a frase
   em volta o interprete corretamente. Isso continua sendo papel da revisão humana.
+- Lacunas conhecidas do verificador: números por extenso ("dois anos") e quantidades entre
+  1900 e 2099, que se confundem com anos. A revisão humana cobre esses casos.
+- O texto fora dos marcadores é escapado antes de virar HTML: contribuições não podem
+  injetar marcação no site.
 
 ## English
 
@@ -76,4 +80,6 @@ or stale numbers; verification must be automatic.
 ### Consequences
 Typos and invented numbers break CI. Writing is slower; reviewing is easier. The checker
 guarantees where a number comes from, not that the sentence interprets it correctly; that
-remains the job of human review.
+remains the job of human review. Known gaps: spelled-out numbers and quantities between
+1900 and 2099 (read as years). Text outside placeholders is HTML-escaped, so contributions
+cannot inject markup.

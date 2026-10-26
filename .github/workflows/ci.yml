@@ -23,7 +23,8 @@ jobs:
       # Reproducibility: rebuilding from committed raw snapshots must not change
       # the committed processed data or changelog.
       - run: uv run compilador build
-      - run: git diff --exit-code -- data/
+      - name: Check committed data is unchanged (including new files)
+        run: test -z "$(git status --porcelain -- data/)" || (git status --porcelain -- data/; exit 1)
 
   site:
     runs-on: ubuntu-latest

@@ -67,3 +67,11 @@ def test_schema_rejects_value_outside_interval():
     df["lower"], df["upper"] = 51.0, 52.0
     with pytest.raises(Exception, match="lower <= value <= upper"):
         tidy(df)
+
+
+def test_indicator_without_data_for_a_geography_is_a_warning(gini):
+    from compilador import geography
+
+    geos = {g: v for g, v in geography.load().items() if g in ("BRA", "MEX")}
+    report = validate(tidy(obs({2000: 50.0})), {gini.id: gini}, geos)
+    assert report.warnings == ["wdi.si_pov_gini MEX: no observations"]

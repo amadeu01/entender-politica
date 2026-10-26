@@ -30,5 +30,7 @@ criticisms:
   - pt: "Valores interpolados ou modelados em anos sem dados de registro confiáveis."
     en: "Values are interpolated or modeled in years without reliable registration data."
 references:
+  - citation: "Oeppen, J., & Vaupel, J. W. (2002). Broken limits to life expectancy. Science, 296(5570), 1029–1031."
+    doi: 10.1126/science.1069675
   - citation: "United Nations, Department of Economic and Social Affairs, Population Division. World Population Prospects — Methodology."
     url: https://population.un.org/wpp/

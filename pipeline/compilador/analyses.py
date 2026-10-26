@@ -24,7 +24,7 @@ LANGS = ("pt", "en")
 class Method(StrEnum):
     DESCRIPTIVE = "descriptive"
     DECOMPOSITION = "decomposition"
-    REVIEW = "review"
+    SYSTEMATIC_REVIEW = "systematic_review"
     RCT = "rct"
     DIFFERENCE_IN_DIFFERENCES = "difference_in_differences"
     REGRESSION_DISCONTINUITY = "regression_discontinuity"
@@ -70,6 +70,8 @@ class Analysis(Strict):
     title: Text
     question: Text
     hypothesis: Text
+    # One-paragraph answer to the question; the full argument is in texto.*.md.
+    result: Text
     indicators: list[str] = Field(min_length=1)
     geographies: list[str] = Field(min_length=1)
     period: Period
@@ -132,7 +134,7 @@ class Policy(Strict):
     @property
     def evidence_level(self) -> str:
         methods = {f.method for f in self.findings}
-        if methods & {Method.RCT, Method.REVIEW}:
+        if methods & {Method.RCT, Method.SYSTEMATIC_REVIEW}:
             return "high"
         if methods & CAUSAL_METHODS:
             return "moderate"
@@ -212,6 +214,10 @@ def check(
         if content.data_keys(bodies["pt"]) != content.data_keys(bodies["en"]):
             errors.append(f"{where}: pt and en texts cite different data (ADR 0004)")
         errors += _text_field_errors(where, _texts(a))
+        for c in a.charts:
+            for lang in LANGS:
+                if content.PLACEHOLDER.search(getattr(c.alt, lang)):
+                    errors.append(f"{where}: chart {c.id} alt text cannot use placeholders")
     for p in policies:
         where = f"policies/{p.slug}.yaml"
         errors += _reference_errors(where, p.references, p.findings)
@@ -299,6 +305,7 @@ def render_analysis(
         "title": r.text(a.title),
         "question": r.text(a.question),
         "hypothesis": r.text(a.hypothesis),
+        "result": r.text(a.result),
         "indicators": a.indicators,
         "geographies": a.geographies,
         "period": a.period.model_dump(),

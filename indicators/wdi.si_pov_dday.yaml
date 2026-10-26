@@ -15,8 +15,8 @@ definition:
     Share of the population living on less than $3.00 a day at 2021 purchasing power
     parity (PPP). This is the World Bank's international extreme poverty line.
 formula:
-  pt: "P₀ = (1/N)·Σ 1[yᵢ < z], com z = US$ 3,00/dia PPC 2021 (índice FGT com α = 0)."
-  en: "P₀ = (1/N)·Σ 1[yᵢ < z], with z = $3.00/day 2021 PPP (FGT index with α = 0)."
+  pt: "P₀ = Σ wᵢ·1[yᵢ < z] / Σ wᵢ, com pesos amostrais wᵢ e z = US$ 3,00/dia PPC 2021 (índice FGT com α = 0)."
+  en: "P₀ = Σ wᵢ·1[yᵢ < z] / Σ wᵢ, with survey weights wᵢ and z = $3.00/day 2021 PPP (FGT index with α = 0)."
 criticisms:
   - pt: >-
       A taxa de incidência ignora quão abaixo da linha as pessoas estão; os índices FGT

@@ -1,7 +1,8 @@
 """Reference table of Brazilian federal government periods (see ADR 0003)."""
 
-from datetime import date
+from datetime import date, timedelta
 from enum import StrEnum
+from itertools import pairwise
 from pathlib import Path
 
 import yaml
@@ -11,11 +12,14 @@ from compilador import DATA_DIR
 from compilador.i18n import Text
 
 GOVERNMENTS_FILE = DATA_DIR / "reference" / "governos.yaml"
+# Inaugurations at the regular start of a term (January 1, or January 5 from 2027 under
+# Constitutional Amendment 111/2021) do not make a year "mixed" for annual data.
+TERM_START_GRACE = timedelta(days=15)
 
 
 class Condition(StrEnum):
-    TITULAR = "titular"
-    INTERINO = "interino"
+    INCUMBENT = "titular"
+    ACTING = "interino"
 
 
 class Period(BaseModel):
@@ -34,7 +38,6 @@ class Period(BaseModel):
     term: Text
     start: date
     end: date | None
-    regime: Text
     note: Text | None = None
 
     @model_validator(mode="after")
@@ -48,21 +51,21 @@ class Governments(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 
     sources: list[HttpUrl] = Field(min_length=1)
+    verified_on: date
     periods: list[Period] = Field(min_length=1)
 
     @model_validator(mode="after")
-    def _contiguous(self) -> "Governments":
+    def _unique_and_contiguous(self) -> "Governments":
         ids = [p.id for p in self.periods]
         if len(ids) != len(set(ids)):
             raise ValueError("period ids must be unique")
-        for prev, cur in zip(self.periods, self.periods[1:], strict=False):
+        # Contiguity also guarantees that only the last period can be ongoing.
+        for prev, cur in pairwise(self.periods):
             if prev.end != cur.start:
                 raise ValueError(
                     f"gap or overlap between {prev.id} (end {prev.end}) and {cur.id} "
                     f"(start {cur.start})"
                 )
-        if any(p.end is None for p in self.periods[:-1]):
-            raise ValueError("only the last period may be ongoing")
         return self
 
     def at(self, day: date) -> Period:
@@ -77,8 +80,14 @@ class Governments(BaseModel):
         return self.at(date(year, 7, 1))
 
     def changes_in_year(self, year: int) -> bool:
-        """True if the presidency changed hands during `year` (excluding January 1)."""
-        return any(p.start.year == year and p.start != date(year, 1, 1) for p in self.periods)
+        """True if a different person took office during `year`, after the regular
+        start-of-term window. A new term of the same person does not count."""
+        return any(
+            prev.president != cur.president
+            and cur.start.year == year
+            and cur.start - date(year, 1, 1) > TERM_START_GRACE
+            for prev, cur in pairwise(self.periods)
+        )
 
 
 def load(path: Path = GOVERNMENTS_FILE) -> Governments:

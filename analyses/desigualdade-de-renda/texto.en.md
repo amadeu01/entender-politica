@@ -16,7 +16,8 @@ regional lines went from {{ v("ipeadata.disoc_ppy", "BRA", 1993) }}% to
 {{ v("ipeadata.disoc_ppy", "BRA", 1995) }}%. The Gini barely moved:
 {{ v("ipeadata.disoc_rdcg", "BRA", 1993) }} in 1993 and
 {{ v("ipeadata.disoc_rdcg", "BRA", 1995) }} in 1995. Barros, Henriques and Mendonça (2000)
-described this as an "unacceptable stability" of inequality.
+described this, in the authors' own normative words, as an "unacceptable stability" of
+inequality.
 
 ### 2001 to 2014: a sustained fall
 

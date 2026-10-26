@@ -37,6 +37,7 @@ class UndpHdrSource:
     def normalize(
         self, snapshot: Snapshot, indicators: list[Indicator], geos: dict[str, Geography]
     ) -> pd.DataFrame:
+        # The HDR 2025 file is Latin-1 (e.g. "C\xf4te d'Ivoire"), not UTF-8.
         table = pd.read_csv(io.BytesIO(snapshot.read(FILE)), encoding="latin-1")
         countries = {c: g for c, g in geos.items() if g.level == Level.COUNTRY}
         table = table[table["iso3"].isin(countries)]
