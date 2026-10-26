@@ -1,0 +1,29 @@
+id: wdi.fp_cpi_totl
+source: wdi
+source_code: FP.CPI.TOTL
+unit: index_2010_100
+min: 0
+listed: false
+name:
+  pt: "Índice de preços ao consumidor (2010 = 100)"
+  en: "Consumer price index (2010 = 100)"
+definition:
+  pt: >-
+    Índice que acompanha a variação do custo de uma cesta de bens e serviços consumida por uma família típica, com base 2010 = 100. Serve para deflacionar valores em moeda local.
+  en: >-
+    Index that tracks the change in the cost of a basket of goods and services bought by a typical household, with 2010 = 100. Used to deflate local-currency values.
+formula:
+  pt: "Custo da cesta no ano / custo da cesta em 2010 × 100."
+  en: "Cost of the basket in the year / cost of the basket in 2010 × 100."
+criticisms:
+  - pt: >-
+      Mede o custo de uma cesta média nacional; a inflação sentida varia conforme a renda e a região.
+    en: >-
+      Measures the cost of an average national basket; experienced inflation varies by income and region.
+  - pt: >-
+      A composição da cesta e a metodologia de cálculo são definidas por cada país, o que limita comparações entre países.
+    en: >-
+      Basket composition and calculation methodology are set by each country, which limits cross-country comparisons.
+references:
+  - citation: "World Bank. World Development Indicators — FP.CPI.TOTL."
+    url: https://data.worldbank.org/indicator/FP.CPI.TOTL

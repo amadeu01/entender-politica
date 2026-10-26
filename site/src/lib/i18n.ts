@@ -272,6 +272,12 @@ export const UNIT_DECIMALS: Record<string, number> = {
   years: 1,
   per_1000_live_births: 1,
   wgi_estimate: 2,
+  brl_month: 0,
+  brl_month_real: 0,
+  usd_ppp_2021: 0,
+  lcu_per_intl_usd: 2,
+  lcu_per_usd: 2,
+  index_2010_100: 1,
 };
 
 export const UNIT_LABELS: Record<string, Record<Lang, string>> = {
@@ -282,4 +288,10 @@ export const UNIT_LABELS: Record<string, Record<Lang, string>> = {
   years: { pt: "anos", en: "years" },
   per_1000_live_births: { pt: "por 1.000 nascidos vivos", en: "per 1,000 live births" },
   wgi_estimate: { pt: "estimativa (≈ −2,5 a +2,5)", en: "estimate (≈ −2.5 to +2.5)" },
+  brl_month: { pt: "R$ por mês", en: "R$ per month" },
+  brl_month_real: { pt: "R$ por mês, a preços do último ano", en: "R$ per month, at prices of the latest year" },
+  usd_ppp_2021: { pt: "US$ PPC de 2021", en: "2021 PPP US$" },
+  lcu_per_intl_usd: { pt: "moeda local por US$ internacional", en: "local currency per international $" },
+  lcu_per_usd: { pt: "moeda local por US$", en: "local currency per US$" },
+  index_2010_100: { pt: "índice (2010 = 100)", en: "index (2010 = 100)" },
 };

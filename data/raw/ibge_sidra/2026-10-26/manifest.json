@@ -1,6 +1,6 @@
 {
   "source_id": "ibge_sidra",
-  "retrieved_at": "2026-10-26T01:07:55+00:00",
+  "retrieved_at": "2026-10-26T03:45:25+00:00",
   "source_version": "2026-05-08",
   "license": "LicenseRef-IBGE-reuse-with-attribution",
   "files": [
@@ -13,6 +13,42 @@
     {
       "name": "7435-periodos.json",
       "url": "https://servicodados.ibge.gov.br/api/v3/agregados/7435/periodos",
+      "sha256": "f025a0b2a1430109aec9f3ff11a581b77f451ec7422e79e1ccf322bc2c1d1334",
+      "bytes": 855
+    },
+    {
+      "name": "7438-10769-c1019.json",
+      "url": "https://apisidra.ibge.gov.br/values/t/7438/n1/all/v/10769,10837/p/all/c1019/all?formato=json",
+      "sha256": "548dfc11bddcfc33cc15a0e520afafbfeef0c96cc4f2fa72c1c88b8fa306ee32",
+      "bytes": 112138
+    },
+    {
+      "name": "7438-periodos.json",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/7438/periodos",
+      "sha256": "f025a0b2a1430109aec9f3ff11a581b77f451ec7422e79e1ccf322bc2c1d1334",
+      "bytes": 855
+    },
+    {
+      "name": "7526-10838-c1019.json",
+      "url": "https://apisidra.ibge.gov.br/values/t/7526/n1/all/v/10838,10839/p/all/c1019/all?formato=json",
+      "sha256": "c52941e61fd6e8c52ea29612357f2e88f6f7e515c95d386acfe1f566b6d6c341",
+      "bytes": 115082
+    },
+    {
+      "name": "7526-periodos.json",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/7526/periodos",
+      "sha256": "f025a0b2a1430109aec9f3ff11a581b77f451ec7422e79e1ccf322bc2c1d1334",
+      "bytes": 855
+    },
+    {
+      "name": "7540-10846-c1043.json",
+      "url": "https://apisidra.ibge.gov.br/values/t/7540/n1/all/v/10846,10847/p/all/c1043/all?formato=json",
+      "sha256": "c325f2fff515d3d75d94a66a7e9eb385420126c4f1f88e93f583b78e49b4e906",
+      "bytes": 106576
+    },
+    {
+      "name": "7540-periodos.json",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/7540/periodos",
       "sha256": "f025a0b2a1430109aec9f3ff11a581b77f451ec7422e79e1ccf322bc2c1d1334",
       "bytes": 855
     }

@@ -46,6 +46,12 @@ UNIT_DECIMALS = {
     "years": 1,
     "per_1000_live_births": 1,
     "wgi_estimate": 2,
+    "brl_month": 0,
+    "brl_month_real": 0,
+    "usd_ppp_2021": 0,
+    "lcu_per_intl_usd": 2,
+    "lcu_per_usd": 2,
+    "index_2010_100": 1,
 }
 MINUS = "−"
 

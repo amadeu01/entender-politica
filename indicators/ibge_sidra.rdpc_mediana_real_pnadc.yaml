@@ -1,0 +1,52 @@
+id: ibge_sidra.rdpc_mediana_real_pnadc
+source: ibge_sidra
+source_code: "7526/10838/49264"
+source_params:
+  table: "7526"
+  variable: "10838"
+  cv_variable: "10839"
+  classification: "1019"
+  category: "49264"
+unit: brl_month_real
+min: 0
+name:
+  pt: "Mediana do rendimento domiciliar per capita a preços do último ano (PNAD Contínua)"
+  en: "Median household income per capita at prices of the latest year (Continuous PNAD)"
+definition:
+  pt: >-
+    Rendimento domiciliar per capita mensal que divide a população ao meio (metade ganha menos, metade mais), deflacionado para os preços do último ano da série, de modo que os anos sejam comparáveis. Calculado pelo IBGE com a PNAD Contínua anual.
+  en: >-
+    Monthly household income per capita that splits the population in half (half earn less, half more), deflated to the prices of the latest year of the series so years are comparable. Computed by IBGE from the annual Continuous PNAD.
+formula:
+  pt: "Percentil 50 do rendimento domiciliar per capita, com pesos amostrais, a preços do último ano."
+  en: "Percentile 50 of household income per capita, using survey weights, at prices of the latest year."
+uncertainty:
+  pt: "Intervalo de 95% calculado a partir do coeficiente de variação publicado pelo IBGE: valor ± 1,96 × valor × CV."
+  en: "95% interval computed from the coefficient of variation published by IBGE: value ± 1.96 × value × CV."
+criticisms:
+  - pt: >-
+      Pesquisa domiciliar subestima as rendas do topo, o que afeta sobretudo os percentis mais altos; os valores podem ser baixos demais no alto da distribuição.
+    en: >-
+      Household surveys underestimate top incomes, which mainly affects the highest percentiles; values may be too low at the top of the distribution.
+  - pt: >-
+      Em 2020 e 2021 a renda vem da 5ª visita (pandemia); as demais edições usam a 1ª.
+    en: >-
+      In 2020 and 2021 income comes from the 5th visit (pandemic); other editions use the 1st.
+  - pt: >-
+      Os valores são reajustados a cada nova edição para os preços do último ano; compare ao longo do tempo apenas dentro da mesma edição dos dados.
+    en: >-
+      Values are re-based to the prices of the latest year with each new release; compare over time only within the same data release.
+references:
+  - citation: "IBGE. SIDRA — Tabela 7526."
+    url: https://sidra.ibge.gov.br/tabela/7526
+  - citation: "IBGE. PNAD Contínua — notas metodológicas."
+    url: https://www.ibge.gov.br/estatisticas/sociais/trabalho/9171-pesquisa-nacional-por-amostra-de-domicilios-continua-mensal.html
+series_breaks:
+  - year: 2020
+    note:
+      pt: "Renda da 5ª visita da PNAD Contínua em 2020–2021 (pandemia)."
+      en: "Income from the Continuous PNAD 5th visit in 2020–2021 (pandemic)."
+  - year: 2022
+    note:
+      pt: "Retorno à 1ª visita da PNAD Contínua."
+      en: "Return to the Continuous PNAD 1st visit."

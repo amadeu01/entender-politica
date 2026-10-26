@@ -1,0 +1,29 @@
+id: wdi.pa_nus_prvt_pp
+source: wdi
+source_code: PA.NUS.PRVT.PP
+unit: lcu_per_intl_usd
+min: 0
+listed: false
+name:
+  pt: "Fator de conversão PPC para consumo das famílias (moeda local por US$ internacional)"
+  en: "PPP conversion factor, private consumption (local currency units per international $)"
+definition:
+  pt: >-
+    Quantas unidades da moeda local (reais, para o Brasil) são necessárias para comprar, no país, a mesma cesta de consumo das famílias que 1 dólar internacional compra nos Estados Unidos.
+  en: >-
+    How many units of local currency (reais, for Brazil) are needed to buy, in the country, the same household consumption basket that 1 international dollar buys in the United States.
+formula:
+  pt: "Preço da cesta de consumo das famílias em moeda local / preço da mesma cesta nos Estados Unidos."
+  en: "Price of the household consumption basket in local currency / price of the same basket in the United States."
+criticisms:
+  - pt: >-
+      Depende da rodada do Programa de Comparação Internacional (ICP); os fatores são revistos entre rodadas e extrapolados nos anos intermediários.
+    en: >-
+      Depends on the International Comparison Program (ICP) round; factors are revised between rounds and extrapolated in intermediate years.
+  - pt: >-
+      Uma cesta média nacional não reflete diferenças de preços entre regiões nem os padrões de consumo de cada faixa de renda.
+    en: >-
+      A national average basket does not reflect price differences across regions or the consumption patterns of each income bracket.
+references:
+  - citation: "World Bank. World Development Indicators — PA.NUS.PRVT.PP."
+    url: https://data.worldbank.org/indicator/PA.NUS.PRVT.PP
