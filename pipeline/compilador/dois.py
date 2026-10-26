@@ -5,6 +5,7 @@ metadata and BibTeX in `data/reference/dois.json`. The offline build then requir
 DOI cited anywhere to be in that file, so a mistyped or invented DOI fails CI.
 """
 
+import html
 import json
 from pathlib import Path
 from urllib.parse import quote
@@ -36,12 +37,17 @@ def _lookup(doi: str, client: httpx.Client) -> dict:
     bibtex.raise_for_status()
     return {
         "doi": m["DOI"].lower(),
-        "title": (m.get("title") or [""])[0],
-        "container": (m.get("container-title") or [""])[0],
+        "title": html.unescape((m.get("title") or [""])[0]),
+        "container": html.unescape((m.get("container-title") or [""])[0]),
         "year": _year(m),
         "authors": [a.get("family", a.get("name", "")) for a in m.get("author", [])],
-        "bibtex": bibtex.text.strip(),
+        "bibtex": _bibtex(bibtex.text),
     }
+
+
+def _bibtex(text: str) -> str:
+    """Crossref BibTeX may carry HTML entities; BibTeX wants an escaped ampersand."""
+    return html.unescape(text.strip().replace("&amp;", "\\&"))
 
 
 def _year(message: dict) -> int | None:

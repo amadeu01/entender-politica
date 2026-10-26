@@ -47,3 +47,9 @@ def test_unknown_doi_fails_verification(tmp_path):
 
 def test_missing_is_case_insensitive():
     assert dois.missing({"10.1/ABC", "10.1/new"}, {"10.1/abc": {}}) == ["10.1/new"]
+
+
+def test_bibtex_ampersand_is_escaped():
+    assert dois._bibtex("@article{a, journal={PS: Political Science &amp; Politics}}") == (
+        "@article{a, journal={PS: Political Science \\& Politics}}"
+    )

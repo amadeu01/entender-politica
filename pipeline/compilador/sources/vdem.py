@@ -79,6 +79,11 @@ class VdemSource:
     ) -> pd.DataFrame:
         # Read exactly as written by `extract`: text, with empty cells for missing values.
         table = pd.read_csv(io.BytesIO(snapshot.read(EXTRACT)), dtype=str, keep_default_na=False)
+        absent = sorted(set(_source_columns(indicators)) - set(table.columns))
+        if absent:
+            raise ValueError(
+                f"V-Dem snapshot {snapshot.path} lacks {absent}: run `compilador fetch vdem`"
+            )
         records = table.to_dict("records")
         rows = []
         for ind in indicators:

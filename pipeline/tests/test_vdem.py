@@ -85,3 +85,10 @@ def test_extract_is_deterministic():
     columns = ["v2x_polyarchy", "v2x_polyarchy_codelow", "v2x_polyarchy_codehigh"]
     first = extract(data, columns, ["MEX", "BRA"])
     assert first == extract(data, columns, ["BRA", "MEX"])
+
+
+def test_snapshot_without_a_catalog_column_says_to_refetch(fetched):
+    _, snap = fetched
+    libdem = make_indicator(id="vdem.v2x_libdem", source="vdem", source_code="v2x_libdem", max=1)
+    with pytest.raises(ValueError, match="compilador fetch vdem"):
+        vdem.normalize(snap, [libdem], geography.load())
