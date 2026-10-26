@@ -22,6 +22,7 @@ from compilador import (
     dois,
     geography,
     governments,
+    guides,
     periods,
     snapshot,
 )
@@ -47,6 +48,7 @@ class Paths:
     indicators: Path = catalog.INDICATORS_DIR
     analyses: Path = ANALYSES_DIR
     policies: Path = POLICIES_DIR
+    guides: Path = guides.GUIDES_DIR
     dois: Path = DOIS_FILE
     brackets: Path = brackets.BRACKETS_FILE
 
@@ -151,8 +153,12 @@ def all_dois(paths: Paths) -> set[str]:
     """Every DOI cited in the catalog, analyses and policy briefs."""
     indicators = catalog.load(paths.indicators)
     found = {r.doi.lower() for i in indicators.values() for r in i.references if r.doi}
-    return found | analyses.cited_dois(
-        analyses.load_analyses(paths.analyses), analyses.load_policies(paths.policies)
+    return (
+        found
+        | analyses.cited_dois(
+            analyses.load_analyses(paths.analyses), analyses.load_policies(paths.policies)
+        )
+        | guides.cited_dois(guides.load_guides(paths.guides))
     )
 
 
@@ -161,6 +167,7 @@ def citation_errors(paths: Paths, registry: dict[str, dict]) -> list[str]:
     refs = [r for i in catalog.load(paths.indicators).values() for r in i.references]
     refs += [r for a, _ in analyses.load_analyses(paths.analyses) for r in a.references]
     refs += [r for p in analyses.load_policies(paths.policies) for r in p.references]
+    refs += [r for g in guides.load_guides(paths.guides) for r in g.references]
     return sorted(
         {
             f"citation year differs from Crossref ({entry['year']}): {r.citation}"
@@ -176,11 +183,14 @@ def citation_errors(paths: Paths, registry: dict[str, dict]) -> list[str]:
 def compile_documents(
     df: pd.DataFrame, indicators: dict[str, catalog.Indicator], paths: Paths
 ) -> dict[str, object]:
-    """Check and render analyses and policy briefs: {site-relative path: JSON document}."""
+    """Check and render analyses, policy briefs and guides: {site path: JSON document}."""
     docs = analyses.load_analyses(paths.analyses)
     policies = analyses.load_policies(paths.policies)
+    guide_docs = guides.load_guides(paths.guides)
+    bracket_cfg = bracket_config(paths, indicators)
     registry = dois.load(paths.dois)
     errors = analyses.check(docs, policies, indicators, set(geography.load()))
+    errors += guides.check(guide_docs, indicators, {p.slug for p in policies}, bracket_cfg)
     errors += [
         f"DOI not verified: {d} (run `compilador verify-dois`)"
         for d in dois.missing(all_dois(paths), registry)
@@ -190,7 +200,7 @@ def compile_documents(
         raise ValidationError(errors)
 
     out: dict[str, object] = {}
-    index: dict[str, list] = {"analyses": [], "policies": []}
+    index: dict[str, list] = {"analyses": [], "policies": [], "guides": []}
     try:
         for lang in analyses.LANGS:
             for a, bodies in docs:
@@ -203,6 +213,11 @@ def compile_documents(
                 index["policies"].append(
                     {"slug": p.slug, "lang": lang, "name": doc["name"], "country": p.country}
                 )
+        for g in guide_docs:
+            for lang in analyses.LANGS:
+                path = f"guides/{g.indicator}.{lang}.json"
+                out[path] = guides.render_guide(g, lang, df, indicators, registry, bracket_cfg)
+            index["guides"].append(g.indicator)
     except content.ContentError as e:
         raise ValidationError([str(e)]) from e
     out["documents.json"] = index
