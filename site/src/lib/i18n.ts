@@ -208,6 +208,7 @@ export const SOURCE_NAMES: Record<string, Record<Lang, string>> = {
   undp_hdr: { pt: "PNUD — Relatório de Desenvolvimento Humano", en: "UNDP — Human Development Report" },
   ibge_sidra: { pt: "IBGE — SIDRA (PNAD Contínua)", en: "IBGE — SIDRA (Continuous PNAD)" },
   ipeadata: { pt: "Ipea — Ipeadata", en: "Ipea — Ipeadata" },
+  vdem: { pt: "V-Dem — Varieties of Democracy (v16)", en: "V-Dem — Varieties of Democracy (v16)" },
 };
 
 export const METHOD_NAMES: Record<string, Record<Lang, string>> = {
@@ -229,6 +230,7 @@ export const SOURCE_CODE: Record<string, string> = {
   undp_hdr: "pipeline/compilador/sources/undp_hdr.py",
   ibge_sidra: "pipeline/compilador/sources/sidra.py",
   ipeadata: "pipeline/compilador/sources/ipeadata.py",
+  vdem: "pipeline/compilador/sources/vdem.py",
 };
 
 /** Entities keep the same color on every chart (color follows the entity, not its rank). */
