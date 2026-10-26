@@ -1,0 +1,297 @@
+---
+import Base from "../layouts/Base.astro";
+import { REPO, UI, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const adr = (n: string) => `${REPO}/blob/main/docs/adr/${n}`;
+const progresa = url(lang, "policies", "progresa-oportunidades");
+---
+
+<Base lang={lang} title={t.nav.studies} route="studies">
+  <h1>{t.nav.studies}</h1>
+  {
+    lang === "pt" ? (
+      <>
+        <p>
+          Este guia explica, em linguagem simples, como ler os estudos citados no site. Você não precisa
+          saber estatística. Cada termo é explicado quando aparece.
+        </p>
+
+        <h2>A pergunta central: o que aconteceria sem a política?</h2>
+        <p>
+          Dizer que uma política "funcionou" significa comparar o que aconteceu com o que teria acontecido
+          sem ela. Só que ninguém observa esse "sem ela". Cada tipo de estudo abaixo é uma forma diferente
+          de estimar essa comparação, e cada um pode mostrar certas coisas e não outras.
+        </p>
+
+        <h2>Os tipos de estudo</h2>
+        <h3>Descritivo</h3>
+        <p>
+          Mostra como algo mudou ou como grupos diferem, por exemplo a renda média por ano. Pode mostrar{" "}
+          <em>o que</em> aconteceu. Não mostra <em>por quê</em>: outras coisas mudaram ao mesmo tempo.
+        </p>
+        <h3>Decomposição</h3>
+        <p>
+          Divide uma mudança em partes contábeis, por exemplo quanto da queda da desigualdade veio de cada
+          fonte de renda. É aritmética, não experimento. Diz quanto cada parte pesou na conta, mas não o que
+          teria acontecido se aquela parte não existisse. Um exemplo está na{" "}
+          <a href={progresa}>ficha do Progresa/Oportunidades</a>, na parte sobre desigualdade de renda.
+        </p>
+        <h3>Observacional</h3>
+        <p>
+          Compara pessoas ou lugares sem que o pesquisador controle quem recebe a política. Mostra
+          associações. Como os grupos já podiam ser diferentes antes, não prova causa.
+        </p>
+        <h3>Experimento aleatorizado</h3>
+        <p>
+          Sorteia quem recebe a política e quem fica no grupo de comparação. Como o sorteio equilibra os
+          grupos, uma diferença depois pode ser atribuída à política. É o desenho mais forte para mostrar
+          causa. Limites: nem sempre é possível ou ético sortear, e o resultado vale para as pessoas e o
+          lugar estudados.
+        </p>
+        <h3>Diferenças em diferenças</h3>
+        <p>
+          Compara a mudança ao longo do tempo num grupo atingido pela política com a mudança no mesmo período
+          num grupo não atingido. Mostra causa se os dois grupos teriam mudado de forma parecida sem a
+          política. Essa suposição não pode ser testada por completo.
+        </p>
+        <h3>Regressão descontínua</h3>
+        <p>
+          Aproveita uma regra de corte, como uma renda máxima para entrar num programa. Compara quem ficou
+          logo abaixo do corte com quem ficou logo acima, que são muito parecidos. Mostra causa, mas só para
+          quem está perto do corte.
+        </p>
+        <h3>Controle sintético</h3>
+        <p>
+          Constrói um "gêmeo" de um país ou região combinando outros que não receberam a política, e compara
+          os dois ao longo do tempo. É útil quando só uma unidade foi atingida. Depende de achar um bom
+          gêmeo.
+        </p>
+        <h3>Variáveis instrumentais</h3>
+        <p>
+          Usa um fator externo que empurra as pessoas para a política, mas que não afeta o resultado por
+          outro caminho. Mostra causa se esse fator for bem escolhido, o que é difícil de provar.
+        </p>
+        <h3>Revisão sistemática e meta-análise</h3>
+        <p>
+          Uma revisão sistemática procura e junta, com regras escritas de antemão, todos os estudos sobre uma
+          pergunta, em vez de escolher os favoritos. Uma meta-análise é a parte que combina os números dos
+          estudos num só. Costuma ser mais confiável que um único estudo, mas só é tão boa quanto os estudos
+          que reúne e mistura programas e países diferentes. A{" "}
+          <a href={progresa}>ficha do Progresa/Oportunidades</a> usa uma revisão sistemática sobre
+          transferências de renda.
+        </p>
+
+        <h2>Como ler os números</h2>
+        <h3>Tamanho do efeito</h3>
+        <p>
+          É quanto o resultado mudou por causa da política, na unidade do resultado ou em comparação com a
+          variação natural dele. Um efeito pode ser estatisticamente claro e pequeno demais para importar na
+          vida real. Sempre pergunte "quanto?", não só "houve efeito?".
+        </p>
+        <h3>Intervalo de confiança</h3>
+        <p>
+          Todo estudo usa uma amostra, não toda a população, então a estimativa tem incerteza. O intervalo
+          de confiança é a faixa de valores plausíveis. Num intervalo de 95%, se repetíssemos o estudo muitas
+          vezes, cerca de 95 intervalos em 100 conteriam o valor verdadeiro. Intervalo largo quer dizer
+          estimativa pouco precisa. Se o intervalo inclui o zero, o estudo não consegue excluir "nenhum
+          efeito".
+        </p>
+        <h3>Valor-p e "significativo"</h3>
+        <p>
+          O valor-p responde: se a política não tivesse efeito nenhum, com que frequência veríamos um
+          resultado pelo menos tão grande por puro acaso? Por convenção, abaixo de 0,05 (5%) o resultado é
+          chamado de "estatisticamente significativo". Isso não quer dizer que o efeito é grande nem
+          importante, e um valor-p acima de 0,05 não prova que não há efeito: pode ser que o estudo fosse
+          pequeno demais para detectá-lo.
+        </p>
+        <h3>Validade externa</h3>
+        <p>
+          É se o resultado vale fora de onde foi medido. Um programa avaliado em comunidades rurais pobres
+          pode funcionar de outro jeito numa grande cidade ou em outro país. Por isso as fichas do site têm
+          uma seção de validade externa. A{" "}
+          <a href={progresa}>ficha do Progresa/Oportunidades</a> mostra um caso: o programa foi avaliado no
+          México e o texto explica por que os resultados não se transferem automaticamente para o Brasil.
+        </p>
+
+        <h2>De onde vem o estudo</h2>
+        <h3>Revisado por pares e texto para discussão</h3>
+        <p>
+          Num artigo revisado por pares, especialistas independentes avaliam o trabalho antes da publicação
+          numa revista científica e podem exigir correções ou recusar o texto. Um texto para discussão
+          (working paper) circula antes dessa avaliação. Pode ser bom, mas ainda não passou pelo filtro, e
+          sua versão final às vezes muda.
+        </p>
+        <p>
+          <strong>Regra do site:</strong> os guias de indicadores usam apenas estudos revisados por pares.
+          Isso não garante que o estudo esteja certo, mas garante que passou por uma checagem externa e
+          permite verificar o artigo pelo DOI, que é o identificador permanente dele. Os DOIs são conferidos
+          na Crossref (<a href={adr("0007-rastreabilidade-do-conteudo.md")}>ADR 0007</a>).
+        </p>
+        <h3>Conflito de interesse</h3>
+        <p>
+          É quando quem fez ou pagou o estudo pode ganhar com um certo resultado, por exemplo um órgão que
+          avalia o próprio programa. Isso não torna o estudo errado, mas é um motivo para olhar com mais
+          atenção. Boas revistas pedem que os autores declarem financiamento e vínculos.
+        </p>
+
+        <h2>Nível de evidência das fichas de política</h2>
+        <p>
+          Cada ficha de política recebe um nível, pelo tipo de estudo disponível
+          (<a href={adr("0007-rastreabilidade-do-conteudo.md")}>ADR 0007</a>):
+        </p>
+        <ul>
+          <li><strong>Alto:</strong> há experimento aleatorizado ou revisão sistemática.</li>
+          <li><strong>Moderado:</strong> há outro desenho causal, como diferenças em diferenças.</li>
+          <li><strong>Baixo:</strong> nos demais casos, como estudos descritivos ou observacionais.</li>
+        </ul>
+        <p>
+          O nível descreve o desenho, não o resultado: uma política pode ter evidência alta de que{" "}
+          <em>não</em> funciona. E afirmações de causa só aparecem onde há desenho causal.
+        </p>
+      </>
+    ) : (
+      <>
+        <p>
+          This guide explains, in plain language, how to read the studies cited on this site. You do not
+          need to know statistics. Each term is explained where it first appears.
+        </p>
+
+        <h2>The core question: what would have happened without the policy?</h2>
+        <p>
+          Saying a policy "worked" means comparing what happened with what would have happened without it.
+          But nobody can observe the "without it". Each type of study below is a different way to estimate
+          that comparison, and each can show some things but not others.
+        </p>
+
+        <h2>Types of study</h2>
+        <h3>Descriptive</h3>
+        <p>
+          Shows how something changed or how groups differ, such as average income by year. It can show{" "}
+          <em>what</em> happened. It cannot show <em>why</em>: other things changed at the same time.
+        </p>
+        <h3>Decomposition</h3>
+        <p>
+          Splits a change into accounting parts, for example how much of a fall in inequality came from each
+          income source. It is arithmetic, not an experiment. It tells you how much each part weighed in the
+          sum, not what would have happened if that part had not existed. An example is in the{" "}
+          <a href={progresa}>Progresa/Oportunidades policy brief</a>, in the income inequality section.
+        </p>
+        <h3>Observational</h3>
+        <p>
+          Compares people or places without the researcher controlling who gets the policy. It shows
+          associations. Because the groups may already have differed beforehand, it does not prove cause.
+        </p>
+        <h3>Randomized experiment</h3>
+        <p>
+          Draws lots for who receives the policy and who stays in the comparison group. Because the draw
+          balances the groups, a later difference can be attributed to the policy. It is the strongest design
+          for showing cause. Limits: drawing lots is not always possible or ethical, and the result applies
+          to the people and place studied.
+        </p>
+        <h3>Difference-in-differences</h3>
+        <p>
+          Compares the change over time in a group reached by the policy with the change over the same period
+          in a group not reached. It shows cause if the two groups would have changed in a similar way
+          without the policy. That assumption cannot be fully tested.
+        </p>
+        <h3>Regression discontinuity</h3>
+        <p>
+          Uses a cutoff rule, such as a maximum income to enter a program. It compares people just below the
+          cutoff with people just above it, who are very similar. It shows cause, but only for people near
+          the cutoff.
+        </p>
+        <h3>Synthetic control</h3>
+        <p>
+          Builds a "twin" of a country or region by combining others that did not get the policy, then
+          compares the two over time. It is useful when only one unit was affected. It depends on finding a
+          good twin.
+        </p>
+        <h3>Instrumental variables</h3>
+        <p>
+          Uses an outside factor that pushes people toward the policy but does not affect the outcome any
+          other way. It shows cause if that factor is well chosen, which is hard to prove.
+        </p>
+        <h3>Systematic review and meta-analysis</h3>
+        <p>
+          A systematic review searches for and gathers, using rules written in advance, all the studies on a
+          question, instead of picking favorites. A meta-analysis is the part that combines the studies'
+          numbers into one. It is usually more reliable than a single study, but it is only as good as the
+          studies it gathers and it mixes different programs and countries. The{" "}
+          <a href={progresa}>Progresa/Oportunidades policy brief</a> uses a systematic review of cash
+          transfers.
+        </p>
+
+        <h2>How to read the numbers</h2>
+        <h3>Effect size</h3>
+        <p>
+          How much the outcome changed because of the policy, in the outcome's own units or compared with its
+          natural variation. An effect can be statistically clear and still too small to matter in real
+          life. Always ask "how much?", not only "was there an effect?".
+        </p>
+        <h3>Confidence interval</h3>
+        <p>
+          Every study uses a sample, not the whole population, so its estimate carries uncertainty. The
+          confidence interval is the range of plausible values. For a 95% interval, if we repeated the study
+          many times, about 95 intervals out of 100 would contain the true value. A wide interval means an
+          imprecise estimate. If the interval includes zero, the study cannot rule out "no effect".
+        </p>
+        <h3>P-value and "significant"</h3>
+        <p>
+          The p-value answers: if the policy had no effect at all, how often would we see a result at least
+          this large by pure chance? By convention, below 0.05 (5%) the result is called "statistically
+          significant". That does not mean the effect is large or important, and a p-value above 0.05 does
+          not prove there is no effect: the study may have been too small to detect it.
+        </p>
+        <h3>External validity</h3>
+        <p>
+          Whether the result holds outside where it was measured. A program evaluated in poor rural
+          communities may work differently in a big city or another country. That is why the site's policy
+          briefs have an external validity section. The{" "}
+          <a href={progresa}>Progresa/Oportunidades policy brief</a> shows one case: the program was
+          evaluated in Mexico, and the text explains why its results do not transfer automatically to
+          Brazil.
+        </p>
+
+        <h2>Where the study comes from</h2>
+        <h3>Peer reviewed versus working paper</h3>
+        <p>
+          In a peer-reviewed article, independent experts assess the work before it is published in a
+          scientific journal and can require corrections or reject it. A working paper circulates before that
+          assessment. It can be good, but it has not yet passed the filter, and its final version sometimes
+          changes.
+        </p>
+        <p>
+          <strong>The site's rule:</strong> indicator guides use only peer-reviewed studies. This does not
+          guarantee that a study is right, but it does mean it went through an outside check, and it lets
+          you look up the article by its DOI, its permanent identifier. DOIs are checked against Crossref (
+          <a href={adr("0007-rastreabilidade-do-conteudo.md")}>ADR 0007</a>).
+        </p>
+        <h3>Conflict of interest</h3>
+        <p>
+          This is when whoever did or paid for the study could gain from a certain result, for example an
+          agency evaluating its own program. It does not make the study wrong, but it is a reason to look
+          more closely. Good journals ask authors to disclose funding and ties.
+        </p>
+
+        <h2>Level of evidence in policy briefs</h2>
+        <p>
+          Each policy brief gets a level based on the type of study available
+          (<a href={adr("0007-rastreabilidade-do-conteudo.md")}>ADR 0007</a>):
+        </p>
+        <ul>
+          <li><strong>High:</strong> there is a randomized experiment or a systematic review.</li>
+          <li><strong>Moderate:</strong> there is another causal design, such as difference-in-differences.</li>
+          <li><strong>Low:</strong> everything else, such as descriptive or observational studies.</li>
+        </ul>
+        <p>
+          The level describes the design, not the result: a policy can have high-level evidence that it{" "}
+          <em>does not</em> work. And causal claims appear only where there is a causal design.
+        </p>
+      </>
+    )
+  }
+</Base>
