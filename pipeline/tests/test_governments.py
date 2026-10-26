@@ -41,6 +41,7 @@ def _period(id_, start, end):
     return {
         "id": id_,
         "president": "X",
+        "short_name": "X",
         "condition": "titular",
         "term": {"pt": "t", "en": "t"},
         "start": start,

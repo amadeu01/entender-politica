@@ -28,6 +28,8 @@ class Period(BaseModel):
 
     id: str = Field(pattern=r"^[a-z0-9-]+$")
     president: str
+    # Name used on chart bands, as commonly known (e.g. "FHC", "Lula").
+    short_name: str
     condition: Condition
     term: Text
     start: date

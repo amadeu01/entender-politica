@@ -12,6 +12,7 @@ sources:
 periods:
   - id: figueiredo
     president: João Figueiredo
+    short_name: Figueiredo
     condition: titular
     term: { pt: "1979–1985", en: "1979–1985" }
     start: 1979-03-15
@@ -20,6 +21,7 @@ periods:
 
   - id: sarney-interino
     president: José Sarney
+    short_name: Sarney
     condition: interino
     term: { pt: "1985 (exercício por doença de Tancredo Neves)", en: "1985 (acting, Tancredo Neves ill)" }
     start: 1985-03-15
@@ -31,6 +33,7 @@ periods:
 
   - id: sarney
     president: José Sarney
+    short_name: Sarney
     condition: titular
     term: { pt: "1985–1990", en: "1985–1990" }
     start: 1985-04-21
@@ -39,6 +42,7 @@ periods:
 
   - id: collor
     president: Fernando Collor
+    short_name: Collor
     condition: titular
     term: { pt: "1990–1992", en: "1990–1992" }
     start: 1990-03-15
@@ -50,6 +54,7 @@ periods:
 
   - id: itamar-interino
     president: Itamar Franco
+    short_name: Itamar
     condition: interino
     term: { pt: "1992 (exercício durante o impeachment)", en: "1992 (acting during impeachment)" }
     start: 1992-10-02
@@ -58,6 +63,7 @@ periods:
 
   - id: itamar
     president: Itamar Franco
+    short_name: Itamar
     condition: titular
     term: { pt: "1992–1994", en: "1992–1994" }
     start: 1992-12-29
@@ -66,6 +72,7 @@ periods:
 
   - id: fhc-1
     president: Fernando Henrique Cardoso
+    short_name: FHC
     condition: titular
     term: { pt: "1º mandato (1995–1998)", en: "1st term (1995–1998)" }
     start: 1995-01-01
@@ -74,6 +81,7 @@ periods:
 
   - id: fhc-2
     president: Fernando Henrique Cardoso
+    short_name: FHC
     condition: titular
     term: { pt: "2º mandato (1999–2002)", en: "2nd term (1999–2002)" }
     start: 1999-01-01
@@ -82,6 +90,7 @@ periods:
 
   - id: lula-1
     president: Luiz Inácio Lula da Silva
+    short_name: Lula
     condition: titular
     term: { pt: "1º mandato (2003–2006)", en: "1st term (2003–2006)" }
     start: 2003-01-01
@@ -90,6 +99,7 @@ periods:
 
   - id: lula-2
     president: Luiz Inácio Lula da Silva
+    short_name: Lula
     condition: titular
     term: { pt: "2º mandato (2007–2010)", en: "2nd term (2007–2010)" }
     start: 2007-01-01
@@ -98,6 +108,7 @@ periods:
 
   - id: dilma-1
     president: Dilma Rousseff
+    short_name: Dilma
     condition: titular
     term: { pt: "1º mandato (2011–2014)", en: "1st term (2011–2014)" }
     start: 2011-01-01
@@ -106,6 +117,7 @@ periods:
 
   - id: dilma-2
     president: Dilma Rousseff
+    short_name: Dilma
     condition: titular
     term: { pt: "2º mandato (2015–2016)", en: "2nd term (2015–2016)" }
     start: 2015-01-01
@@ -117,6 +129,7 @@ periods:
 
   - id: temer-interino
     president: Michel Temer
+    short_name: Temer
     condition: interino
     term: { pt: "2016 (exercício durante o impeachment)", en: "2016 (acting during impeachment)" }
     start: 2016-05-12
@@ -125,6 +138,7 @@ periods:
 
   - id: temer
     president: Michel Temer
+    short_name: Temer
     condition: titular
     term: { pt: "2016–2018", en: "2016–2018" }
     start: 2016-08-31
@@ -133,6 +147,7 @@ periods:
 
   - id: bolsonaro
     president: Jair Bolsonaro
+    short_name: Bolsonaro
     condition: titular
     term: { pt: "2019–2022", en: "2019–2022" }
     start: 2019-01-01
@@ -141,6 +156,7 @@ periods:
 
   - id: lula-3
     president: Luiz Inácio Lula da Silva
+    short_name: Lula
     condition: titular
     term: { pt: "3º mandato (2023–)", en: "3rd term (2023–)" }
     start: 2023-01-01
