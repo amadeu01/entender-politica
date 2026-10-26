@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import { analysis, catalog, documents, policy } from "../lib/data";
-import { UI, asset, url, type Lang } from "../lib/i18n";
+import { UI, asset, plain, url, type Lang } from "../lib/i18n";
 interface Props {
   lang: Lang;
 }
@@ -15,7 +15,6 @@ const add = (r: { citation: string; doi: string | null; url: string | null }, hr
   if (!e.usedBy.some((u) => u.href === href)) e.usedBy.push({ href, label });
   entries.set(key, e);
 };
-const plain = (html: string) => html.replace(/<[^>]+>/g, "");
 for (const i of catalog()) i.references.forEach((r) => add(r, url(lang, "indicators", i.id), i.name[lang]));
 for (const d of documents().analyses.filter((a) => a.lang === lang)) {
   const a = analysis(d.slug, lang);
@@ -26,7 +25,6 @@ for (const d of documents().policies.filter((p) => p.lang === lang)) {
   p.references.forEach((r) => add(r, url(lang, "policies", p.slug), plain(p.name)));
 }
 const sorted = [...entries.values()].sort((a, b) => a.citation.localeCompare(b.citation));
-const usedIn = lang === "pt" ? "Usado em" : "Used in";
 ---
 
 <Base lang={lang} title={t.nav.references} route="references">
@@ -40,7 +38,7 @@ const usedIn = lang === "pt" ? "Usado em" : "Used in";
           {r.doi ? <a href={`https://doi.org/${r.doi}`}>doi:{r.doi}</a> : r.url && <a href={r.url}>{r.url}</a>}
           <br />
           <span class="meta">
-            {usedIn}:{" "}
+            {t.usedIn}:{" "}
             {r.usedBy.map((u, n) => (
               <>
                 {n > 0 && " · "}

@@ -1,8 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
 import Chart from "../components/Chart.astro";
+import Notice from "../components/Notice.astro";
 import { indicator, series } from "../lib/data";
-import { SOURCE_NAMES, UI, UNIT_LABELS, asset, type Lang } from "../lib/i18n";
+import { GEO_ORDER, SOURCE_NAMES, UI, UNIT_LABELS, asset, type Lang } from "../lib/i18n";
 interface Props {
   lang: Lang;
   id: string;
@@ -11,8 +12,7 @@ const { lang, id } = Astro.props;
 const t = UI[lang];
 const ind = indicator(id);
 const data = series(id);
-const ORDER = ["BRA", "ARG", "CHL", "COL", "MEX", "LCN", "WLD"];
-const geos = ORDER.filter((g) => data.observations.some((o) => o.geo_code === g));
+const geos = GEO_ORDER.filter((g) => data.observations.some((o) => o.geo_code === g));
 const alt = {
   pt: `Linha do tempo de ${ind.name.pt} por geografia, com faixas dos períodos de governo do Brasil ao fundo.`,
   en: `Timeline of ${ind.name.en} by geography, with Brazil's government period bands in the background.`,
@@ -44,6 +44,7 @@ const alt = {
     <dd>{data.license}</dd>
   </dl>
 
+  <Notice lang={lang} />
   <Chart lang={lang} id={id.replace(/\W/g, "-")} title={ind.name[lang]} alt={alt} indicators={[id]} geographies={geos} log={id === "wdi.fp_cpi_totl_zg"} />
 
   <h2>{t.criticisms}</h2>

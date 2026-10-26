@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import Numbers from "../components/Numbers.astro";
 import References from "../components/References.astro";
 import { analysis, documents, geoName, policy } from "../lib/data";
-import { METHOD_NAMES, UI, url, type Lang } from "../lib/i18n";
+import { METHOD_NAMES, UI, plain, url, type Lang } from "../lib/i18n";
 interface Props {
   lang: Lang;
   slug: string;
@@ -11,7 +11,6 @@ interface Props {
 const { lang, slug } = Astro.props;
 const t = UI[lang];
 const p = policy(slug, lang);
-const plain = (html: string) => html.replace(/<[^>]+>/g, "");
 const ICON = { positive: "▲", null: "●", negative: "▼", mixed: "◆" };
 const related = documents()
   .analyses.filter((a) => a.lang === lang)

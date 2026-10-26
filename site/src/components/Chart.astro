@@ -4,7 +4,9 @@
 import { governments, indicator, series, geoName } from "../lib/data";
 import {
   asset,
+  GEO_ORDER,
   REPO,
+  SOURCE_CODE,
   SOURCE_NAMES,
   UI,
   UNIT_DECIMALS,
@@ -25,16 +27,21 @@ interface Props {
 const { lang, id, title, alt, indicators, geographies, log = false } = Astro.props;
 const t = UI[lang];
 
-// Entities keep the same color on every chart (color follows the entity, not its rank).
-const GEO_ORDER = ["BRA", "ARG", "CHL", "COL", "MEX", "LCN", "WLD"];
 const byIndicator = indicators.length > 1;
 if (byIndicator && geographies.length > 1) {
   throw new Error(`chart ${id}: several indicators need a single geography`);
 }
 const metas = indicators.map((i) => ({ ind: indicator(i), data: series(i) }));
+const unknown = geographies.filter((g) => !GEO_ORDER.includes(g));
+if (unknown.length) throw new Error(`chart ${id}: no color slot for ${unknown.join(", ")}`);
+// Geographies the source has no data for are named in the caption, not silently dropped.
+const withData = geographies.filter((g) =>
+  metas.some((m) => m.data.observations.some((o) => o.geo_code === g)),
+);
+const missing = geographies.filter((g) => !withData.includes(g));
 const keys = byIndicator
   ? metas.map((m, n) => ({ key: m.ind.id, label: m.ind.name[lang], slot: n + 1 }))
-  : geographies.map((g) => ({ key: g, label: geoName(g, lang), slot: GEO_ORDER.indexOf(g) + 1 }));
+  : withData.map((g) => ({ key: g, label: geoName(g, lang), slot: GEO_ORDER.indexOf(g) + 1 }));
 const unit = metas[0].ind.unit;
 if (metas.some((m) => m.ind.unit !== unit)) {
   throw new Error(`chart ${id}: one axis only, indicators must share a unit`);
@@ -54,8 +61,15 @@ const config = {
   keys,
   points,
   periods: governments().periods.map((p) => ({ name: p.short_name, start: p.start, end: p.end })),
-  text: { year: t.year, seriesBreak: t.seriesBreak },
+  text: { seriesBreak: t.seriesBreak },
 };
+const captionNote = [
+  `${config.unitLabel}. ${t.governments}.`,
+  missing.length > 0 ? `${t.noDataFor}: ${missing.map((g) => geoName(g, lang)).join(", ")}.` : "",
+  log && points.some((p) => p.value <= 0) ? t.logDropped : "",
+]
+  .filter(Boolean)
+  .join(" ");
 const cell = (key: string, year: number) => points.find((p) => p.key === key && p.year === year);
 const fmt = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", {
   maximumFractionDigits: config.decimals,
@@ -80,7 +94,7 @@ const fmt = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", {
     <noscript>{alt}</noscript>
   </div>
   <figcaption>
-    <p class="meta">{config.unitLabel}. {t.governments}.</p>
+    <p class="meta">{captionNote}</p>
     <dl class="provenance">
       {
         metas.map((m) => {
@@ -115,7 +129,11 @@ const fmt = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", {
                   {t.downloadCsv}
                 </a>{" "}
                 ·{" "}
-                <a href={`${REPO}/blob/main/site/src/scripts/chart.ts`}>{t.viewCode}</a>
+                {t.viewCode}:{" "}
+                <a href={`${REPO}/blob/main/${SOURCE_CODE[m.data.source_id]}`}>
+                  {t.viewSourceCode}
+                </a>{" "}
+                · <a href={`${REPO}/blob/main/site/src/scripts/chart.ts`}>chart.ts</a>
               </dd>
             </>
           );

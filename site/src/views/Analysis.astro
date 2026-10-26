@@ -5,7 +5,7 @@ import Notice from "../components/Notice.astro";
 import Numbers from "../components/Numbers.astro";
 import References from "../components/References.astro";
 import { analysis, policy } from "../lib/data";
-import { METHOD_NAMES, UI, url, type Lang } from "../lib/i18n";
+import { METHOD_NAMES, UI, plain, url, type Lang } from "../lib/i18n";
 interface Props {
   lang: Lang;
   slug: string;
@@ -13,8 +13,6 @@ interface Props {
 const { lang, slug } = Astro.props;
 const t = UI[lang];
 const a = analysis(slug, lang);
-const plain = (html: string) => html.replace(/<[^>]+>/g, "");
-const evidence = (items: typeof a.evidence_for) => items;
 ---
 
 <Base lang={lang} title={plain(a.title)} route="analyses" slug={slug} description={plain(a.question)}>
@@ -33,9 +31,12 @@ const evidence = (items: typeof a.evidence_for) => items;
         <span set:html={a.method_description} />
       </dd>
       <dt>{t.causal}</dt>
-      <dd>{a.causal_claims ? (lang === "pt" ? "Sim" : "Yes") : t.descriptiveOnly}</dd>
+      <dd>{a.causal_claims ? t.yes : t.descriptiveOnly}</dd>
     </dl>
     <Notice lang={lang} />
+
+    <h2>{t.result}</h2>
+    <p set:html={a.result} />
 
     <Fragment set:html={a.body} />
 
@@ -56,7 +57,7 @@ const evidence = (items: typeof a.evidence_for) => items;
     <h2>{t.evidenceFor}</h2>
     <ul>
       {
-        evidence(a.evidence_for).map((e) => (
+        a.evidence_for.map((e) => (
           <li>
             <span set:html={e.text} />{" "}
             {e.references.map((d) => <a href={`https://doi.org/${d}`}>[doi:{d}]</a>)}
@@ -67,7 +68,7 @@ const evidence = (items: typeof a.evidence_for) => items;
     <h2>{t.evidenceAgainst}</h2>
     <ul>
       {
-        evidence(a.evidence_against).map((e) => (
+        a.evidence_against.map((e) => (
           <li>
             <span set:html={e.text} />{" "}
             {e.references.map((d) => <a href={`https://doi.org/${d}`}>[doi:{d}]</a>)}
