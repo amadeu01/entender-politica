@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import { analysis, catalog, documents, policy } from "../lib/data";
+import { analysis, catalog, documents, guide, policy } from "../lib/data";
 import { UI, asset, plain, url, type Lang } from "../lib/i18n";
 interface Props {
   lang: Lang;
@@ -23,6 +23,12 @@ for (const d of documents().analyses.filter((a) => a.lang === lang)) {
 for (const d of documents().policies.filter((p) => p.lang === lang)) {
   const p = policy(d.slug, lang);
   p.references.forEach((r) => add(r, url(lang, "policies", p.slug), plain(p.name)));
+}
+for (const id of documents().guides) {
+  const g = guide(id, lang);
+  if (!g) continue;
+  const label = catalog().find((i) => i.id === id)?.name[lang] ?? id;
+  [...g.references_indicator, ...g.references_policies].forEach((r) => add(r, url(lang, "indicators", id), label));
 }
 const sorted = [...entries.values()].sort((a, b) => a.citation.localeCompare(b.citation));
 ---

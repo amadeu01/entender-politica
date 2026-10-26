@@ -1,11 +1,14 @@
+import dataclasses
 import json
 from datetime import UTC, datetime
 
 import pandas as pd
+import pytest
 
-from compilador import build, snapshot
+from compilador import brackets, build, snapshot
 from compilador.snapshot import RawFile
-from tests.helpers import wdi_payload
+from compilador.validate import ValidationError
+from tests.helpers import make_indicator, wdi_payload
 
 
 def _paths(tmp_path, gini) -> build.Paths:
@@ -20,6 +23,7 @@ def _paths(tmp_path, gini) -> build.Paths:
     return build.Paths(
         analyses=tmp_path / "no-analyses",
         policies=tmp_path / "no-policies",
+        guides=tmp_path / "no-guides",
         dois=registry,
         raw=tmp_path / "raw",
         processed=tmp_path / "processed",
@@ -79,3 +83,158 @@ def test_source_with_only_null_values_builds_an_empty_dataset(tmp_path, gini):
     _fetch(paths, [("BRA", 2011, None)], 24)
     result = build.build(paths, today="2026-10-24")
     assert result.observations.empty
+
+
+def _bracket_catalog(guard=True):
+    config = brackets.load()
+    ids = [*config.input_indicators, *config.income_indicators]
+    if guard:
+        ids.append("wdi.ny_gdp_pcap_pp_kd")
+    return {
+        i: make_indicator(
+            id=i,
+            source=i.split(".")[0],
+            source_code=i.split(".")[1].upper().replace("_", "."),
+        )
+        for i in ids
+    }
+
+
+def _icp_snapshot(paths, name, day=24):
+    payload = wdi_payload("NY.GDP.PCAP.PP.KD", [("BRA", 2024, 1.0)])
+    payload = payload.replace(b'"value": "NY.GDP.PCAP.PP.KD"', f'"value": "{name}"'.encode())
+    snapshot.write(
+        "wdi",
+        [RawFile("NY.GDP.PCAP.PP.KD.json", "u", payload)],
+        source_version="v",
+        license="CC-BY-4.0",
+        raw_dir=paths.raw,
+        now=datetime(2026, 10, day, tzinfo=UTC),
+    )
+
+
+def test_export_writes_income_brackets_when_inputs_present(tmp_path):
+    config = brackets.load()
+    rows = []
+    for p, ind in config.percentile_indicators.items():
+        rows.append((ind, 2024, 300.0 * p))
+    rows += [(config.ppp_indicator, 2021, 2.5), (config.cpi_indicator, 2021, 100.0)]
+    rows += [(config.cpi_indicator, 2024, 120.0)]
+    df = pd.DataFrame(
+        [
+            {
+                "geo_code": "BRA",
+                "geo_level": "country",
+                "year": y,
+                "indicator_id": i,
+                "value": v,
+                "source_id": "s",
+                "source_version": "v1",
+                "retrieved_at": "2026-10-26",
+                "unit": "x",
+                "license": "l",
+                "lower": None,
+                "upper": None,
+                "series_break": False,
+            }
+            for i, y, v in rows
+        ]
+    )
+    build.export_site(df, {}, tmp_path, config)
+    out = json.loads((tmp_path / "income_brackets.json").read_text())
+    assert out["config"]["method"] == "linear_interpolation"
+    assert out["years"][0]["year"] == 2024
+    assert len(out["years"][0]["brackets"]) == 5
+    assert {s["indicator_id"] for s in out["sources"]} == set(config.input_indicators)
+
+
+def test_export_skips_income_brackets_without_inputs(tmp_path, gini):
+    build.export_site(pd.DataFrame(columns=["year", "indicator_id"]), {gini.id: gini}, tmp_path)
+    assert not (tmp_path / "income_brackets.json").exists()
+
+
+def test_bracket_config_skipped_when_inputs_not_in_catalog(tmp_path, gini):
+    assert build.bracket_config(_paths(tmp_path, gini), {gini.id: gini}) is None
+
+
+def test_icp_base_year_guard(tmp_path, gini):
+    paths = _paths(tmp_path, gini)
+    catalog = _bracket_catalog()
+    _icp_snapshot(paths, "GDP per capita, PPP (constant 2021 international $)")
+    assert build.bracket_config(paths, catalog) is not None
+    _icp_snapshot(paths, "GDP per capita, PPP (constant 2027 international $)", 25)
+    with pytest.raises(ValidationError, match="ICP"):
+        build.bracket_config(paths, catalog)
+
+
+def test_icp_guard_skipped_without_the_indicator(tmp_path, gini):
+    paths = _paths(tmp_path, gini)
+    assert build.bracket_config(paths, _bracket_catalog(guard=False)) is not None
+
+
+GUIDE_DOI = "10.1000/study"
+
+
+def _guide(doi=GUIDE_DOI, cite_doi=GUIDE_DOI) -> dict:
+    cite = f'{{{{ cite("10%", "{cite_doi}", "abstract") }}}}'
+    text = {"pt": "texto", "en": "text"}
+    return {
+        "indicator": "wdi.si_pov_gini",
+        "understand": {"pt": cite, "en": cite},
+        "how_to_read": text,
+        "studies": [{"text": text, "method": "descriptive", "references": [doi]}],
+        "policies": [
+            {
+                "name": text,
+                "country": "BRA",
+                "period": {"start": 2003, "end": 2010},
+                "result": text,
+                "direction": "null",
+                "method": "observational",
+                "references": [doi],
+            }
+        ],
+        "references": [{"citation": "A (2020)", "doi": doi}],
+    }
+
+
+def _with_guide(tmp_path, gini, registry_entry, guide=None):
+    paths = _paths(tmp_path, gini)
+    folder = tmp_path / "guides"
+    folder.mkdir()
+    (folder / "wdi.si_pov_gini.yaml").write_text(json.dumps(guide or _guide()))
+    registry = json.loads(paths.dois.read_text()) | registry_entry
+    paths.dois.write_text(json.dumps(registry))
+    _fetch(paths, [("BRA", 2012, 53.0)], 24)
+    return dataclasses.replace(paths, guides=folder)
+
+
+def test_build_writes_guide_json_and_indexes_it(tmp_path, gini):
+    paths = _with_guide(tmp_path, gini, {GUIDE_DOI: {"bibtex": "@a"}})
+    build.build(paths, today="2026-10-24")
+    index = json.loads((paths.site / "documents.json").read_text())
+    assert index["guides"] == ["wdi.si_pov_gini"]
+    for lang in ("pt", "en"):
+        doc = json.loads((paths.site / "guides" / f"wdi.si_pov_gini.{lang}.json").read_text())
+        assert doc["lang"] == lang
+    assert "@a" in (paths.site / "references.bib").read_text()
+
+
+def test_guide_doi_missing_from_registry_fails_build(tmp_path, gini):
+    paths = _with_guide(tmp_path, gini, {})
+    with pytest.raises(ValidationError, match="DOI not verified: 10.1000/study"):
+        build.build(paths, today="2026-10-24")
+
+
+def test_guide_citation_year_mismatch_is_reported(tmp_path, gini):
+    paths = _with_guide(tmp_path, gini, {GUIDE_DOI: {"bibtex": "@a", "year": 1999}})
+    errors = build.citation_errors(paths, json.loads(paths.dois.read_text()))
+    assert errors == ["citation year differs from Crossref (1999): A (2020)"]
+    assert GUIDE_DOI in build.all_dois(paths)
+
+
+def test_content_error_in_guide_becomes_validation_error(tmp_path, gini):
+    guide = _guide(cite_doi="10.9999/other")
+    paths = _with_guide(tmp_path, gini, {GUIDE_DOI: {"bibtex": "@a"}}, guide)
+    with pytest.raises(ValidationError, match="10.9999/other"):
+        build.build(paths, today="2026-10-24")

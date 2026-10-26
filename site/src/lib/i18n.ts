@@ -8,6 +8,7 @@ export const ROUTES = {
   analyses: { pt: "analises", en: "analyses" },
   policies: { pt: "politicas", en: "policies" },
   methodology: { pt: "metodologia", en: "methodology" },
+  studies: { pt: "como-ler-estudos", en: "reading-studies" },
   references: { pt: "referencias", en: "references" },
   contribute: { pt: "contribuir", en: "contribute" },
 } as const;
@@ -39,6 +40,7 @@ export const UI = {
       analyses: "Análises",
       policies: "Políticas",
       methodology: "Metodologia",
+      studies: "Como ler estudos",
       references: "Referências",
       contribute: "Como contribuir",
     },
@@ -118,6 +120,66 @@ export const UI = {
     noData: "sem dado",
     readMore: "Ler",
     all: "Todos",
+    guideUnderstand: "Entender o indicador",
+    guideHowToRead: "Como ler este indicador",
+    guideStudies: "O que dizem os estudos",
+    guideStudiesHow: "Como ler estudos: o que cada desenho mostra e o que não mostra",
+    guidePolicies: "Políticas estudadas",
+    guideIncome: "Por faixa de renda",
+    guideIncomeNone:
+      "Não encontramos estudo revisado por pares sobre este indicador por grupo de renda.",
+    guidePurchasing: "Poder de compra",
+    guideRefsImpacts: "Políticas e impactos",
+    guideRefsIndicator: "Sobre o indicador",
+    briefLink: "Ver a ficha da política",
+    translationTitle: "Em faixas de renda",
+    translationGroup: (side: "bottom" | "top", cut: number) =>
+      side === "bottom" ? `Os ${cut}% mais pobres` : `Os ${100 - cut}% mais ricos`,
+    translationText: (year: number, brl: string, usd: string, bracket: string) =>
+      `Em ${year}, o limite desse grupo era ${brl} por pessoa por mês, ou ${usd}. Faixa: ${bracket}.`,
+    ppp: "US$ PPC",
+    pppTerm: "Dólares PPC",
+    pppExplain: (base: number) =>
+      `Dólares ajustados pela paridade do poder de compra (PPC): um dólar PPC compra, no Brasil, o que um dólar comprava nos Estados Unidos em ${base}. A faixa é a renda domiciliar mensal por pessoa.`,
+    bracketsTitle: "Quantas pessoas vivem em cada faixa de renda",
+    bracketsCaption: (year: number) =>
+      `Pessoas por faixa de renda domiciliar per capita mensal, Brasil, ${year}`,
+    bracket: "Faixa (US$ PPC por pessoa por mês)",
+    inReais: (year: number) => `Em reais por mês (${year})`,
+    shareOfPeople: "Parcela das pessoas",
+    interpolationNote: "≈ estimado por interpolação linear entre os percentis do IBGE",
+    reaisPerUsd: (base: number) => `Reais por dólar PPC de ${base}`,
+    reaisPerUsdNote: (base: number) =>
+      `Essa taxa difere do fator de conversão PPC do ano corrente citado em Poder de compra, porque os limites das faixas estão fixos em dólares de ${base} e são atualizados pela inflação brasileira.`,
+    breakLegend: "Área cinza e traço tracejado: anos afetados por quebra de série (veja a nota abaixo).",
+    breakFlag: "quebra de série",
+    priceLevelTitle: "Nível de preços em relação aos Estados Unidos",
+    priceLevelCaption: "Fator de conversão PPC do consumo das famílias dividido pela taxa de câmbio, último ano com os dois valores",
+    priceLevelNote:
+      "Abaixo de 1, os preços são mais baixos que nos Estados Unidos; acima de 1, mais altos.",
+    priceLevelCol: "Nível de preços",
+    sourcesLabel: "Fontes",
+    overTime: "Ao longo dos anos",
+    overTimeAlt: (label: string, first: number, last: number) =>
+      `Parcela das pessoas na faixa ${label} de ${first} a ${last}: faixa sombreada entre o mínimo e o máximo estimados e linha no ponto médio. Os valores estão na tabela abaixo.`,
+    rangeBetween: (a: string, b: string) => `entre ${a} e ${b}`,
+    approx: (a: string) => `≈ ${a}`,
+    lessThan: (a: string) => `menos de ${a}`,
+    upTo: (a: string) => `até ${a}`,
+    moreThan: (a: string) => `mais de ${a}`,
+    fromTo: (a: string, b: string) => `de ${a} a ${b}`,
+    medianTitle: "Renda típica no Brasil",
+    medianAlt:
+      "Linhas do tempo da mediana do rendimento domiciliar per capita e da mediana do rendimento do trabalho no Brasil, em reais.",
+    medianNote: (year: number) =>
+      `Valores reais a preços de ${year}, último ano da série (PNAD Contínua).`,
+    ppAlt: "Linha do tempo do PIB per capita ajustado pelo poder de compra, por geografia.",
+    ppNominalAlt: "Linha do tempo do PIB per capita a preços constantes de 2015, por geografia.",
+    ppNote:
+      "O primeiro gráfico corrige as diferenças de custo de vida entre países; o segundo usa o câmbio e não corrige.",
+    ppTitle: "PIB per capita em dólares PPC de 2021",
+    nominalTitle: "PIB per capita em dólares de 2015",
+    overTimeLegend: "Faixa sombreada: do mínimo ao máximo estimado; linha: ponto médio.",
   },
   en: {
     siteName: "Understanding Politics",
@@ -130,6 +192,7 @@ export const UI = {
       analyses: "Analyses",
       policies: "Policies",
       methodology: "Methodology",
+      studies: "Reading studies",
       references: "References",
       contribute: "Contribute",
     },
@@ -209,6 +272,65 @@ export const UI = {
     noData: "no data",
     readMore: "Read",
     all: "All",
+    guideUnderstand: "Understanding the indicator",
+    guideHowToRead: "How to read this indicator",
+    guideStudies: "What studies say",
+    guideStudiesHow: "How to read studies: what each design can and cannot show",
+    guidePolicies: "Studied policies",
+    guideIncome: "By income bracket",
+    guideIncomeNone: "We found no peer-reviewed study of this indicator by income group.",
+    guidePurchasing: "Purchasing power",
+    guideRefsImpacts: "Policies and impacts",
+    guideRefsIndicator: "About the indicator",
+    briefLink: "See the policy brief",
+    translationTitle: "In income brackets",
+    translationGroup: (side: "bottom" | "top", cut: number) =>
+      side === "bottom" ? `The poorest ${cut}%` : `The richest ${100 - cut}%`,
+    translationText: (year: number, brl: string, usd: string, bracket: string) =>
+      `In ${year}, this group's limit was ${brl} per person per month, or ${usd}. Bracket: ${bracket}.`,
+    ppp: "PPP US$",
+    pppTerm: "PPP dollars",
+    pppExplain: (base: number) =>
+      `Dollars adjusted by purchasing power parity (PPP): one PPP dollar buys in Brazil what one dollar bought in the United States in ${base}. The bracket is monthly household income per person.`,
+    bracketsTitle: "How many people live in each income bracket",
+    bracketsCaption: (year: number) =>
+      `People by monthly household income per capita bracket, Brazil, ${year}`,
+    bracket: "Bracket (PPP US$ per person per month)",
+    inReais: (year: number) => `In reais per month (${year})`,
+    shareOfPeople: "Share of people",
+    interpolationNote: "≈ estimated by linear interpolation between IBGE percentiles",
+    reaisPerUsd: (base: number) => `Reais per ${base} PPP dollar`,
+    reaisPerUsdNote: (base: number) =>
+      `This rate differs from the current-year PPP conversion factor quoted under Purchasing power, because the bracket limits are fixed in ${base} dollars and updated by Brazilian inflation.`,
+    breakLegend: "Grey area and dashed line: years affected by a series break (see the note below).",
+    breakFlag: "series break",
+    priceLevelTitle: "Price level relative to the United States",
+    priceLevelCaption: "Household consumption PPP conversion factor divided by the exchange rate, latest year with both values",
+    priceLevelNote:
+      "Below 1, prices are lower than in the United States; above 1, higher.",
+    priceLevelCol: "Price level",
+    sourcesLabel: "Sources",
+    overTime: "Over the years",
+    overTimeAlt: (label: string, first: number, last: number) =>
+      `Share of people in the ${label} bracket from ${first} to ${last}: shaded band between the estimated minimum and maximum and a line at the midpoint. Values are in the table below.`,
+    rangeBetween: (a: string, b: string) => `between ${a} and ${b}`,
+    approx: (a: string) => `≈ ${a}`,
+    lessThan: (a: string) => `less than ${a}`,
+    upTo: (a: string) => `up to ${a}`,
+    moreThan: (a: string) => `more than ${a}`,
+    fromTo: (a: string, b: string) => `from ${a} to ${b}`,
+    medianTitle: "Typical income in Brazil",
+    medianAlt:
+      "Timelines of the median household income per capita and the median labor income in Brazil, in reais.",
+    medianNote: (year: number) =>
+      `Real values at ${year} prices, the last year of the series (Continuous PNAD).`,
+    ppAlt: "Timeline of GDP per capita adjusted for purchasing power, by geography.",
+    ppNominalAlt: "Timeline of GDP per capita at constant 2015 prices, by geography.",
+    ppNote:
+      "The first chart corrects for cost-of-living differences between countries; the second uses exchange rates and does not.",
+    ppTitle: "GDP per capita in 2021 PPP dollars",
+    nominalTitle: "GDP per capita in 2015 dollars",
+    overTimeLegend: "Shaded band: estimated minimum to maximum; line: midpoint.",
   },
 } as const;
 
@@ -272,6 +394,12 @@ export const UNIT_DECIMALS: Record<string, number> = {
   years: 1,
   per_1000_live_births: 1,
   wgi_estimate: 2,
+  brl_month: 0,
+  brl_month_real: 0,
+  usd_ppp_2021: 0,
+  lcu_per_intl_usd: 2,
+  lcu_per_usd: 2,
+  index_2010_100: 1,
 };
 
 export const UNIT_LABELS: Record<string, Record<Lang, string>> = {
@@ -282,4 +410,10 @@ export const UNIT_LABELS: Record<string, Record<Lang, string>> = {
   years: { pt: "anos", en: "years" },
   per_1000_live_births: { pt: "por 1.000 nascidos vivos", en: "per 1,000 live births" },
   wgi_estimate: { pt: "estimativa (≈ −2,5 a +2,5)", en: "estimate (≈ −2.5 to +2.5)" },
+  brl_month: { pt: "R$ por mês", en: "R$ per month" },
+  brl_month_real: { pt: "R$ por mês, a preços do último ano", en: "R$ per month, at prices of the latest year" },
+  usd_ppp_2021: { pt: "US$ PPC de 2021", en: "2021 PPP US$" },
+  lcu_per_intl_usd: { pt: "moeda local por US$ internacional", en: "local currency per international $" },
+  lcu_per_usd: { pt: "moeda local por US$", en: "local currency per US$" },
+  index_2010_100: { pt: "índice (2010 = 100)", en: "index (2010 = 100)" },
 };

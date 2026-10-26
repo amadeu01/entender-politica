@@ -4,6 +4,7 @@ Both are validated against the catalog, the data and the DOI registry, and rende
 JSON for the site with every number resolved and traceable (see `content`).
 """
 
+from collections.abc import Iterable
 from enum import StrEnum
 from pathlib import Path
 
@@ -99,6 +100,20 @@ class Direction(StrEnum):
     MIXED = "mixed"
 
 
+def evidence_level(methods: set[Method]) -> str:
+    """Strength of the design behind a claim about a policy's effect (ADR 0007)."""
+    if methods & {Method.RCT, Method.SYSTEMATIC_REVIEW}:
+        return "high"
+    if methods & CAUSAL_METHODS:
+        return "moderate"
+    return "low"
+
+
+def needs_contrary_search(directions: Iterable[Direction]) -> bool:
+    """True when every direction is positive, so the contrary-evidence search is required."""
+    return all(d == Direction.POSITIVE for d in directions)
+
+
 class Finding(Strict):
     outcome: Text
     result: Text
@@ -123,8 +138,10 @@ class Policy(Strict):
 
     @model_validator(mode="after")
     def _neutrality(self) -> "Policy":
-        only_positive = all(f.direction == Direction.POSITIVE for f in self.findings)
-        if only_positive and self.contrary_evidence_search is None:
+        if (
+            needs_contrary_search(f.direction for f in self.findings)
+            and self.contrary_evidence_search is None
+        ):
             raise ValueError(
                 f"{self.slug}: all findings positive; add a null/negative/mixed finding or "
                 "describe in contrary_evidence_search where contrary evidence was sought"
@@ -133,12 +150,7 @@ class Policy(Strict):
 
     @property
     def evidence_level(self) -> str:
-        methods = {f.method for f in self.findings}
-        if methods & {Method.RCT, Method.SYSTEMATIC_REVIEW}:
-            return "high"
-        if methods & CAUSAL_METHODS:
-            return "moderate"
-        return "low"
+        return evidence_level({f.method for f in self.findings})
 
 
 def load_analyses(directory: Path = ANALYSES_DIR) -> list[tuple[Analysis, dict[str, str]]]:

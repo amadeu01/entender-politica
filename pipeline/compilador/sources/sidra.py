@@ -2,6 +2,8 @@
 
 Catalog entries set `source_params`: `table`, `variable` and, when IBGE publishes it,
 `cv_variable` (coefficient of variation, in %), turned into a 95% interval.
+Optional `classification` + `category` read one category of a SIDRA classification: the whole
+classification is fetched once (`/c{classification}/all`, category in `D4C`) and shared.
 https://apisidra.ibge.gov.br/
 """
 
@@ -32,21 +34,27 @@ class SidraSource:
     def fetch(
         self, indicators: list[Indicator], geos: dict[str, Geography], client: httpx.Client
     ) -> tuple[list[RawFile], str]:
-        files, versions = [], []
+        files: dict[str, RawFile] = {}
+        versions: list[str] = []
         for ind in indicators:
             p = ind.source_params
             variables = ",".join(v for v in (p["variable"], p.get("cv_variable")) if v)
-            url = f"{VALUES_API}/t/{p['table']}/n1/all/v/{variables}/p/all?formato=json"
-            files.append(RawFile(_values_file(ind), url, _get(client, url)))
+            cls = f"/c{p['classification']}/all" if "classification" in p else ""
+            url = f"{VALUES_API}/t/{p['table']}/n1/all/v/{variables}/p/all{cls}?formato=json"
+            name = _values_file(ind)
+            if name not in files:
+                files[name] = RawFile(name, url, _get(client, url))
 
-            periods_url = f"{METADATA_API}/{p['table']}/periodos"
-            periods = _get(client, periods_url)
-            files.append(RawFile(f"{p['table']}-periodos.json", periods_url, periods))
-            versions += [
-                datetime.strptime(x["modificacao"], "%d/%m/%Y").date().isoformat()
-                for x in json.loads(periods)
-            ]
-        return _dedupe(files), max(versions)
+            periods_name = f"{p['table']}-periodos.json"
+            if periods_name not in files:
+                periods_url = f"{METADATA_API}/{p['table']}/periodos"
+                periods = _get(client, periods_url)
+                files[periods_name] = RawFile(periods_name, periods_url, periods)
+                versions += [
+                    datetime.strptime(x["modificacao"], "%d/%m/%Y").date().isoformat()
+                    for x in json.loads(periods)
+                ]
+        return list(files.values()), max(versions)
 
     def normalize(
         self, snapshot: Snapshot, indicators: list[Indicator], geos: dict[str, Geography]
@@ -57,6 +65,8 @@ class SidraSource:
             p = ind.source_params
             # First record is the header row.
             records = json.loads(snapshot.read(_values_file(ind)))[1:]
+            if "classification" in p:
+                records = [r for r in records if r["D4C"] == p["category"]]
             values = _by_year(records, p["variable"])
             cvs = _by_year(records, p["cv_variable"]) if "cv_variable" in p else {}
             for year, value in values.items():
@@ -70,18 +80,15 @@ class SidraSource:
 
 
 def _values_file(ind: Indicator) -> str:
-    return f"{ind.source_params['table']}-{ind.source_params['variable']}.json"
+    p = ind.source_params
+    suffix = f"-c{p['classification']}" if "classification" in p else ""
+    return f"{p['table']}-{p['variable']}{suffix}.json"
 
 
 def _get(client: httpx.Client, url: str) -> bytes:
     resp = client.get(url)
     resp.raise_for_status()
     return resp.content
-
-
-def _dedupe(files: list[RawFile]) -> list[RawFile]:
-    """Several indicators may share a table, and so its period metadata file."""
-    return list({f.name: f for f in files}.values())
 
 
 def _by_year(records: list[dict], variable: str) -> dict[int, float]:

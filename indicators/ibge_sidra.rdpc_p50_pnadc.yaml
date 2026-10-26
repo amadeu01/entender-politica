@@ -1,0 +1,47 @@
+id: ibge_sidra.rdpc_p50_pnadc
+source: ibge_sidra
+source_code: "7438/10769/49264"
+source_params:
+  table: "7438"
+  variable: "10769"
+  cv_variable: "10837"
+  classification: "1019"
+  category: "49264"
+unit: brl_month
+min: 0
+listed: false
+name:
+  pt: "Rendimento domiciliar per capita: limite superior do percentil 50 (PNAD Contínua)"
+  en: "Household income per capita: upper limit of percentile 50 (Continuous PNAD)"
+definition:
+  pt: >-
+    Valor de rendimento domiciliar per capita mensal, em reais correntes, abaixo do qual está 50% da população, ordenada do menor ao maior rendimento. Calculado pelo IBGE com a PNAD Contínua anual.
+  en: >-
+    Monthly household income per capita, in current reais, below which 50% of the population falls when ordered from lowest to highest income. Computed by IBGE from the annual Continuous PNAD.
+formula:
+  pt: "Percentil 50 da distribuição do rendimento domiciliar per capita, com pesos amostrais."
+  en: "Percentile 50 of the household income per capita distribution, using survey weights."
+uncertainty:
+  pt: "Intervalo de 95% calculado a partir do coeficiente de variação publicado pelo IBGE: valor ± 1,96 × valor × CV."
+  en: "95% interval computed from the coefficient of variation published by IBGE: value ± 1.96 × value × CV."
+criticisms:
+  - pt: >-
+      Pesquisa domiciliar subestima as rendas do topo, o que afeta sobretudo os percentis mais altos; os valores podem ser baixos demais no alto da distribuição.
+    en: >-
+      Household surveys underestimate top incomes, which mainly affects the highest percentiles; values may be too low at the top of the distribution.
+  - pt: >-
+      Em 2020 e 2021 a renda vem da 5ª visita (pandemia); as demais edições usam a 1ª.
+    en: >-
+      In 2020 and 2021 income comes from the 5th visit (pandemic); other editions use the 1st.
+references:
+  - citation: "IBGE. PNAD Contínua — notas metodológicas."
+    url: https://www.ibge.gov.br/estatisticas/sociais/trabalho/9171-pesquisa-nacional-por-amostra-de-domicilios-continua-mensal.html
+series_breaks:
+  - year: 2020
+    note:
+      pt: "Renda da 5ª visita da PNAD Contínua em 2020–2021 (pandemia)."
+      en: "Income from the Continuous PNAD 5th visit in 2020–2021 (pandemic)."
+  - year: 2022
+    note:
+      pt: "Retorno à 1ª visita da PNAD Contínua."
+      en: "Return to the Continuous PNAD 1st visit."

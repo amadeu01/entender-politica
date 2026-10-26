@@ -1,0 +1,31 @@
+# Faixas de renda domiciliar per capita mensal, em dolares internacionais PPC (paridade
+# do poder de compra) de 2021. Os limiares sao definidos apenas aqui.
+# Monthly household income per capita brackets in 2021 PPP international dollars.
+ppp_base_year: 2021
+thresholds_usd_ppp: [250, 500, 1000, 2000]
+percentile_indicators:
+  5: ibge_sidra.rdpc_p05_pnadc
+  10: ibge_sidra.rdpc_p10_pnadc
+  20: ibge_sidra.rdpc_p20_pnadc
+  30: ibge_sidra.rdpc_p30_pnadc
+  40: ibge_sidra.rdpc_p40_pnadc
+  50: ibge_sidra.rdpc_p50_pnadc
+  60: ibge_sidra.rdpc_p60_pnadc
+  70: ibge_sidra.rdpc_p70_pnadc
+  80: ibge_sidra.rdpc_p80_pnadc
+  90: ibge_sidra.rdpc_p90_pnadc
+  95: ibge_sidra.rdpc_p95_pnadc
+  99: ibge_sidra.rdpc_p99_pnadc
+ppp_indicator: wdi.pa_nus_prvt_pp
+cpi_indicator: wdi.fp_cpi_totl
+# Guias que sempre mostram as secoes de renda e poder de compra.
+income_indicators:
+  - wdi.ny_gdp_pcap_kd
+  - wdi.fp_cpi_totl_zg
+  - wdi.si_pov_dday
+  - wdi.si_pov_gini
+  - ibge_sidra.gini_pnadc
+  - ipeadata.disoc_ppy
+  - ipeadata.disoc_rdcg
+  - undp_hdr.hdi
+  - undp_hdr.ihdi

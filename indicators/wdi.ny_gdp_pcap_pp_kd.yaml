@@ -1,0 +1,28 @@
+id: wdi.ny_gdp_pcap_pp_kd
+source: wdi
+source_code: NY.GDP.PCAP.PP.KD
+unit: usd_ppp_2021
+min: 0
+name:
+  pt: "PIB per capita, paridade de poder de compra (US$ internacionais constantes de 2021)"
+  en: "GDP per capita, purchasing power parity (constant 2021 international $)"
+definition:
+  pt: >-
+    PIB dividido pela população no meio do ano, convertido por paridade de poder de compra para dólares internacionais constantes de 2021. Permite comparar o tamanho da economia por pessoa entre países.
+  en: >-
+    GDP divided by midyear population, converted by purchasing power parity to constant 2021 international dollars. Allows comparing the size of the economy per person across countries.
+formula:
+  pt: "PIB real a PPC (US$ internacionais de 2021) / população."
+  en: "Real GDP at PPP (2021 international $) / population."
+criticisms:
+  - pt: >-
+      Não mede bem-estar nem distribuição: ignora desigualdade, lazer e produção fora do mercado.
+    en: >-
+      Does not measure welfare or distribution: ignores inequality, leisure and non-market production.
+  - pt: >-
+      Comparações de nível dependem da rodada do Programa de Comparação Internacional (ICP) usada para calcular a paridade; revisões entre rodadas alteram os valores.
+    en: >-
+      Level comparisons depend on the International Comparison Program (ICP) round used to compute the parity; revisions between rounds change the values.
+references:
+  - citation: "World Bank. World Development Indicators — NY.GDP.PCAP.PP.KD."
+    url: https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD

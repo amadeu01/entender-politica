@@ -5,6 +5,7 @@
 - { pt: "controle sintético", en: "synthetic control" }
 - { pt: "desigualdade de renda", en: "income inequality" }
 - { pt: "diferenças-em-diferenças", en: "difference-in-differences" }
+- { pt: "faixa de renda", en: "income bracket" }
 - { pt: "ficha de política", en: "policy brief" }
 - { pt: "gasto social", en: "social spending" }
 - { pt: "governo interino", en: "acting government" }
@@ -14,8 +15,11 @@
 - { pt: "limitações", en: "limitations" }
 - { pt: "margem de erro", en: "margin of error" }
 - { pt: "nível de evidência", en: "level of evidence" }
+- { pt: "paridade do poder de compra (PPC)", en: "purchasing power parity (PPP)" }
+- { pt: "percentil", en: "percentile" }
 - { pt: "PNAD Contínua", en: "Continuous PNAD (Brazilian national household survey)" }
-- { pt: "quebra de série", en: "series break" }
 - { pt: "quase-experimento", en: "quasi-experiment" }
+- { pt: "quebra de série", en: "series break" }
+- { pt: "renda domiciliar per capita", en: "household income per capita" }
 - { pt: "transferência condicionada de renda", en: "conditional cash transfer" }
 - { pt: "validade externa", en: "external validity" }

@@ -1,0 +1,29 @@
+id: wdi.pa_nus_fcrf
+source: wdi
+source_code: PA.NUS.FCRF
+unit: lcu_per_usd
+min: 0
+listed: false
+name:
+  pt: "Taxa de câmbio oficial (moeda local por US$, média do período)"
+  en: "Official exchange rate (local currency units per US$, period average)"
+definition:
+  pt: >-
+    Taxa de câmbio oficial média do ano: quantas unidades da moeda local (reais, para o Brasil) valem 1 dólar americano.
+  en: >-
+    Average official exchange rate for the year: how many units of local currency (reais, for Brazil) equal 1 US dollar.
+formula:
+  pt: "Média anual da taxa de câmbio oficial (moeda local / US$)."
+  en: "Annual average of the official exchange rate (local currency / US$)."
+criticisms:
+  - pt: >-
+      Taxa de câmbio de mercado não reflete diferenças de preços entre países; para comparar poder de compra use a paridade de poder de compra.
+    en: >-
+      The market exchange rate does not reflect price differences across countries; to compare purchasing power use purchasing power parity.
+  - pt: >-
+      É uma média anual e pode oscilar fortemente de um ano para o outro por razões financeiras, sem mudança equivalente no poder de compra interno.
+    en: >-
+      It is an annual average and can swing sharply from year to year for financial reasons, without an equivalent change in domestic purchasing power.
+references:
+  - citation: "World Bank. World Development Indicators — PA.NUS.FCRF."
+    url: https://data.worldbank.org/indicator/PA.NUS.FCRF

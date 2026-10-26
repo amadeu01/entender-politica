@@ -1,4 +1,16 @@
 {
+ "10.1002/jae.2663": {
+  "doi": "10.1002/jae.2663",
+  "title": "Actual and counterfactual growth incidence and delta Lorenz curves: Estimation and inference",
+  "container": "Journal of Applied Econometrics",
+  "year": 2018,
+  "authors": [
+   "Ferreira",
+   "Firpo",
+   "Galvao"
+  ],
+  "bibtex": "@article{Ferreira_2018, title={Actual and counterfactual growth incidence and delta Lorenz curves: Estimation and inference}, volume={34}, ISSN={1099-1255}, url={http://dx.doi.org/10.1002/jae.2663}, DOI={10.1002/jae.2663}, number={3}, journal={Journal of Applied Econometrics}, publisher={Wiley}, author={Ferreira, Francisco H.G. and Firpo, Sergio and Galvao, Antonio F.}, year={2018}, month=Oct, pages={385–402} }"
+ },
  "10.1007/s12116-018-9268-z": {
   "doi": "10.1007/s12116-018-9268-z",
   "title": "Measuring Polyarchy Across the Globe, 1900–2017",
@@ -108,6 +120,18 @@
   ],
   "bibtex": "@article{Knutsen_2024, title={Conceptual and Measurement Issues in Assessing Democratic Backsliding}, volume={57}, ISSN={1537-5935}, url={http://dx.doi.org/10.1017/s104909652300077x}, DOI={10.1017/s104909652300077x}, number={2}, journal={PS: Political Science \\& Politics}, publisher={Cambridge University Press (CUP)}, author={Knutsen, Carl Henrik and Marquardt, Kyle L. and Seim, Brigitte and Coppedge, Michael and Edgell, Amanda B. and Medzihorsky, Juraj and Pemstein, Daniel and Teorell, Jan and Gerring, John and Lindberg, Staffan I.}, year={2024}, month=Jan, pages={162–177} }"
  },
+ "10.1017/s1365100507070137": {
+  "doi": "10.1017/s1365100507070137",
+  "title": "THE RISE AND FALL OF BRAZILIAN INEQUALITY: 1981–2004",
+  "container": "Macroeconomic Dynamics",
+  "year": 2008,
+  "authors": [
+   "Ferreira",
+   "Leite",
+   "Litchfield"
+  ],
+  "bibtex": "@article{Ferreira_2008, title={THE RISE AND FALL OF BRAZILIAN INEQUALITY: 1981–2004}, volume={12}, ISSN={1469-8056}, url={http://dx.doi.org/10.1017/s1365100507070137}, DOI={10.1017/s1365100507070137}, number={S2}, journal={Macroeconomic Dynamics}, publisher={Cambridge University Press (CUP)}, author={Ferreira, Francisco H. G. and Leite, Phillippe G. and Litchfield, Julie A.}, year={2008}, month=Sept, pages={199–230} }"
+ },
  "10.1017/s1537592711000880": {
   "doi": "10.1017/s1537592711000880",
   "title": "Conceptualizing and Measuring Democracy: A New Approach",
@@ -142,6 +166,32 @@
    "Mastruzzi"
   ],
   "bibtex": "@article{Kaufmann_2011, title={The Worldwide Governance Indicators: Methodology and Analytical Issues}, volume={3}, ISSN={1876-4053}, url={http://dx.doi.org/10.1017/s1876404511200046}, DOI={10.1017/s1876404511200046}, number={02}, journal={Hague Journal on the Rule of Law}, publisher={Springer Science and Business Media LLC}, author={Kaufmann, Daniel and Kraay, Aart and Mastruzzi, Massimo}, year={2011}, month=Sept, pages={220–246} }"
+ },
+ "10.1037/a0029873": {
+  "doi": "10.1037/a0029873",
+  "title": "The new stylized facts about income and subjective well-being.",
+  "container": "Emotion",
+  "year": 2012,
+  "authors": [
+   "Sacks",
+   "Stevenson",
+   "Wolfers"
+  ],
+  "bibtex": "@article{Sacks_2012, title={The new stylized facts about income and subjective well-being.}, volume={12}, ISSN={1528-3542}, url={http://dx.doi.org/10.1037/a0029873}, DOI={10.1037/a0029873}, number={6}, journal={Emotion}, publisher={American Psychological Association (APA)}, author={Sacks, Daniel W. and Stevenson, Betsey and Wolfers, Justin}, year={2012}, pages={1181–1187} }"
+ },
+ "10.1073/pnas.1015962107": {
+  "doi": "10.1073/pnas.1015962107",
+  "title": "The happiness–income paradox revisited",
+  "container": "Proceedings of the National Academy of Sciences",
+  "year": 2010,
+  "authors": [
+   "Easterlin",
+   "McVey",
+   "Switek",
+   "Sawangfa",
+   "Zweig"
+  ],
+  "bibtex": "@article{Easterlin_2010, title={The happiness–income paradox revisited}, volume={107}, ISSN={1091-6490}, url={http://dx.doi.org/10.1073/pnas.1015962107}, DOI={10.1073/pnas.1015962107}, number={52}, journal={Proceedings of the National Academy of Sciences}, publisher={National Academy of Sciences}, author={Easterlin, Richard A. and McVey, Laura Angelescu and Switek, Malgorzata and Sawangfa, Onnicha and Zweig, Jacqueline Smith}, year={2010}, month=Dec, pages={22463–22468} }"
  },
  "10.1080/19439342.2014.890362": {
   "doi": "10.1080/19439342.2014.890362",
@@ -180,6 +230,18 @@
   ],
   "bibtex": "@article{Ravallion_2009, title={Dollar a Day Revisited}, volume={23}, ISSN={0258-6770}, url={http://dx.doi.org/10.1093/wber/lhp007}, DOI={10.1093/wber/lhp007}, number={2}, journal={The World Bank Economic Review}, publisher={Oxford University Press (OUP)}, author={Ravallion, Martin and Chen, Shaohua and Sangraula, Prem}, year={2009}, month=Jan, pages={163–184} }"
  },
+ "10.1111/ajps.12116": {
+  "doi": "10.1111/ajps.12116",
+  "title": "Comparative Politics and the Synthetic Control Method",
+  "container": "American Journal of Political Science",
+  "year": 2014,
+  "authors": [
+   "Abadie",
+   "Diamond",
+   "Hainmueller"
+  ],
+  "bibtex": "@article{Abadie_2014, title={Comparative Politics and the Synthetic Control Method: COMPARATIVE POLITICS AND THE SYNTHETIC CONTROL METHOD}, volume={59}, ISSN={0092-5853}, url={http://dx.doi.org/10.1111/ajps.12116}, DOI={10.1111/ajps.12116}, number={2}, journal={American Journal of Political Science}, publisher={Wiley}, author={Abadie, Alberto and Diamond, Alexis and Hainmueller, Jens}, year={2014}, month=Apr, pages={495–510} }"
+ },
  "10.1126/science.1069675": {
   "doi": "10.1126/science.1069675",
   "title": "Broken Limits to Life Expectancy",
@@ -190,6 +252,17 @@
    "Vaupel"
   ],
   "bibtex": "@article{Oeppen_2002, title={Broken Limits to Life Expectancy}, volume={296}, ISSN={1095-9203}, url={http://dx.doi.org/10.1126/science.1069675}, DOI={10.1126/science.1069675}, number={5570}, journal={Science}, publisher={American Association for the Advancement of Science (AAAS)}, author={Oeppen, Jim and Vaupel, James W.}, year={2002}, month=May, pages={1029–1031} }"
+ },
+ "10.1162/rest_a_00324": {
+  "doi": "10.1162/rest_a_00324",
+  "title": "Assessing Economic Liberalization Episodes: A Synthetic Control Approach",
+  "container": "Review of Economics and Statistics",
+  "year": 2013,
+  "authors": [
+   "Billmeier",
+   "Nannicini"
+  ],
+  "bibtex": "@article{Billmeier_2013, title={Assessing Economic Liberalization Episodes: A Synthetic Control Approach}, volume={95}, ISSN={1530-9142}, url={http://dx.doi.org/10.1162/rest_a_00324}, DOI={10.1162/rest_a_00324}, number={3}, journal={Review of Economics and Statistics}, publisher={MIT Press}, author={Billmeier, Andreas and Nannicini, Tommaso}, year={2013}, month=July, pages={983–1001} }"
  },
  "10.1214/14-aoas768": {
   "doi": "10.1214/14-aoas768",
@@ -212,6 +285,17 @@
    "Klenow"
   ],
   "bibtex": "@article{Jones_2016, title={Beyond GDP? Welfare across Countries and Time}, volume={106}, ISSN={0002-8282}, url={http://dx.doi.org/10.1257/aer.20110236}, DOI={10.1257/aer.20110236}, number={9}, journal={American Economic Review}, publisher={American Economic Association}, author={Jones, Charles I. and Klenow, Peter J.}, year={2016}, month=Sept, pages={2426–2457} }"
+ },
+ "10.1257/aer.20161214": {
+  "doi": "10.1257/aer.20161214",
+  "title": "Trade Liberalization and Regional Dynamics",
+  "container": "American Economic Review",
+  "year": 2017,
+  "authors": [
+   "Dix-Carneiro",
+   "Kovak"
+  ],
+  "bibtex": "@article{Dix_Carneiro_2017, title={Trade Liberalization and Regional Dynamics}, volume={107}, ISSN={0002-8282}, url={http://dx.doi.org/10.1257/aer.20161214}, DOI={10.1257/aer.20161214}, number={10}, journal={American Economic Review}, publisher={American Economic Association}, author={Dix-Carneiro, Rafael and Kovak, Brian K.}, year={2017}, month=Oct, pages={2908–2946} }"
  },
  "10.1257/aer.20181506": {
   "doi": "10.1257/aer.20181506",
@@ -308,5 +392,15 @@
    "Zepeda"
   ],
   "bibtex": "@article{Soares_2009, title={Conditional cash transfers in Brazil, Chile and Mexico: Impacts upon inequality}, ISSN={0188-6916}, url={http://dx.doi.org/10.24201/ee.v0i0.387}, DOI={10.24201/ee.v0i0.387}, journal={Estudios Económicos de El Colegio de México}, publisher={El Colegio de Mexico, A.C.}, author={Soares, Sergei and Guerreiro Osório, Rafael and Veras Soares, Fábio and Medeiros, Marcelo and Zepeda, Eduardo}, year={2009}, month=Jan, pages={207–224} }"
+ },
+ "10.5935/0034-7140.20170011": {
+  "doi": "10.5935/0034-7140.20170011",
+  "title": "Free trade zone of Manaus: Na impact evaluation using the synthetic control method",
+  "container": "Revista Brasileira de Economia",
+  "year": 2017,
+  "authors": [
+   "Possebom"
+  ],
+  "bibtex": "@article{Possebom_2017, title={Free trade zone of Manaus: Na impact evaluation using the synthetic control method}, volume={71}, ISSN={0034-7140}, url={http://dx.doi.org/10.5935/0034-7140.20170011}, DOI={10.5935/0034-7140.20170011}, number={2}, journal={Revista Brasileira de Economia}, publisher={GN1 Sistemas e Publicacoes Ltd.}, author={Possebom, Vitor Augusto}, year={2017} }"
  }
 }

@@ -15,12 +15,14 @@ from compilador import (
     DATA_DIR,
     REPO_ROOT,
     analyses,
+    brackets,
     catalog,
     changelog,
     content,
     dois,
     geography,
     governments,
+    guides,
     periods,
     snapshot,
 )
@@ -46,7 +48,9 @@ class Paths:
     indicators: Path = catalog.INDICATORS_DIR
     analyses: Path = ANALYSES_DIR
     policies: Path = POLICIES_DIR
+    guides: Path = guides.GUIDES_DIR
     dois: Path = DOIS_FILE
+    brackets: Path = brackets.BRACKETS_FILE
 
 
 @dataclass(frozen=True)
@@ -90,7 +94,8 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     indicators = catalog.load(paths.indicators)
     df, versions = compile_observations(paths)
     report = validate(df, indicators, geography.load())
-    documents = compile_documents(df, indicators, paths)
+    bracket_cfg = bracket_config(paths, indicators)
+    documents = compile_documents(df, indicators, paths, bracket_cfg)
 
     previous = paths.processed / f"{OBSERVATIONS}.parquet"
     old = pd.read_parquet(previous) if previous.exists() else empty()
@@ -100,7 +105,7 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     df.to_parquet(previous, index=False)
     df.to_csv(paths.processed / f"{OBSERVATIONS}.csv", index=False)
     _write_json(paths.processed / "validation.json", report.to_dict())
-    export_site(df, indicators, paths.site)
+    export_site(df, indicators, paths.site, bracket_cfg)
     for name, doc in documents.items():
         _write_json(paths.site / name, doc)
     registry = dois.load(paths.dois)
@@ -113,12 +118,48 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     return Result(df, report, changes)
 
 
+ICP_GUARD_INDICATOR = "wdi.ny_gdp_pcap_pp_kd"
+
+
+def bracket_config(
+    paths: Paths, indicators: dict[str, catalog.Indicator]
+) -> brackets.Config | None:
+    """Income bracket config, or None when its input indicators are not in the catalog.
+
+    Also guards against the World Bank moving to a new ICP round: the WDI name of the
+    PPP series must still mention the base year the brackets are expressed in.
+    """
+    config = brackets.load(paths.brackets)
+    if not set(config.input_indicators) <= set(indicators):
+        return None
+    config = brackets.load(paths.brackets, indicators)
+    if ICP_GUARD_INDICATOR in indicators:
+        snap = snapshot.latest("wdi", paths.raw)
+        code = indicators[ICP_GUARD_INDICATOR].source_code
+        if snap is not None and f"{code}.json" in snap.files:
+            payload = json.loads(snap.read(f"{code}.json"))
+            name = payload[1][0]["indicator"]["value"] if len(payload) > 1 and payload[1] else ""
+            if str(config.ppp_base_year) not in name:
+                raise ValidationError(
+                    [
+                        f"WDI names {code} '{name}', which lacks the PPP base year "
+                        f"{config.ppp_base_year}: the ICP round changed, review "
+                        f"{paths.brackets.name}"
+                    ]
+                )
+    return config
+
+
 def all_dois(paths: Paths) -> set[str]:
     """Every DOI cited in the catalog, analyses and policy briefs."""
     indicators = catalog.load(paths.indicators)
     found = {r.doi.lower() for i in indicators.values() for r in i.references if r.doi}
-    return found | analyses.cited_dois(
-        analyses.load_analyses(paths.analyses), analyses.load_policies(paths.policies)
+    return (
+        found
+        | analyses.cited_dois(
+            analyses.load_analyses(paths.analyses), analyses.load_policies(paths.policies)
+        )
+        | guides.cited_dois(guides.load_guides(paths.guides))
     )
 
 
@@ -127,6 +168,7 @@ def citation_errors(paths: Paths, registry: dict[str, dict]) -> list[str]:
     refs = [r for i in catalog.load(paths.indicators).values() for r in i.references]
     refs += [r for a, _ in analyses.load_analyses(paths.analyses) for r in a.references]
     refs += [r for p in analyses.load_policies(paths.policies) for r in p.references]
+    refs += [r for g in guides.load_guides(paths.guides) for r in g.references]
     return sorted(
         {
             f"citation year differs from Crossref ({entry['year']}): {r.citation}"
@@ -140,13 +182,18 @@ def citation_errors(paths: Paths, registry: dict[str, dict]) -> list[str]:
 
 
 def compile_documents(
-    df: pd.DataFrame, indicators: dict[str, catalog.Indicator], paths: Paths
+    df: pd.DataFrame,
+    indicators: dict[str, catalog.Indicator],
+    paths: Paths,
+    bracket_cfg: brackets.Config | None,
 ) -> dict[str, object]:
-    """Check and render analyses and policy briefs: {site-relative path: JSON document}."""
+    """Check and render analyses, policy briefs and guides: {site path: JSON document}."""
     docs = analyses.load_analyses(paths.analyses)
     policies = analyses.load_policies(paths.policies)
+    guide_docs = guides.load_guides(paths.guides)
     registry = dois.load(paths.dois)
     errors = analyses.check(docs, policies, indicators, set(geography.load()))
+    errors += guides.check(guide_docs, indicators, {p.slug for p in policies}, bracket_cfg)
     errors += [
         f"DOI not verified: {d} (run `compilador verify-dois`)"
         for d in dois.missing(all_dois(paths), registry)
@@ -156,7 +203,7 @@ def compile_documents(
         raise ValidationError(errors)
 
     out: dict[str, object] = {}
-    index: dict[str, list] = {"analyses": [], "policies": []}
+    index: dict[str, list] = {"analyses": [], "policies": [], "guides": []}
     try:
         for lang in analyses.LANGS:
             for a, bodies in docs:
@@ -169,6 +216,11 @@ def compile_documents(
                 index["policies"].append(
                     {"slug": p.slug, "lang": lang, "name": doc["name"], "country": p.country}
                 )
+        for g in guide_docs:
+            for lang in analyses.LANGS:
+                path = f"guides/{g.indicator}.{lang}.json"
+                out[path] = guides.render_guide(g, lang, df, indicators, registry, bracket_cfg)
+            index["guides"].append(g.indicator)
     except content.ContentError as e:
         raise ValidationError([str(e)]) from e
     out["documents.json"] = index
@@ -186,7 +238,12 @@ def _write_json(path: Path, obj: object) -> None:
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=1, default=str) + "\n")
 
 
-def export_site(df: pd.DataFrame, indicators: dict[str, catalog.Indicator], out: Path) -> None:
+def export_site(
+    df: pd.DataFrame,
+    indicators: dict[str, catalog.Indicator],
+    out: Path,
+    bracket_cfg: brackets.Config | None = None,
+) -> None:
     """Write the JSON/CSV files the static site reads."""
     _write_json(out / "catalog.json", [i.model_dump(mode="json") for i in indicators.values()])
     govs = governments.load()
@@ -195,6 +252,16 @@ def export_site(df: pd.DataFrame, indicators: dict[str, catalog.Indicator], out:
     last_year = int(df["year"].max()) if len(df) else govs.periods[0].start.year
     if set(periods.TABLE_INDICATORS) <= set(units):
         _write_json(out / "period_changes.json", periods.changes(df, govs, units, last_year))
+    if bracket_cfg is not None:
+        _write_json(
+            out / "income_brackets.json",
+            {
+                "config": bracket_cfg.model_dump(mode="json")
+                | {"labels": bracket_cfg.labels, "method": "linear_interpolation"},
+                "years": brackets.distribution(df, bracket_cfg),
+                "sources": brackets.sources(df, bracket_cfg),
+            },
+        )
     _write_json(
         out / "geographies.json", [g.model_dump(mode="json") for g in geography.load().values()]
     )

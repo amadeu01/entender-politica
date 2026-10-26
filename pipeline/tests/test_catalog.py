@@ -35,3 +35,8 @@ def test_file_name_must_match_id(tmp_path, gini):
     (tmp_path / "wrong.yaml").write_text(gini.model_dump_json())
     with pytest.raises(ValueError, match="file name"):
         catalog.load(tmp_path)
+
+
+def test_listed_defaults_true_and_can_be_false():
+    assert make_indicator().listed is True
+    assert make_indicator(listed=False).listed is False

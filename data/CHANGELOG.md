@@ -8,6 +8,54 @@
 - Fonte / Source `vdem`: versão / version `v16`
 - Fonte / Source `wdi`: versão / version `2026-10-08`
 - Fonte / Source `wgi`: versão / version `2026-09-25`
+- Séries novas / New series: 35
+  - `ibge_sidra.rdpc_mediana_real_pnadc BRA`
+  - `ibge_sidra.rdpc_p05_pnadc BRA`
+  - `ibge_sidra.rdpc_p10_pnadc BRA`
+  - `ibge_sidra.rdpc_p20_pnadc BRA`
+  - `ibge_sidra.rdpc_p30_pnadc BRA`
+  - `ibge_sidra.rdpc_p40_pnadc BRA`
+  - `ibge_sidra.rdpc_p50_pnadc BRA`
+  - `ibge_sidra.rdpc_p60_pnadc BRA`
+  - `ibge_sidra.rdpc_p70_pnadc BRA`
+  - `ibge_sidra.rdpc_p80_pnadc BRA`
+  - `ibge_sidra.rdpc_p90_pnadc BRA`
+  - `ibge_sidra.rdpc_p95_pnadc BRA`
+  - `ibge_sidra.rdpc_p99_pnadc BRA`
+  - `ibge_sidra.trabalho_mediana_real_pnadc BRA`
+  - `wdi.fp_cpi_totl BRA`
+  - `wdi.fp_cpi_totl CHL`
+  - `wdi.fp_cpi_totl COL`
+  - `wdi.fp_cpi_totl MEX`
+  - `wdi.ny_gdp_pcap_pp_kd ARG`
+  - `wdi.ny_gdp_pcap_pp_kd BRA`
+  - `wdi.ny_gdp_pcap_pp_kd CHL`
+  - `wdi.ny_gdp_pcap_pp_kd COL`
+  - `wdi.ny_gdp_pcap_pp_kd LCN`
+  - `wdi.ny_gdp_pcap_pp_kd MEX`
+  - `wdi.ny_gdp_pcap_pp_kd WLD`
+  - `wdi.pa_nus_fcrf ARG`
+  - `wdi.pa_nus_fcrf BRA`
+  - `wdi.pa_nus_fcrf CHL`
+  - `wdi.pa_nus_fcrf COL`
+  - `wdi.pa_nus_fcrf MEX`
+  - `wdi.pa_nus_prvt_pp ARG`
+  - `wdi.pa_nus_prvt_pp BRA`
+  - `wdi.pa_nus_prvt_pp CHL`
+  - `wdi.pa_nus_prvt_pp COL`
+  - `wdi.pa_nus_prvt_pp MEX`
+- Observações adicionadas / Observations added: 1053
+- Observações removidas / Observations removed: 0
+- Valores revisados pela fonte / Values revised upstream: 0
+
+## 2026-10-26
+
+- Fonte / Source `ibge_sidra`: versão / version `2026-05-08`
+- Fonte / Source `ipeadata`: versão / version `2016-01-06`
+- Fonte / Source `undp_hdr`: versão / version `HDR 2025`
+- Fonte / Source `vdem`: versão / version `v16`
+- Fonte / Source `wdi`: versão / version `2026-10-08`
+- Fonte / Source `wgi`: versão / version `2026-09-25`
 - Séries novas / New series: 15
   - `vdem.v2x_egaldem ARG`
   - `vdem.v2x_egaldem BRA`

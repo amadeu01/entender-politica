@@ -10,7 +10,7 @@ const t = UI[lang];
 const docs = documents();
 const analyses = docs.analyses.filter((a) => a.lang === lang);
 const policies = docs.policies.filter((p) => p.lang === lang);
-const nIndicators = catalog().length;
+const nIndicators = catalog().filter((i) => i.listed !== false).length;
 const copy = {
   pt: {
     lede: "Um site para entender mudanças políticas e de políticas públicas no Brasil desde 1980 com dados abertos, métricas consagradas e artigos revisados por pares. Cada número leva à sua fonte.",

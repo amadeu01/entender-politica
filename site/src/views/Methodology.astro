@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import { REPO, UI, asset, type Lang } from "../lib/i18n";
+import { REPO, UI, asset, url, type Lang } from "../lib/i18n";
 interface Props {
   lang: Lang;
 }
@@ -50,6 +50,7 @@ const adr = (n: string) => `${REPO}/blob/main/docs/adr/${n}`;
           externos pesam e o Congresso, os estados e o Banco Central também decidem. Por isso o Brasil aparece
           sempre ao lado de países vizinhos, e afirmações causais só aparecem em análises com desenho causal
           (<a href={adr("0003-governos-e-causalidade.md")}>ADR 0003</a>).
+          Para entender o que cada tipo de estudo mostra, veja <a href={url(lang, "studies")}>como ler estudos</a>.
         </p>
 
         <h2>Quebras de série e incerteza</h2>
@@ -110,6 +111,7 @@ const adr = (n: string) => `${REPO}/blob/main/docs/adr/${n}`;
           states and the central bank also decide. That is why Brazil is always shown alongside neighboring
           countries, and causal claims appear only in analyses with a causal design
           (<a href={adr("0003-governos-e-causalidade.md")}>ADR 0003</a>).
+          To see what each type of study can show, read <a href={url(lang, "studies")}>how to read studies</a>.
         </p>
 
         <h2>Series breaks and uncertainty</h2>
