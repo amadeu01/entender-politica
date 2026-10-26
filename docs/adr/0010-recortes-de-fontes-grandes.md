@@ -1,6 +1,6 @@
 # 0010 — Recortes de fontes grandes / Extracts of large sources
 
-- **Status:** aceito / accepted
+- **Status:** aceito; altera a regra de tamanho do ADR 0002 / accepted; amends ADR 0002's size rule
 - **Data / Date:** 2026-10-25
 
 ## pt-BR
@@ -13,8 +13,8 @@ países desde 1789, do qual usamos poucas colunas de poucos países.
 ### Decisão
 Para fontes acima do limite, o snapshot guarda:
 - um **recorte determinístico** do arquivo original: só as geografias cobertas, só as
-  colunas do catálogo, só os anos a partir de 1975, com os valores copiados como texto e
-  as linhas ordenadas;
+  colunas do catálogo, só os anos a partir do ano inicial da coleta (`START_YEAR`, ADR
+  0009), com os valores copiados como texto e as linhas ordenadas;
 - um `upstream.json` com a URL, o nome do arquivo dentro do pacote, o tamanho e o sha256
   do arquivo original, e o filtro aplicado.
 
@@ -34,9 +34,15 @@ Qualquer pessoa pode baixar o original, conferir o hash e reproduzir o recorte c
 
 ## English
 
+### Context
+ADR 0002 commits raw data while each source is under 5 MB. V-Dem publishes one file of
+about 16 MB zipped (200 MB unzipped) covering every country since 1789, of which we use a
+few columns for a few countries.
+
 ### Decision
 For sources above the size limit, the snapshot keeps a **deterministic extract** (covered
-geographies, catalog columns, years from 1975, values copied as text, sorted rows) and an
+geographies, catalog columns, years from the collection start year `START_YEAR` (ADR 0009),
+values copied as text, sorted rows) and an
 `upstream.json` with the original file's URL, archive member, size, sha256 and the filter.
 Anyone can download the original, check the hash and re-derive the extract with the
 connector's `extract` function. CI rebuilds everything from the committed extract.

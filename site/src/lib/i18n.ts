@@ -52,7 +52,8 @@ export const UI = {
     viewSourceCode: "código da coleta",
     otherLang: "English",
     otherLangCode: "en",
-    footer: "Código sob licença MIT. Conteúdo sob CC BY 4.0. Dados sob a licença de cada fonte.",
+    footer:
+      "Código sob licença MIT. Conteúdo sob CC BY 4.0. Dados e gráficos sob a licença de cada fonte, indicada em cada gráfico (os derivados do V-Dem são CC BY-SA 4.0).",
     source: "Fonte",
     license: "Licença",
     version: "Versão da fonte",
@@ -138,7 +139,8 @@ export const UI = {
     viewSourceCode: "collection code",
     otherLang: "Português",
     otherLangCode: "pt-BR",
-    footer: "Code under the MIT license. Content under CC BY 4.0. Data under each source's license.",
+    footer:
+      "Code under the MIT license. Content under CC BY 4.0. Data and charts under each source's license, shown on each chart (V-Dem-derived ones are CC BY-SA 4.0).",
     source: "Source",
     license: "License",
     version: "Source version",

@@ -40,10 +40,11 @@ licenses; Brazilian public bodies usually publish their own terms without an SPD
 identifier.
 
 ### Decision
-V-Dem: `CC-BY-SA-4.0` (share-alike: V-Dem-derived data and charts are distributed under
-CC BY-SA 4.0, not CC BY 4.0; checked on 2026-10-25). World Bank (WDI, WGI): `CC-BY-4.0`. UNDP HDR: `CC-BY-3.0-IGO` (terms checked on
+World Bank (WDI, WGI): `CC-BY-4.0`. UNDP HDR: `CC-BY-3.0-IGO` (terms checked on
 2026-10-25). IBGE SIDRA: `LicenseRef-IBGE-reuse-with-attribution`. Ipeadata:
-`LicenseRef-Ipeadata-reuse-with-attribution`. `LicenseRef-*` follows the SPDX convention
+`LicenseRef-Ipeadata-reuse-with-attribution`. V-Dem: `CC-BY-SA-4.0` (share-alike:
+V-Dem-derived data and charts are distributed under CC BY-SA 4.0, not CC BY 4.0; checked
+on 2026-10-25). `LicenseRef-*` follows the SPDX convention
 for licenses without an official identifier.
 
 ### Verification pending
