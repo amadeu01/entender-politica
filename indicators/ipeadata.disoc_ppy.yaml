@@ -1,0 +1,45 @@
+id: ipeadata.disoc_ppy
+source: ipeadata
+source_code: DISOC_PPY
+unit: percent
+min: 0
+max: 100
+name:
+  pt: "Taxa de pobreza com linhas regionais (PNAD, 1976–2014)"
+  en: "Poverty rate with regional lines (PNAD, 1976–2014)"
+definition:
+  pt: >-
+    Percentual de pessoas com renda domiciliar per capita abaixo da linha de pobreza
+    calculada pelo Ipea, que é o dobro da linha de extrema pobreza (custo de uma cesta
+    alimentar com as calorias mínimas recomendadas por FAO e OMS), com valores diferentes
+    para 24 regiões do país. Calculada a partir da antiga PNAD; interrompida em 2014.
+  en: >-
+    Share of people with household income per capita below the poverty line computed by
+    Ipea, set at twice the extreme poverty line (cost of a food basket meeting FAO/WHO
+    minimum calorie recommendations), with different values for 24 regions of the
+    country. Computed from the old PNAD; discontinued in 2014.
+formula:
+  pt: "P₀ = (1/N)·Σ 1[yᵢ < zᵣ], com linha zᵣ específica da região r (índice FGT com α = 0)."
+  en: "P₀ = (1/N)·Σ 1[yᵢ < zᵣ], with a line zᵣ specific to region r (FGT index with α = 0)."
+criticisms:
+  - pt: >-
+      Linhas de pobreza nacionais e internacionais dão níveis muito diferentes; compare
+      tendências, não níveis, com a série do Banco Mundial.
+    en: >-
+      National and international poverty lines give very different levels; compare
+      trends, not levels, with the World Bank series.
+  - pt: >-
+      Em 1986 a taxa cai muito e volta a subir em 1987, coincidindo com o congelamento de
+      preços do Plano Cruzado; leia esse ano com cautela.
+    en: >-
+      In 1986 the rate drops sharply and rises again in 1987, coinciding with the Cruzado
+      Plan price freeze; read that year with caution.
+  - pt: "Sem dados em anos de Censo (1980, 1991, 2000, 2010) e em 1994."
+    en: "No data in census years (1980, 1991, 2000, 2010) or in 1994."
+references:
+  - citation: "Foster, J., Greer, J., & Thorbecke, E. (1984). A class of decomposable poverty measures. Econometrica, 52(3), 761–766."
+    doi: 10.2307/1913475
+  - citation: "Barros, R. P., Henriques, R., & Mendonça, R. (2000). Desigualdade e pobreza no Brasil: retrato de uma estabilidade inaceitável. Revista Brasileira de Ciências Sociais, 15(42), 123–142."
+    doi: 10.1590/S0102-69092000000100009
+  - citation: "Ipeadata — série DISOC_PPY."
+    url: http://www.ipeadata.gov.br/

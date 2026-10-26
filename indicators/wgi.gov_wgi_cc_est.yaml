@@ -1,0 +1,48 @@
+id: wgi.gov_wgi_cc_est
+source: wgi
+source_code: GOV_WGI_CC.EST
+unit: wgi_estimate
+min: -3
+max: 3
+name:
+  pt: "Controle da corrupção (WGI)"
+  en: "Control of corruption (WGI)"
+definition:
+  pt: >-
+    Percepção de quanto o poder público é usado para ganho privado, incluindo pequena e grande corrupção. Estimativa em unidades de uma distribuição normal padrão (média 0 e desvio
+    padrão 1 entre os países), que vai aproximadamente de −2,5 a +2,5. Combina dezenas de
+    pesquisas e avaliações de especialistas, ONGs e organismos internacionais.
+  en: >-
+    Perceptions of the extent to which public power is exercised for private gain, including petty and grand corruption. Estimate in units of a standard normal distribution (mean 0 and standard
+    deviation 1 across countries), roughly from −2.5 to +2.5. Aggregates dozens of
+    surveys and assessments by experts, NGOs and international organizations.
+formula:
+  pt: "Modelo de componentes não observados que pondera cada fonte pela sua precisão (Kaufmann, Kraay e Mastruzzi, 2011)."
+  en: "Unobserved components model weighting each source by its precision (Kaufmann, Kraay and Mastruzzi, 2011)."
+uncertainty:
+  pt: "Intervalo de confiança de 90%: estimativa ± 1,645 × erro padrão publicado pelo WGI."
+  en: "90% confidence interval: estimate ± 1.645 × standard error published by the WGI."
+criticisms:
+  - pt: >-
+      Os intervalos de confiança são largos: diferenças pequenas entre anos ou entre
+      países muitas vezes não são estatisticamente significativas.
+    en: >-
+      Confidence intervals are wide: small differences between years or countries are
+      often not statistically significant.
+  - pt: >-
+      A escala é relativa: a média mundial é 0 em todo ano, então o indicador não mostra
+      melhoras ou pioras globais, só a posição em relação aos outros países.
+    en: >-
+      The scale is relative: the world average is 0 every year, so the indicator cannot
+      show global improvement or decline, only position relative to other countries.
+  - pt: >-
+      Baseado em percepções; as fontes podem reagir ao noticiário e ao desempenho
+      econômico, e não só à qualidade das instituições.
+    en: >-
+      Perception-based; sources may react to news and economic performance, not only to
+      institutional quality.
+  - pt: "Série começa em 1996 e foi bienal até 2002 (sem 1997, 1999 e 2001)."
+    en: "The series starts in 1996 and was biennial until 2002 (no 1997, 1999 or 2001)."
+references:
+  - citation: "Kaufmann, D., Kraay, A., & Mastruzzi, M. (2011). The Worldwide Governance Indicators: methodology and analytical issues. Hague Journal on the Rule of Law, 3(2), 220–246."
+    doi: 10.1017/S1876404511200046

@@ -1,0 +1,45 @@
+id: ipeadata.disoc_rdcg
+source: ipeadata
+source_code: DISOC_RDCG
+unit: index_0_1
+min: 0
+max: 1
+name:
+  pt: "Coeficiente de Gini da renda domiciliar per capita (PNAD, 1976–2014)"
+  en: "Gini coefficient of household income per capita (PNAD, 1976–2014)"
+definition:
+  pt: >-
+    Desigualdade da renda domiciliar per capita calculada pelo Ipea a partir da antiga
+    PNAD do IBGE. É a série mais longa disponível para o Brasil e a única que cobre os
+    anos 1980. Interrompida em 2014, quando a PNAD foi substituída pela PNAD Contínua.
+  en: >-
+    Inequality of household income per capita computed by Ipea from IBGE's old PNAD
+    survey. The longest series available for Brazil and the only one covering the 1980s.
+    Discontinued in 2014, when PNAD was replaced by the Continuous PNAD.
+formula:
+  pt: "G = 1 − 2·∫₀¹ L(p) dp, sobre a renda domiciliar per capita declarada na PNAD."
+  en: "G = 1 − 2·∫₀¹ L(p) dp, over household income per capita reported in PNAD."
+criticisms:
+  - pt: >-
+      Sem dados em 1980, 1991, 2000 e 2010 (anos de Censo, sem PNAD) e em 1994; os
+      anos faltantes não devem ser interpolados.
+    en: >-
+      No data in 1980, 1991, 2000 and 2010 (census years, no PNAD) or in 1994; missing
+      years must not be interpolated.
+  - pt: >-
+      Até 2004 a PNAD não cobria a área rural da região Norte (exceto Tocantins).
+    en: >-
+      Until 2004 PNAD did not cover the rural North region (except Tocantins).
+  - pt: >-
+      Com alta inflação nos anos 1980 e início dos 1990, a renda declarada no mês de
+      referência é mais ruidosa.
+    en: >-
+      With high inflation in the 1980s and early 1990s, income reported for the reference
+      month is noisier.
+  - pt: "Subestima rendas do topo, como toda pesquisa domiciliar (ver Gini do Banco Mundial)."
+    en: "Underestimates top incomes, like every household survey (see the World Bank Gini)."
+references:
+  - citation: "Barros, R. P., Henriques, R., & Mendonça, R. (2000). Desigualdade e pobreza no Brasil: retrato de uma estabilidade inaceitável. Revista Brasileira de Ciências Sociais, 15(42), 123–142."
+    doi: 10.1590/S0102-69092000000100009
+  - citation: "Ipeadata — série DISOC_RDCG."
+    url: http://www.ipeadata.gov.br/

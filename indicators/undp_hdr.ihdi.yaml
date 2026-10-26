@@ -1,0 +1,41 @@
+id: undp_hdr.ihdi
+source: undp_hdr
+source_code: ihdi
+unit: index_0_1
+min: 0
+max: 1
+name:
+  pt: "IDH ajustado à desigualdade (IDHAD)"
+  en: "Inequality-adjusted HDI (IHDI)"
+definition:
+  pt: >-
+    IDH descontado pela desigualdade em cada dimensão (saúde, educação e renda). Se não
+    houvesse desigualdade, seria igual ao IDH; a diferença entre os dois é a perda de
+    desenvolvimento humano por causa da desigualdade. Disponível desde 2010.
+  en: >-
+    HDI discounted for inequality in each dimension (health, education and income). With
+    no inequality it would equal the HDI; the gap between the two is the human
+    development lost to inequality. Available since 2010.
+formula:
+  pt: "IDHAD = Π (1 − Aₓ)·Iₓ elevado a 1/3, em que Aₓ é a medida de desigualdade de Atkinson (ε = 1) da dimensão x."
+  en: "IHDI = Π (1 − Aₓ)·Iₓ raised to 1/3, where Aₓ is the Atkinson inequality measure (ε = 1) of dimension x."
+criticisms:
+  - pt: >-
+      A desigualdade de renda vem de pesquisas domiciliares, que subestimam o topo da
+      distribuição (ver críticas ao Gini).
+    en: >-
+      Income inequality comes from household surveys, which underestimate the top of the
+      distribution (see the Gini criticisms).
+  - pt: >-
+      Cada dimensão é ajustada separadamente; o índice não capta se as mesmas pessoas
+      acumulam privações em saúde, educação e renda.
+    en: >-
+      Each dimension is adjusted separately; the index does not capture whether the same
+      people accumulate deprivations in health, education and income.
+  - pt: "Mudanças nas pesquisas usadas por país criam saltos que não são mudanças reais."
+    en: "Changes in the surveys used for each country create jumps that are not real changes."
+references:
+  - citation: "Atkinson, A. B. (1970). On the measurement of inequality. Journal of Economic Theory, 2(3), 244–263."
+    doi: 10.1016/0022-0531(70)90039-6
+  - citation: "UNDP. Human Development Report 2025 — Technical notes."
+    url: https://hdr.undp.org/data-center/documentation-and-downloads
