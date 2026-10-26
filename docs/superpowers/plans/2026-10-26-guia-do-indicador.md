@@ -54,10 +54,12 @@ def test_normalize_filters_by_classification_category(tmp_path):
     ...
     assert df["value"].tolist() == [1200.0]
 
+
 def test_fetch_shares_one_file_per_table_classification():
     # two indicators, same table/variable/classification, different category
     files, _ = sidra.fetch([p10, p50], geos, client)
     assert [f.name for f in files].count("7438-10769-c1019.json") == 1
+
 
 def test_listed_defaults_true_and_can_be_false():
     assert make_indicator().listed is True
@@ -130,39 +132,61 @@ Verified ids: table 7540 has variable 10846, CV 10847, classification 1043, P50 
 - [ ] **Step 1: Write failing tests**
 
 ```python
-LIMITS = {5: 300, 10: 450, 20: 700, 30: 900, 40: 1100, 50: 1300, 60: 1600,
-          70: 2000, 80: 2700, 90: 4200, 95: 6500, 99: 15000}
+LIMITS = {
+    5: 300,
+    10: 450,
+    20: 700,
+    30: 900,
+    40: 1100,
+    50: 1300,
+    60: 1600,
+    70: 2000,
+    80: 2700,
+    90: 4200,
+    95: 6500,
+    99: 15000,
+}
+
 
 def test_share_below_interpolates():
     assert share_below(LIMITS, 1200) == Share(45.0, 45.0)
 
+
 def test_share_below_above_p99_is_a_range():
     assert share_below(LIMITS, 20000) == Share(99, 100)
 
+
 def test_share_below_under_p5_is_a_range():
     assert share_below(LIMITS, 100) == Share(0, 5)
+
 
 def test_reais_per_usd_ppp_uses_base_ppp_and_cpi_ratio(df):
     # PPP 2021 = 2.45, CPI 2021 = 100, CPI 2024 = 120
     assert reais_per_usd_ppp(df, config, 2024) == pytest.approx(2.94)
 
+
 def test_year_without_cpi_is_skipped(df_missing_cpi_2025):
     assert 2025 not in [d["year"] for d in distribution(df_missing_cpi_2025, config)]
+
 
 def test_translate_bottom_40_maps_limit_to_bracket(df):
     t = translate(df, config, 40, "bottom", 2024)
     assert t["bracket"] == "ate_500" and t["limit_usd_ppp"] == pytest.approx(1100 / 2.94)
 
+
 def test_translate_year_without_data_raises(df):
     with pytest.raises(BracketError, match="2011"):
         translate(df, config, 40, "bottom", 2011)
+
 
 def test_translate_top_10_uses_p90(df):
     t = translate(df, config, 90, "top", 2024)
     assert t["limit_brl"] == LIMITS[90]
 
+
 def test_tied_percentiles_do_not_divide_by_zero():
     assert share_below({**LIMITS, 20: 450}, 450) == Share(10, 20)
+
 
 def test_real_2024_shares():
     # table 7438 2024 percentiles, PPP 2021 = 2.4499, CPI 2024 = 223.216, CPI 2021 = 187.117
@@ -203,20 +227,20 @@ def test_real_2024_shares():
 - [ ] **Step 1: Write failing tests**
 
 ```python
-def test_guide_for_unknown_indicator_is_rejected(): ...        # "not in catalog"
+def test_guide_for_unknown_indicator_is_rejected(): ...  # "not in catalog"
 def test_guide_file_name_must_match_indicator(tmp_path): ...
-def test_bare_number_in_guide_text_is_rejected(): ...           # error names guides/<id>.yaml
+def test_bare_number_in_guide_text_is_rejected(): ...  # error names guides/<id>.yaml
 def test_guide_translations_must_cite_same_data(): ...
 def test_only_positive_policies_need_contrary_search(): ...
 def test_policy_entry_brief_must_exist(): ...
 def test_entry_cites_reference_not_listed_is_rejected(): ...
 def test_show_income_false_for_non_income_indicator_without_effects(): ...
-def test_by_income_translation_is_computed(): ...                # bracket in rendered dict
-def test_by_income_year_without_data_fails_build(): ...          # ValidationError mentions year
+def test_by_income_translation_is_computed(): ...  # bracket in rendered dict
+def test_by_income_year_without_data_fails_build(): ...  # ValidationError mentions year
 def test_by_income_without_group_renders_null_translation(): ...
 def test_top_10_group_translates_with_p90(): ...
 def test_references_split_by_where_cited(): ...
-def test_policy_evidence_level_unchanged_after_refactor(): ...   # existing test still passes
+def test_policy_evidence_level_unchanged_after_refactor(): ...  # existing test still passes
 ```
 
 - [ ] **Step 2: Run** `uv run pytest pipeline/tests/test_guides.py -v`. Expected: FAIL.
