@@ -8,6 +8,7 @@ const { lang } = Astro.props;
 const t = UI[lang];
 const adr = (n: string) => `${REPO}/blob/main/docs/adr/${n}`;
 const progresa = url(lang, "policies", "progresa-oportunidades");
+const pib = url(lang, "indicators", "wdi.ny_gdp_pcap_kd");
 ---
 
 <Base lang={lang} title={t.nav.studies} route="studies">
@@ -31,7 +32,9 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         <h3>Descritivo</h3>
         <p>
           Mostra como algo mudou ou como grupos diferem, por exemplo a renda média por ano. Pode mostrar{" "}
-          <em>o que</em> aconteceu. Não mostra <em>por quê</em>: outras coisas mudaram ao mesmo tempo.
+          <em>o que</em> aconteceu. Não mostra <em>por quê</em>: outras coisas mudaram ao mesmo tempo. No{" "}
+          <a href={pib}>guia do PIB per capita</a>, o estudo sobre desigualdade e pobreza no Brasil entre 1981 e
+          2004 é descritivo.
         </p>
         <h3>Decomposição</h3>
         <p>
@@ -43,20 +46,24 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         <h3>Observacional</h3>
         <p>
           Compara pessoas ou lugares sem que o pesquisador controle quem recebe a política. Mostra
-          associações. Como os grupos já podiam ser diferentes antes, não prova causa.
+          associações. Como os grupos já podiam ser diferentes antes, não prova causa. O{" "}
+          <a href={pib}>guia do PIB per capita</a> traz dois exemplos que chegam a conclusões opostas sobre
+          renda e satisfação com a vida.
         </p>
         <h3>Experimento aleatorizado</h3>
         <p>
           Sorteia quem recebe a política e quem fica no grupo de comparação. Como o sorteio equilibra os
           grupos, uma diferença depois pode ser atribuída à política. É o desenho mais forte para mostrar
-          causa. Limites: nem sempre é possível ou ético sortear, e o resultado vale para as pessoas e o
-          lugar estudados.
+          causa. Limites: nem sempre é possível ou ético sortear, e o resultado pode não valer em outros
+          lugares.
         </p>
         <h3>Diferenças em diferenças</h3>
         <p>
           Compara a mudança ao longo do tempo num grupo atingido pela política com a mudança no mesmo período
           num grupo não atingido. Mostra causa se os dois grupos teriam mudado de forma parecida sem a
-          política. Essa suposição não pode ser testada por completo.
+          política. Essa suposição não pode ser testada por completo. O{" "}
+          <a href={pib}>guia do PIB per capita</a> traz um estudo parecido, que compara regiões brasileiras
+          com cortes de tarifas de importação maiores e menores.
         </p>
         <h3>Regressão descontínua</h3>
         <p>
@@ -68,7 +75,8 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         <p>
           Constrói um "gêmeo" de um país ou região combinando outros que não receberam a política, e compara
           os dois ao longo do tempo. É útil quando só uma unidade foi atingida. Depende de achar um bom
-          gêmeo.
+          gêmeo. O <a href={pib}>guia do PIB per capita</a> traz exemplos, como a Zona Franca de Manaus e a
+          reunificação alemã.
         </p>
         <h3>Variáveis instrumentais</h3>
         <p>
@@ -78,9 +86,10 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         <h3>Revisão sistemática e meta-análise</h3>
         <p>
           Uma revisão sistemática procura e junta, com regras escritas de antemão, todos os estudos sobre uma
-          pergunta, em vez de escolher os favoritos. Uma meta-análise é a parte que combina os números dos
-          estudos num só. Costuma ser mais confiável que um único estudo, mas só é tão boa quanto os estudos
-          que reúne e mistura programas e países diferentes. A{" "}
+          pergunta, em vez de escolher os favoritos. Uma meta-análise combina numericamente os resultados dos
+          estudos; muitas revisões sistemáticas incluem uma, mas nem todas. Costuma ser mais confiável que um
+          único estudo, mas só é tão boa quanto os estudos que reúne e pode misturar programas e países
+          diferentes. A{" "}
           <a href={progresa}>ficha do Progresa/Oportunidades</a> usa uma revisão sistemática sobre
           transferências de renda.
         </p>
@@ -90,7 +99,9 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         <p>
           É quanto o resultado mudou por causa da política, na unidade do resultado ou em comparação com a
           variação natural dele. Um efeito pode ser estatisticamente claro e pequeno demais para importar na
-          vida real. Sempre pergunte "quanto?", não só "houve efeito?".
+          vida real. Sempre pergunte "quanto?", não só "houve efeito?". No{" "}
+          <a href={pib}>guia do PIB per capita</a>, a estimativa de quanto a reunificação alemã reduziu o PIB
+          per capita da Alemanha Ocidental é um tamanho de efeito.
         </p>
         <h3>Intervalo de confiança</h3>
         <p>
@@ -106,7 +117,9 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
           resultado pelo menos tão grande por puro acaso? Por convenção, abaixo de 0,05 (5%) o resultado é
           chamado de "estatisticamente significativo". Isso não quer dizer que o efeito é grande nem
           importante, e um valor-p acima de 0,05 não prova que não há efeito: pode ser que o estudo fosse
-          pequeno demais para detectá-lo.
+          pequeno demais para detectá-lo. No <a href={pib}>guia do PIB per capita</a>, um estudo não encontra
+          impacto significativo das liberalizações econômicas mais recentes; isso não prova que o efeito foi
+          zero.
         </p>
         <h3>Validade externa</h3>
         <p>
@@ -127,9 +140,10 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         </p>
         <p>
           <strong>Regra do site:</strong> os guias de indicadores usam apenas estudos revisados por pares.
-          Isso não garante que o estudo esteja certo, mas garante que passou por uma checagem externa e
-          permite verificar o artigo pelo DOI, que é o identificador permanente dele. Os DOIs são conferidos
-          na Crossref (<a href={adr("0007-rastreabilidade-do-conteudo.md")}>ADR 0007</a>).
+          Isso não garante que o estudo esteja certo, mas garante que passou por uma checagem externa. O site
+          também exige um DOI, o identificador permanente do artigo, que permite a qualquer pessoa
+          encontrá-lo. Os DOIs são conferidos na Crossref
+          (<a href={adr("0007-rastreabilidade-do-conteudo.md")}>ADR 0007</a>).
         </p>
         <h3>Conflito de interesse</h3>
         <p>
@@ -171,7 +185,9 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         <h3>Descriptive</h3>
         <p>
           Shows how something changed or how groups differ, such as average income by year. It can show{" "}
-          <em>what</em> happened. It cannot show <em>why</em>: other things changed at the same time.
+          <em>what</em> happened. It cannot show <em>why</em>: other things changed at the same time. In the{" "}
+          <a href={pib}>GDP per capita guide</a>, the study of inequality and poverty in Brazil between 1981 and
+          2004 is descriptive.
         </p>
         <h3>Decomposition</h3>
         <p>
@@ -183,20 +199,24 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         <h3>Observational</h3>
         <p>
           Compares people or places without the researcher controlling who gets the policy. It shows
-          associations. Because the groups may already have differed beforehand, it does not prove cause.
+          associations. Because the groups may already have differed beforehand, it does not prove cause. The{" "}
+          <a href={pib}>GDP per capita guide</a> has two examples that reach opposite conclusions about income
+          and life satisfaction.
         </p>
         <h3>Randomized experiment</h3>
         <p>
           Draws lots for who receives the policy and who stays in the comparison group. Because the draw
           balances the groups, a later difference can be attributed to the policy. It is the strongest design
-          for showing cause. Limits: drawing lots is not always possible or ethical, and the result applies
-          to the people and place studied.
+          for showing cause. Limits: drawing lots is not always possible or ethical, and the result may not
+          apply elsewhere.
         </p>
         <h3>Difference-in-differences</h3>
         <p>
           Compares the change over time in a group reached by the policy with the change over the same period
           in a group not reached. It shows cause if the two groups would have changed in a similar way
-          without the policy. That assumption cannot be fully tested.
+          without the policy. That assumption cannot be fully tested. The{" "}
+          <a href={pib}>GDP per capita guide</a> has a similar study, comparing Brazilian regions with larger
+          and smaller import tariff cuts.
         </p>
         <h3>Regression discontinuity</h3>
         <p>
@@ -208,7 +228,8 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         <p>
           Builds a "twin" of a country or region by combining others that did not get the policy, then
           compares the two over time. It is useful when only one unit was affected. It depends on finding a
-          good twin.
+          good twin. The <a href={pib}>GDP per capita guide</a> has examples, such as the Manaus Free Trade
+          Zone and German reunification.
         </p>
         <h3>Instrumental variables</h3>
         <p>
@@ -218,9 +239,9 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         <h3>Systematic review and meta-analysis</h3>
         <p>
           A systematic review searches for and gathers, using rules written in advance, all the studies on a
-          question, instead of picking favorites. A meta-analysis is the part that combines the studies'
-          numbers into one. It is usually more reliable than a single study, but it is only as good as the
-          studies it gathers and it mixes different programs and countries. The{" "}
+          question, instead of picking favorites. A meta-analysis numerically combines the studies' results;
+          many systematic reviews include one, but not all. It is usually more reliable than a single study,
+          but it is only as good as the studies it gathers and may mix different programs and countries. The{" "}
           <a href={progresa}>Progresa/Oportunidades policy brief</a> uses a systematic review of cash
           transfers.
         </p>
@@ -230,7 +251,9 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         <p>
           How much the outcome changed because of the policy, in the outcome's own units or compared with its
           natural variation. An effect can be statistically clear and still too small to matter in real
-          life. Always ask "how much?", not only "was there an effect?".
+          life. Always ask "how much?", not only "was there an effect?". In the{" "}
+          <a href={pib}>GDP per capita guide</a>, the estimate of how much German reunification reduced West
+          German GDP per capita is an effect size.
         </p>
         <h3>Confidence interval</h3>
         <p>
@@ -244,7 +267,9 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
           The p-value answers: if the policy had no effect at all, how often would we see a result at least
           this large by pure chance? By convention, below 0.05 (5%) the result is called "statistically
           significant". That does not mean the effect is large or important, and a p-value above 0.05 does
-          not prove there is no effect: the study may have been too small to detect it.
+          not prove there is no effect: the study may have been too small to detect it. In the{" "}
+          <a href={pib}>GDP per capita guide</a>, one study finds no significant impact of more recent economic
+          liberalizations; that does not prove the effect was zero.
         </p>
         <h3>External validity</h3>
         <p>
@@ -266,9 +291,9 @@ const progresa = url(lang, "policies", "progresa-oportunidades");
         </p>
         <p>
           <strong>The site's rule:</strong> indicator guides use only peer-reviewed studies. This does not
-          guarantee that a study is right, but it does mean it went through an outside check, and it lets
-          you look up the article by its DOI, its permanent identifier. DOIs are checked against Crossref (
-          <a href={adr("0007-rastreabilidade-do-conteudo.md")}>ADR 0007</a>).
+          guarantee that a study is right, but it does mean it went through an outside check. The site also
+          requires a DOI, the article's permanent identifier, which lets anyone look the article up. DOIs are
+          checked against Crossref (<a href={adr("0007-rastreabilidade-do-conteudo.md")}>ADR 0007</a>).
         </p>
         <h3>Conflict of interest</h3>
         <p>
