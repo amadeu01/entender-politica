@@ -42,12 +42,16 @@ class Indicator(BaseModel):
     id: str = Field(pattern=r"^[a-z0-9_]+\.[a-z0-9_]+$")
     source: str
     source_code: str
+    # Connector-specific parameters (e.g. SIDRA table and variables).
+    source_params: dict[str, str] = {}
     name: Text
     unit: str
     definition: Text
     formula: Text
     criticisms: list[Text] = Field(min_length=1)
     references: list[Reference] = Field(min_length=1)
+    # How `lower`/`upper` are derived when the source publishes uncertainty.
+    uncertainty: Text | None = None
     min: float | None = None
     max: float | None = None
     series_breaks: list[SeriesBreak] = []
