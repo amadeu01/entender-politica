@@ -27,7 +27,7 @@ BRA,country,1987,ipeadata.disoc_ppy,38.710240907139,,,percent,ipeadata,2016-01-0
 BRA,country,1988,ipeadata.disoc_ppy,43.5729318060916,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,1989,ipeadata.disoc_ppy,41.3619770232427,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,1990,ipeadata.disoc_ppy,41.9225995885211,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
-BRA,country,1992,ipeadata.disoc_ppy,42.0924280128688,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1992,ipeadata.disoc_ppy,42.0924280128688,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,True
 BRA,country,1993,ipeadata.disoc_ppy,42.9799209464312,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,1995,ipeadata.disoc_ppy,35.0793952349548,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,1996,ipeadata.disoc_ppy,34.7289732415829,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
@@ -37,7 +37,7 @@ BRA,country,1999,ipeadata.disoc_ppy,35.256397545013,,,percent,ipeadata,2016-01-0
 BRA,country,2001,ipeadata.disoc_ppy,35.0875861892043,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,2002,ipeadata.disoc_ppy,34.3795326315975,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,2003,ipeadata.disoc_ppy,35.7505476188909,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
-BRA,country,2004,ipeadata.disoc_ppy,33.7124643609299,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2004,ipeadata.disoc_ppy,33.7124643609299,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,True
 BRA,country,2005,ipeadata.disoc_ppy,30.8346965027347,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,2006,ipeadata.disoc_ppy,26.7540597717612,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,2007,ipeadata.disoc_ppy,25.3593083869705,,,percent,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
@@ -61,7 +61,7 @@ BRA,country,1987,ipeadata.disoc_rdcg,0.600557448310031,,,index_0_1,ipeadata,2016
 BRA,country,1988,ipeadata.disoc_rdcg,0.616371706324988,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,1989,ipeadata.disoc_rdcg,0.635569534688695,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,1990,ipeadata.disoc_rdcg,0.613884134032126,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
-BRA,country,1992,ipeadata.disoc_rdcg,0.582522412942549,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,1992,ipeadata.disoc_rdcg,0.582522412942549,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,True
 BRA,country,1993,ipeadata.disoc_rdcg,0.604436889650206,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,1995,ipeadata.disoc_rdcg,0.60050664738202,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,1996,ipeadata.disoc_rdcg,0.602054079464361,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
@@ -71,7 +71,7 @@ BRA,country,1999,ipeadata.disoc_rdcg,0.593973924815284,,,index_0_1,ipeadata,2016
 BRA,country,2001,ipeadata.disoc_rdcg,0.595782270759072,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,2002,ipeadata.disoc_rdcg,0.589286530265019,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,2003,ipeadata.disoc_rdcg,0.583019477516815,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
-BRA,country,2004,ipeadata.disoc_rdcg,0.57245923760349,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2004,ipeadata.disoc_rdcg,0.57245923760349,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,True
 BRA,country,2005,ipeadata.disoc_rdcg,0.56952641427141,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,2006,ipeadata.disoc_rdcg,0.562974276364698,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,2007,ipeadata.disoc_rdcg,0.555952195335968,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False

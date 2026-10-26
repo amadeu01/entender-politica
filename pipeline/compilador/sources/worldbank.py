@@ -80,6 +80,8 @@ class WorldBankSource:
 
 
 def _se_code(ind: Indicator) -> str:
+    if not ind.source_code.endswith(".EST"):
+        raise ValueError(f"{ind.id}: WGI source_code must end in .EST, got {ind.source_code}")
     return ind.source_code.removesuffix(".EST") + ".SE"
 
 
