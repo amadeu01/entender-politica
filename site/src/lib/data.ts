@@ -171,7 +171,13 @@ export type Guide = {
   numbers: Cited[];
 };
 export type IncomeBrackets = {
-  config: { thresholds_usd_ppp: number[]; ppp_base_year: number; labels: string[]; method: string };
+  config: {
+    thresholds_usd_ppp: number[];
+    ppp_base_year: number;
+    labels: string[];
+    method: string;
+    percentile_indicators: Record<string, string>;
+  };
   years: {
     year: number;
     reais_per_usd_ppp: number;
@@ -183,6 +189,7 @@ export type IncomeBrackets = {
 type Documents = {
   analyses: { slug: string; lang: Lang; title: string }[];
   policies: { slug: string; lang: Lang; name: string; country: string }[];
+  guides: string[];
 };
 
 export const catalog = (): Indicator[] => read("catalog.json");

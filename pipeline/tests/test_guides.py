@@ -136,6 +136,15 @@ def test_unknown_cut_is_rejected(tmp_path):
     assert any("cut 33" in e for e in check_with_cfg(write(tmp_path, data)))
 
 
+def test_purchasing_power_without_income_section_is_rejected(tmp_path):
+    data = base() | {"purchasing_power": text()}
+    assert any("purchasing_power" in e for e in check_with_cfg(write(tmp_path, data)))
+    ok = data | {"indicator": "wdi.ny_gdp_pcap_kd"}
+    other = tmp_path / "ok"
+    other.mkdir()
+    assert not any("purchasing_power" in e for e in check_with_cfg(write(other, ok)))
+
+
 def check_with_cfg(gs):
     return guides.check(gs, INDICATORS, {"prog"}, config)
 

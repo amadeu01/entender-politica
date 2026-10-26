@@ -125,7 +125,6 @@ export const UI = {
     guideStudies: "O que dizem os estudos",
     guideStudiesHow: "Como ler estudos: o que cada desenho mostra e o que não mostra",
     guidePolicies: "Políticas estudadas",
-    guidePoliciesNone: "Ainda não há política estudada listada.",
     guideIncome: "Por faixa de renda",
     guideIncomeNone:
       "Não encontramos estudo revisado por pares sobre este indicador por grupo de renda.",
@@ -133,8 +132,6 @@ export const UI = {
     guideRefsImpacts: "Políticas e impactos",
     guideRefsIndicator: "Sobre o indicador",
     briefLink: "Ver a ficha da política",
-    countryLabel: "País",
-    evidenceMethod: "Método do estudo",
     translationTitle: "Em faixas de renda",
     translationGroup: (side: "bottom" | "top", cut: number) =>
       side === "bottom" ? `Os ${cut}% mais pobres` : `Os ${100 - cut}% mais ricos`,
@@ -142,8 +139,8 @@ export const UI = {
       `Em ${year}, o limite desse grupo era ${brl} por pessoa por mês, ou ${usd}. Faixa: ${bracket}.`,
     ppp: "US$ PPC",
     pppTerm: "Dólares PPC",
-    pppExplain:
-      "Dólares ajustados pela paridade do poder de compra (PPC) de 2021: um dólar PPC compra, no Brasil, o mesmo que um dólar compraria nos Estados Unidos. A faixa é a renda domiciliar mensal por pessoa.",
+    pppExplain: (base: number) =>
+      `Dólares ajustados pela paridade do poder de compra (PPC): um dólar PPC compra, no Brasil, o que um dólar comprava nos Estados Unidos em ${base}. A faixa é a renda domiciliar mensal por pessoa.`,
     bracketsTitle: "Quantas pessoas vivem em cada faixa de renda",
     bracketsCaption: (year: number) =>
       `Pessoas por faixa de renda domiciliar per capita mensal, Brasil, ${year}`,
@@ -151,7 +148,16 @@ export const UI = {
     inReais: (year: number) => `Em reais por mês (${year})`,
     shareOfPeople: "Parcela das pessoas",
     interpolationNote: "≈ estimado por interpolação linear entre os percentis do IBGE",
-    reaisPerUsd: "Reais por dólar PPC",
+    reaisPerUsd: (base: number) => `Reais por dólar PPC de ${base}`,
+    reaisPerUsdNote: (base: number) =>
+      `Essa taxa difere do fator de conversão PPC do ano corrente citado em Poder de compra, porque os limites das faixas estão fixos em dólares de ${base} e são atualizados pela inflação brasileira.`,
+    breakLegend: "Área cinza e traço tracejado: anos afetados por quebra de série (veja a nota abaixo).",
+    breakFlag: "quebra de série",
+    priceLevelTitle: "Nível de preços em relação aos Estados Unidos",
+    priceLevelCaption: "Fator de conversão PPC do consumo das famílias dividido pela taxa de câmbio, último ano com os dois valores",
+    priceLevelNote:
+      "Abaixo de 1, os preços são mais baixos que nos Estados Unidos; acima de 1, mais altos.",
+    priceLevelCol: "Nível de preços",
     sourcesLabel: "Fontes",
     overTime: "Ao longo dos anos",
     overTimeAlt: (label: string, first: number, last: number) =>
@@ -271,15 +277,12 @@ export const UI = {
     guideStudies: "What studies say",
     guideStudiesHow: "How to read studies: what each design can and cannot show",
     guidePolicies: "Studied policies",
-    guidePoliciesNone: "No studied policy is listed yet.",
     guideIncome: "By income bracket",
     guideIncomeNone: "We found no peer-reviewed study of this indicator by income group.",
     guidePurchasing: "Purchasing power",
     guideRefsImpacts: "Policies and impacts",
     guideRefsIndicator: "About the indicator",
     briefLink: "See the policy brief",
-    countryLabel: "Country",
-    evidenceMethod: "Study method",
     translationTitle: "In income brackets",
     translationGroup: (side: "bottom" | "top", cut: number) =>
       side === "bottom" ? `The poorest ${cut}%` : `The richest ${100 - cut}%`,
@@ -287,8 +290,8 @@ export const UI = {
       `In ${year}, this group's limit was ${brl} per person per month, or ${usd}. Bracket: ${bracket}.`,
     ppp: "PPP US$",
     pppTerm: "PPP dollars",
-    pppExplain:
-      "Dollars adjusted by 2021 purchasing power parity (PPP): one PPP dollar buys in Brazil what one dollar would buy in the United States. The bracket is monthly household income per person.",
+    pppExplain: (base: number) =>
+      `Dollars adjusted by purchasing power parity (PPP): one PPP dollar buys in Brazil what one dollar bought in the United States in ${base}. The bracket is monthly household income per person.`,
     bracketsTitle: "How many people live in each income bracket",
     bracketsCaption: (year: number) =>
       `People by monthly household income per capita bracket, Brazil, ${year}`,
@@ -296,7 +299,16 @@ export const UI = {
     inReais: (year: number) => `In reais per month (${year})`,
     shareOfPeople: "Share of people",
     interpolationNote: "≈ estimated by linear interpolation between IBGE percentiles",
-    reaisPerUsd: "Reais per PPP dollar",
+    reaisPerUsd: (base: number) => `Reais per ${base} PPP dollar`,
+    reaisPerUsdNote: (base: number) =>
+      `This rate differs from the current-year PPP conversion factor quoted under Purchasing power, because the bracket limits are fixed in ${base} dollars and updated by Brazilian inflation.`,
+    breakLegend: "Grey area and dashed line: years affected by a series break (see the note below).",
+    breakFlag: "series break",
+    priceLevelTitle: "Price level relative to the United States",
+    priceLevelCaption: "Household consumption PPP conversion factor divided by the exchange rate, latest year with both values",
+    priceLevelNote:
+      "Below 1, prices are lower than in the United States; above 1, higher.",
+    priceLevelCol: "Price level",
     sourcesLabel: "Sources",
     overTime: "Over the years",
     overTimeAlt: (label: string, first: number, last: number) =>

@@ -1,0 +1,63 @@
+---
+// Price level relative to the United States: the household-consumption PPP conversion
+// factor (local currency per international dollar) divided by the market exchange rate
+// (local currency per dollar). Computed here from the published series; nothing typed.
+import { geoName, series } from "../lib/data";
+import { GEO_ORDER, SOURCE_NAMES, UI, formatNumber, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const ppp = series("wdi.pa_nus_prvt_pp");
+const fx = series("wdi.pa_nus_fcrf");
+const rows = GEO_ORDER.flatMap((geo) => {
+  const a = new Map(ppp.observations.filter((o) => o.geo_code === geo && o.value != null).map((o) => [o.year, o.value as number]));
+  const years = fx.observations
+    .filter((o) => o.geo_code === geo && o.value != null && a.has(o.year))
+    .map((o) => o.year);
+  if (years.length === 0) return [];
+  const year = Math.max(...years);
+  const rate = fx.observations.find((o) => o.geo_code === geo && o.year === year)!.value as number;
+  return [{ geo, year, level: a.get(year)! / rate }];
+});
+const sources = [ppp, fx];
+---
+
+{
+  rows.length > 0 && (
+    <>
+      <h3>{t.priceLevelTitle}</h3>
+      <div class="table-scroll">
+        <table class="data">
+          <caption>{t.priceLevelCaption}</caption>
+          <thead>
+            <tr>
+              <th scope="col">{t.country}</th>
+              <th scope="col">{t.year}</th>
+              <th scope="col" class="num">{t.priceLevelCol}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr>
+                <th scope="row">{geoName(r.geo, lang)}</th>
+                <td>{r.year}</td>
+                <td class="num">{formatNumber(r.level, lang, 2)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="meta">
+        {t.priceLevelNote}{" "}
+        {sources.map((s, n) => (
+          <>
+            {n > 0 && " · "}
+            {SOURCE_NAMES[s.source_id]?.[lang] ?? s.source_id} · {s.indicator_id} · {t.version} {s.source_version} · {t.retrieved} {s.retrieved_at.slice(0, 10)}
+          </>
+        ))}
+      </p>
+    </>
+  )
+}

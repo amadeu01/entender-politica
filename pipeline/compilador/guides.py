@@ -125,6 +125,15 @@ def check(
             if p.brief is not None and p.brief not in policy_slugs
         ]
         if config is not None:
+            if (
+                g.purchasing_power is not None
+                and not g.by_income
+                and g.indicator not in config.income_indicators
+            ):
+                errors.append(
+                    f"{where}: purchasing_power is only shown with the income section; "
+                    f"'{g.indicator}' is not in income_indicators and the guide has no by_income"
+                )
             errors += [
                 f"{where}: cut {e.group.cut} is not a published percentile"
                 for e in g.by_income

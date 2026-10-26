@@ -25,9 +25,10 @@ how_to_read:
     referência de tempo: elas não mostram que um governo causou a subida ou a queda.
 
     Exemplo com o dado do site: em 2024, o PIB per capita do Brasil foi de
-    US$ {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }}. Entre 2014 e 2016 a variação foi de
-    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2014, 2016) }}, e entre 2016 e 2024 foi de
-    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2016, 2024) }}. Uma queda quer dizer que a economia
+    US$ {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }}. Entre 2014 e 2017, o período da recessão
+    e de sua saída, a variação foi de
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2014, 2017) }}, e entre 2017 e 2024 foi de
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2017, 2024) }}. Uma queda quer dizer que a economia
     produziu menos por habitante; não quer dizer que a renda de cada pessoa caiu na mesma
     proporção.
 
@@ -42,9 +43,10 @@ how_to_read:
     a time reference: they do not show that a government caused the rise or fall.
 
     Example with the site's data: in 2024, Brazil's GDP per capita was
-    US$ {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }}. Between 2014 and 2016 the change was
-    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2014, 2016) }}, and between 2016 and 2024 it was
-    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2016, 2024) }}. A fall means the economy produced
+    US$ {{ v("wdi.ny_gdp_pcap_kd", "BRA", 2024) }}. Between 2014 and 2017, the period of the recession
+    and its exit, the change was
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2014, 2017) }}, and between 2017 and 2024 it was
+    {{ pct("wdi.ny_gdp_pcap_kd", "BRA", 2017, 2024) }}. A fall means the economy produced
     less per inhabitant; it does not mean each person's income fell in the same
     proportion.
 

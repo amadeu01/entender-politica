@@ -4,7 +4,7 @@
 // estimated range, a line at its midpoint). Thresholds and shares come only from
 // income_brackets.json; shares are estimates by linear interpolation (ADR 0011).
 import Chart from "./Chart.astro";
-import { incomeBrackets, series } from "../lib/data";
+import { incomeBrackets, indicator, series } from "../lib/data";
 import { SOURCE_NAMES, UI, formatNumber, type Lang } from "../lib/i18n";
 interface Props {
   lang: Lang;
@@ -22,6 +22,15 @@ const share = (low: number, high: number): string => {
   if (high < 0.05) return t.lessThan(pct(0.1));
   return a === b || Math.abs(high - low) < 0.05 ? t.approx(pct((low + high) / 2)) : t.rangeBetween(a, b);
 };
+const base = data?.config.ppp_base_year ?? 0;
+// PNAD series breaks, read from the catalog entry of one percentile indicator.
+const breaks = data
+  ? indicator(Object.values(data.config.percentile_indicators)[0]).series_breaks
+      .filter((b) => b.geo === null || b.geo === "BRA")
+      .sort((a, b) => a.year - b.year)
+  : [];
+// A year is affected when an odd number of breaks lie at or before it (a break opens, the next closes).
+const affected = (year: number): boolean => breaks.filter((b) => b.year <= year).length % 2 === 1;
 const last = data?.years[data.years.length - 1];
 const first = data?.years[0];
 const th = data?.config.thresholds_usd_ppp ?? [];
@@ -55,13 +64,28 @@ const panels = data
       const lo = data.years
         .map((r) => `${x(r.year).toFixed(1)},${y(r.brackets[i].low).toFixed(1)}`)
         .reverse();
-      const mid = data.years.map(
-        (r) => `${x(r.year).toFixed(1)},${y((r.brackets[i].low + r.brackets[i].high) / 2).toFixed(1)}`,
-      );
-      return { label, i, band: [...hi, ...lo].join(" "), line: mid.join(" ") };
+      const pt = data.years.map((r) => ({
+        year: r.year,
+        x: x(r.year),
+        y: y((r.brackets[i].low + r.brackets[i].high) / 2),
+      }));
+      // One segment per pair of consecutive years; dashed when either end is in a break.
+      const segs = pt.slice(1).map((b, k) => {
+        const a = pt[k];
+        return {
+          pts: `${a.x.toFixed(1)},${a.y.toFixed(1)} ${b.x.toFixed(1)},${b.y.toFixed(1)}`,
+          dashed: affected(a.year) || affected(b.year),
+        };
+      });
+      return { label, i, band: [...hi, ...lo].join(" "), segs };
     })
   : [];
 const ticks = [0, ymax / 2, ymax];
+const flagged = data ? data.years.filter((r) => affected(r.year)).map((r) => r.year) : [];
+const shade =
+  flagged.length > 0 && data
+    ? { x1: x(Math.max(first!.year, flagged[0] - 0.5)), x2: x(Math.min(last!.year, flagged[flagged.length - 1] + 0.5)) }
+    : null;
 ---
 
 {
@@ -69,7 +93,7 @@ const ticks = [0, ymax / 2, ymax];
     <section class="brackets" aria-labelledby="faixas-titulo">
       <h3 id="faixas-titulo">{t.bracketsTitle}</h3>
       <p class="meta">
-        <strong>{t.pppTerm}.</strong>{" "}{t.pppExplain}
+        <strong>{t.pppTerm}.</strong>{" "}{t.pppExplain(base)}
       </p>
       <div class="table-scroll">
         <table class="data">
@@ -99,7 +123,7 @@ const ticks = [0, ymax / 2, ymax];
         </table>
       </div>
       <p class="meta">
-        {t.interpolationNote}. {t.reaisPerUsd} ({last.year}): {formatNumber(last.reais_per_usd_ppp, lang, 2)}.{" "}
+        {t.interpolationNote}. {t.reaisPerUsd(base)} ({last.year}): {formatNumber(last.reais_per_usd_ppp, lang, 2)}. {t.reaisPerUsdNote(base)}
       </p>
       <details>
         <summary>{t.sourcesLabel}</summary>
@@ -138,15 +162,32 @@ const ticks = [0, ymax / 2, ymax];
                   <text x={pad.l - 4} y={y(v) + 3} text-anchor="end">{v}%</text>
                 </g>
               ))}
+              {shade && <rect x={shade.x1} y={pad.t} width={shade.x2 - shade.x1} height={H - pad.t - pad.b} class="brk" />}
               <polygon points={p.band} class="band" />
-              <polyline points={p.line} class="mid" fill="none" />
+              {p.segs.map((sg) => (
+                <polyline points={sg.pts} class={sg.dashed ? "mid dashed" : "mid"} fill="none" />
+              ))}
               <text x={pad.l} y={H - 5}>{first.year}</text>
               <text x={W - pad.r} y={H - 5} text-anchor="end">{last.year}</text>
             </svg>
           </figure>
         ))}
       </div>
-      <p class="meta">{t.interpolationNote}. {t.overTimeLegend}</p>
+      <p class="meta">{t.interpolationNote}. {t.overTimeLegend}{flagged.length > 0 && ` ${t.breakLegend}`}</p>
+      {
+        breaks.length > 0 && (
+          <div class="meta">
+            <strong>{t.seriesBreaks}:</strong>
+            <ul>
+              {breaks.map((b) => (
+                <li>
+                  <strong>{b.year}:</strong> {b.note[lang]}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
       <details>
         <summary>{t.tableView}</summary>
         <div class="table-scroll">
@@ -161,7 +202,10 @@ const ticks = [0, ymax / 2, ymax];
             <tbody>
               {data.years.map((r) => (
                 <tr>
-                  <th scope="row">{r.year}</th>
+                  <th scope="row">
+                    {r.year}
+                    {affected(r.year) && <span class="meta"> ({t.breakFlag})</span>}
+                  </th>
                   {r.brackets.map((b) => <td class="num">{share(b.low, b.high)}</td>)}
                 </tr>
               ))}
@@ -223,5 +267,12 @@ const ticks = [0, ymax / 2, ymax];
   .mid {
     stroke: var(--series-1);
     stroke-width: 2;
+  }
+  .mid.dashed {
+    stroke-dasharray: 3 2;
+  }
+  .brk {
+    fill: var(--ink-2);
+    opacity: 0.15;
   }
 </style>

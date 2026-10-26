@@ -2,6 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Chart from "../components/Chart.astro";
 import IncomeBrackets from "../components/IncomeBrackets.astro";
+import PriceLevel from "../components/PriceLevel.astro";
 import Notice from "../components/Notice.astro";
 import Numbers from "../components/Numbers.astro";
 import References from "../components/References.astro";
@@ -42,7 +43,10 @@ const bracketText = (label: string): string => {
   if (i === th.length) return t.moreThan(usdPpp(th[th.length - 1]));
   return t.fromTo(usdPpp(th[i - 1]), usdPpp(th[i]));
 };
-const ppGeos = GEO_ORDER.filter((g) => series("wdi.ny_gdp_pcap_pp_kd").observations.some((o) => o.geo_code === g));
+const gdpCharts = id === "wdi.ny_gdp_pcap_kd" || id === "wdi.ny_gdp_pcap_pp_kd";
+const ppGeos = guide && gdpCharts
+  ? GEO_ORDER.filter((g) => series("wdi.ny_gdp_pcap_pp_kd").observations.some((o) => o.geo_code === g))
+  : [];
 ---
 
 <Base lang={lang} title={ind.name[lang]} route="indicators" slug={id} description={ind.definition[lang]}>
@@ -188,9 +192,14 @@ const ppGeos = GEO_ORDER.filter((g) => series("wdi.ny_gdp_pcap_pp_kd").observati
           <>
             <h2>{t.guidePurchasing}</h2>
             <div set:html={guide.purchasing_power} />
-            <p class="meta">{t.ppNote}</p>
-            <Chart lang={lang} id="pib-ppc" title={t.ppTitle} alt={t.ppAlt} indicators={["wdi.ny_gdp_pcap_pp_kd"]} geographies={ppGeos} />
-            <Chart lang={lang} id="pib-2015" title={t.nominalTitle} alt={t.ppNominalAlt} indicators={["wdi.ny_gdp_pcap_kd"]} geographies={ppGeos} />
+            {gdpCharts && (
+              <>
+                <p class="meta">{t.ppNote}</p>
+                <Chart lang={lang} id="pib-ppc" title={t.ppTitle} alt={t.ppAlt} indicators={["wdi.ny_gdp_pcap_pp_kd"]} geographies={ppGeos} />
+                <Chart lang={lang} id="pib-2015" title={t.nominalTitle} alt={t.ppNominalAlt} indicators={["wdi.ny_gdp_pcap_kd"]} geographies={ppGeos} />
+              </>
+            )}
+            <PriceLevel lang={lang} />
           </>
         )}
       </>
