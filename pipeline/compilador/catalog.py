@@ -33,6 +33,8 @@ class SeriesBreak(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 
     year: int
+    # Geography the break applies to; None means every geography of the indicator.
+    geo: str | None = None
     note: Text
 
 

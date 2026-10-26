@@ -21,6 +21,7 @@ from compilador import (
     dois,
     geography,
     governments,
+    periods,
     snapshot,
 )
 from compilador.analyses import ANALYSES_DIR, POLICIES_DIR
@@ -58,7 +59,10 @@ class Result:
 def _mark_series_breaks(df: pd.DataFrame, indicators: dict[str, catalog.Indicator]) -> None:
     for ind in indicators.values():
         for brk in ind.series_breaks:
-            df.loc[(df["indicator_id"] == ind.id) & (df["year"] == brk.year), "series_break"] = True
+            rows = (df["indicator_id"] == ind.id) & (df["year"] == brk.year)
+            if brk.geo is not None:
+                rows &= df["geo_code"] == brk.geo
+            df.loc[rows, "series_break"] = True
 
 
 def compile_observations(paths: Paths) -> tuple[pd.DataFrame, dict[str, str]]:
@@ -100,6 +104,10 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     export_site(df, indicators, paths.site)
     for name, doc in documents.items():
         _write_json(paths.site / name, doc)
+    registry = dois.load(paths.dois)
+    (paths.site / "references.bib").write_text(
+        "\n\n".join(registry[d]["bibtex"] for d in sorted(all_dois(paths)) if d in registry) + "\n"
+    )
     return Result(df, report, changes)
 
 
@@ -179,7 +187,12 @@ def _write_json(path: Path, obj: object) -> None:
 def export_site(df: pd.DataFrame, indicators: dict[str, catalog.Indicator], out: Path) -> None:
     """Write the JSON/CSV files the static site reads."""
     _write_json(out / "catalog.json", [i.model_dump(mode="json") for i in indicators.values()])
-    _write_json(out / "governments.json", governments.load().model_dump(mode="json"))
+    govs = governments.load()
+    _write_json(out / "governments.json", govs.model_dump(mode="json"))
+    units = {i.id: i.unit for i in indicators.values()}
+    last_year = int(df["year"].max()) if len(df) else govs.periods[0].start.year
+    if set(periods.TABLE_INDICATORS) <= set(units):
+        _write_json(out / "period_changes.json", periods.changes(df, govs, units, last_year))
     _write_json(
         out / "geographies.json", [g.model_dump(mode="json") for g in geography.load().values()]
     )
