@@ -1,0 +1,21 @@
+# Glossário pt-BR ↔ en. Use estes termos nas traduções (ADR 0004).
+# pt-BR ↔ English glossary. Use these terms in translations (ADR 0004).
+- { pt: "afirmação", en: "claim" }
+- { pt: "análise", en: "analysis" }
+- { pt: "controle sintético", en: "synthetic control" }
+- { pt: "desigualdade de renda", en: "income inequality" }
+- { pt: "diferenças-em-diferenças", en: "difference-in-differences" }
+- { pt: "ficha de política", en: "policy brief" }
+- { pt: "gasto social", en: "social spending" }
+- { pt: "governo interino", en: "acting government" }
+- { pt: "IDH ajustado à desigualdade", en: "inequality-adjusted HDI" }
+- { pt: "insegurança alimentar", en: "food insecurity" }
+- { pt: "intervalo de confiança", en: "confidence interval" }
+- { pt: "limitações", en: "limitations" }
+- { pt: "margem de erro", en: "margin of error" }
+- { pt: "nível de evidência", en: "level of evidence" }
+- { pt: "PNAD Contínua", en: "Continuous PNAD (Brazilian national household survey)" }
+- { pt: "quebra de série", en: "series break" }
+- { pt: "quase-experimento", en: "quasi-experiment" }
+- { pt: "transferência condicionada de renda", en: "conditional cash transfer" }
+- { pt: "validade externa", en: "external validity" }
