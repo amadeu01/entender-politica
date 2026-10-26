@@ -5,7 +5,8 @@
 - `normalize(snapshot, indicators, geos) -> DataFrame` in the common format: offline.
 """
 
+from compilador.sources.ipeadata import ipeadata
 from compilador.sources.sidra import sidra
 from compilador.sources.worldbank import wdi, wgi
 
-SOURCES = {s.source_id: s for s in (wdi, wgi, sidra)}
+SOURCES = {s.source_id: s for s in (wdi, wgi, sidra, ipeadata)}
