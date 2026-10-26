@@ -132,6 +132,10 @@ trocar rigor por didática.
 - Público: leigo. Conteúdo: entender, como ler, estudos de referência, políticas que
   afetam o indicador, efeito por faixa de renda, como ler estudos, custo de vida.
 - Faixas: renda **familiar**, limites US$1 mil, 2 mil, 5 mil, 10 mil.
+- **Revisão no planejamento (2026-10-26):** o IBGE só publica pronta a distribuição da
+  renda domiciliar **per capita** (PNAD Contínua, tabela 7438). O piloto usa renda por
+  pessoa da família, com os mesmos limites US$1 mil, 2 mil, 5 mil, 10 mil por pessoa;
+  renda familiar total (microdados, ADR 0010) fica para depois. Escolha do usuário.
 - Ordem dos projetos: guia primeiro (proposta minha, aceita ao seguir adiante).
 - Faixas em **dólar PPC** (Banco Mundial) de um ano-base fixo, com o equivalente em reais
   do ano exibido.
@@ -220,7 +224,9 @@ build. Every DOI verified on Crossref; every quoted number read in the source.
 
 ### Decisions
 
-User: lay audience; the content list above; **household** income; brackets US$1k/2k/5k/10k;
+User: lay audience; the content list above; household income, revised during planning to
+**household income per capita** (IBGE publishes only that distribution; total household
+income needs microdata, deferred); brackets US$1k/2k/5k/10k;
 PPP dollars of a fixed base year with the reais equivalent shown; study-group-to-bracket
 translation allowed with visible conversion; **peer-reviewed studies only** (ADR 0007
 unchanged; existing indicator fields stay outside the bare-number check).
