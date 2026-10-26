@@ -23,7 +23,7 @@ def fetch(source_ids: list[str]) -> None:
                 continue
             files, version = SOURCES[source_id].fetch(wanted, geos, client)
             snap = snapshot.write(
-                source_id, files, source_version=version, license=SOURCES[source_id].LICENSE
+                source_id, files, source_version=version, license=SOURCES[source_id].license
             )
             print(f"{source_id}: {len(files)} files, version {version} -> {snap.path}")
 

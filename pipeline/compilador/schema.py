@@ -3,7 +3,9 @@
 import pandas as pd
 import pandera.pandas as pa
 
-from compilador.geography import Level
+from compilador.catalog import Indicator
+from compilador.geography import Geography, Level
+from compilador.snapshot import Snapshot
 
 COLUMNS = [
     "geo_code",
@@ -61,3 +63,30 @@ def tidy(df: pd.DataFrame) -> pd.DataFrame:
     """Coerce to the schema and sort deterministically so outputs diff cleanly."""
     df = OBSERVATIONS.validate(df[COLUMNS], lazy=True)
     return df.sort_values(KEY, ignore_index=True)
+
+
+def row(
+    snapshot: Snapshot,
+    ind: Indicator,
+    geo: Geography,
+    year: int,
+    value: float,
+    lower: float | None = None,
+    upper: float | None = None,
+) -> dict:
+    """One observation in the common format, with provenance taken from the snapshot."""
+    return {
+        "geo_code": geo.code,
+        "geo_level": geo.level.value,
+        "year": year,
+        "indicator_id": ind.id,
+        "value": value,
+        "lower": lower,
+        "upper": upper,
+        "unit": ind.unit,
+        "source_id": snapshot.source_id,
+        "source_version": snapshot.source_version,
+        "retrieved_at": snapshot.retrieved_at,
+        "license": snapshot.license,
+        "series_break": False,
+    }

@@ -1,0 +1,42 @@
+id: undp_hdr.hdi
+source: undp_hdr
+source_code: hdi
+unit: index_0_1
+min: 0
+max: 1
+name:
+  pt: "Índice de Desenvolvimento Humano (IDH)"
+  en: "Human Development Index (HDI)"
+definition:
+  pt: >-
+    Média geométrica de três dimensões: vida longa e saudável (expectativa de vida),
+    conhecimento (anos esperados e anos médios de estudo) e padrão de vida (renda nacional
+    bruta per capita em PPC, em logaritmo). Vai de 0 a 1. A série inteira é recalculada
+    a cada edição do relatório, então valores de edições diferentes não se comparam.
+  en: >-
+    Geometric mean of three dimensions: a long and healthy life (life expectancy),
+    knowledge (expected and mean years of schooling) and standard of living (log of gross
+    national income per capita in PPP). Ranges from 0 to 1. The whole series is
+    recomputed with each report edition, so values from different editions are not
+    comparable.
+formula:
+  pt: "IDH = (I_saúde · I_educação · I_renda)^(1/3), cada índice normalizado entre mínimo e máximo fixos."
+  en: "HDI = (I_health · I_education · I_income)^(1/3), each index normalized between fixed minimum and maximum."
+criticisms:
+  - pt: >-
+      Os pesos implícitos entre dimensões impõem trocas difíceis de justificar: o valor
+      implícito de um ano de vida a mais varia enormemente entre países ricos e pobres
+      (Ravallion, 2012).
+    en: >-
+      Implicit weights across dimensions impose hard-to-justify tradeoffs: the implicit
+      value of an extra year of life varies enormously between rich and poor countries
+      (Ravallion, 2012).
+  - pt: "Usa médias nacionais e ignora a desigualdade dentro do país (ver IDH ajustado à desigualdade)."
+    en: "Uses national averages and ignores inequality within the country (see the inequality-adjusted HDI)."
+  - pt: "Muda pouco de um ano para o outro; parte dos componentes é interpolada ou projetada."
+    en: "Moves slowly year to year; some components are interpolated or projected."
+references:
+  - citation: "Ravallion, M. (2012). Troubling tradeoffs in the Human Development Index. Journal of Development Economics, 99(2), 201–209."
+    doi: 10.1016/j.jdeveco.2012.01.003
+  - citation: "UNDP. Human Development Report 2025 — Technical notes."
+    url: https://hdr.undp.org/data-center/documentation-and-downloads
