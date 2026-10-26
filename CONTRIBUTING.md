@@ -21,7 +21,13 @@ então o processo de revisão é mais rigoroso do que o comum.
 4. **Nova ficha de política:** um arquivo em `policies/` com desenho da avaliação, tamanho
    do efeito, intervalo de confiança, DOI e validade externa para o Brasil. Fichas de
    políticas que **não** funcionaram são tão bem-vindas quanto as que funcionaram.
-5. **Correções:** dados, traduções, acessibilidade, código.
+5. **Guia de indicador:** um arquivo em `guides/<id_do_indicador>.yaml` (esquema em
+   `pipeline/compilador/guides.py`), com as mesmas regras de números das fichas
+   ([ADR 0007](docs/adr/0007-rastreabilidade-do-conteudo.md),
+   [ADR 0011](docs/adr/0011-guias-dos-indicadores.md)). Só artigos revisados por pares
+   como evidência; confira os DOIs com `uv run compilador verify-dois`. Exemplo:
+   `guides/wdi.ny_gdp_pcap_kd.yaml`.
+6. **Correções:** dados, traduções, acessibilidade, código.
 
 ## Regras
 
@@ -60,8 +66,11 @@ analyses (`analise.yaml` + `texto.pt.md` + `texto.en.md`, numbers only through
 `v`/`diff`/`pct`, `cite` or `lit` placeholders, see ADR 0007; new DOIs:
 `uv run compilador verify-dois`), policy briefs (evaluation design, effect size,
 confidence interval, DOI, external validity for Brazil; policies that did **not** work
-are equally welcome), and
-fixes.
+are equally welcome), indicator guides (`guides/<indicator_id>.yaml`, schema in
+`pipeline/compilador/guides.py`, same number rules as briefs, see ADR 0007 and
+[ADR 0011](docs/adr/0011-guias-dos-indicadores.md); peer-reviewed articles only as evidence;
+check DOIs with `uv run compilador verify-dois`; example: `guides/wdi.ny_gdp_pcap_kd.yaml`),
+and fixes.
 
 **Rules:** everything in Portuguese and English (CI enforces it); no unsourced numbers
 (CI enforces it); neutral language; correlation is not causation, and causal claims need
