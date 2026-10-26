@@ -14,7 +14,10 @@ então o processo de revisão é mais rigoroso do que o comum.
 2. **Novo indicador:** um arquivo em `indicators/` com definição, fórmula, fonte, DOI do
    artigo que fundamenta a métrica e críticas conhecidas à métrica.
 3. **Nova análise:** uma pasta em `analyses/<slug>/` com `analise.yaml`, `texto.pt.md` e
-   `texto.en.md`. Números no texto só entram por marcadores (`{{ v(...) }}`).
+   `texto.en.md`. Números no texto só entram por marcadores: `v`, `diff` e `pct` para
+   dados do repositório, `cite` para números de artigos e `lit` com justificativa
+   ([ADR 0007](docs/adr/0007-rastreabilidade-do-conteudo.md)). DOIs novos:
+   `uv run compilador verify-dois`.
 4. **Nova ficha de política:** um arquivo em `policies/` com desenho da avaliação, tamanho
    do efeito, intervalo de confiança, DOI e validade externa para o Brasil. Fichas de
    políticas que **não** funcionaram são tão bem-vindas quanto as que funcionaram.
@@ -52,10 +55,12 @@ review process is stricter than usual.
 
 **Contribution types:** data source connectors (network-free tests with synthetic
 responses in the source's format, plus a committed real snapshot in `data/raw/` that CI
-rebuilds on every PR), indicators (definition, formula, source, DOI, known criticisms), analyses
-(`analise.yaml` + `texto.pt.md` + `texto.en.md`, numbers only through `{{ v(...) }}`
-placeholders), policy briefs (evaluation design, effect size, confidence interval, DOI,
-external validity for Brazil; policies that did **not** work are equally welcome), and
+rebuilds on every PR), indicators (definition, formula, source, DOI, known criticisms),
+analyses (`analise.yaml` + `texto.pt.md` + `texto.en.md`, numbers only through
+`v`/`diff`/`pct`, `cite` or `lit` placeholders, see ADR 0007; new DOIs:
+`uv run compilador verify-dois`), policy briefs (evaluation design, effect size,
+confidence interval, DOI, external validity for Brazil; policies that did **not** work
+are equally welcome), and
 fixes.
 
 **Rules:** everything in Portuguese and English (CI enforces it); no unsourced numbers

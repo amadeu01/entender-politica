@@ -15,7 +15,12 @@ def _paths(tmp_path, gini) -> build.Paths:
         "series_breaks": [{"year": 2012, "note": {"pt": "q", "en": "b"}}]
     }
     (indicators / f"{gini.id}.yaml").write_text(json.dumps(data))
+    registry = tmp_path / "dois.json"
+    registry.write_text(json.dumps({"10.1016/0022-0531(70)90039-6": {"bibtex": "@article{x}"}}))
     return build.Paths(
+        analyses=tmp_path / "no-analyses",
+        policies=tmp_path / "no-policies",
+        dois=registry,
         raw=tmp_path / "raw",
         processed=tmp_path / "processed",
         changelog=tmp_path / "CHANGELOG.md",

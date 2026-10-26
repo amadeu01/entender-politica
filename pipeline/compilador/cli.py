@@ -5,7 +5,7 @@ import sys
 
 import httpx
 
-from compilador import build, catalog, geography, snapshot
+from compilador import build, catalog, dois, geography, snapshot
 from compilador.sources import SOURCES
 from compilador.validate import ValidationError
 
@@ -28,16 +28,26 @@ def fetch(source_ids: list[str]) -> None:
             print(f"{source_id}: {len(files)} files, version {version} -> {snap.path}")
 
 
+def verify_dois() -> None:
+    with httpx.Client(timeout=60, headers={"User-Agent": USER_AGENT}) as client:
+        added = dois.verify(build.all_dois(build.Paths()), client)
+    print(f"{len(added)} DOIs verified and added: {added}" if added else "all DOIs verified")
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="compilador")
     sub = parser.add_subparsers(dest="command", required=True)
     p_fetch = sub.add_parser("fetch", help="download raw snapshots (network)")
     p_fetch.add_argument("sources", nargs="*", choices=list(SOURCES))
     sub.add_parser("build", help="raw snapshots -> processed data and site artifacts (offline)")
+    sub.add_parser("verify-dois", help="look up new DOIs on Crossref (network)")
     args = parser.parse_args(argv)
 
     if args.command == "fetch":
         fetch(args.sources or list(SOURCES))
+        return 0
+    if args.command == "verify-dois":
+        verify_dois()
         return 0
 
     try:

@@ -11,10 +11,23 @@ from pathlib import Path
 
 import pandas as pd
 
-from compilador import DATA_DIR, REPO_ROOT, catalog, changelog, geography, governments, snapshot
+from compilador import (
+    DATA_DIR,
+    REPO_ROOT,
+    analyses,
+    catalog,
+    changelog,
+    content,
+    dois,
+    geography,
+    governments,
+    snapshot,
+)
+from compilador.analyses import ANALYSES_DIR, POLICIES_DIR
+from compilador.dois import DOIS_FILE
 from compilador.schema import COLUMNS, empty, tidy
 from compilador.sources import SOURCES
-from compilador.validate import Report, validate
+from compilador.validate import Report, ValidationError, validate
 
 PROCESSED_DIR = DATA_DIR / "processed"
 CHANGELOG_FILE = DATA_DIR / "CHANGELOG.md"
@@ -30,6 +43,9 @@ class Paths:
     changelog: Path = CHANGELOG_FILE
     site: Path = SITE_DATA_DIR
     indicators: Path = catalog.INDICATORS_DIR
+    analyses: Path = ANALYSES_DIR
+    policies: Path = POLICIES_DIR
+    dois: Path = DOIS_FILE
 
 
 @dataclass(frozen=True)
@@ -70,6 +86,7 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     indicators = catalog.load(paths.indicators)
     df, versions = compile_observations(paths)
     report = validate(df, indicators, geography.load())
+    documents = compile_documents(df, indicators, paths)
 
     previous = paths.processed / f"{OBSERVATIONS}.parquet"
     old = pd.read_parquet(previous) if previous.exists() else empty()
@@ -80,10 +97,74 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     df.to_csv(paths.processed / f"{OBSERVATIONS}.csv", index=False)
     _write_json(paths.processed / "validation.json", report.to_dict())
     export_site(df, indicators, paths.site)
+    for name, doc in documents.items():
+        _write_json(paths.site / name, doc)
     # Logged last, so a failed write never leaves a changelog entry for data that is not there.
     if changes:
         _prepend_changelog(paths.changelog, changelog.render(changes, today, versions))
     return Result(df, report, changes)
+
+
+def all_dois(paths: Paths) -> set[str]:
+    """Every DOI cited in the catalog, analyses and policy briefs."""
+    indicators = catalog.load(paths.indicators)
+    found = {r.doi.lower() for i in indicators.values() for r in i.references if r.doi}
+    return found | analyses.cited_dois(
+        analyses.load_analyses(paths.analyses), analyses.load_policies(paths.policies)
+    )
+
+
+def citation_errors(paths: Paths, registry: dict[str, dict]) -> list[str]:
+    """A citation's year must match the publication year recorded by Crossref."""
+    refs = [r for i in catalog.load(paths.indicators).values() for r in i.references]
+    refs += [r for a, _ in analyses.load_analyses(paths.analyses) for r in a.references]
+    refs += [r for p in analyses.load_policies(paths.policies) for r in p.references]
+    return sorted(
+        {
+            f"citation year differs from Crossref ({entry['year']}): {r.citation}"
+            for r in refs
+            if r.doi
+            and (entry := registry.get(r.doi.lower()))
+            and "year" in entry
+            and f"({entry['year']})" not in r.citation
+        }
+    )
+
+
+def compile_documents(
+    df: pd.DataFrame, indicators: dict[str, catalog.Indicator], paths: Paths
+) -> dict[str, object]:
+    """Check and render analyses and policy briefs: {site-relative path: JSON document}."""
+    docs = analyses.load_analyses(paths.analyses)
+    policies = analyses.load_policies(paths.policies)
+    registry = dois.load(paths.dois)
+    errors = analyses.check(docs, policies, indicators, set(geography.load()))
+    errors += [
+        f"DOI not verified: {d} (run `compilador verify-dois`)"
+        for d in dois.missing(all_dois(paths), registry)
+    ]
+    errors += citation_errors(paths, registry)
+    if errors:
+        raise ValidationError(errors)
+
+    out: dict[str, object] = {}
+    index: dict[str, list] = {"analyses": [], "policies": []}
+    try:
+        for lang in analyses.LANGS:
+            for a, bodies in docs:
+                doc = analyses.render_analysis(a, bodies[lang], lang, df, indicators, registry)
+                out[f"analyses/{a.slug}.{lang}.json"] = doc
+                index["analyses"].append({"slug": a.slug, "lang": lang, "title": doc["title"]})
+            for p in policies:
+                doc = analyses.render_policy(p, lang, df, indicators, registry)
+                out[f"policies/{p.slug}.{lang}.json"] = doc
+                index["policies"].append(
+                    {"slug": p.slug, "lang": lang, "name": doc["name"], "country": p.country}
+                )
+    except content.ContentError as e:
+        raise ValidationError([str(e)]) from e
+    out["documents.json"] = index
+    return out
 
 
 def _prepend_changelog(path: Path, entry: str) -> None:

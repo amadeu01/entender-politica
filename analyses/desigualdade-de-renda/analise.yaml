@@ -1,0 +1,200 @@
+slug: desigualdade-de-renda
+title:
+  pt: "Desigualdade de renda no Brasil desde 1980"
+  en: "Income inequality in Brazil since 1980"
+question:
+  pt: "Como a desigualdade de renda evoluiu no Brasil desde 1980, e o que a literatura revisada por pares atribui às mudanças?"
+  en: "How has income inequality in Brazil evolved since 1980, and what does peer-reviewed research attribute the changes to?"
+hypothesis:
+  pt: >-
+    Políticas de renda, sobretudo a valorização do salário mínimo e as transferências
+    focalizadas, explicam a maior parte da queda da desigualdade de renda no Brasil a
+    partir de 2001.
+  en: >-
+    Income policies, especially the rising minimum wage and targeted transfers, explain
+    most of the fall in income inequality in Brazil from 2001 on.
+result:
+  pt: >-
+    A desigualdade medida por pesquisas domiciliares subiu nos anos 1980, ficou estável
+    nos anos 1990 e caiu de forma contínua de 2001 a 2014: o Gini da PNAD antiga passou
+    de {{ v("ipeadata.disoc_rdcg", "BRA", 2001) }} para
+    {{ v("ipeadata.disoc_rdcg", "BRA", 2014) }}. Estudos atribuem parte relevante da queda
+    ao salário mínimo e às transferências, mas também a mudanças no mercado de trabalho, e
+    dados tributários indicam que a concentração no topo pouco mudou. A evidência
+    disponível não permite afirmar com segurança que as políticas de renda explicam a
+    maior parte da queda.
+  en: >-
+    Inequality measured by household surveys rose in the 1980s, was stable in the 1990s
+    and fell steadily from 2001 to 2014: the old PNAD Gini went from
+    {{ v("ipeadata.disoc_rdcg", "BRA", 2001) }} to
+    {{ v("ipeadata.disoc_rdcg", "BRA", 2014) }}. Studies attribute a relevant part of the
+    fall to the minimum wage and transfers, but also to labor market changes, and tax data
+    suggest top-income concentration changed little. The available evidence does not
+    allow a confident claim that income policies explain most of the fall.
+indicators:
+  - ipeadata.disoc_rdcg
+  - ibge_sidra.gini_pnadc
+  - wdi.si_pov_gini
+  - ipeadata.disoc_ppy
+  - wdi.si_pov_dday
+  - undp_hdr.hdi
+  - undp_hdr.ihdi
+  - wdi.ny_gdp_pcap_kd
+  - wdi.fp_cpi_totl_zg
+geographies: [BRA, ARG, CHL, COL, MEX]
+period: { start: 1976, end: 2025 }
+method: descriptive
+method_description:
+  pt: >-
+    Descrição das séries de desigualdade e pobreza, mantidas separadas por pesquisa (PNAD
+    antiga e PNAD Contínua), comparadas com países vizinhos, e revisão de estudos que
+    decompõem a queda da desigualdade. Não há estimativa causal própria: as frações da
+    queda atribuídas a cada fator vêm dos estudos citados e dependem dos métodos deles.
+  en: >-
+    Description of inequality and poverty series, kept separate by survey (old PNAD and
+    Continuous PNAD), compared with neighboring countries, and a review of studies that
+    decompose the fall in inequality. There is no original causal estimate: shares of the
+    fall attributed to each factor come from the cited studies and depend on their methods.
+causal_claims: false
+evidence_for:
+  - text:
+      pt: >-
+        Segundo um modelo estrutural do mercado de trabalho, o aumento real do salário
+        mínimo de {{ cite("128%", "10.1257/aer.20181506", "resumo") }} entre 1996 e 2018
+        responde por {{ cite("45%", "10.1257/aer.20181506", "resumo") }} da queda da
+        desigualdade dos rendimentos do trabalho, com efeitos pequenos sobre emprego e
+        produto. A fração depende das hipóteses do modelo e se refere a rendimentos do
+        trabalho, não à renda domiciliar total.
+      en: >-
+        According to a structural model of the labor market, the
+        {{ cite("128%", "10.1257/aer.20181506", "abstract") }} real increase in the minimum
+        wage between 1996 and 2018 accounts for
+        {{ cite("45%", "10.1257/aer.20181506", "abstract") }} of the fall in labor earnings
+        inequality, with muted effects on employment and output. The share depends on the
+        model's assumptions and refers to labor earnings, not total household income.
+    references: [10.1257/aer.20181506]
+  - text:
+      pt: >-
+        Transferências condicionadas de renda representavam
+        {{ cite("menos de 1%", "10.24201/ee.v0i0.387", "resumo") }} da renda total, mas, por
+        serem bem focalizadas, responderam por cerca de
+        {{ cite("21%", "10.24201/ee.v0i0.387", "resumo") }} da queda do Gini no Brasil e no
+        México entre meados dos anos 1990 e meados dos anos 2000, numa decomposição contábil
+        (não causal).
+      en: >-
+        Conditional cash transfers were
+        {{ cite("less than 1%", "10.24201/ee.v0i0.387", "abstract") }} of total income but,
+        being well targeted, accounted for about
+        {{ cite("21%", "10.24201/ee.v0i0.387", "abstract") }} of the fall in the Gini in
+        Brazil and Mexico between the mid-1990s and the mid-2000s, in an accounting
+        (not causal) decomposition.
+    references: [10.24201/ee.v0i0.387]
+  - text:
+      pt: >-
+        Uma revisão comparativa conclui que o Bolsa Família ajudou a reduzir a desigualdade
+        e a extrema pobreza, sem impacto negativo sobre a participação no mercado de
+        trabalho.
+      en: >-
+        A comparative review concludes that Bolsa Família helped reduce inequality and
+        extreme poverty, with no negative impact on labor force participation.
+    references: [10.1017/S0023879100009390]
+evidence_against:
+  - text:
+      pt: >-
+        Numa decomposição dos rendimentos do trabalho entre 1995 e 2012, o principal fator
+        da queda do Gini foi a redução do retorno à experiência no mercado de trabalho,
+        responsável por {{ cite("53%", "10.1093/wber/lhab005", "resumo") }} da queda, mais do
+        que a queda do prêmio da educação. Esse fator não é uma política de renda.
+      en: >-
+        In a decomposition of labor earnings between 1995 and 2012, the main driver of the
+        fall in the Gini was lower returns to labor market experience, accounting for
+        {{ cite("53%", "10.1093/wber/lhab005", "abstract") }} of the fall, more than the
+        falling education premium. This factor is not an income policy.
+    references: [10.1093/wber/lhab005]
+  - text:
+      pt: >-
+        Com dados do Imposto de Renda, a concentração de renda no topo é substancialmente
+        maior do que nas pesquisas domiciliares e permaneceu, em termos gerais, estável
+        entre 2006 e 2012. A queda medida pelas pesquisas pode exagerar a redução da
+        desigualdade total, e com ela o papel atribuído a qualquer política.
+      en: >-
+        With income tax data, top-income concentration is substantially higher than in
+        household surveys and remained broadly stable between 2006 and 2012. The fall
+        measured by surveys may overstate the reduction in overall inequality, and with it
+        the role attributed to any policy.
+    references: [10.1590/00115258201537]
+limitations:
+  - pt: >-
+      As séries da PNAD antiga e da PNAD Contínua não são comparáveis em nível e não foram
+      emendadas. A comparação entre períodos deve ser feita dentro de cada série.
+    en: >-
+      The old PNAD and Continuous PNAD series are not level-comparable and were not
+      spliced. Comparisons across periods should be made within each series.
+  - pt: >-
+      Pesquisas domiciliares subestimam as rendas do topo; o nível e talvez a tendência da
+      desigualdade total são diferentes com dados tributários.
+    en: >-
+      Household surveys underestimate top incomes; the level and possibly the trend of
+      overall inequality differ with tax data.
+  - pt: >-
+      Comparações regionais usam o Gini do Banco Mundial, que para a Argentina cobre só a
+      população urbana, e cujas pesquisas mudam de ano para ano em vários países.
+    en: >-
+      Regional comparisons use the World Bank Gini, which for Argentina covers only the
+      urban population, and whose underlying surveys change over time in several countries.
+  - pt: >-
+      As frações da queda atribuídas a salário mínimo, transferências e mercado de trabalho
+      vêm de estudos com períodos, medidas de renda e métodos diferentes; não se somam.
+    en: >-
+      Shares of the fall attributed to the minimum wage, transfers and the labor market
+      come from studies with different periods, income measures and methods; they do not
+      add up.
+  - pt: >-
+      A coincidência temporal entre uma política e a queda da desigualdade não demonstra
+      que a política causou a queda (ver a metodologia do site).
+    en: >-
+      Temporal coincidence between a policy and the fall in inequality does not show that
+      the policy caused the fall (see the site methodology).
+references:
+  - citation: "Engbom, N., & Moser, C. (2022). Earnings inequality and the minimum wage: evidence from Brazil. American Economic Review, 112(12), 3803–3847."
+    doi: 10.1257/aer.20181506
+  - citation: "Soares, S., Osório, R. G., Soares, F. V., Medeiros, M., & Zepeda, E. (2009). Conditional cash transfers in Brazil, Chile and Mexico: impacts upon inequality. Estudios Económicos, 207–224."
+    doi: 10.24201/ee.v0i0.387
+  - citation: "Soares, F. V., Ribas, R. P., & Osório, R. G. (2010). Evaluating the impact of Brazil's Bolsa Família: cash transfer programs in comparative perspective. Latin American Research Review, 45(2), 173–190."
+    doi: 10.1017/S0023879100009390
+  - citation: "Ferreira, F. H. G., Firpo, S. P., & Messina, J. (2021). Labor market experience and falling earnings inequality in Brazil: 1995–2012. The World Bank Economic Review, 36(1), 37–67."
+    doi: 10.1093/wber/lhab005
+  - citation: "Medeiros, M., Souza, P. H. G. F., & Castro, F. A. (2015). O topo da distribuição de renda no Brasil: primeiras estimativas com dados tributários e comparação com pesquisas domiciliares (2006–2012). Dados, 58(1), 7–36."
+    doi: 10.1590/00115258201537
+  - citation: "Barros, R. P., Henriques, R., & Mendonça, R. (2000). Desigualdade e pobreza no Brasil: retrato de uma estabilidade inaceitável. Revista Brasileira de Ciências Sociais, 15(42), 123–142."
+    doi: 10.1590/S0102-69092000000100009
+charts:
+  - id: gini-brasil
+    title: { pt: "Índice de Gini no Brasil, por pesquisa", en: "Gini index in Brazil, by survey" }
+    alt:
+      pt: "Linhas do Gini da renda domiciliar per capita: PNAD antiga de 1976 a 2014 e PNAD Contínua de 2012 em diante, com intervalo de confiança na PNAD Contínua e faixas dos governos ao fundo."
+      en: "Lines of the Gini of household income per capita: old PNAD from 1976 to 2014 and Continuous PNAD from 2012 on, with confidence interval for the Continuous PNAD and government bands in the background."
+    indicators: [ipeadata.disoc_rdcg, ibge_sidra.gini_pnadc]
+    geographies: [BRA]
+  - id: gini-regiao
+    title: { pt: "Gini no Brasil e em países vizinhos (Banco Mundial)", en: "Gini in Brazil and neighboring countries (World Bank)" }
+    alt:
+      pt: "Linhas do Gini do Banco Mundial para Brasil, Argentina, Chile, Colômbia e México desde 1981."
+      en: "World Bank Gini lines for Brazil, Argentina, Chile, Colombia and Mexico since 1981."
+    indicators: [wdi.si_pov_gini]
+    geographies: [BRA, ARG, CHL, COL, MEX]
+  - id: pobreza-brasil
+    title: { pt: "Pobreza no Brasil: linha nacional (Ipea) e internacional (Banco Mundial)", en: "Poverty in Brazil: national line (Ipea) and international line (World Bank)" }
+    alt:
+      pt: "Duas linhas de taxa de pobreza no Brasil: linhas regionais do Ipea de 1976 a 2014 e linha internacional de pobreza extrema do Banco Mundial."
+      en: "Two poverty rate lines for Brazil: Ipea regional lines from 1976 to 2014 and the World Bank international extreme poverty line."
+    indicators: [ipeadata.disoc_ppy, wdi.si_pov_dday]
+    geographies: [BRA]
+  - id: idh-desigualdade
+    title: { pt: "IDH e IDH ajustado à desigualdade no Brasil", en: "HDI and inequality-adjusted HDI in Brazil" }
+    alt:
+      pt: "Linhas do IDH desde 1990 e do IDH ajustado à desigualdade desde 2010 no Brasil; a distância entre elas é a perda por desigualdade."
+      en: "Lines of Brazil's HDI since 1990 and inequality-adjusted HDI since 2010; the gap between them is the loss due to inequality."
+    indicators: [undp_hdr.hdi, undp_hdr.ihdi]
+    geographies: [BRA]
+related_policies: [progresa-oportunidades]
