@@ -118,6 +118,12 @@ const fmt = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", {
                     <a href={`https://doi.org/${paper.doi}`}>{paper.citation.split(".")[0]}</a>
                   </>
                 )}
+                {m.ind.uncertainty && (
+                  <>
+                    <br />
+                    {t.uncertainty}: {m.ind.uncertainty[lang]}
+                  </>
+                )}
                 {breaks.length > 0 && (
                   <>
                     <br />

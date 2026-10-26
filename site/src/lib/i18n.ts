@@ -52,7 +52,8 @@ export const UI = {
     viewSourceCode: "código da coleta",
     otherLang: "English",
     otherLangCode: "en",
-    footer: "Código sob licença MIT. Conteúdo sob CC BY 4.0. Dados sob a licença de cada fonte.",
+    footer:
+      "Código sob licença MIT. Conteúdo sob CC BY 4.0. Dados e gráficos sob a licença de cada fonte, indicada em cada gráfico (os derivados do V-Dem são CC BY-SA 4.0).",
     source: "Fonte",
     license: "Licença",
     version: "Versão da fonte",
@@ -138,7 +139,8 @@ export const UI = {
     viewSourceCode: "collection code",
     otherLang: "Português",
     otherLangCode: "pt-BR",
-    footer: "Code under the MIT license. Content under CC BY 4.0. Data under each source's license.",
+    footer:
+      "Code under the MIT license. Content under CC BY 4.0. Data and charts under each source's license, shown on each chart (V-Dem-derived ones are CC BY-SA 4.0).",
     source: "Source",
     license: "License",
     version: "Source version",
@@ -208,6 +210,7 @@ export const SOURCE_NAMES: Record<string, Record<Lang, string>> = {
   undp_hdr: { pt: "PNUD — Relatório de Desenvolvimento Humano", en: "UNDP — Human Development Report" },
   ibge_sidra: { pt: "IBGE — SIDRA (PNAD Contínua)", en: "IBGE — SIDRA (Continuous PNAD)" },
   ipeadata: { pt: "Ipea — Ipeadata", en: "Ipea — Ipeadata" },
+  vdem: { pt: "V-Dem — Varieties of Democracy", en: "V-Dem — Varieties of Democracy" },
 };
 
 export const METHOD_NAMES: Record<string, Record<Lang, string>> = {
@@ -229,6 +232,7 @@ export const SOURCE_CODE: Record<string, string> = {
   undp_hdr: "pipeline/compilador/sources/undp_hdr.py",
   ibge_sidra: "pipeline/compilador/sources/sidra.py",
   ipeadata: "pipeline/compilador/sources/ipeadata.py",
+  vdem: "pipeline/compilador/sources/vdem.py",
 };
 
 /** Entities keep the same color on every chart (color follows the entity, not its rank). */

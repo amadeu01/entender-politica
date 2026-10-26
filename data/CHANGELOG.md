@@ -5,6 +5,34 @@
 - Fonte / Source `ibge_sidra`: versão / version `2026-05-08`
 - Fonte / Source `ipeadata`: versão / version `2016-01-06`
 - Fonte / Source `undp_hdr`: versão / version `HDR 2025`
+- Fonte / Source `vdem`: versão / version `v16`
+- Fonte / Source `wdi`: versão / version `2026-10-08`
+- Fonte / Source `wgi`: versão / version `2026-09-25`
+- Séries novas / New series: 15
+  - `vdem.v2x_egaldem ARG`
+  - `vdem.v2x_egaldem BRA`
+  - `vdem.v2x_egaldem CHL`
+  - `vdem.v2x_egaldem COL`
+  - `vdem.v2x_egaldem MEX`
+  - `vdem.v2x_libdem ARG`
+  - `vdem.v2x_libdem BRA`
+  - `vdem.v2x_libdem CHL`
+  - `vdem.v2x_libdem COL`
+  - `vdem.v2x_libdem MEX`
+  - `vdem.v2x_polyarchy ARG`
+  - `vdem.v2x_polyarchy BRA`
+  - `vdem.v2x_polyarchy CHL`
+  - `vdem.v2x_polyarchy COL`
+  - `vdem.v2x_polyarchy MEX`
+- Observações adicionadas / Observations added: 765
+- Observações removidas / Observations removed: 0
+- Valores revisados pela fonte / Values revised upstream: 0
+
+## 2026-10-26
+
+- Fonte / Source `ibge_sidra`: versão / version `2026-05-08`
+- Fonte / Source `ipeadata`: versão / version `2016-01-06`
+- Fonte / Source `undp_hdr`: versão / version `HDR 2025`
 - Fonte / Source `wdi`: versão / version `2026-10-08`
 - Fonte / Source `wgi`: versão / version `2026-09-25`
 - Séries novas / New series: 28

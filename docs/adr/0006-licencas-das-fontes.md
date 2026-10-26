@@ -18,6 +18,7 @@ identificador SPDX.
 | PNUD (HDR) | `CC-BY-3.0-IGO` | [Termos de uso do HDRO](https://hdr.undp.org/terms-use), conferidos em 2026-10-25 |
 | IBGE (SIDRA) | `LicenseRef-IBGE-reuse-with-attribution` | Termos de uso do IBGE: reutilização permitida com citação da fonte |
 | Ipeadata | `LicenseRef-Ipeadata-reuse-with-attribution` | Reprodução permitida com citação da fonte |
+| V-Dem | `CC-BY-SA-4.0` | [Página do dataset V-Dem](https://v-dem.net/data/the-v-dem-dataset/), conferida em 2026-10-25. **Compartilha igual:** dados e gráficos derivados do V-Dem são distribuídos sob CC BY-SA 4.0, não CC BY 4.0 |
 
 Identificadores `LicenseRef-*` seguem a convenção SPDX para licenças sem identificador
 oficial.
@@ -41,7 +42,9 @@ identifier.
 ### Decision
 World Bank (WDI, WGI): `CC-BY-4.0`. UNDP HDR: `CC-BY-3.0-IGO` (terms checked on
 2026-10-25). IBGE SIDRA: `LicenseRef-IBGE-reuse-with-attribution`. Ipeadata:
-`LicenseRef-Ipeadata-reuse-with-attribution`. `LicenseRef-*` follows the SPDX convention
+`LicenseRef-Ipeadata-reuse-with-attribution`. V-Dem: `CC-BY-SA-4.0` (share-alike:
+V-Dem-derived data and charts are distributed under CC BY-SA 4.0, not CC BY 4.0; checked
+on 2026-10-25). `LicenseRef-*` follows the SPDX convention
 for licenses without an official identifier.
 
 ### Verification pending

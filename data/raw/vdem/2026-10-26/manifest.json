@@ -1,0 +1,20 @@
+{
+  "source_id": "vdem",
+  "retrieved_at": "2026-10-26T02:25:35+00:00",
+  "source_version": "v16",
+  "license": "CC-BY-SA-4.0",
+  "files": [
+    {
+      "name": "upstream.json",
+      "url": "https://v-dem.net/media/datasets/V-Dem-CY-Core-v16_csv.zip",
+      "sha256": "cf718b6b1a72b8156fab7680286cafc579c00d13c7e67d8b09b8d906ae40e493",
+      "bytes": 609
+    },
+    {
+      "name": "vdem-extract.csv",
+      "url": "https://v-dem.net/media/datasets/V-Dem-CY-Core-v16_csv.zip#extract-see-upstream.json",
+      "sha256": "031b5f3b9e817b4b7dd7648ac5fc62eefc3477dd5bb7cff9638d457e29490e2c",
+      "bytes": 15974
+    }
+  ]
+}

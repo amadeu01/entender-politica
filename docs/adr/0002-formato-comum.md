@@ -32,8 +32,9 @@ Os dados brutos ficam em `data/raw/<fonte>/<data-da-coleta>/` com um `manifest.j
 (URL, sha256, data, licença, versão). Os normalizados em `data/processed/` como Parquet
 e CSV.
 
-Enquanto cada fonte tiver menos de 5 MB, os brutos são commitados. Acima disso, passam a
-ser anexados como *assets* de Releases do GitHub, e o manifesto aponta para eles.
+Enquanto cada fonte tiver menos de 5 MB, os brutos são commitados. Acima disso, vale o
+[ADR 0010](0010-recortes-de-fontes-grandes.md): um recorte determinístico mais o hash do
+arquivo original.
 
 ### Consequências
 - Qualquer número no site é rastreável até uma linha, e daí até um arquivo bruto com hash.
@@ -55,8 +56,8 @@ Long format, **one observation per row**, with the columns in the table above: `
 
 Raw data goes to `data/raw/<source>/<collection-date>/` with a `manifest.json` (URL,
 sha256, date, license, version); normalized data to `data/processed/` as Parquet and CSV.
-Raw files are committed while each source is under 5 MB, and moved to GitHub Release
-assets beyond that.
+Raw files are committed while each source is under 5 MB; beyond that, ADR 0010 applies
+(a deterministic extract plus the original file's hash).
 
 ### Consequences
 Every number on the site traces to one row and from there to a hashed raw file. Upstream
