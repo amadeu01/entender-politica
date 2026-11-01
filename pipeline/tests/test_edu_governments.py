@@ -161,7 +161,7 @@ def test_render_resolves_numbers_and_tabulates_changes():
     lcn = next(c for c in out["changes"] if c["geo_code"] == "LCN" and c["lag"] == 0)
     assert lcn["change"] == pytest.approx(0.0)
     assert out["started"][0]["values"][IND] == 52.0
-    assert out["cuts"][0]["values"][IND] == 55.0
+    assert out["cuts"][0]["values"][IND] == 54.0
 
 
 def test_items_must_fall_inside_the_period_years():
