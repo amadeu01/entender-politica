@@ -344,6 +344,9 @@ export const SOURCE_NAMES: Record<string, Record<Lang, string>> = {
   ibge_sidra: { pt: "IBGE — SIDRA (PNAD Contínua)", en: "IBGE — SIDRA (Continuous PNAD)" },
   ipeadata: { pt: "Ipea — Ipeadata", en: "Ipea — Ipeadata" },
   vdem: { pt: "V-Dem — Varieties of Democracy", en: "V-Dem — Varieties of Democracy" },
+  inep: { pt: "Inep", en: "Inep" },
+  capes: { pt: "Capes", en: "Capes" },
+  tesouro: { pt: "Tesouro Nacional e FNDE", en: "National Treasury and FNDE" },
 };
 
 export const METHOD_NAMES: Record<string, Record<Lang, string>> = {
@@ -396,6 +399,7 @@ export const UNIT_DECIMALS: Record<string, number> = {
   usd_2015: 0,
   years: 1,
   per_1000_live_births: 1,
+  per_million_people: 0,
   wgi_estimate: 2,
   brl_month: 0,
   brl_month_real: 0,
@@ -412,6 +416,7 @@ export const UNIT_LABELS: Record<string, Record<Lang, string>> = {
   usd_2015: { pt: "US$ de 2015", en: "2015 US$" },
   years: { pt: "anos", en: "years" },
   per_1000_live_births: { pt: "por 1.000 nascidos vivos", en: "per 1,000 live births" },
+  per_million_people: { pt: "por milhão de habitantes", en: "per million people" },
   wgi_estimate: { pt: "estimativa (≈ −2,5 a +2,5)", en: "estimate (≈ −2.5 to +2.5)" },
   brl_month: { pt: "R$ por mês", en: "R$ per month" },
   brl_month_real: { pt: "R$ por mês, a preços do último ano", en: "R$ per month, at prices of the latest year" },

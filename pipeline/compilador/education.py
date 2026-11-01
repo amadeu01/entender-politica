@@ -27,6 +27,7 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 from compilador import REPO_ROOT, content
 from compilador.catalog import Indicator
 from compilador.i18n import Text
+from compilador.sources.camara_votes import PropRef
 
 EDUCATION_DIR = REPO_ROOT / "education"
 SUBMODULES_FILE = "submodulos.yaml"
@@ -51,13 +52,14 @@ class EventType(StrEnum):
     PLENARY_VOTE = "plenary_vote"
     ENACTED = "enacted"
     AMENDED = "amended"
+    REGULATED = "regulated"
     REVOKED = "revoked"
     SUPERSEDED = "superseded"
 
 
 VOTE_TYPES = {EventType.COMMITTEE_VOTE, EventType.PLENARY_VOTE}
 # Events that a later norm causes: they must name it.
-BY_TYPES = {EventType.AMENDED, EventType.REVOKED}
+BY_TYPES = {EventType.AMENDED, EventType.REGULATED, EventType.REVOKED}
 
 
 class Chamber(StrEnum):
@@ -96,6 +98,14 @@ class Event(Strict):
         return self
 
 
+class Bill(Strict):
+    """A bill in the Câmara, as numbered by the Câmara (`PEC 15/2015`)."""
+
+    type: str = Field(pattern=r"^[A-Z]{2,5}$")
+    number: int = Field(gt=0)
+    year: int = Field(ge=1900, le=2100)
+
+
 class Law(Strict):
     slug: str = Field(pattern=r"^[a-z0-9-]+$")
     designation: str = Field(min_length=3)
@@ -107,12 +117,18 @@ class Law(Strict):
     summary: Text
     submodules: list[str] = Field(min_length=1)
     events: list[Event] = Field(min_length=1)
+    # Bills whose plenary roll calls the votes connectors collect, each in its own
+    # chamber's numbering (the Câmara's PEC 15/2015 is the Senado's PEC 26/2020).
+    camara: list[Bill] = []
+    senado: list[Bill] = []
     # Date someone matched this record against the official text. Empty means the record
     # was not checked yet, and the site says so.
     verified: dt.date | None = None
 
     @model_validator(mode="after")
     def _enacted(self) -> "Law":
+        if len(set(self.submodules)) != len(self.submodules):
+            raise ValueError(f"{self.slug}: repeated sub-module in `submodules`")
         enacted = [e for e in self.events if e.type == EventType.ENACTED]
         if len(enacted) != 1:
             raise ValueError(f"{self.slug}: exactly one 'enacted' event required")
@@ -149,14 +165,20 @@ def load_module(directory: Path = EDUCATION_DIR) -> Module | None:
     if not (directory / SUBMODULES_FILE).exists():
         return None
     with (directory / SUBMODULES_FILE).open(encoding="utf-8") as f:
-        return Module.model_validate(yaml.safe_load(f))
+        raw = yaml.safe_load(f)
+    if not isinstance(raw, dict):
+        raise ValueError(f"{SUBMODULES_FILE}: empty or not a mapping")
+    return Module.model_validate(raw)
 
 
 def load_laws(directory: Path = EDUCATION_DIR) -> list[Law]:
     laws = []
     for path in sorted((directory / LAWS_SUBDIR).glob("*.yaml")):
         with path.open(encoding="utf-8") as f:
-            law = Law.model_validate(yaml.safe_load(f))
+            raw = yaml.safe_load(f)
+        if not isinstance(raw, dict):
+            raise ValueError(f"{path.name}: empty or not a mapping")
+        law = Law.model_validate(raw)
         if path.stem != law.slug:
             raise ValueError(f"{path.name}: file name must be '{law.slug}.yaml'")
         laws.append(law)
@@ -192,6 +214,11 @@ def check(module: Module, laws: list[Law], indicators: dict[str, Indicator]) -> 
 
     for law in laws:
         errors += [
+            f"{law.slug}: event {e.year} names '{e.by}', which is not a record in education/normas"
+            for e in law.events
+            if e.by and e.by not in designations
+        ]
+        errors += [
             f"{law.slug}: unknown sub-module '{s}'" for s in law.submodules if s not in sub_ids
         ]
     prose = [(f"sub-module {s.id} summary", s.summary) for s in module.submodules]
@@ -210,6 +237,33 @@ def check(module: Module, laws: list[Law], indicators: dict[str, Indicator]) -> 
     return errors
 
 
+def _refs(bills: Iterable[Bill]) -> list[PropRef]:
+    refs = {PropRef(b.type, b.number, b.year) for b in bills}
+    return sorted(refs, key=lambda r: (r.year, r.type, r.number))
+
+
+def camara_refs(laws: list[Law]) -> list[PropRef]:
+    """Every distinct Câmara bill the votes connector must collect, in a stable order."""
+    return _refs(b for law in laws for b in law.camara)
+
+
+def senado_refs(laws: list[Law]) -> list[PropRef]:
+    """Every distinct Senado bill the votes connector must collect, in a stable order."""
+    return _refs(b for law in laws for b in law.senado)
+
+
+def vote_files(votes: dict[str, list[dict]]) -> dict[str, str]:
+    """Per-deputy CSV of each nominal vote: {file name: CSV text}."""
+    files = {}
+    for vote in (v for group in votes.values() for v in group):
+        lines = ["deputy_id,name,party,state,vote"]
+        for b in vote["ballots"]:
+            name = b["name"].replace('"', '""')
+            lines.append(f'{b["deputy_id"]},"{name}",{b["party"]},{b["state"]},{b["vote"]}')
+        files[f"{vote['id']}.csv"] = "\n".join(lines) + "\n"
+    return files
+
+
 def _value_at(df: pd.DataFrame, indicator_id: str, year: int) -> float | None:
     rows = df[
         (df["indicator_id"] == indicator_id) & (df["geo_code"] == FOCUS_GEO) & (df["year"] == year)
@@ -217,9 +271,25 @@ def _value_at(df: pd.DataFrame, indicator_id: str, year: int) -> float | None:
     return None if rows.empty else float(rows["value"].iloc[0])
 
 
-def render(module: Module, laws: list[Law], df: pd.DataFrame) -> dict[str, object]:
+def render(
+    module: Module,
+    laws: list[Law],
+    df: pd.DataFrame,
+    votes: dict[str, list[dict]] | None = None,
+) -> dict[str, object]:
     """The JSON document the education page reads."""
+    votes = votes or {}
     by_designation = {law.designation: law.slug for law in laws}
+
+    def law_votes(law: Law) -> list[dict]:
+        found = [
+            {k: v for k, v in vote.items() if k != "ballots"} | {"csv": f"{vote['id']}.csv"}
+            for chamber, bills in (("camara", law.camara), ("senado", law.senado))
+            for b in bills
+            for vote in votes.get(f"{chamber}:{PropRef(b.type, b.number, b.year).label}", [])
+        ]
+        return sorted(found, key=lambda v: (v["date"], v["id"]))
+
     law_docs = []
     for law in laws:
         events = sorted(law.events, key=lambda e: (e.year, e.date or dt.date(e.year, 1, 1)))
@@ -229,7 +299,8 @@ def render(module: Module, laws: list[Law], df: pd.DataFrame) -> dict[str, objec
                 "events": [
                     e.model_dump(mode="json") | {"by_slug": by_designation.get(e.by or "")}
                     for e in events
-                ]
+                ],
+                "votes": law_votes(law),
             }
         )
     law_docs.sort(key=lambda d: (d["year"], d["designation"]))
@@ -244,6 +315,7 @@ def render(module: Module, laws: list[Law], df: pd.DataFrame) -> dict[str, objec
             (
                 {
                     "year": e.year,
+                    "date": e.date.isoformat() if e.date else None,
                     "law": law.slug,
                     "designation": law.designation,
                     "type": e.type.value,
@@ -257,11 +329,23 @@ def render(module: Module, laws: list[Law], df: pd.DataFrame) -> dict[str, objec
                 for law in member
                 for e in law.events
             ),
-            key=lambda m: (m["year"], m["designation"]),
+            key=lambda m: (m["date"] or f"{m['year']}", m["designation"]),
         )
         submodules.append(
             sub.model_dump(mode="json")
-            | {"laws": [law.slug for law in member], "shown_indicators": shown, "events": marks}
+            | {
+                "laws": [law.slug for law in member],
+                "shown_indicators": shown,
+                "events": marks,
+                "votes": sorted(
+                    (
+                        v | {"law": law.slug, "designation": law.designation}
+                        for law in member
+                        for v in law_votes(law)
+                    ),
+                    key=lambda v: (v["date"], v["id"]),
+                ),
+            }
         )
     return {
         "geography": FOCUS_GEO,

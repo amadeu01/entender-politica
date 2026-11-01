@@ -61,6 +61,7 @@ uv run pytest
 uv run ruff check . && uv run ruff format --check .
 uv run compilador build          # dados brutos -> dados processados e arquivos do site (offline)
 uv run compilador fetch          # baixa novos snapshots das fontes (rede)
+uv run compilador fetch-votes    # baixa votações em plenário (Câmara e Senado) das normas de educação (rede, lento)
 uv run compilador verify-dois    # confere DOIs novos na Crossref (rede)
 cd site && npm ci && npm run dev # site em http://localhost:4321/entender-politica/
 ```

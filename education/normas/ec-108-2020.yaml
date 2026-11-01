@@ -7,6 +7,8 @@ summary:
   pt: "Torna o Fundeb permanente e amplia a complementação da União, com parte do aumento condicionada a resultados."
   en: "Makes Fundeb permanent and widens the Union's top-up, with part of the increase conditioned on results."
 submodules: [financiamento, educacao-infantil, ensino-fundamental, ensino-medio]
+camara: [{ type: PEC, number: 15, year: 2015 }]
+senado: [{ type: PEC, number: 26, year: 2020 }]
 events:
   - { year: 2015, type: proposed, description: { pt: "Apresentada a proposta de emenda que originou o Fundeb permanente.", en: "The constitutional amendment proposal behind the permanent Fundeb is introduced." } }
   - { year: 2020, date: 2020-08-26, type: enacted, description: { pt: "Promulgada a emenda.", en: "The amendment is promulgated." } }

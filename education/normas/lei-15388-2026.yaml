@@ -5,13 +5,13 @@ year: 2026
 bill: "PL 2614/2024"
 title: { pt: "Novo Plano Nacional de Educação", en: "New National Education Plan" }
 summary:
-  pt: "Novo plano decenal da educação nacional, com mais objetivos, metas e estratégias do que o plano anterior. Tramitou na Câmara em caráter conclusivo e seguiu ao Senado depois de recurso."
-  en: "New ten-year national education plan, with more objectives, goals and strategies than the previous plan. It went through the Câmara in conclusive form and moved to the Senado after an appeal."
+  pt: "Novo plano decenal da educação nacional, que sucede o plano de 2014. Tramitou na Câmara em caráter conclusivo; o plenário rejeitou o recurso contra essa via e o projeto seguiu ao Senado."
+  en: "New ten-year national education plan, succeeding the 2014 plan. It went through the Câmara in conclusive form; the plenary rejected the appeal against that route and the bill moved to the Senado."
 submodules: [planejamento, educacao-infantil, ensino-fundamental, ensino-medio, educacao-profissional, graduacao, pos-graduacao-ciencia, financiamento]
+camara: [{ type: PL, number: 2614, year: 2024 }]
 events:
-  - { year: 2024, type: proposed, chamber: camara, description: { pt: "Projeto do Executivo apresentado à Câmara.", en: "Executive bill introduced in the Câmara." } }
-  - { year: 2025, type: committee_vote, chamber: camara, form: conclusive, description: { pt: "Comissão especial aprova o projeto em caráter conclusivo, sem votação no plenário.", en: "The special committee approves the bill in conclusive form, without a plenary vote." } }
-  - { year: 2025, date: 2025-12-15, type: plenary_vote, chamber: camara, form: unknown, description: { pt: "Plenário rejeita recurso contra a tramitação conclusiva; o projeto segue ao Senado.", en: "The plenary rejects an appeal against the conclusive route; the bill moves to the Senado." } }
+  - { year: 2024, date: 2024-06-27, type: proposed, chamber: camara, description: { pt: "Projeto apresentado à Câmara.", en: "Bill introduced in the Câmara." } }
+  - { year: 2025, date: 2025-12-10, type: committee_vote, chamber: camara, form: unknown, description: { pt: "Comissão especial aprova o parecer do relator; o projeto tramita em caráter conclusivo.", en: "The special committee approves the rapporteur's report; the bill moves in conclusive form." } }
+  - { year: 2025, date: 2025-12-15, type: plenary_vote, chamber: camara, form: unknown, description: { pt: "Plenário rejeita o recurso contra a tramitação conclusiva e aprova a redação final; o projeto segue ao Senado.", en: "The plenary rejects the appeal against the conclusive route and approves the final text; the bill moves to the Senado." } }
   - { year: 2026, date: 2026-03-25, type: committee_vote, chamber: senado, form: unknown, description: { pt: "Comissão de Educação do Senado aprova o projeto.", en: "The Senado Education Committee approves the bill." } }
-  - { year: 2026, date: 2026-03-25, type: plenary_vote, chamber: senado, form: unknown, description: { pt: "Plenário do Senado aprova o requerimento de urgência.", en: "The Senado plenary approves the urgency request." } }
   - { year: 2026, date: 2026-04-14, type: enacted, description: { pt: "Sancionado o plano.", en: "The plan is enacted." } }

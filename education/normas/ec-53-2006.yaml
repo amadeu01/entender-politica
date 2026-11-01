@@ -9,4 +9,4 @@ summary:
 submodules: [financiamento, educacao-infantil, ensino-fundamental, ensino-medio]
 events:
   - { year: 2006, type: enacted, description: { pt: "Promulgada a emenda que cria o Fundeb.", en: "The amendment creating Fundeb is promulgated." } }
-  - { year: 2007, type: amended, by: "Lei 11.494/2007", description: { pt: "Regulamentação do fundo.", en: "The fund is regulated." } }
+  - { year: 2007, type: regulated, by: "Lei 11.494/2007", description: { pt: "Regulamentação do fundo.", en: "The fund is regulated." } }

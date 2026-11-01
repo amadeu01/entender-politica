@@ -7,5 +7,6 @@ summary:
   pt: "Institui o Programa Universidade para Todos, com bolsas em instituições privadas de ensino superior em troca de isenção de tributos."
   en: "Creates the University for All Program, with scholarships at private higher-education institutions in exchange for tax exemption."
 submodules: [graduacao]
+camara: [{ type: MPV, number: 213, year: 2004 }]
 events:
   - { year: 2005, type: enacted, description: { pt: "Sancionada a lei do ProUni.", en: "The ProUni law is enacted." } }

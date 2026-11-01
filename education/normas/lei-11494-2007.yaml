@@ -7,6 +7,7 @@ summary:
   pt: "Regulamenta o Fundeb criado pela emenda de 2006, com regras de distribuição entre estados e municípios."
   en: "Regulates the Fundeb created by the 2006 amendment, with rules for sharing among states and municipalities."
 submodules: [financiamento, educacao-infantil, ensino-fundamental, ensino-medio]
+camara: [{ type: MPV, number: 339, year: 2006 }]
 events:
   - { year: 2007, type: enacted, description: { pt: "Sancionada a lei de regulamentação.", en: "The regulating law is enacted." } }
   - { year: 2020, type: revoked, by: "Lei 14.113/2020", description: { pt: "Substituída pela regulamentação do Fundeb permanente.", en: "Replaced by the regulation of the permanent Fundeb." } }

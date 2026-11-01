@@ -4,7 +4,7 @@ kind: law
 year: 1996
 title: { pt: "Lei de Diretrizes e Bases da Educação Nacional (LDB)", en: "National Education Guidelines and Framework Law (LDB)" }
 summary:
-  pt: "Organiza a educação nacional em níveis e etapas e define competências da União, dos estados e dos municípios. É a lei que as demais normas da educação alteram."
+  pt: "Organiza a educação nacional em níveis e etapas e define competências da União, dos estados e dos municípios. É a lei que muitas outras normas da educação alteram."
   en: "Organizes national education into levels and stages and sets the roles of the Union, states and municipalities. It is the law that most other education norms amend."
 submodules: [planejamento, educacao-infantil, ensino-fundamental, ensino-medio, graduacao]
 events:

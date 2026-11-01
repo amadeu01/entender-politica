@@ -1,7 +1,7 @@
 # Módulo de educação: subtemas, indicadores de cada um e métricas planejadas.
 # Indicadores listados aqui precisam existir em /indicadores. Métricas planejadas ainda
-# não têm dado coletado: o código da série deve ser conferido na API da fonte antes de
-# virar indicador (ver docs/adr/0012-modulo-educacao.md).
+# não têm dado coletado: uma série só vira indicador depois que o código foi conferido na
+# API da fonte e há snapshot real (docs/adr/0012-modulo-educacao.md).
 overview_indicators:
   - undp_hdr.eys
   - undp_hdr.mys
@@ -12,45 +12,45 @@ submodules:
     summary:
       pt: "Creche e pré-escola, a primeira etapa da educação básica."
       en: "Nursery and pre-school, the first stage of basic education."
+    indicators: [wdi.se_pre_enrr]
     planned_metrics:
-      - name: { pt: "Taxa bruta de matrícula na pré-escola", en: "Gross pre-primary enrollment rate" }
-        source: wdi
-        code: SE.PRE.ENRR
+      - name: { pt: "Cobertura de creche (faixa etária mais nova)", en: "Nursery coverage (youngest age group)" }
+        source: ibge_sidra
         note:
-          pt: "Série do Banco Mundial; a cobertura de creche (faixa mais nova) vem do Inep e da PNAD Contínua."
-          en: "World Bank series; nursery coverage (the youngest group) comes from Inep and the Continuous PNAD."
+          pt: "Vem da PNAD Contínua (SIDRA); o host do SIDRA ainda não está liberado no ambiente de desenvolvimento."
+          en: "Comes from the Continuous PNAD (SIDRA); the SIDRA host is not yet allowed in the development environment."
 
   - id: ensino-fundamental
     name: { pt: "Ensino fundamental", en: "Primary and lower secondary (ensino fundamental)" }
     summary:
       pt: "A etapa obrigatória mais longa, dos anos iniciais aos finais."
       en: "The longest compulsory stage, from the early to the final grades."
+    indicators: [wdi.se_prm_enrr]
     planned_metrics:
-      - name: { pt: "Taxa bruta de matrícula no ensino primário", en: "Gross primary enrollment rate" }
-        source: wdi
-        code: SE.PRM.ENRR
+      - name: { pt: "Ideb e Saeb (aprendizado)", en: "Ideb and Saeb (learning)" }
+        source: inep
         note:
-          pt: "Pode passar de cem por cento quando há alunos fora da idade esperada."
-          en: "Can exceed one hundred percent when students are outside the expected age."
+          pt: "Medem aprendizado e fluxo escolar, que a matrícula não mede. O Inep ainda não tem conector."
+          en: "They measure learning and school flow, which enrollment does not. Inep has no connector yet."
       - name: { pt: "Taxa de conclusão do ensino primário", en: "Primary completion rate" }
         source: wdi
         code: SE.PRM.CMPT.ZS
         note:
-          pt: "Aprendizado vem do Ideb e do Saeb (Inep), que ainda não têm conector."
-          en: "Learning outcomes come from Ideb and Saeb (Inep), which have no connector yet."
+          pt: "O Banco Mundial não publica valores para o Brasil nesta série."
+          en: "The World Bank publishes no values for Brazil in this series."
 
   - id: ensino-medio
     name: { pt: "Ensino médio", en: "Upper secondary (ensino médio)" }
     summary:
       pt: "Última etapa da educação básica, com currículo alterado pelas reformas de 2017 e 2024."
       en: "Last stage of basic education, with a curriculum changed by the 2017 and 2024 reforms."
+    indicators: [wdi.se_sec_enrr]
     planned_metrics:
-      - name: { pt: "Taxa bruta de matrícula no ensino secundário", en: "Gross secondary enrollment rate" }
-        source: wdi
-        code: SE.SEC.ENRR
+      - name: { pt: "Frequência líquida e abandono", en: "Net attendance and dropout" }
+        source: ibge_sidra
         note:
-          pt: "Frequência líquida e abandono vêm da PNAD Contínua (SIDRA) e do Censo Escolar."
-          en: "Net attendance and dropout come from the Continuous PNAD (SIDRA) and the School Census."
+          pt: "Vêm da PNAD Contínua (SIDRA) e do Censo Escolar, ainda sem conector."
+          en: "They come from the Continuous PNAD (SIDRA) and the School Census, with no connector yet."
 
   - id: educacao-profissional
     name: { pt: "Educação profissional e técnica", en: "Vocational and technical education" }
@@ -58,67 +58,60 @@ submodules:
       pt: "Cursos técnicos e de qualificação, incluindo a rede dos institutos federais."
       en: "Technical and qualification courses, including the federal institutes network."
     planned_metrics:
-      - name: { pt: "Matrícula vocacional no ensino secundário", en: "Vocational share of secondary enrollment" }
-        source: wdi
-        code: SE.SEC.ENRL.VO.ZS
+      - name: { pt: "Matrículas em educação profissional", en: "Vocational education enrollment" }
+        source: inep
         note:
-          pt: "Código a conferir; os microdados do Censo Escolar dão o detalhe por rede."
-          en: "Code to be confirmed; School Census microdata give the detail by network."
+          pt: "O Banco Mundial não oferece uma série válida para isso; o detalhe por rede vem do Censo Escolar, ainda sem conector."
+          en: "The World Bank offers no valid series for this; detail by network comes from the School Census, with no connector yet."
 
   - id: graduacao
     name: { pt: "Graduação", en: "Undergraduate education" }
     summary:
       pt: "Ensino superior de graduação, com ingresso, cotas e financiamento estudantil."
       en: "Undergraduate higher education, with admission, quotas and student financing."
+    indicators: [wdi.se_ter_enrr]
     planned_metrics:
-      - name: { pt: "Taxa bruta de matrícula no ensino superior", en: "Gross tertiary enrollment rate" }
-        source: wdi
-        code: SE.TER.ENRR
+      - name: { pt: "Perfil dos ingressantes por raça e renda", en: "Entrants' profile by race and income" }
+        source: inep
         note:
-          pt: "Composição por raça e renda vem da PNAD Contínua e do Censo da Educação Superior."
-          en: "Breakdown by race and income comes from the Continuous PNAD and the Higher Education Census."
+          pt: "Vem da PNAD Contínua e do Censo da Educação Superior, ainda sem conector."
+          en: "Comes from the Continuous PNAD and the Higher Education Census, with no connector yet."
 
   - id: pos-graduacao-ciencia
     name: { pt: "Pós-graduação, ciência e tecnologia", en: "Graduate education, science and technology" }
     summary:
       pt: "Pesquisa, pós-graduação e o arcabouço legal de ciência, tecnologia e inovação."
       en: "Research, graduate programs and the legal framework for science, technology and innovation."
+    indicators: [wdi.gb_xpd_rsdv_gd_zs, wdi.sp_pop_scie_rd_p6]
     planned_metrics:
-      - name: { pt: "Gasto em pesquisa e desenvolvimento, em proporção do PIB", en: "R&D expenditure as a share of GDP" }
-        source: wdi
-        code: GB.XPD.RSDV.GD.ZS
+      - name: { pt: "Títulos de mestrado e doutorado", en: "Master's and doctoral degrees" }
+        source: capes
         note:
-          pt: "Pesquisadores e artigos científicos têm séries próprias no Banco Mundial."
-          en: "Researchers and scientific articles have their own World Bank series."
-      - name: { pt: "Pesquisadores em P&D por milhão de habitantes", en: "Researchers in R&D per million people" }
-        source: wdi
-        code: SP.POP.SCIE.RD.P6
-        note:
-          pt: "Títulos de mestrado e doutorado vêm da Capes, ainda sem conector."
-          en: "Master's and doctoral degrees come from Capes, which has no connector yet."
+          pt: "Vêm da Capes, ainda sem conector."
+          en: "They come from Capes, which has no connector yet."
 
   - id: financiamento
     name: { pt: "Financiamento da educação", en: "Education funding" }
     summary:
       pt: "Fundeb, vinculações constitucionais e o regime fiscal que limita o gasto."
       en: "Fundeb, constitutional earmarks and the fiscal regime that caps spending."
+    indicators: [wdi.se_xpd_totl_gd_zs]
     planned_metrics:
-      - name: { pt: "Gasto público em educação, em proporção do PIB", en: "Government education expenditure as a share of GDP" }
-        source: wdi
-        code: SE.XPD.TOTL.GD.ZS
+      - name: { pt: "Transferências do Fundeb", en: "Fundeb transfers" }
+        source: tesouro
         note:
-          pt: "As transferências do Fundeb vêm do Tesouro Nacional e do FNDE, ainda sem conector."
-          en: "Fundeb transfers come from the National Treasury and FNDE, which have no connector yet."
+          pt: "Vêm do Tesouro Nacional e do FNDE, ainda sem conector."
+          en: "They come from the National Treasury and FNDE, which have no connector yet."
 
   - id: planejamento
     name: { pt: "Planejamento e profissionais da educação", en: "Planning and education professionals" }
     summary:
       pt: "Lei de Diretrizes e Bases, planos nacionais de educação e carreira docente."
       en: "The national education guidelines law, national education plans and the teaching career."
+    indicators: [wdi.se_adt_litr_zs]
     planned_metrics:
-      - name: { pt: "Taxa de alfabetização de adultos", en: "Adult literacy rate" }
-        source: wdi
-        code: SE.ADT.LITR.ZS
+      - name: { pt: "Metas do plano nacional (Ideb, Saeb, PNAD)", en: "National plan targets (Ideb, Saeb, PNAD)" }
+        source: inep
         note:
-          pt: "Metas dos planos nacionais usam Ideb, Saeb e a PNAD Contínua, sem conector ainda."
-          en: "National plan targets use Ideb, Saeb and the Continuous PNAD, without a connector yet."
+          pt: "As metas dos planos usam fontes do Inep e do IBGE, ainda sem conector."
+          en: "Plan targets use Inep and IBGE sources, which have no connector yet."

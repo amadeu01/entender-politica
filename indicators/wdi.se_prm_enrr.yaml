@@ -1,0 +1,28 @@
+id: wdi.se_prm_enrr
+source: wdi
+source_code: SE.PRM.ENRR
+unit: percent
+min: 0
+name:
+  pt: Matrícula bruta no ensino primário (% da população em idade escolar)
+  en: Gross primary enrollment (% of school-age population)
+definition:
+  pt: Matrículas no ensino primário, de qualquer idade, como proporção da população da faixa etária
+    oficial. No Brasil, corresponde aos anos iniciais do ensino fundamental. Estimativa do UIS,
+    reproduzida pelo Banco Mundial.
+  en: Primary enrollment of any age as a share of the population of the official primary age group.
+    In Brazil this matches the early grades of the ensino fundamental. UIS estimate, republished
+    by the World Bank.
+formula:
+  pt: Matrículas totais / população da faixa etária oficial × 100.
+  en: Total enrollment / population of the official age group × 100.
+criticisms:
+- pt: 'Taxa bruta: alunos repetentes ou fora da idade a elevam e ela pode passar de cem por cento.
+    Mede acesso, não aprendizado.'
+  en: 'Gross rate: repeaters and over-age students raise it and it can exceed one hundred percent.
+    It measures access, not learning.'
+references:
+- citation: World Bank. World Development Indicators — metadata for SE.PRM.ENRR.
+  url: https://data.worldbank.org/indicator/SE.PRM.ENRR
+- citation: 'UNESCO Institute for Statistics. Education and science data: methodology.'
+  url: https://uis.unesco.org/

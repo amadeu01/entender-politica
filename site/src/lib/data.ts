@@ -208,12 +208,30 @@ export type EducationLaw = {
   verified: string | null;
   events: EducationEvent[];
 };
-export type EducationMark = Omit<EducationEvent, "date" | "form" | "chamber"> & {
+export type EducationMark = Omit<EducationEvent, "form" | "chamber"> & {
   law: string;
   designation: string;
   chamber: EducationEvent["chamber"];
   form: EducationEvent["form"];
   values: Record<string, number | null>;
+};
+export type EducationVote = {
+  id: string;
+  chamber: "camara" | "senado";
+  proposition: string;
+  date: string;
+  description: string;
+  turn: string | null;
+  approved: boolean | null;
+  totals: Record<string, number>;
+  by_party: Record<string, Record<string, number>>;
+  orientations: { party_or_bloc: string; orientation: string }[];
+  source_url: string;
+  retrieved_at: string;
+  license: string;
+  csv: string;
+  law?: string;
+  designation?: string;
 };
 export type EducationSubmodule = {
   id: string;
@@ -224,6 +242,7 @@ export type EducationSubmodule = {
   planned_metrics: { name: Text; source: string; code: string | null; note: Text }[];
   laws: string[];
   events: EducationMark[];
+  votes: EducationVote[];
 };
 export type Education = {
   geography: string;

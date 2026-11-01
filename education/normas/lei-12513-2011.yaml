@@ -7,5 +7,6 @@ summary:
   pt: "Cria o Programa Nacional de Acesso ao Ensino Técnico e Emprego, com bolsas para cursos técnicos e de qualificação."
   en: "Creates the National Program for Access to Technical Education and Employment, with grants for technical and qualification courses."
 submodules: [educacao-profissional]
+camara: [{ type: PL, number: 1209, year: 2011 }]
 events:
   - { year: 2011, type: enacted, description: { pt: "Sancionada a lei do Pronatec.", en: "The Pronatec law is enacted." } }

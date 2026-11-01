@@ -18,13 +18,15 @@ identificador SPDX.
 | PNUD (HDR) | `CC-BY-3.0-IGO` | [Termos de uso do HDRO](https://hdr.undp.org/terms-use), conferidos em 2026-10-25 |
 | IBGE (SIDRA) | `LicenseRef-IBGE-reuse-with-attribution` | Termos de uso do IBGE: reutilização permitida com citação da fonte |
 | Ipeadata | `LicenseRef-Ipeadata-reuse-with-attribution` | Reprodução permitida com citação da fonte |
+| Câmara dos Deputados (votações) | `LicenseRef-Camara-open-data` | Dados abertos da Câmara; **termos não conferidos** (ver abaixo) |
+| Senado Federal (votações) | `LicenseRef-Senado-open-data` | Dados abertos do Senado; **termos não conferidos** (ver abaixo) |
 | V-Dem | `CC-BY-SA-4.0` | [Página do dataset V-Dem](https://v-dem.net/data/the-v-dem-dataset/), conferida em 2026-10-25. **Compartilha igual:** dados e gráficos derivados do V-Dem são distribuídos sob CC BY-SA 4.0, não CC BY 4.0 |
 
 Identificadores `LicenseRef-*` seguem a convenção SPDX para licenças sem identificador
 oficial.
 
 ### Verificação pendente
-Os termos do IBGE e do Ipeadata **não foram conferidos automaticamente** nesta fase (a
+Os termos do IBGE, do Ipeadata, da Câmara e do Senado **não foram conferidos automaticamente** nesta fase (a
 página de termos do IBGE bloqueia acesso automatizado). Uma pessoa precisa conferir os
 textos atuais e atualizar este ADR com os links exatos.
 
@@ -48,7 +50,7 @@ on 2026-10-25). `LicenseRef-*` follows the SPDX convention
 for licenses without an official identifier.
 
 ### Verification pending
-IBGE and Ipeadata terms were **not checked automatically** in this phase (IBGE's terms page
+IBGE, Ipeadata, Câmara and Senado terms were **not checked automatically** in this phase (IBGE's terms page
 blocks automated access). A person must check the current texts and update this ADR with
 exact links.
 

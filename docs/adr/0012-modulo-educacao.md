@@ -19,11 +19,17 @@ tramitação), então os votos vêm de outra fonte.
    O build valida, compila `education.json` e a página `/educacao/` mostra uma aba por subtema.
 2. **Sem número digitado na prosa**, como na ADR 0007 (anos, décadas e ordinais passam).
    Identificadores de normas (`Lei 9.394/1996`) são campos estruturados.
-3. **Votos:** um evento de votação registra apenas que ocorreu, a casa e a forma
-   (nominal, simbólica, conclusiva). **Placar por parlamentar e orientação de bancada não
-   são digitados:** devem vir de um snapshot dos dados abertos da Câmara (`votacoes`,
-   `votacoesVotos`, `votacoesOrientacoes`, `votacoesProposicoes`) e do Senado, num
-   conector próprio com manifesto, como as demais fontes. O conector ainda não existe.
+3. **Votos:** os placares **não são digitados**. Cada norma lista os projetos que a
+   originaram, na numeração de cada casa (`camara:` e `senado:`, por exemplo a PEC 15/2015
+   da Câmara é a PEC 26/2020 do Senado). `compilador fetch-votes` consulta as APIs de dados
+   abertos da Câmara e do Senado e grava snapshots com manifesto (`camara_votos`,
+   `senado_votos`): para cada votação em plenário com voto individual, guarda o detalhe, o
+   voto de cada parlamentar e, na Câmara, as orientações de bancada. Votações simbólicas
+   não têm registro individual e não são guardadas. O build resume cada votação em totais,
+   votos por partido e orientações, e gera um CSV com os votos individuais. Eventos de
+   votação escritos à mão (`committee_vote`, `plenary_vote`) só registram que a votação
+   aconteceu, a casa e a forma. A licença das duas fontes é registrada como
+   `LicenseRef-*` com verificação pendente, como no ADR 0006.
 4. **Métricas ao lado das normas:** a tabela de cada subtema mostra o valor das séries
    do Brasil no ano de cada evento. É descritiva (ADR 0003): a série mudar depois de uma
    norma não demonstra que a norma causou a mudança. Séries de adultos, como anos médios
@@ -35,7 +41,7 @@ tramitação), então os votos vêm de outra fonte.
 
 ### Consequências
 - Estrutura e navegação prontas; o conteúdo cresce por pull request, como as análises.
-- Enquanto não houver conector de votos, a seção de votações é qualitativa.
+- Votações em plenário de projetos listados em `camara:` ou `senado:` aparecem com placar; as demais só como registro. O Senado exige descobrir o número do projeto na numeração própria da casa, o que ainda foi feito só para o Fundeb.
 - Os registros iniciais foram redigidos sem acesso às fontes oficiais e precisam de
   conferência humana antes de receberem `verified`.
 
@@ -51,10 +57,16 @@ votes (only propositions, themes and procedural history), so votes need another 
    The build validates it and compiles `education.json`; `/en/education/` has one tab per
    sub-topic.
 2. No hand-typed numbers in prose (ADR 0007); law identifiers are structured fields.
-3. Vote events record only that a vote happened, the chamber and the form. Per-legislator
-   tallies and party orientations are never typed: they must come from a snapshot of the
-   Câmara and Senado open data through a dedicated connector with a manifest. That
-   connector does not exist yet.
+3. Tallies are never typed. Each law lists the bills behind it in each chamber's own
+   numbering (`camara:` and `senado:`). `compilador fetch-votes` queries the Câmara and
+   Senado open-data APIs and writes manifest-backed snapshots (`camara_votos`,
+   `senado_votos`): for each plenary vote with individual records it stores the detail,
+   every legislator's vote and, in the Câmara, bench orientations. Symbolic votes have no
+   individual record and are not stored. The build summarizes each vote as totals, votes
+   by party and orientations, and writes a CSV of individual votes. Hand-written vote
+   events (`committee_vote`, `plenary_vote`) only record that a vote happened, the chamber
+   and the form. Both sources' license is recorded as `LicenseRef-*`, verification
+   pending, as in ADR 0006.
 4. Each sub-topic table shows Brazil's series values in the year of each event. It is
    descriptive (ADR 0003) and does not show causation.
 5. `planned_metrics` list series not collected yet, with the source code to confirm; they
@@ -63,6 +75,5 @@ votes (only propositions, themes and procedural history), so votes need another 
    site shows a "not yet checked" notice.
 
 ### Consequences
-Structure and navigation are ready and content grows by pull request. Until a votes
-connector exists the votes section is qualitative. The seed records were written without
+Structure and navigation are ready and content grows by pull request. Plenary votes of bills listed in `camara:` or `senado:` show tallies; others are only a record that the vote happened. The Senado needs the bill's number in its own numbering, which has only been found for Fundeb so far. The seed records were written without
 access to official sources and need human checking before `verified` is set.
