@@ -1,0 +1,316 @@
+---
+// Education: an overview plus one section per sub-module (early childhood, primary, ...),
+// each with the laws that shape it, the votes and amendments in their history, and the
+// metrics beside them. Descriptive only (ADR 0003, ADR 0012).
+import Base from "../layouts/Base.astro";
+import Chart from "../components/Chart.astro";
+import Notice from "../components/Notice.astro";
+import { education, indicator } from "../lib/data";
+import type { EducationEvent, EducationLaw, EducationMark } from "../lib/data";
+import { SOURCE_NAMES, UI, UNIT_DECIMALS, UNIT_LABELS, formatNumber, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const edu = education();
+const lawBySlug = new Map(edu.laws.map((l) => [l.slug, l]));
+const REGION = ["BRA", "ARG", "CHL", "COL", "MEX"];
+
+const copy = {
+  pt: {
+    lede: "As normas que moldam cada etapa da educação, as votações e alterações na história delas e as métricas disponíveis, lado a lado. Escolha um subtema.",
+    nav: "Subtemas da educação",
+    overview: "Panorama",
+    overviewLede: "Séries que cobrem o sistema inteiro, com Brasil e vizinhos. As normas de cada subtema aparecem nas abas ao lado.",
+    laws: "Normas que moldam este subtema",
+    noLaws: "Nenhuma norma registrada ainda para este subtema.",
+    votes: "Votações",
+    votesNone: "Nenhuma votação registrada para este subtema.",
+    votesPending:
+      "O placar por parlamentar e as orientações de bancada ainda não foram coletados. Eles virão dos dados abertos da Câmara e do Senado; aqui só consta que a votação aconteceu, em qual casa e de que forma.",
+    marks: "Marcos legais e métricas no mesmo ano",
+    marksLede: "Valor de cada série para o Brasil no ano do evento. Uma série que muda depois de uma norma não demonstra que a norma causou a mudança, e séries de adultos mudam devagar por construção.",
+    year: "Ano",
+    law: "Norma",
+    event: "Evento",
+    planned: "Métricas planejadas, ainda não coletadas",
+    plannedLede: "Estas séries ainda não estão no catálogo. O código deve ser conferido na API da fonte antes de virar indicador.",
+    code: "Código na fonte",
+    unverified: "Registro ainda não conferido com o texto oficial",
+    bill: "Projeto",
+    by: "por",
+    noData: "sem dado",
+    noEvents: "Sem eventos.",
+    kinds: { constitutional_amendment: "Emenda constitucional", complementary_law: "Lei complementar", law: "Lei" },
+    types: {
+      proposed: "Apresentação",
+      committee_vote: "Votação em comissão",
+      plenary_vote: "Votação em plenário",
+      enacted: "Sanção ou promulgação",
+      amended: "Alterada",
+      revoked: "Revogada",
+      superseded: "Sucedida",
+    },
+    chambers: { camara: "Câmara", senado: "Senado", congresso: "Congresso" },
+    forms: { nominal: "nominal", symbolic: "simbólica", conclusive: "caráter conclusivo", unknown: "forma não registrada" },
+    alt: (name: string) => `Linhas de ${name} para o Brasil, Argentina, Chile, Colômbia e México, com faixas dos presidentes do Brasil ao fundo.`,
+  },
+  en: {
+    lede: "The laws that shape each stage of education, the votes and amendments in their history, and the available metrics, side by side. Pick a sub-topic.",
+    nav: "Education sub-topics",
+    overview: "Overview",
+    overviewLede: "Series that cover the whole system, with Brazil and its neighbors. Each sub-topic's laws appear in the tabs beside it.",
+    laws: "Laws that shape this sub-topic",
+    noLaws: "No law recorded yet for this sub-topic.",
+    votes: "Votes",
+    votesNone: "No vote recorded for this sub-topic.",
+    votesPending:
+      "Per-legislator tallies and party orientations have not been collected yet. They will come from the Câmara and Senado open data; here we only record that the vote happened, in which chamber and in what form.",
+    marks: "Legal milestones and metrics in the same year",
+    marksLede: "Each series' value for Brazil in the event's year. A series that moves after a law does not show the law caused the change, and adult series move slowly by construction.",
+    year: "Year",
+    law: "Law",
+    event: "Event",
+    planned: "Planned metrics, not collected yet",
+    plannedLede: "These series are not in the catalog yet. The code must be confirmed against the source's API before it becomes an indicator.",
+    code: "Source code",
+    unverified: "Record not yet checked against the official text",
+    bill: "Bill",
+    by: "by",
+    noData: "no data",
+    noEvents: "No events.",
+    kinds: { constitutional_amendment: "Constitutional amendment", complementary_law: "Complementary law", law: "Law" },
+    types: {
+      proposed: "Introduced",
+      committee_vote: "Committee vote",
+      plenary_vote: "Plenary vote",
+      enacted: "Enacted",
+      amended: "Amended",
+      revoked: "Revoked",
+      superseded: "Succeeded",
+    },
+    chambers: { camara: "Câmara", senado: "Senado", congresso: "Congress" },
+    forms: { nominal: "roll call", symbolic: "voice vote", conclusive: "conclusive route", unknown: "form not recorded" },
+    alt: (name: string) => `Lines of ${name} for Brazil, Argentina, Chile, Colombia and Mexico, with Brazil's presidents as background bands.`,
+  },
+}[lang];
+
+const when = (e: { year: number; date?: string | null }) =>
+  e.date ? (lang === "pt" ? e.date.split("-").reverse().join("/") : e.date) : String(e.year);
+const eventLabel = (e: EducationEvent | EducationMark) => {
+  const parts = [copy.types[e.type]];
+  if (e.chamber) parts.push(copy.chambers[e.chamber]);
+  if (e.form) parts.push(copy.forms[e.form]);
+  return parts.join(" · ");
+};
+const isVote = (e: { type: string }) => e.type === "committee_vote" || e.type === "plenary_vote";
+const show = (value: number | null | undefined, unit: string) =>
+  value === null || value === undefined ? copy.noData : formatNumber(value, lang, UNIT_DECIMALS[unit] ?? 2);
+
+const tabs = [
+  { id: "panorama", label: copy.overview },
+  ...edu.submodules.map((s) => ({ id: s.id, label: s.name[lang] })),
+];
+---
+
+<Base lang={lang} title={t.nav.education} route="education">
+  <h1>{t.nav.education}</h1>
+  <p class="lede">{copy.lede}</p>
+  <Notice lang={lang} />
+
+  <nav class="subnav" aria-label={copy.nav}>
+    <ul>
+      {tabs.map((tab) => <li><a href={`#${tab.id}`}>{tab.label}</a></li>)}
+    </ul>
+  </nav>
+
+  <section id="panorama" data-tab tabindex="-1" aria-labelledby="h-panorama">
+    <h2 id="h-panorama">{copy.overview}</h2>
+    <p>{copy.overviewLede}</p>
+    {
+      edu.overview_indicators.map((id) => {
+        const ind = indicator(id);
+        return (
+          <Chart
+            lang={lang}
+            id={id.replace(/\W/g, "-")}
+            title={ind.name[lang]}
+            alt={copy.alt(ind.name[lang])}
+            indicators={[id]}
+            geographies={REGION}
+          />
+        );
+      })
+    }
+  </section>
+
+  {
+    edu.submodules.map((sub) => {
+      const laws = sub.laws.map((slug) => lawBySlug.get(slug)).filter((l): l is EducationLaw => !!l);
+      const votes = sub.events.filter(isVote);
+      const inSub = new Set(sub.laws);
+      const lawLink = (slug: string | null, text: string) =>
+        slug && inSub.has(slug) ? <a href={`#${sub.id}--${slug}`}>{text}</a> : text;
+      const shown = sub.shown_indicators.map(indicator);
+      return (
+        <section id={sub.id} data-tab tabindex="-1" aria-labelledby={`h-${sub.id}`}>
+          <h2 id={`h-${sub.id}`}>{sub.name[lang]}</h2>
+          <p class="lede">{sub.summary[lang]}</p>
+
+          <h3>{copy.laws}</h3>
+          {laws.length === 0 && <p>{copy.noLaws}</p>}
+          <ul class="card-grid laws">
+            {
+              laws.map((law) => (
+                <li class="card" id={`${sub.id}--${law.slug}`}>
+                  <h4>
+                    {law.designation} · {law.title[lang]}
+                  </h4>
+                  <p class="meta">
+                    <span class="badge">{copy.kinds[law.kind]}</span>
+                    {law.bill && <>{" · "}{copy.bill} {law.bill}</>}
+                    {!law.verified && <>{" · "}<span class="badge unverified">{copy.unverified}</span></>}
+                  </p>
+                  <p>{law.summary[lang]}</p>
+                  <ol class="events">
+                    {
+                      law.events
+                        .slice()
+                        .sort((a, b) => a.year - b.year)
+                        .map((e) => (
+                          <li class={isVote(e) ? "vote" : undefined}>
+                            <strong>{when(e)}</strong> · {eventLabel(e)}
+                            {e.by && <>{" "}{copy.by}{" "}{lawLink(e.by_slug, e.by)}</>}
+                            <br />
+                            {e.description[lang]}
+                          </li>
+                        ))
+                    }
+                  </ol>
+                </li>
+              ))
+            }
+          </ul>
+
+          <h3>{copy.votes}</h3>
+          {
+            votes.length === 0 ? (
+              <p>{copy.votesNone}</p>
+            ) : (
+              <ul class="votes">
+                {votes.map((m) => (
+                  <li>
+                    <strong>{when(m)}</strong> · {m.designation} · {eventLabel(m)}
+                    <br />
+                    {m.description[lang]}
+                  </li>
+                ))}
+              </ul>
+            )
+          }
+          <p class="meta">{copy.votesPending}</p>
+
+          {
+            sub.events.length > 0 && (
+              <>
+                <h3>{copy.marks}</h3>
+                <p>{copy.marksLede}</p>
+                <div class="table-scroll">
+                  <table class="data">
+                    <thead>
+                      <tr>
+                        <th scope="col">{copy.year}</th>
+                        <th scope="col">{copy.law}</th>
+                        <th scope="col">{copy.event}</th>
+                        {shown.map((ind) => (
+                          <th scope="col" class="num">
+                            <a href={url(lang, "indicators", ind.id)}>{ind.name[lang]}</a>
+                            <br />
+                            <span class="meta">{UNIT_LABELS[ind.unit]?.[lang] ?? ind.unit}</span>
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {sub.events.map((m) => (
+                        <tr>
+                          <td>{m.year}</td>
+                          <td>{m.designation}</td>
+                          <td>{eventLabel(m)}{m.by ? ` ${copy.by} ${m.by}` : ""}</td>
+                          {shown.map((ind) => <td class="num">{show(m.values[ind.id], ind.unit)}</td>)}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p class="meta">
+                  {[...new Set(shown.map((ind) => SOURCE_NAMES[ind.source]?.[lang] ?? ind.source))].join("; ")}
+                </p>
+              </>
+            )
+          }
+
+          {
+            sub.indicators.map((id) => {
+              const ind = indicator(id);
+              return (
+                <Chart
+                  lang={lang}
+                  id={`${sub.id}-${id.replace(/\W/g, "-")}`}
+                  title={ind.name[lang]}
+                  alt={copy.alt(ind.name[lang])}
+                  indicators={[id]}
+                  geographies={REGION}
+                />
+              );
+            })
+          }
+
+          {
+            sub.planned_metrics.length > 0 && (
+              <>
+                <h3>{copy.planned}</h3>
+                <p>{copy.plannedLede}</p>
+                <ul>
+                  {sub.planned_metrics.map((m) => (
+                    <li>
+                      {m.name[lang]} · {SOURCE_NAMES[m.source]?.[lang] ?? m.source}
+                      {m.code && <> · {copy.code}: <code>{m.code}</code></>}
+                      <br />
+                      <span class="meta">{m.note[lang]}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )
+          }
+        </section>
+      );
+    })
+  }
+
+  <Notice lang={lang} />
+
+  <script>
+    // Progressive enhancement: with JavaScript, the sub-topic links work as tabs
+    // (one section at a time, chosen by the URL hash). Without it, all sections stack.
+    const sections = [...document.querySelectorAll<HTMLElement>("section[data-tab]")];
+    const links = [...document.querySelectorAll<HTMLAnchorElement>("nav.subnav a")];
+    const show = () => {
+      const hash = decodeURIComponent(location.hash.slice(1));
+      // A hash can also point inside a section (a law card): open the section holding it.
+      const inner = hash ? document.getElementById(hash) : null;
+      const target =
+        sections.find((s) => s.id === hash) ?? sections.find((s) => inner && s.contains(inner)) ?? sections[0];
+      for (const s of sections) s.hidden = s !== target;
+      for (const a of links) {
+        if (a.getAttribute("href") === `#${target.id}`) a.setAttribute("aria-current", "true");
+        else a.removeAttribute("aria-current");
+      }
+      if (inner && inner !== target) inner.scrollIntoView();
+    };
+    window.addEventListener("hashchange", show);
+    show();
+  </script>
+</Base>

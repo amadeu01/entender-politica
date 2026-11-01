@@ -102,10 +102,14 @@
   "ipeadata.disoc_rdcg LCN: no observations",
   "ipeadata.disoc_rdcg MEX: no observations",
   "ipeadata.disoc_rdcg WLD: no observations",
+  "undp_hdr.eys LCN: no observations",
+  "undp_hdr.eys WLD: no observations",
   "undp_hdr.hdi LCN: no observations",
   "undp_hdr.hdi WLD: no observations",
   "undp_hdr.ihdi LCN: no observations",
   "undp_hdr.ihdi WLD: no observations",
+  "undp_hdr.mys LCN: no observations",
+  "undp_hdr.mys WLD: no observations",
   "vdem.v2x_egaldem LCN: no observations",
   "vdem.v2x_egaldem WLD: no observations",
   "vdem.v2x_libdem LCN: no observations",
@@ -134,6 +138,17 @@
   "ibge_sidra.rdpc_p99_pnadc BRA 2025: atypical year-over-year change (robust z=7.7, value=15214.0)",
   "ipeadata.disoc_ppy BRA 1986: atypical year-over-year change (robust z=-5.9, value=26.4111509231732)",
   "ipeadata.disoc_ppy BRA 1987: atypical year-over-year change (robust z=5.4, value=38.710240907139)",
+  "undp_hdr.eys BRA 2013: atypical year-over-year change (robust z=-9.4, value=15.24518967)",
+  "undp_hdr.eys BRA 2014: atypical year-over-year change (robust z=34.0, value=15.36814022)",
+  "undp_hdr.eys BRA 2015: atypical year-over-year change (robust z=-81.8, value=15.24540043)",
+  "undp_hdr.eys BRA 2017: atypical year-over-year change (robust z=29.2, value=15.40701962)",
+  "undp_hdr.eys BRA 2018: atypical year-over-year change (robust z=21.7, value=15.50376034)",
+  "undp_hdr.eys BRA 2019: atypical year-over-year change (robust z=-49.6, value=15.44937038)",
+  "undp_hdr.eys BRA 2020: atypical year-over-year change (robust z=-25.5, value=15.44596004)",
+  "undp_hdr.eys BRA 2021: atypical year-over-year change (robust z=38.7, value=15.5788002)",
+  "undp_hdr.eys BRA 2022: atypical year-over-year change (robust z=76.9, value=15.7927103)",
+  "undp_hdr.eys BRA 2023: atypical year-over-year change (robust z=-23.9, value=15.7927103)",
+  "undp_hdr.eys CHL 1993: atypical year-over-year change (robust z=-9.4, value=11.73915958)",
   "undp_hdr.hdi BRA 2020: atypical year-over-year change (robust z=-7.4, value=0.77)",
   "undp_hdr.hdi CHL 2020: atypical year-over-year change (robust z=-5.7, value=0.856)",
   "undp_hdr.hdi COL 2020: atypical year-over-year change (robust z=-6.1, value=0.764)",
@@ -145,6 +160,9 @@
   "undp_hdr.ihdi BRA 2021: atypical year-over-year change (robust z=-6.7, value=0.582)",
   "undp_hdr.ihdi CHL 2020: atypical year-over-year change (robust z=-7.0, value=0.701)",
   "undp_hdr.ihdi COL 2020: atypical year-over-year change (robust z=-6.1, value=0.574)",
+  "undp_hdr.mys ARG 2002: atypical year-over-year change (robust z=14.0, value=9.394999981)",
+  "undp_hdr.mys ARG 2003: atypical year-over-year change (robust z=14.0, value=9.920000076)",
+  "undp_hdr.mys COL 2006: atypical year-over-year change (robust z=-6.9, value=6.800000191)",
   "vdem.v2x_egaldem ARG 1976: atypical year-over-year change (robust z=-41.4, value=0.132)",
   "vdem.v2x_egaldem ARG 1983: atypical year-over-year change (robust z=14.8, value=0.189)",
   "vdem.v2x_egaldem ARG 1984: atypical year-over-year change (robust z=95.0, value=0.681)",
@@ -501,6 +519,46 @@
    ]
   },
   {
+   "indicator_id": "undp_hdr.eys",
+   "geo_code": "ARG",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.eys",
+   "geo_code": "BRA",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.eys",
+   "geo_code": "CHL",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.eys",
+   "geo_code": "COL",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.eys",
+   "geo_code": "MEX",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
    "indicator_id": "undp_hdr.hdi",
    "geo_code": "ARG",
    "first_year": 1990,
@@ -578,6 +636,46 @@
    "first_year": 2010,
    "last_year": 2023,
    "observations": 14,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.mys",
+   "geo_code": "ARG",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.mys",
+   "geo_code": "BRA",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.mys",
+   "geo_code": "CHL",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.mys",
+   "geo_code": "COL",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.mys",
+   "geo_code": "MEX",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
    "missing_years": []
   },
   {

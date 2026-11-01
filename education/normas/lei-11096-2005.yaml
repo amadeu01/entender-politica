@@ -1,0 +1,11 @@
+slug: lei-11096-2005
+designation: "Lei 11.096/2005"
+kind: law
+year: 2005
+title: { pt: "ProUni", en: "ProUni" }
+summary:
+  pt: "Institui o Programa Universidade para Todos, com bolsas em instituições privadas de ensino superior em troca de isenção de tributos."
+  en: "Creates the University for All Program, with scholarships at private higher-education institutions in exchange for tax exemption."
+submodules: [graduacao]
+events:
+  - { year: 2005, type: enacted, description: { pt: "Sancionada a lei do ProUni.", en: "The ProUni law is enacted." } }

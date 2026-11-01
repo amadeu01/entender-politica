@@ -1,5 +1,28 @@
 # Changelog dos dados / Data changelog
 
+## 2026-11-01
+
+- Fonte / Source `ibge_sidra`: versão / version `2026-05-08`
+- Fonte / Source `ipeadata`: versão / version `2016-01-06`
+- Fonte / Source `undp_hdr`: versão / version `HDR 2025`
+- Fonte / Source `vdem`: versão / version `v16`
+- Fonte / Source `wdi`: versão / version `2026-10-08`
+- Fonte / Source `wgi`: versão / version `2026-09-25`
+- Séries novas / New series: 10
+  - `undp_hdr.eys ARG`
+  - `undp_hdr.eys BRA`
+  - `undp_hdr.eys CHL`
+  - `undp_hdr.eys COL`
+  - `undp_hdr.eys MEX`
+  - `undp_hdr.mys ARG`
+  - `undp_hdr.mys BRA`
+  - `undp_hdr.mys CHL`
+  - `undp_hdr.mys COL`
+  - `undp_hdr.mys MEX`
+- Observações adicionadas / Observations added: 340
+- Observações removidas / Observations removed: 0
+- Valores revisados pela fonte / Values revised upstream: 0
+
 ## 2026-10-26
 
 - Fonte / Source `ibge_sidra`: versão / version `2026-05-08`

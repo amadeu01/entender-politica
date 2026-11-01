@@ -27,7 +27,11 @@ então o processo de revisão é mais rigoroso do que o comum.
    [ADR 0011](docs/adr/0011-guias-dos-indicadores.md)). Só artigos revisados por pares
    como evidência; confira os DOIs com `uv run compilador verify-dois`. Exemplo:
    `guides/wdi.ny_gdp_pcap_kd.yaml`.
-6. **Correções:** dados, traduções, acessibilidade, código.
+6. **Norma de educação:** um arquivo em `education/normas/<slug>.yaml` (esquema em
+   `pipeline/compilador/education.py`) com eventos datados. Sem números digitados na prosa;
+   preencha `verified` só depois de conferir com o texto oficial
+   ([ADR 0012](docs/adr/0012-modulo-educacao.md)).
+7. **Correções:** dados, traduções, acessibilidade, código.
 
 ## Regras
 

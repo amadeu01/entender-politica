@@ -1,0 +1,12 @@
+slug: ec-108-2020
+designation: "Emenda Constitucional 108/2020"
+kind: constitutional_amendment
+year: 2020
+title: { pt: "Fundeb permanente", en: "Permanent Fundeb" }
+summary:
+  pt: "Torna o Fundeb permanente e amplia a complementação da União, com parte do aumento condicionada a resultados."
+  en: "Makes Fundeb permanent and widens the Union's top-up, with part of the increase conditioned on results."
+submodules: [financiamento, educacao-infantil, ensino-fundamental, ensino-medio]
+events:
+  - { year: 2015, type: proposed, description: { pt: "Apresentada a proposta de emenda que originou o Fundeb permanente.", en: "The constitutional amendment proposal behind the permanent Fundeb is introduced." } }
+  - { year: 2020, date: 2020-08-26, type: enacted, description: { pt: "Promulgada a emenda.", en: "The amendment is promulgated." } }

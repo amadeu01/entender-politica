@@ -1,0 +1,11 @@
+slug: ec-95-2016
+designation: "Emenda Constitucional 95/2016"
+kind: constitutional_amendment
+year: 2016
+title: { pt: "Novo regime fiscal e o piso da educação", en: "New fiscal regime and the education spending floor" }
+summary:
+  pt: "Limita o crescimento das despesas primárias da União por prazo longo e passa a corrigir pela inflação o mínimo aplicado em educação."
+  en: "Caps the growth of the Union's primary spending for a long period and updates the minimum applied to education by inflation."
+submodules: [financiamento]
+events:
+  - { year: 2016, type: enacted, description: { pt: "Promulgada a emenda.", en: "The amendment is promulgated." } }

@@ -24,6 +24,7 @@ def _paths(tmp_path, gini) -> build.Paths:
         analyses=tmp_path / "no-analyses",
         policies=tmp_path / "no-policies",
         guides=tmp_path / "no-guides",
+        education=tmp_path / "no-education",
         dois=registry,
         raw=tmp_path / "raw",
         processed=tmp_path / "processed",

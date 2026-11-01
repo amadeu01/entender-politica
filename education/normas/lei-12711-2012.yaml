@@ -1,0 +1,12 @@
+slug: lei-12711-2012
+designation: "Lei 12.711/2012"
+kind: law
+year: 2012
+title: { pt: "Lei de Cotas no ensino superior e técnico federal", en: "Quota law for federal higher and technical education" }
+summary:
+  pt: "Reserva vagas nas instituições federais de ensino superior e técnico de nível médio para estudantes de escolas públicas, com subcotas por renda e por raça."
+  en: "Reserves places in federal higher-education and upper-secondary technical institutions for public-school students, with sub-quotas by income and race."
+submodules: [graduacao, educacao-profissional]
+events:
+  - { year: 2012, type: enacted, description: { pt: "Sancionada a lei de cotas.", en: "The quota law is enacted." } }
+  - { year: 2023, type: amended, by: "Lei 14.723/2023", description: { pt: "Revisão da lei, prevista pelo texto original, com mudanças nos critérios de renda e na ordem de seleção.", en: "Review of the law, foreseen by the original text, changing income criteria and the selection order." } }

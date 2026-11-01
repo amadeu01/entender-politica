@@ -4,6 +4,7 @@ export const LANGS: Lang[] = ["pt", "en"];
 export const ROUTES = {
   home: { pt: "", en: "" },
   brazil: { pt: "brasil", en: "brazil" },
+  education: { pt: "educacao", en: "education" },
   indicators: { pt: "indicadores", en: "indicators" },
   analyses: { pt: "analises", en: "analyses" },
   policies: { pt: "politicas", en: "policies" },
@@ -36,6 +37,7 @@ export const UI = {
     nav: {
       home: "Início",
       brazil: "Brasil 1980–hoje",
+      education: "Educação",
       indicators: "Indicadores",
       analyses: "Análises",
       policies: "Políticas",
@@ -188,6 +190,7 @@ export const UI = {
     nav: {
       home: "Home",
       brazil: "Brazil 1980–today",
+      education: "Education",
       indicators: "Indicators",
       analyses: "Analyses",
       policies: "Policies",

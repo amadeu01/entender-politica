@@ -186,6 +186,51 @@ export type IncomeBrackets = {
   }[];
   sources: { indicator_id: string; source_id: string; source_version: string; retrieved_at: string }[];
 };
+export type EducationEvent = {
+  year: number;
+  date: string | null;
+  type: "proposed" | "committee_vote" | "plenary_vote" | "enacted" | "amended" | "revoked" | "superseded";
+  chamber: "camara" | "senado" | "congresso" | null;
+  form: "nominal" | "symbolic" | "conclusive" | "unknown" | null;
+  by: string | null;
+  by_slug: string | null;
+  description: Text;
+};
+export type EducationLaw = {
+  slug: string;
+  designation: string;
+  kind: "constitutional_amendment" | "complementary_law" | "law";
+  year: number;
+  bill: string | null;
+  title: Text;
+  summary: Text;
+  submodules: string[];
+  verified: string | null;
+  events: EducationEvent[];
+};
+export type EducationMark = Omit<EducationEvent, "date" | "form" | "chamber"> & {
+  law: string;
+  designation: string;
+  chamber: EducationEvent["chamber"];
+  form: EducationEvent["form"];
+  values: Record<string, number | null>;
+};
+export type EducationSubmodule = {
+  id: string;
+  name: Text;
+  summary: Text;
+  indicators: string[];
+  shown_indicators: string[];
+  planned_metrics: { name: Text; source: string; code: string | null; note: Text }[];
+  laws: string[];
+  events: EducationMark[];
+};
+export type Education = {
+  geography: string;
+  overview_indicators: string[];
+  submodules: EducationSubmodule[];
+  laws: EducationLaw[];
+};
 type Documents = {
   analyses: { slug: string; lang: Lang; title: string }[];
   policies: { slug: string; lang: Lang; name: string; country: string }[];
@@ -209,6 +254,7 @@ export const guide = (id: string, lang: Lang): Guide | null =>
   documents().guides.includes(id) ? read(`guides/${id}.${lang}.json`) : null;
 export const incomeBrackets = (): IncomeBrackets | null =>
   existsSync(join(DATA_DIR, "income_brackets.json")) ? read("income_brackets.json") : null;
+export const education = (): Education => read("education.json");
 export const periodChanges = (): PeriodChange[] => read("period_changes.json");
 
 export const geoName = (code: string, lang: Lang): string =>

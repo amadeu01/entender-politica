@@ -1,0 +1,11 @@
+slug: lei-12513-2011
+designation: "Lei 12.513/2011"
+kind: law
+year: 2011
+title: { pt: "Pronatec", en: "Pronatec" }
+summary:
+  pt: "Cria o Programa Nacional de Acesso ao Ensino Técnico e Emprego, com bolsas para cursos técnicos e de qualificação."
+  en: "Creates the National Program for Access to Technical Education and Employment, with grants for technical and qualification courses."
+submodules: [educacao-profissional]
+events:
+  - { year: 2011, type: enacted, description: { pt: "Sancionada a lei do Pronatec.", en: "The Pronatec law is enacted." } }

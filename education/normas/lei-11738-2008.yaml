@@ -1,0 +1,11 @@
+slug: lei-11738-2008
+designation: "Lei 11.738/2008"
+kind: law
+year: 2008
+title: { pt: "Piso salarial profissional nacional do magistério", en: "National minimum wage for public school teachers" }
+summary:
+  pt: "Fixa um piso nacional de remuneração para os profissionais do magistério público da educação básica."
+  en: "Sets a national pay floor for public basic-education teachers."
+submodules: [planejamento]
+events:
+  - { year: 2008, type: enacted, description: { pt: "Sancionada a lei do piso.", en: "The pay-floor law is enacted." } }

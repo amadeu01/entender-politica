@@ -20,6 +20,7 @@ from compilador import (
     changelog,
     content,
     dois,
+    education,
     geography,
     governments,
     guides,
@@ -51,6 +52,7 @@ class Paths:
     guides: Path = guides.GUIDES_DIR
     dois: Path = DOIS_FILE
     brackets: Path = brackets.BRACKETS_FILE
+    education: Path = education.EDUCATION_DIR
 
 
 @dataclass(frozen=True)
@@ -199,6 +201,10 @@ def compile_documents(
         for d in dois.missing(all_dois(paths), registry)
     ]
     errors += citation_errors(paths, registry)
+    edu_module = education.load_module(paths.education)
+    edu_laws = education.load_laws(paths.education)
+    if edu_module is not None:
+        errors += education.check(edu_module, edu_laws, indicators)
     if errors:
         raise ValidationError(errors)
 
@@ -224,6 +230,8 @@ def compile_documents(
     except content.ContentError as e:
         raise ValidationError([str(e)]) from e
     out["documents.json"] = index
+    if edu_module is not None:
+        out["education.json"] = education.render(edu_module, edu_laws, df)
     return out
 
 

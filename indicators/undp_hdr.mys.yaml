@@ -1,0 +1,39 @@
+id: undp_hdr.mys
+source: undp_hdr
+source_code: mys
+unit: years
+min: 0
+max: 25
+name:
+  pt: "Anos médios de estudo (PNUD)"
+  en: "Mean years of schooling (UNDP)"
+definition:
+  pt: >-
+    Média de anos de estudo completados pela população de 25 anos ou mais. É o outro
+    componente de educação do IDH. Por olhar para adultos, muda devagar: reflete décadas
+    de matrícula passada, não apenas as políticas recentes. A série inteira é recalculada
+    a cada edição do relatório.
+  en: >-
+    Average years of schooling completed by the population aged 25 and over. The other
+    education component of the HDI. Because it looks at adults, it moves slowly: it
+    reflects decades of past enrollment, not only recent policy. The whole series is
+    recomputed with each report edition.
+formula:
+  pt: "Anos de estudo médios da população de 25 anos ou mais, a partir de pesquisas domiciliares e censos."
+  en: "Mean years of schooling of the population aged 25 and over, from household surveys and censuses."
+criticisms:
+  - pt: >-
+      Muda devagar por construção: a série de adultos de 25 anos ou mais mistura gerações,
+      então mudanças de política recentes quase não aparecem nela.
+    en: >-
+      It moves slowly by construction: the series for adults aged 25 and over mixes
+      cohorts, so recent policy changes barely show up in it.
+  - pt: >-
+      Conta anos cursados, não concluídos com aprendizado, e não distingue a qualidade da
+      escola.
+    en: >-
+      It counts years attended, not learning achieved, and does not distinguish school
+      quality.
+references:
+  - citation: "UNDP. Human Development Report 2025 — Technical notes."
+    url: https://hdr.undp.org/data-center/documentation-and-downloads

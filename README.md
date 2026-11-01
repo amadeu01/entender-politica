@@ -13,6 +13,7 @@ públicas no Brasil, de 1980 até hoje, com comparações internacionais.
 | Página | Endereço |
 |---|---|
 | Brasil 1980–hoje (linhas do tempo por governo) | [/brasil/](https://amadeu01.github.io/entender-politica/brasil/) |
+| Educação: normas, votações e métricas por subtema | [/educacao/](https://amadeu01.github.io/entender-politica/educacao/) |
 | Catálogo de indicadores | [/indicadores/](https://amadeu01.github.io/entender-politica/indicadores/) |
 | Análises | [/analises/](https://amadeu01.github.io/entender-politica/analises/) |
 | Políticas de referência | [/politicas/](https://amadeu01.github.io/entender-politica/politicas/) |
@@ -47,6 +48,7 @@ Todo argumento do site segue a mesma estrutura:
 | `data/reference/` | Tabelas de referência (períodos de governo, marcos) |
 | `indicators/` | Catálogo de indicadores: definição, fórmula, fonte, críticas |
 | `analyses/` | Análises (pergunta, hipótese, método, resultado, limitações) |
+| `education/` | Módulo de educação: subtemas e normas com votações e alterações ([ADR 0012](docs/adr/0012-modulo-educacao.md)) |
 | `policies/` | Fichas de políticas públicas de referência, com nível de evidência |
 | `site/` | Site estático (Astro) publicado no GitHub Pages |
 | `docs/` | Metodologia e decisões (ADRs) |
