@@ -1,0 +1,163 @@
+# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
+# Itens sem `checked` ainda não foram conferidos com o registro oficial.
+period: fhc-1
+summary:
+  pt: O gasto público total em educação foi de {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 1995) }}% do PIB em
+    1995 e {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 1998) }}% em 1998, e os anos médios de estudo foram de
+    {{ v("undp_hdr.mys", "BRA", 1995) }} a {{ v("undp_hdr.mys", "BRA", 1998) }}. O governo aprovou a nova
+    LDB, criou o fundo de financiamento do ensino fundamental (Fundef), o Enem e a avaliação nacional
+    de cursos superiores.
+  en: Total public education spending was {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 1995) }}% of GDP in 1995
+    and {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 1998) }}% in 1998, and mean years of schooling went from
+    {{ v("undp_hdr.mys", "BRA", 1995) }} to {{ v("undp_hdr.mys", "BRA", 1998) }}. The government passed
+    the new LDB, created the primary education funding mechanism (Fundef), the Enem and the national assessment
+    of higher education courses.
+context:
+  pt: A estabilização de preços (Plano Real) foi o pano de fundo macroeconômico. Estudos acadêmicos associam
+    o Fundef a mais matrículas no ensino fundamental, sobretudo em municípios pequenos, a partir de 1998;
+    matrículas, porém, também seguem a demografia e a renda das famílias. Essas séries de matrícula não
+    estão no catálogo para este período.
+  en: Price stabilization (Real Plan) was the macroeconomic background. Academic studies associate Fundef
+    with more primary enrollment, especially in small municipalities, from 1998; enrollment also follows
+    demographics and family income. Those enrollment series are not in the catalog for this period.
+started:
+- title:
+    pt: Conselho Nacional de Educação e Exame Nacional de Cursos
+    en: National Education Council and national course exam
+  year: 1995
+  date: '1995-11-24'
+  instrument: Lei 9.131/1995
+  submodules:
+  - graduacao
+  - planejamento
+  description:
+    pt: Cria o Conselho Nacional de Educação e institui o exame nacional dos concluintes de cursos de
+      graduação (o Provão, aplicado a partir de 1996).
+    en: Creates the National Education Council and institutes the national exam for undergraduate graduates
+      (the Provão, applied from 1996).
+  source: https://www.planalto.gov.br/ccivil_03/leis/l9131.htm
+- title:
+    pt: Lei de Diretrizes e Bases da Educação Nacional
+    en: National Education Guidelines and Bases Law
+  year: 1996
+  date: '1996-12-20'
+  instrument: Lei 9.394/1996
+  norm: ldb-1996
+  submodules:
+  - educacao-infantil
+  - ensino-fundamental
+  - ensino-medio
+  - graduacao
+  - planejamento
+  description:
+    pt: 'Lei geral da educação nacional: organiza a educação básica e superior, inclui a educação infantil
+      na educação básica e prevê o plano nacional de educação.'
+    en: 'General law of national education: organizes basic and higher education, includes early childhood
+      education in basic education and provides for the national education plan.'
+  source: https://www.planalto.gov.br/ccivil_03/leis/l9394.htm
+- title:
+    pt: Fundef
+    en: Fundef
+  year: 1996
+  date: '1996-09-12'
+  instrument: Emenda Constitucional 14/1996
+  submodules:
+  - financiamento
+  - ensino-fundamental
+  description:
+    pt: Subvincula parte da receita de estados e municípios ao ensino fundamental, redistribui os recursos
+      dentro de cada estado por número de alunos e prevê complementação da União onde o valor por aluno
+      fica abaixo do mínimo nacional. Regulamentado por lei federal do mesmo ano e em operação desde 1998.
+    en: Sub-earmarks part of state and municipal revenue for primary education, redistributes funds within
+      each state by number of students and provides Union top-ups where per-pupil value falls below the
+      national minimum. Regulated by a federal law of the same year and operating since 1998.
+  source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc14.htm
+- title:
+    pt: Separação do ensino médio e da educação profissional
+    en: Separation of secondary and vocational education
+  year: 1997
+  date: '1997-04-17'
+  instrument: Decreto 2.208/1997
+  submodules:
+  - ensino-medio
+  - educacao-profissional
+  description:
+    pt: Separa a educação profissional do ensino médio acadêmico e financia a expansão da rede técnica
+      com recursos de empréstimo externo.
+    en: Separates vocational education from academic secondary schooling and funds the technical network's
+      expansion with an external loan.
+  source: https://www.planalto.gov.br/ccivil_03/decreto/d2208.htm
+- title:
+    pt: Exame Nacional do Ensino Médio (Enem)
+    en: National Secondary Education Exam (Enem)
+  year: 1998
+  date: '1998-05-28'
+  instrument: Portaria MEC 438/1998
+  submodules:
+  - ensino-medio
+  - graduacao
+  description:
+    pt: Exame voluntário e individual que avalia competências ao fim do ensino médio, aplicado pela primeira
+      vez em 1998; mais tarde passou a servir de porta de entrada para a graduação.
+    en: Voluntary individual exam assessing end-of-secondary competencies, first applied in 1998; later
+      became an admissions route to undergraduate education.
+  source: https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem
+cuts:
+- kind: earmark
+  title:
+    pt: Fundo de Estabilização Fiscal e a base da vinculação
+    en: Fiscal Stabilization Fund and the earmark base
+  year: 1996
+  submodules:
+  - financiamento
+  description:
+    pt: A emenda de 1996 transformou o fundo de emergência em Fundo de Estabilização Fiscal e manteve
+      parte da receita federal fora das vinculações. Fontes divergem sobre o quanto isso afetou a base
+      de cálculo do piso federal de educação, cuja desvinculação só começou a cair, para a educação, a
+      partir de 2009.
+    en: The 1996 amendment turned the emergency fund into the Fiscal Stabilization Fund and kept part
+      of federal revenue outside earmarks. Sources differ on how much this affected the base of the federal
+      education minimum, whose delinking only began to fall, for education, from 2009.
+  source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc10.htm
+- kind: cut
+  title:
+    pt: Valor mínimo por aluno do Fundef e a complementação da União
+    en: Fundef per-pupil minimum and the Union top-up
+  year: 1998
+  submodules:
+  - financiamento
+  - ensino-fundamental
+  description:
+    pt: A lei do Fundef deixava a um ato presidencial fixar o valor mínimo nacional por aluno, que define
+      a complementação da União. Em 2017 o Supremo Tribunal Federal decidiu que a União deve complementar
+      pela média nacional no período de 1998 a 2007, o que sustenta que os valores fixados ficaram abaixo
+      da fórmula legal. A disputa atravessa mais de um governo.
+    en: The Fundef law left it to a presidential act to set the national per-pupil minimum, which determines
+      the Union top-up. In 2017 the Supreme Federal Court decided the Union must top up at the national
+      average for 1998 to 2007, which supports the view that the values set were below the legal formula.
+      The dispute spans more than one government.
+  source: https://www.planalto.gov.br/ccivil_03/leis/l9424.htm
+indicators:
+- wdi.se_xpd_totl_gd_zs
+- undp_hdr.mys
+- wdi.se_adt_litr_zs
+limitations:
+- pt: Os itens desta página foram redigidos a partir de pesquisa em fontes secundárias, sem acesso aos
+    textos oficiais no ambiente de desenvolvimento; cada item mostra se foi conferido com o registro oficial.
+  en: The items on this page were written from research in secondary sources, without access to the official
+    texts in the development environment; each item shows whether it was checked against the official
+    record.
+- pt: Anos médios de estudo e alfabetização de adultos mudam devagar por construção e refletem décadas
+    de matrículas; uma variação num mandato não mede o efeito das políticas daquele mandato. Séries de
+    matrícula por etapa só existem a partir de 2007 ou 2012, e não há série de aprendizado nem de gasto
+    federal em reais no catálogo.
+  en: Mean years of schooling and adult literacy move slowly by construction and reflect decades of enrollment;
+    a change within one term does not measure that term's policies. Enrollment series by level only start
+    in 2007 or 2012, and the catalog has no learning series or federal spending in reais.
+references:
+- citation: Planalto — Legislação federal
+  url: https://www.planalto.gov.br/ccivil_03/
+- citation: Banco Mundial — World Development Indicators (educação)
+  url: https://datatopics.worldbank.org/world-development-indicators/
+- citation: PNUD — Relatório de Desenvolvimento Humano, dados
+  url: https://hdr.undp.org/data-center
