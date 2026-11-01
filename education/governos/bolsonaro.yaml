@@ -1,0 +1,185 @@
+# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
+# Itens sem `checked` ainda não foram conferidos com o registro oficial.
+period: bolsonaro
+summary:
+  pt: O gasto público em educação foi de {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2018) }}% do PIB em 2018
+    e {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2022) }}% em 2022, com a pandemia de 2020–2021 no meio. A taxa
+    bruta de matrícula na educação superior foi de {{ v("wdi.se_ter_enrr", "BRA", 2018) }}% a {{ v("wdi.se_ter_enrr",
+    "BRA", 2022) }}%. O governo criou o programa de escolas cívico-militares, uma política de alfabetização,
+    e o Congresso tornou o Fundeb permanente e destinou recursos de telecomunicações à conectividade de
+    escolas, esta última contra a posição do Executivo.
+  en: Public education spending was {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2018) }}% of GDP in 2018 and
+    {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2022) }}% in 2022, with the 2020–2021 pandemic in between. The
+    gross tertiary enrollment ratio went from {{ v("wdi.se_ter_enrr", "BRA", 2018) }}% to {{ v("wdi.se_ter_enrr",
+    "BRA", 2022) }}%. The government created the civic-military schools program, a literacy policy, and
+    Congress made Fundeb permanent and earmarked telecommunications resources for school connectivity,
+    the latter against the Executive’s position.
+context:
+  pt: O fechamento de escolas na pandemia afetou matrículas, frequência e aprendizado em todo o mundo,
+    e o PIB caiu em 2020, o que altera a razão gasto/PIB. O Fundeb permanente foi aprovado pelo Congresso
+    com participação ativa do Legislativo. As séries do catálogo não medem aprendizado, que é onde a literatura
+    espera o efeito mais forte da pandemia.
+  en: School closures in the pandemic affected enrollment, attendance and learning worldwide, and GDP
+    fell in 2020, which changes the spending/GDP ratio. The permanent Fundeb was approved by Congress
+    with an active role of the legislature. The catalog's series do not measure learning, which is where
+    the literature expects the strongest pandemic effect.
+started:
+- title:
+    pt: Política Nacional de Alfabetização
+    en: National Literacy Policy
+  year: 2019
+  date: '2019-04-11'
+  instrument: Decreto 9.765/2019
+  submodules:
+  - ensino-fundamental
+  - educacao-infantil
+  description:
+    pt: Institui política nacional de alfabetização com ênfase em métodos fônicos; revogada em 2023.
+    en: Institutes a national literacy policy emphasizing phonics-based methods; revoked in 2023.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/D9765.htm
+- title:
+    pt: Programa Nacional das Escolas Cívico-Militares
+    en: National Civic-Military Schools Program
+  year: 2019
+  date: '2019-09-05'
+  instrument: Decreto 10.004/2019
+  submodules:
+  - ensino-fundamental
+  - ensino-medio
+  description:
+    pt: Apoia a adoção de modelo de gestão cívico-militar em escolas públicas estaduais e municipais que
+      aderem; revogado em 2023.
+    en: Supports the adoption of a civic-military management model in participating state and municipal
+      public schools; revoked in 2023.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/D10004.htm
+- title:
+    pt: Fundeb permanente
+    en: Permanent Fundeb
+  year: 2020
+  date: '2020-08-26'
+  instrument: Emenda Constitucional 108/2020
+  norm: ec-108-2020
+  submodules:
+  - financiamento
+  description:
+    pt: Torna o Fundeb permanente e eleva gradualmente a complementação da União, com novas modalidades
+      de distribuição.
+    en: Makes Fundeb permanent and gradually raises the Union top-up, with new distribution modalities.
+  source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc108.htm
+- title:
+    pt: Regulamentação do Fundeb permanente
+    en: Regulation of the permanent Fundeb
+  year: 2020
+  date: '2020-12-25'
+  instrument: Lei 14.113/2020
+  norm: lei-14113-2020
+  submodules:
+  - financiamento
+  description:
+    pt: Regulamenta o Fundeb permanente, com a regra de complementação da União e critérios de distribuição.
+    en: Regulates the permanent Fundeb, with the Union top-up rule and distribution criteria.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/L14113.htm
+- title:
+    pt: Acesso à internet para estudantes e professores da educação básica
+    en: Internet access for basic education students and teachers
+  year: 2021
+  date: '2021-06-10'
+  instrument: Lei 14.172/2021
+  submodules:
+  - ensino-fundamental
+  - ensino-medio
+  description:
+    pt: Destina recursos de fundo de telecomunicações a internet para alunos e professores da rede pública.
+      O Executivo vetou o projeto por inteiro, o Congresso derrubou o veto e o governo questionou a lei
+      no Supremo Tribunal Federal.
+    en: Allocates telecommunications fund resources to internet for public school students and teachers.
+      The Executive vetoed the bill in full, Congress overrode the veto and the government challenged
+      the law in the Supreme Federal Court.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/L14172.htm
+cuts:
+- kind: withheld
+  title:
+    pt: Bloqueio de verbas de universidades e institutos federais
+    en: Block on funds of federal universities and institutes
+  year: 2019
+  date: '2019-03-28'
+  submodules:
+  - graduacao
+  - educacao-profissional
+  - pos-graduacao-ciencia
+  description:
+    pt: Em 2019 um decreto de programação orçamentária bloqueou parte relevante das despesas discricionárias
+      de universidades e institutos federais, chamado pelo governo de bloqueio preventivo; a Justiça Federal
+      suspendeu o bloqueio e ele foi totalmente liberado em outubro de 2019. Cortes em bolsas da Capes
+      e do CNPq não foram conferidos. As fontes divergem no percentual do bloqueio. Na execução, o gasto
+      federal pago em educação, a preços constantes e em bilhões de reais, foi de {{ v('siconfi.educ_uniao_paga',
+      'BRA', 2018) }} em 2018, {{ v('siconfi.educ_uniao_paga', 'BRA', 2019) }} em 2019 e {{ v('siconfi.educ_uniao_paga',
+      'BRA', 2021) }} em 2021; o pago em ensino superior, de {{ v('siconfi.superior_uniao_paga', 'BRA',
+      2018) }} a {{ v('siconfi.superior_uniao_paga', 'BRA', 2019) }} e {{ v('siconfi.superior_uniao_paga',
+      'BRA', 2021) }}.
+    en: In 2019 a budget programming decree blocked a significant part of federal universities' and institutes'
+      discretionary spending, called a preventive block by the government; a federal court suspended the
+      block and it was fully released in October 2019. Cuts to Capes and CNPq scholarships were not checked.
+      Sources differ on the share blocked. In execution, federal spending paid on education, at constant
+      prices and in billions of reais, was {{ v('siconfi.educ_uniao_paga', 'BRA', 2018) }} in 2018, {{
+      v('siconfi.educ_uniao_paga', 'BRA', 2019) }} in 2019 and {{ v('siconfi.educ_uniao_paga', 'BRA',
+      2021) }} in 2021; paid on higher education, {{ v('siconfi.superior_uniao_paga', 'BRA', 2018) }},
+      {{ v('siconfi.superior_uniao_paga', 'BRA', 2019) }} and {{ v('siconfi.superior_uniao_paga', 'BRA',
+      2021) }}.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/D9741.htm
+- kind: withheld
+  title:
+    pt: Bloqueio de despesas do MEC
+    en: Block on MEC expenses
+  year: 2022
+  submodules:
+  - graduacao
+  - educacao-profissional
+  - financiamento
+  description:
+    pt: Decreto de setembro de 2022 bloqueou parte do orçamento do MEC dentro do cumprimento do teto de
+      gastos; o Ministério Público Federal registrou desbloqueio em outubro, e o ministro afirmou que
+      o MEC absorveu o efeito (valores não conferidos).
+    en: A September 2022 decree blocked part of the MEC budget under the spending cap; the federal prosecutors
+      recorded an unblocking in October, and the minister said MEC absorbed the effect (amounts not checked).
+  source: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11216.htm
+- kind: fiscal_rule
+  title:
+    pt: Teto de gastos em vigor
+    en: Spending cap in force
+  year: 2019
+  submodules:
+  - financiamento
+  - pos-graduacao-ciencia
+  description:
+    pt: A regra do teto seguiu limitando a despesa primária federal durante todo o período.
+    en: The cap rule kept limiting federal primary spending throughout the period.
+  source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc95.htm
+indicators:
+- wdi.se_xpd_totl_gd_zs
+- wdi.gb_xpd_rsdv_gd_zs
+- siconfi.educ_uniao_paga
+- siconfi.superior_uniao_paga
+- wdi.se_ter_enrr
+- wdi.se_sec_enrr
+- undp_hdr.mys
+limitations:
+- pt: Os itens desta página foram redigidos a partir de pesquisa em fontes secundárias, sem acesso aos
+    textos oficiais no ambiente de desenvolvimento; cada item mostra se foi conferido com o registro oficial.
+  en: The items on this page were written from research in secondary sources, without access to the official
+    texts in the development environment; each item shows whether it was checked against the official
+    record.
+- pt: Anos médios de estudo e alfabetização de adultos mudam devagar por construção e refletem décadas
+    de matrículas; uma variação num mandato não mede o efeito das políticas daquele mandato. Séries de
+    matrícula por etapa só existem a partir de 2007 ou 2012, e não há série de aprendizado nem de gasto
+    federal em reais no catálogo.
+  en: Mean years of schooling and adult literacy move slowly by construction and reflect decades of enrollment;
+    a change within one term does not measure that term's policies. Enrollment series by level only start
+    in 2007 or 2012, and the catalog has no learning series or federal spending in reais.
+references:
+- citation: Planalto — Legislação federal
+  url: https://www.planalto.gov.br/ccivil_03/
+- citation: Banco Mundial — World Development Indicators (educação)
+  url: https://datatopics.worldbank.org/world-development-indicators/
+- citation: PNUD — Relatório de Desenvolvimento Humano, dados
+  url: https://hdr.undp.org/data-center
