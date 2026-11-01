@@ -1,0 +1,122 @@
+# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
+# Itens sem `checked` ainda não foram conferidos com o registro oficial.
+period: fhc-2
+summary:
+  pt: O gasto público em educação ficou em {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 1999) }}% do PIB em 1999
+    e {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2002) }}% em 2002, e o gasto em pesquisa e desenvolvimento
+    em {{ v("wdi.gb_xpd_rsdv_gd_zs", "BRA", 2000) }}% do PIB em 2000. O governo criou o financiamento
+    estudantil federal (Fies), o plano nacional de educação 2001–2010 e a bolsa federal condicionada à
+    frequência escolar.
+  en: Public education spending was {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 1999) }}% of GDP in 1999 and
+    {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2002) }}% in 2002, and research and development spending {{ v("wdi.gb_xpd_rsdv_gd_zs",
+    "BRA", 2000) }}% of GDP in 2000. The government created federal student financing (Fies), the 2001–2010
+    national education plan and the federal grant conditional on school attendance.
+context:
+  pt: Crises cambiais e acordos com o FMI (1998–2002) e a Lei de Responsabilidade Fiscal limitaram o gasto
+    público. A série do Banco Mundial tem lacunas e mudanças de metodologia, e o gasto em educação inclui
+    estados e municípios, que respondem pela maior parte dele.
+  en: Currency crises and IMF agreements (1998–2002) and the Fiscal Responsibility Law limited public
+    spending. The World Bank series has gaps and methodology changes, and education spending includes
+    states and municipalities, which account for most of it.
+started:
+- title:
+    pt: Fundo de Financiamento Estudantil (Fies)
+    en: Student Financing Fund (Fies)
+  year: 2001
+  date: '2001-07-12'
+  instrument: Lei 10.260/2001
+  norm: lei-10260-2001
+  submodules:
+  - graduacao
+  - financiamento
+  description:
+    pt: Substitui o crédito educativo e financia cursos de graduação em instituições privadas avaliadas
+      positivamente; originou-se de medida provisória de 1999.
+    en: Replaces the previous student credit and finances undergraduate courses at positively assessed
+      private institutions; originated in a 1999 provisional measure.
+  source: https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10260.htm
+- title:
+    pt: Plano Nacional de Educação 2001–2010
+    en: National Education Plan 2001–2010
+  year: 2001
+  date: '2001-01-09'
+  instrument: Lei 10.172/2001
+  submodules:
+  - planejamento
+  - financiamento
+  description:
+    pt: Primeiro plano decenal com metas por etapa e modalidade. Teve os dispositivos de financiamento
+      vetados (ver cortes).
+    en: First ten-year plan with goals by level and modality. Its financing provisions were vetoed (see
+      cuts).
+  source: https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10172.htm
+- title:
+    pt: Bolsa Escola federal
+    en: Federal Bolsa Escola
+  year: 2001
+  date: '2001-04-11'
+  instrument: Lei 10.219/2001
+  submodules:
+  - ensino-fundamental
+  description:
+    pt: Transferência de renda a famílias pobres condicionada à frequência escolar de crianças em idade
+      de ensino fundamental, operada pelos municípios.
+    en: Cash transfer to poor families conditional on school attendance of primary-age children, run by
+      municipalities.
+  source: https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10219.htm
+cuts:
+- kind: veto
+  title:
+    pt: Vetos às metas de financiamento e expansão do PNE
+    en: Vetoes of the PNE financing and expansion goals
+  year: 2001
+  submodules:
+  - financiamento
+  - planejamento
+  description:
+    pt: O presidente vetou parcialmente a lei do plano nacional, atingindo metas de financiamento de todos
+      os níveis (a meta de percentual do PIB foi o principal item) e, em especial, de expansão da educação
+      superior. O Congresso manteve o veto.
+    en: The president partially vetoed the national plan law, hitting financing goals at all levels (the
+      GDP-share goal was the main item) and, especially, higher education expansion goals. Congress upheld
+      the veto.
+  source: https://www.congressonacional.leg.br/materias/vetos/-/veto/detalhe/3037
+- kind: earmark
+  title:
+    pt: Desvinculação de receitas da União (DRU)
+    en: Delinking of Union revenue (DRU)
+  year: 2000
+  submodules:
+  - financiamento
+  description:
+    pt: A desvinculação de receitas da União sucedeu o fundo de estabilização fiscal e manteve parte da
+      receita federal fora das vinculações; seu efeito sobre o piso federal de educação é objeto de estudos
+      divergentes.
+    en: The Union revenue delinking succeeded the fiscal stabilization fund and kept part of federal revenue
+      outside earmarks; its effect on the federal education minimum is the subject of divergent studies.
+  source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc27.htm
+indicators:
+- wdi.se_xpd_totl_gd_zs
+- wdi.gb_xpd_rsdv_gd_zs
+- undp_hdr.mys
+- wdi.se_adt_litr_zs
+limitations:
+- pt: Os itens desta página foram redigidos a partir de pesquisa em fontes secundárias, sem acesso aos
+    textos oficiais no ambiente de desenvolvimento; cada item mostra se foi conferido com o registro oficial.
+  en: The items on this page were written from research in secondary sources, without access to the official
+    texts in the development environment; each item shows whether it was checked against the official
+    record.
+- pt: Anos médios de estudo e alfabetização de adultos mudam devagar por construção e refletem décadas
+    de matrículas; uma variação num mandato não mede o efeito das políticas daquele mandato. Séries de
+    matrícula por etapa só existem a partir de 2007 ou 2012, e não há série de aprendizado nem de gasto
+    federal em reais no catálogo.
+  en: Mean years of schooling and adult literacy move slowly by construction and reflect decades of enrollment;
+    a change within one term does not measure that term's policies. Enrollment series by level only start
+    in 2007 or 2012, and the catalog has no learning series or federal spending in reais.
+references:
+- citation: Planalto — Legislação federal
+  url: https://www.planalto.gov.br/ccivil_03/
+- citation: Banco Mundial — World Development Indicators (educação)
+  url: https://datatopics.worldbank.org/world-development-indicators/
+- citation: PNUD — Relatório de Desenvolvimento Humano, dados
+  url: https://hdr.undp.org/data-center
