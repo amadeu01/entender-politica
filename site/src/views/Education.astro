@@ -6,7 +6,7 @@ import Base from "../layouts/Base.astro";
 import Chart from "../components/Chart.astro";
 import Notice from "../components/Notice.astro";
 import VoteList from "../components/VoteList.astro";
-import { education, indicator } from "../lib/data";
+import { eduGovernment, eduGovernments, education, indicator } from "../lib/data";
 import type { EducationEvent, EducationLaw, EducationMark } from "../lib/data";
 import { asset, SOURCE_NAMES, UI, UNIT_DECIMALS, UNIT_LABELS, formatNumber, url, type Lang } from "../lib/i18n";
 interface Props {
@@ -16,6 +16,13 @@ const { lang } = Astro.props;
 const t = UI[lang];
 const edu = education();
 const lawBySlug = new Map(edu.laws.map((l) => [l.slug, l]));
+const govPages = eduGovernments().map((id) => eduGovernment(id, lang));
+const govHeading = lang === "pt" ? "Educação por governo" : "Education by government";
+const govLede =
+  lang === "pt"
+    ? "O que cada governo começou, o que foi cortado e as séries do período, lado a lado."
+    : "What each government started, what was cut, and the series for the period, side by side.";
+const govPath = (id: string) => `${url(lang, "education")}${lang === "pt" ? "governos" : "governments"}/${id}/`;
 const REGION = ["BRA", "ARG", "CHL", "COL", "MEX"];
 
 const copy = {
@@ -143,6 +150,20 @@ const tabs = [
   <h1>{t.nav.education}</h1>
   <p class="lede">{copy.lede}</p>
   <Notice lang={lang} />
+
+  {
+    govPages.length > 0 && (
+      <section aria-labelledby="h-gov">
+        <h2 id="h-gov">{govHeading}</h2>
+        <p>{govLede}</p>
+        <ul>
+          {govPages.map((g) => (
+            <li><a href={govPath(g.id)}>{g.periods[g.periods.length - 1].short_name} · {g.periods[g.periods.length - 1].term[lang]}</a></li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
 
   <nav class="subnav" aria-label={copy.nav}>
     <ul>

@@ -252,6 +252,47 @@ export type Education = {
   submodules: EducationSubmodule[];
   laws: EducationLaw[];
 };
+export type EduGovChange = {
+  indicator_id: string;
+  geo_code: string;
+  lag: number;
+  start_year: number;
+  end_year: number;
+  start_value: number | null;
+  end_value: number | null;
+  change: number | null;
+  relative: boolean;
+  mixed_years: number[];
+};
+export type EduGovItem = {
+  title: string;
+  description: string;
+  year: number;
+  date: string | null;
+  submodules: string[];
+  source: string;
+  checked: string | null;
+  values: Record<string, number | null>;
+  kind?: string;
+  instrument?: string | null;
+  norm?: string | null;
+  norm_designation?: string | null;
+};
+export type EduGovernment = {
+  id: string;
+  lang: Lang;
+  periods: Period[];
+  years: number[];
+  summary: string;
+  context: string;
+  started: EduGovItem[];
+  cuts: EduGovItem[];
+  indicators: string[];
+  changes: EduGovChange[];
+  limitations: string[];
+  references: { citation: string; doi: string | null; url: string }[];
+  numbers: Cited[];
+};
 type Documents = {
   analyses: { slug: string; lang: Lang; title: string }[];
   policies: { slug: string; lang: Lang; name: string; country: string }[];
@@ -280,3 +321,9 @@ export const periodChanges = (): PeriodChange[] => read("period_changes.json");
 
 export const geoName = (code: string, lang: Lang): string =>
   geographies().find((g) => g.code === code)?.name[lang] ?? code;
+export const eduGovernments = (): string[] =>
+  existsSync(join(DATA_DIR, "education", "governments", "index.json"))
+    ? read("education/governments/index.json")
+    : [];
+export const eduGovernment = (id: string, lang: Lang): EduGovernment =>
+  read(`education/governments/${id}.${lang}.json`);

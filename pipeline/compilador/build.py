@@ -22,6 +22,7 @@ from compilador import (
     changelog,
     content,
     dois,
+    edu_governments,
     education,
     geography,
     governments,
@@ -236,6 +237,13 @@ def compile_documents(
         raise ValidationError([f"education content: {e}"]) from e
     if edu_module is not None:
         errors += education.check(edu_module, edu_laws, indicators)
+    try:
+        edu_govs = edu_governments.load(paths.education) if edu_module is not None else []
+    except (PydanticError, ValueError, yaml.YAMLError) as e:
+        raise ValidationError([f"education/governos: {e}"]) from e
+    govs = governments.load()
+    if edu_module is not None:
+        errors += edu_governments.check(edu_govs, govs, edu_module, edu_laws, indicators, registry)
     if errors:
         raise ValidationError(errors)
 
@@ -266,6 +274,15 @@ def compile_documents(
         out["education.json"] = education.render(edu_module, edu_laws, df, votes)
         for name, csv in education.vote_files(votes).items():
             out[f"education/votes/{name}"] = csv
+        try:
+            for g in edu_govs:
+                for lang in analyses.LANGS:
+                    out[f"education/governments/{g.period}.{lang}.json"] = edu_governments.render(
+                        g, lang, df, indicators, govs, edu_laws
+                    )
+        except content.ContentError as e:
+            raise ValidationError([str(e)]) from e
+        out["education/governments/index.json"] = [g.period for g in edu_govs]
     return out
 
 
