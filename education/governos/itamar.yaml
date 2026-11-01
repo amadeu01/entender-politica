@@ -1,0 +1,89 @@
+# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
+# Itens sem `checked` ainda não foram conferidos com o registro oficial.
+period: itamar
+includes:
+- itamar-interino
+summary:
+  pt: Os anos médios de estudo dos adultos foram de {{ v("undp_hdr.mys", "BRA", 1992) }} em 1992 a {{
+    v("undp_hdr.mys", "BRA", 1994) }} em 1994. O governo adotou o plano decenal de educação para todos,
+    compromisso assumido na conferência de Jomtien, e descentralizou a merenda escolar; o Plano Real veio
+    em 1994.
+  en: Mean years of schooling went from {{ v("undp_hdr.mys", "BRA", 1992) }} in 1992 to {{ v("undp_hdr.mys",
+    "BRA", 1994) }} in 1994. The government adopted the ten-year education-for-all plan, a commitment
+    from the Jomtien conference, and decentralized school meals; the Real Plan came in 1994.
+context:
+  pt: A inflação muito alta até meados de 1994 corroía salários e orçamentos. Uma avaliação crítica da
+    literatura é que o plano decenal teve pouca execução; o ensino fundamental só se aproximou da universalização
+    depois da reforma de financiamento do governo seguinte.
+  en: Very high inflation until mid-1994 eroded pay and budgets. One critical assessment in the literature
+    is that the ten-year plan was little implemented; primary education only approached universal access
+    after the next government's funding reform.
+started:
+- title:
+    pt: Plano Decenal de Educação para Todos
+    en: Ten-Year Plan of Education for All
+  year: 1993
+  submodules:
+  - ensino-fundamental
+  - planejamento
+  description:
+    pt: Plano do MEC, apresentado em 1993, que assume a meta de universalizar o ensino fundamental e reduzir
+      o analfabetismo, em resposta à conferência mundial de 1990.
+    en: MEC plan presented in 1993 that takes on the goal of universalizing primary education and reducing
+      illiteracy, in response to the 1990 world conference.
+  source: https://oasisbr.ibict.br/vufind/Record/INEP-1_ab604ac8154a9c6b5bca79c64ad62c38
+- title:
+    pt: Municipalização da merenda escolar
+    en: Decentralization of school meals to municipalities
+  year: 1994
+  date: '1994-07-12'
+  instrument: Lei 8.913/1994
+  submodules:
+  - ensino-fundamental
+  - educacao-infantil
+  description:
+    pt: Transfere os recursos da alimentação escolar para estados, Distrito Federal e municípios.
+    en: Transfers school meal funds to states, the Federal District and municipalities.
+  source: https://www2.camara.leg.br/legin/fed/lei/1994/lei-8913-12-julho-1994-349782-publicacaooriginal-1-pl.html
+  checked: '2026-11-01'
+cuts:
+- kind: earmark
+  title:
+    pt: Fundo Social de Emergência e a base da vinculação
+    en: Emergency Social Fund and the earmark base
+  year: 1994
+  date: '1994-03-01'
+  submodules:
+  - financiamento
+  description:
+    pt: A emenda de revisão de 1994 que criou o fundo de estabilização retirou parte da receita de impostos
+      da União das vinculações. Há debate sobre o quanto isso reduziu a base de cálculo do piso federal
+      de educação (efeito não conferido).
+    en: The revision amendment that created the stabilization fund removed part of the Union's tax revenue
+      from earmarks. There is debate on how much this reduced the base for the federal education minimum
+      (effect not checked).
+  source: https://www2.camara.leg.br/legin/fed/emecrv/1994/emendaconstitucionalderevisao-1-1-marco-1994-363599-norma-pl.html
+  checked: '2026-11-01'
+indicators:
+- undp_hdr.mys
+- wdi.se_adt_litr_zs
+limitations:
+- pt: Os itens desta página foram redigidos a partir de pesquisa em fontes secundárias, sem acesso aos
+    textos oficiais no ambiente de desenvolvimento; cada item mostra se foi conferido com o registro oficial.
+  en: The items on this page were written from research in secondary sources, without access to the official
+    texts in the development environment; each item shows whether it was checked against the official
+    record.
+- pt: Anos médios de estudo e alfabetização de adultos mudam devagar por construção e refletem décadas
+    de matrículas; uma variação num mandato não mede o efeito das políticas daquele mandato. Séries de
+    matrícula por etapa só existem a partir de 2007 ou 2012, e não há série de aprendizado nem de gasto
+    federal em reais no catálogo.
+  en: Mean years of schooling and adult literacy move slowly by construction and reflect decades of enrollment;
+    a change within one term does not measure that term's policies. Enrollment series by level only start
+    in 2007 or 2012, and the catalog has no learning series or federal spending in reais.
+references:
+- citation: Planalto — Legislação federal
+  url: https://www.planalto.gov.br/ccivil_03/
+- citation: Banco Mundial — World Development Indicators (educação)
+  url: https://datatopics.worldbank.org/world-development-indicators/
+- citation: PNUD — Relatório de Desenvolvimento Humano, dados
+  url: https://hdr.undp.org/data-center
