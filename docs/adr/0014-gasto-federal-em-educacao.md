@@ -15,8 +15,8 @@ Transparência exige chave).
 ### Decisão
 1. **Fonte:** DCA (Declaração de Contas Anuais), Anexo I-E, da União, na API de dados abertos
    do Tesouro (Siconfi), de 2014 em diante: despesa empenhada e paga na função Educação e
-   nas subfunções Ensino Superior, Ensino Profissional e Transferências para a Educação
-   Básica. A DCA é o fechamento contábil, sem revisões posteriores.
+   nas subfunções Ensino Superior e Ensino Profissional, além das Transferências para a
+   Educação Básica, que pertence à função Encargos Especiais e não soma no total de Educação. A DCA é o fechamento contábil, sem revisões posteriores.
 2. **Preços constantes:** cada valor é dividido pela média anual do IPCA (série 433 do
    Banco Central, baixada junto no mesmo snapshot) e multiplicado pela média do ano-base, o
    último ano com os doze meses. O ano-base muda quando um novo snapshot cobre mais um ano.
@@ -38,7 +38,7 @@ Transparency Portal needs a key).
 ### Decision
 1. **Source:** the Union's DCA (annual accounts), Annex I-E, from the Treasury open data API
    (Siconfi), 2014 on: committed and paid spending in the Education function and the Higher
-   Education, Vocational Education and Transfers to Basic Education sub-functions. The DCA is
+   Education and Vocational Education sub-functions, plus Transfers to Basic Education, which belongs to the Special Charges function and does not add to the Education total. The DCA is
    the accounting close, with no later revisions.
 2. **Constant prices:** each value is divided by the year's average IPCA (Central Bank series
    433, fetched in the same snapshot) and multiplied by the base year's average, the latest

@@ -96,7 +96,7 @@ submodules:
     summary:
       pt: "Fundeb, vinculações constitucionais e o regime fiscal que limita o gasto."
       en: "Fundeb, constitutional earmarks and the fiscal regime that caps spending."
-    indicators: [wdi.se_xpd_totl_gd_zs, siconfi.educ_uniao_paga, siconfi.educ_uniao_empenhada, siconfi.fundeb_uniao_paga]
+    indicators: [wdi.se_xpd_totl_gd_zs, siconfi.educ_uniao_paga, siconfi.educ_uniao_empenhada, siconfi.transf_educ_basica_uniao_paga]
     planned_metrics:
       - name: { pt: "Transferências do Fundeb", en: "Fundeb transfers" }
         source: tesouro

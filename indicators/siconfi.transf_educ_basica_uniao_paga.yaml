@@ -1,4 +1,4 @@
-id: siconfi.fundeb_uniao_paga
+id: siconfi.transf_educ_basica_uniao_paga
 source: siconfi
 source_code: Despesas Pagas|28.847 - Transferências para a Educação Básica
 source_params:
@@ -11,12 +11,14 @@ name:
 unit: brl_billion_real
 min: 0
 definition:
-  pt: Valor anual da despesa paga pela União na subfunção Transferências para a Educação Básica (inclui
-    a complementação ao Fundeb), em R$ bilhões a preços do último ano completo, deflacionado pela média
-    anual do IPCA.
-  en: Annual amount of federal spending paid in the Transfers to Basic Education sub-function (includes
-    the Fundeb top-up), in R$ billion at prices of the latest full year, deflated by the annual average
-    of the IPCA.
+  pt: Valor anual da despesa paga pela União na subfunção Transferências para a Educação Básica, em R$
+    bilhões a preços do último ano completo, deflacionado pela média anual do IPCA. Esta subfunção pertence
+    à função Encargos Especiais, não à função Educação, e portanto não é parte do total de `siconfi.educ_uniao_paga`;
+    o conteúdo exato (por exemplo, quanto é complementação ao Fundeb) não foi conferido.
+  en: Annual amount of the Union's spending paid in the Transfers to Basic Education sub-function, in
+    R$ billion at prices of the latest full year, deflated by the annual average of the IPCA. This sub-function
+    belongs to the Special Charges function, not the Education function, so it is not part of the `siconfi.educ_uniao_paga`
+    total; its exact content (for example, how much is the Fundeb top-up) was not checked.
 formula:
   pt: Valor nominal da DCA, Anexo I-E, ÷ média anual do índice IPCA × média do índice do ano-base ÷ 1
     bilhão.

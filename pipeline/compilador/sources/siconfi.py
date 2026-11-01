@@ -94,7 +94,10 @@ class SiconfiSource:
                     if x["coluna"] == p["coluna"] and x["conta"] == p["conta"]
                 ]
                 if len(match) != 1:
-                    continue
+                    raise RuntimeError(
+                        f"SICONFI {year}: {len(match)} rows for {p['coluna']!r} / {p['conta']!r}"
+                        f" (indicator {ind.id}); the account may have been renamed"
+                    )
                 value = match[0]
                 if p.get("real") == "true":
                     if year not in index:

@@ -57,7 +57,7 @@ def test_real_values_use_the_base_year_prices(tmp_path):
     assert set(df["geo_code"]) == {"BRA"}
 
 
-def test_nominal_indicator_and_missing_account_are_handled(tmp_path):
+def test_nominal_indicator_and_a_missing_account_is_an_error(tmp_path):
     snap = snapshot.write(
         "siconfi",
         [
@@ -70,8 +70,10 @@ def test_nominal_indicator_and_missing_account_are_handled(tmp_path):
     )
     nominal = _ind(real="false")
     absent = _ind(conta="28.847 - Transferências para a Educação Básica")
-    df = siconfi.normalize(snap, [nominal, absent], geography.load())
+    df = siconfi.normalize(snap, [nominal], geography.load())
     assert list(df["value"]) == [pytest.approx(2.0)]
+    with pytest.raises(RuntimeError, match="0 rows"):
+        siconfi.normalize(snap, [absent], geography.load())
 
 
 def test_fetch_pages_through_results_and_adds_the_price_index():
