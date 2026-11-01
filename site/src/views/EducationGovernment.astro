@@ -1,0 +1,184 @@
+---
+// Education during one government: what it started, what was cut, and the metrics beside
+// both. Descriptive only (ADR 0003, ADR 0013).
+import Base from "../layouts/Base.astro";
+import Chart from "../components/Chart.astro";
+import Notice from "../components/Notice.astro";
+import Numbers from "../components/Numbers.astro";
+import { eduGovernment, geoName, indicator } from "../lib/data";
+import type { EduGovItem } from "../lib/data";
+import { UNIT_DECIMALS, UNIT_LABELS, UI, formatNumber, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+  id: string;
+}
+const { lang, id } = Astro.props;
+const t = UI[lang];
+const g = eduGovernment(id, lang);
+const main = g.periods[g.periods.length - 1];
+const REGION = ["BRA", "ARG", "CHL", "COL", "MEX"];
+const copy = {
+  pt: {
+    title: (n: string) => `Educação no governo ${n}`,
+    back: "Educação",
+    started: "O que começou",
+    startedNone: "Nenhuma norma ou programa novo registrado neste período.",
+    cuts: "Cortes, bloqueios e limites",
+    cutsNone: "Nenhum corte registrado neste período.",
+    kinds: { cut: "Corte", withheld: "Bloqueio ou contingenciamento", fiscal_rule: "Regra fiscal", earmark: "Vinculação", veto: "Veto" } as Record<string, string>,
+    source: "Fonte",
+    unchecked: "Ainda não conferido com o registro oficial",
+    checkedOn: (d: string) => `Conferido com o registro oficial em ${d}`,
+    values: "Séries no ano do evento (Brasil)",
+    changes: "Variação das séries no período",
+    changesLede: "Do ano anterior ao início até o último ano do período, com defasagem opcional. Comparar com a América Latina e os vizinhos: se todos mudaram juntos, a mudança provavelmente não é obra de um governo.",
+    lag: "Defasagem",
+    context: "Outros fatores que mexeram nas mesmas séries",
+    limitations: "Limitações",
+    references: "Fontes",
+    noData: "sem dado",
+    window: "Janela",
+    mixed: "Ano com mais de um presidente na janela",
+    norm: "Registro na página de educação",
+    years: (n: number) => (n === 0 ? "sem defasagem" : `defasagem de ${n} ${n === 1 ? "ano" : "anos"}`),
+    alt: (n: string) => `Linhas de ${n} para o Brasil, Argentina, Chile, Colômbia e México, com faixas dos presidentes ao fundo.`,
+  },
+  en: {
+    title: (n: string) => `Education under ${n}`,
+    back: "Education",
+    started: "What started",
+    startedNone: "No new law or program recorded for this period.",
+    cuts: "Cuts, withholdings and limits",
+    cutsNone: "No cut recorded for this period.",
+    kinds: { cut: "Cut", withheld: "Withholding (contingenciamento)", fiscal_rule: "Fiscal rule", earmark: "Earmark", veto: "Veto" } as Record<string, string>,
+    source: "Source",
+    unchecked: "Not yet checked against the official record",
+    checkedOn: (d: string) => `Checked against the official record on ${d}`,
+    values: "Series in the event's year (Brazil)",
+    changes: "Change in the series over the period",
+    changesLede: "From the year before the start to the last year of the period, with an optional lag. Compare with Latin America and neighbors: if all moved together, the change is probably not a government's doing.",
+    lag: "Lag",
+    context: "Other factors that moved the same series",
+    limitations: "Limitations",
+    references: "Sources",
+    noData: "no data",
+    window: "Window",
+    mixed: "Year with more than one president in the window",
+    norm: "Record on the education page",
+    years: (n: number) => (n === 0 ? "no lag" : `${n}-year lag`),
+    alt: (n: string) => `Lines of ${n} for Brazil, Argentina, Chile, Colombia and Mexico, with presidents as background bands.`,
+  },
+}[lang];
+const inds = g.indicators.map(indicator);
+const lags = [...new Set(g.changes.map((c) => c.lag))];
+const geos = [...new Set(g.changes.map((c) => c.geo_code))];
+const fmt = (v: number | null | undefined, unit: string) =>
+  v === null || v === undefined ? copy.noData : formatNumber(v, lang, UNIT_DECIMALS[unit] ?? 2);
+const when = (e: EduGovItem) => (e.date ? (lang === "pt" ? e.date.split("-").reverse().join("/") : e.date) : String(e.year));
+const change = (i: string, geo: string, lag: number) => g.changes.find((c) => c.indicator_id === i && c.geo_code === geo && c.lag === lag);
+const showChange = (c: ReturnType<typeof change>, unit: string) => {
+  if (!c || c.change === null) return copy.noData;
+  const sign = c.change > 0 ? "+" : c.change < 0 ? "−" : "";
+  return `${sign}${formatNumber(Math.abs(c.change), lang, c.relative ? 1 : UNIT_DECIMALS[unit] ?? 2)}${c.relative ? "%" : ""}`;
+};
+const label = copy.title(main.short_name);
+const items = [
+  { list: g.started, head: copy.started, none: copy.startedNone, cut: false },
+  { list: g.cuts, head: copy.cuts, none: copy.cutsNone, cut: true },
+];
+---
+
+<Base lang={lang} title={label} route="education">
+  <p class="meta"><a href={url(lang, "education")}>{copy.back}</a></p>
+  <h1>{label}</h1>
+  <p class="meta">
+    {g.periods.map((p) => p.term[lang]).join(" · ")}
+  </p>
+  <Fragment set:html={g.summary} />
+  <Notice lang={lang} />
+
+  {
+    items.map((sec) => (
+      <section>
+        <h2>{sec.head}</h2>
+        {sec.list.length === 0 && <p>{sec.none}</p>}
+        <ul class="card-grid laws">
+          {sec.list.map((e) => (
+            <li class="card">
+              <h4 set:html={e.title} />
+              <p class="meta">
+                {when(e)}
+                {e.kind && <> · <span class="badge">{copy.kinds[e.kind]}</span></>}
+                {e.instrument && <> · {e.instrument}</>}
+                {" · "}<span class={e.checked ? "badge" : "badge unverified"}>{e.checked ? copy.checkedOn(e.checked) : copy.unchecked}</span>
+                {e.norm && <> · <a href={`${url(lang, "education")}#${e.submodules[0]}--${e.norm}`}>{copy.norm}</a></>}
+              </p>
+              <Fragment set:html={e.description} />
+              <p class="meta">{copy.source}: <a href={e.source} rel="noopener">{new URL(e.source).hostname}</a></p>
+              <details>
+                <summary>{copy.values}</summary>
+                <ul>
+                  {inds.map((ind) => (
+                    <li>{ind.name[lang]}: {fmt(e.values[ind.id], ind.unit)} <span class="meta">{UNIT_LABELS[ind.unit]?.[lang] ?? ind.unit}</span></li>
+                  ))}
+                </ul>
+              </details>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+
+  <section>
+    <h2>{copy.changes}</h2>
+    <p>{copy.changesLede}</p>
+    {
+      lags.map((lag) => (
+        <>
+          <h3>{copy.years(lag)}</h3>
+          <div class="table-scroll">
+            <table class="data">
+              <thead>
+                <tr>
+                  <th scope="col">{t.indicator}</th>
+                  <th scope="col">{copy.window}</th>
+                  {geos.map((geo) => <th scope="col" class="num">{geoName(geo, lang)}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {inds.map((ind) => {
+                  const c0 = change(ind.id, "BRA", lag);
+                  return (
+                    <tr>
+                      <th scope="row"><a href={url(lang, "indicators", ind.id)}>{ind.name[lang]}</a> <span class="meta">{UNIT_LABELS[ind.unit]?.[lang] ?? ind.unit}</span></th>
+                      <td>{c0 ? `${c0.start_year}–${c0.end_year}` : ""}{c0 && c0.mixed_years.length > 0 && <span title={copy.mixed}> *</span>}</td>
+                      {geos.map((geo) => <td class="num">{showChange(change(ind.id, geo, lag), ind.unit)}</td>)}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </>
+      ))
+    }
+  </section>
+
+  {
+    inds.map((ind) => (
+      <Chart lang={lang} id={`gov-${ind.id.replace(/\W/g, "-")}`} title={ind.name[lang]} alt={copy.alt(ind.name[lang])} indicators={[ind.id]} geographies={REGION} />
+    ))
+  }
+
+  <h2>{copy.context}</h2>
+  <Fragment set:html={g.context} />
+
+  <h2>{copy.limitations}</h2>
+  <ul>{g.limitations.map((l) => <li set:html={l} />)}</ul>
+
+  <h2>{copy.references}</h2>
+  <ul>{g.references.map((r) => <li><a href={r.url} rel="noopener">{r.citation}</a></li>)}</ul>
+
+  {g.numbers.length > 0 && <Numbers lang={lang} numbers={g.numbers} />}
+</Base>

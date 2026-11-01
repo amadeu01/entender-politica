@@ -1,0 +1,11 @@
+---
+import View from "../../../../views/EducationGovernment.astro";
+import { eduGovernments } from "../../../../lib/data";
+
+export function getStaticPaths() {
+  return eduGovernments().map((id) => ({ params: { id } }));
+}
+const { id } = Astro.params;
+---
+
+<View lang="en" id={id} />
