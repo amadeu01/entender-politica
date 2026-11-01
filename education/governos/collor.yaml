@@ -1,0 +1,88 @@
+# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
+# Itens sem `checked` ainda não foram conferidos com o registro oficial.
+period: collor
+summary:
+  pt: Entre 1990 e 1992 os anos médios de estudo dos adultos passaram de {{ v("undp_hdr.mys", "BRA", 1990)
+    }} para {{ v("undp_hdr.mys", "BRA", 1992) }}, em série que muda devagar e reflete gerações anteriores.
+    O governo iniciou a avaliação nacional da educação básica e um programa de centros de educação integral,
+    e encerrou a Fundação Educar.
+  en: Between 1990 and 1992 adults' mean years of schooling went from {{ v("undp_hdr.mys", "BRA", 1990)
+    }} to {{ v("undp_hdr.mys", "BRA", 1992) }}, in a series that moves slowly and reflects earlier generations.
+    The government started the national assessment of basic education and a program of full-time education
+    centers, and ended the Educar Foundation.
+context:
+  pt: O período combinou recessão, confisco de ativos financeiros e plano de estabilização com alta inflação,
+    e terminou no impeachment. Os dados anuais não permitem separar o primeiro ano, com o plano de estabilização,
+    dos seguintes.
+  en: The period combined recession, a freeze on financial assets and a stabilization plan with high inflation,
+    and ended in impeachment. Annual data cannot separate the first year, with the stabilization plan,
+    from the following ones.
+started:
+- title:
+    pt: Primeira aplicação do Saeb
+    en: First Saeb application
+  year: 1990
+  submodules:
+  - ensino-fundamental
+  - ensino-medio
+  - planejamento
+  description:
+    pt: Primeira aplicação do Sistema Nacional de Avaliação da Educação Básica, avaliação amostral de
+      aprendizado coordenada pelo Inep.
+    en: First application of the National Basic Education Assessment System, a sample-based learning assessment
+      coordinated by Inep.
+  source: https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb
+- title:
+    pt: Centros Integrados de Atendimento à Criança (CIAC)
+    en: Integrated Child Care Centers (CIAC)
+  year: 1991
+  submodules:
+  - educacao-infantil
+  - ensino-fundamental
+  description:
+    pt: Programa de centros que combinam escola em tempo integral, saúde e assistência, depois renomeados
+      CAIC. A meta anunciada ficou muito acima do que foi construído (número construído não conferido).
+    en: Program of centers combining full-time school, health and assistance, later renamed CAIC. The
+      announced target was far above what was built (number built not checked).
+  source: https://repositorio.ufc.br/ri/bitstream/riufc/21137/1/2011_eve_srbessatrrbragaycqueiroz.pdf
+cuts:
+- kind: cut
+  title:
+    pt: Extinção da Fundação Educar
+    en: End of the Educar Foundation
+  year: 1990
+  date: '1990-05-07'
+  submodules:
+  - ensino-fundamental
+  description:
+    pt: A reforma administrativa de 1990 autorizou (lei de abril) e determinou (decreto de maio) a extinção
+      do órgão federal de alfabetização de jovens e adultos. Parte da literatura afirma que a responsabilidade
+      passou a estados e municípios.
+    en: The 1990 administrative reform authorized (April law) and ordered (May decree) the extinction
+      of the federal youth and adult literacy agency. Part of the literature states that responsibility
+      passed to states and municipalities.
+  source: https://www.planalto.gov.br/ccivil_03/decreto/1990-1994/D99240.htm
+  checked: '2026-11-01'
+indicators:
+- undp_hdr.mys
+- wdi.se_adt_litr_zs
+limitations:
+- pt: Os itens desta página foram redigidos a partir de pesquisa em fontes secundárias, sem acesso aos
+    textos oficiais no ambiente de desenvolvimento; cada item mostra se foi conferido com o registro oficial.
+  en: The items on this page were written from research in secondary sources, without access to the official
+    texts in the development environment; each item shows whether it was checked against the official
+    record.
+- pt: Anos médios de estudo e alfabetização de adultos mudam devagar por construção e refletem décadas
+    de matrículas; uma variação num mandato não mede o efeito das políticas daquele mandato. Séries de
+    matrícula por etapa só existem a partir de 2007 ou 2012, e não há série de aprendizado nem de gasto
+    federal em reais no catálogo.
+  en: Mean years of schooling and adult literacy move slowly by construction and reflect decades of enrollment;
+    a change within one term does not measure that term's policies. Enrollment series by level only start
+    in 2007 or 2012, and the catalog has no learning series or federal spending in reais.
+references:
+- citation: Planalto — Legislação federal
+  url: https://www.planalto.gov.br/ccivil_03/
+- citation: Banco Mundial — World Development Indicators (educação)
+  url: https://datatopics.worldbank.org/world-development-indicators/
+- citation: PNUD — Relatório de Desenvolvimento Humano, dados
+  url: https://hdr.undp.org/data-center
