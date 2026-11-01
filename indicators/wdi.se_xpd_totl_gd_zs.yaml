@@ -1,0 +1,27 @@
+id: wdi.se_xpd_totl_gd_zs
+source: wdi
+source_code: SE.XPD.TOTL.GD.ZS
+unit: percent
+min: 0
+max: 100
+name:
+  pt: Gasto público em educação (% do PIB)
+  en: Government expenditure on education (% of GDP)
+definition:
+  pt: Gasto público geral, corrente e de capital, em educação, como proporção do PIB. Dados do
+    UIS, reproduzidos pelo Banco Mundial.
+  en: General government expenditure on education, current and capital, as a share of GDP. UIS
+    data, republished by the World Bank.
+formula:
+  pt: Gasto público total em educação / PIB × 100.
+  en: Total government expenditure on education / GDP × 100.
+criticisms:
+- pt: Depende de quais esferas de governo a fonte consegue somar; a cobertura de estados e municípios
+    pode variar entre anos. Gasto não equivale a resultado educacional.
+  en: It depends on which levels of government the source manages to add up; coverage of states
+    and municipalities may vary across years. Spending does not equal educational results.
+references:
+- citation: World Bank. World Development Indicators — metadata for SE.XPD.TOTL.GD.ZS.
+  url: https://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS
+- citation: 'UNESCO Institute for Statistics. Education and science data: methodology.'
+  url: https://uis.unesco.org/

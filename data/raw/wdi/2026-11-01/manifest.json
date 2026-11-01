@@ -1,0 +1,116 @@
+{
+  "source_id": "wdi",
+  "retrieved_at": "2026-11-01T20:52:34+00:00",
+  "source_version": "2026-10-08",
+  "license": "CC-BY-4.0",
+  "files": [
+    {
+      "name": "FP.CPI.TOTL.ZG.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/FP.CPI.TOTL.ZG?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "22ad16d9079cf62d5e512f719f4ee590a4bde92f9546fe0b22e1d9d4d2dc210c",
+      "bytes": 81198
+    },
+    {
+      "name": "FP.CPI.TOTL.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/FP.CPI.TOTL?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "8c4fefec6053bf38f69daf38465f39c7c14c69671c9c688e9a7eb2b92b65de9e",
+      "bytes": 77562
+    },
+    {
+      "name": "GB.XPD.RSDV.GD.ZS.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/GB.XPD.RSDV.GD.ZS?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "6a59d0172f050db1b6d5136366a6d4fb6a84cffb41aef6037bda8cac3c57e673",
+      "bytes": 83245
+    },
+    {
+      "name": "NY.GDP.PCAP.KD.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/NY.GDP.PCAP.KD?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "74e99e91ea7e690d4900c70b8f1f6fdc1ec665b2de4917b8e9fc8c1e85201145",
+      "bytes": 80792
+    },
+    {
+      "name": "NY.GDP.PCAP.PP.KD.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/NY.GDP.PCAP.PP.KD?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "26518e53e8a7902ea07cf72f2e0479c9a89283fcf07036e676773fe6df1260ee",
+      "bytes": 86679
+    },
+    {
+      "name": "PA.NUS.FCRF.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/PA.NUS.FCRF?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "45ea5818647e5118e0a14f0aaa692378e752aaab1d1fe3052368fc49bb44e0f2",
+      "bytes": 84796
+    },
+    {
+      "name": "PA.NUS.PRVT.PP.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/PA.NUS.PRVT.PP?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "61c381d7db5e63ba52df127b4316a326f862cccdeae7eba5f91c2400dcbd1634",
+      "bytes": 101382
+    },
+    {
+      "name": "SE.ADT.LITR.ZS.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SE.ADT.LITR.ZS?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "09fc53f6675746eca308e0ba081557926711d6588aeb5b75e64a542f0b7b5ac4",
+      "bytes": 87167
+    },
+    {
+      "name": "SE.PRE.ENRR.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SE.PRE.ENRR?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "a49430e1bcf6c06014fe960f3c63c745a739c1dca6cf0fd3e6da916296bbc42c",
+      "bytes": 80295
+    },
+    {
+      "name": "SE.PRM.ENRR.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SE.PRM.ENRR?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "fae3c92882e926e6db18b9163125229546f452f4aa414ca475d7ee61c4366bac",
+      "bytes": 78670
+    },
+    {
+      "name": "SE.SEC.ENRR.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SE.SEC.ENRR?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "52b28eaa9064390b5904170ea8b504c5a9268c7aa9832c99356affd2bc860012",
+      "bytes": 79318
+    },
+    {
+      "name": "SE.TER.ENRR.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SE.TER.ENRR?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "81558e38a4e93c1dd99525010d2fe4bd57ebf69419091e56fbe9e11c768ad14a",
+      "bytes": 78913
+    },
+    {
+      "name": "SE.XPD.TOTL.GD.ZS.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SE.XPD.TOTL.GD.ZS?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "11a6307e8af75cc5de398065495b72f13d57a2fb259741fd76d9b5a36597aa1c",
+      "bytes": 86911
+    },
+    {
+      "name": "SI.POV.DDAY.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SI.POV.DDAY?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "3eaea1066bc01802ece0f0c1ecc9b7b17f04dfb241194a57a8552651a4b27afd",
+      "bytes": 87118
+    },
+    {
+      "name": "SI.POV.GINI.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SI.POV.GINI?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "ca4ea7cf7a79eb290ca9ec3360f5b8d39f449a45b1618952ae785008d4c1b8e9",
+      "bytes": 66879
+    },
+    {
+      "name": "SP.DYN.IMRT.IN.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SP.DYN.IMRT.IN?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "c9288ead2410907c3d74d072c4d21a730641cb20819d1ce21991639218e169fe",
+      "bytes": 80719
+    },
+    {
+      "name": "SP.DYN.LE00.IN.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SP.DYN.LE00.IN?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "8f032791a16fc4107efe92f705d91d1668156dcc715d23259759737131e035c1",
+      "bytes": 79993
+    },
+    {
+      "name": "SP.POP.SCIE.RD.P6.json",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;LCN;MEX;WLD/indicator/SP.POP.SCIE.RD.P6?source=2&format=json&per_page=20000&date=1975:2026",
+      "sha256": "0026a23f8519e3c2029be54d3660beb5bc50aeb19c87587f8ee6078af11d9be2",
+      "bytes": 80099
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+id: wdi.se_sec_enrr
+source: wdi
+source_code: SE.SEC.ENRR
+unit: percent
+min: 0
+name:
+  pt: Matrícula bruta no ensino secundário (% da população em idade escolar)
+  en: Gross secondary enrollment (% of school-age population)
+definition:
+  pt: Matrículas no ensino secundário, de qualquer idade, como proporção da população da faixa
+    etária oficial. No Brasil inclui os anos finais do fundamental e o ensino médio, conforme
+    a classificação internacional. Estimativa do UIS, reproduzida pelo Banco Mundial.
+  en: Secondary enrollment of any age as a share of the population of the official secondary age
+    group. In Brazil, by the international classification, it covers the final grades of the ensino
+    fundamental and the ensino médio. UIS estimate, republished by the World Bank.
+formula:
+  pt: Matrículas totais / população da faixa etária oficial × 100.
+  en: Total enrollment / population of the official age group × 100.
+criticisms:
+- pt: 'Taxa bruta: reflete o atraso escolar e pode passar de cem por cento. Não mede conclusão
+    nem aprendizado, e a classificação internacional não coincide com as etapas brasileiras.'
+  en: 'Gross rate: it reflects grade lag and can exceed one hundred percent. It does not measure
+    completion or learning, and the international classification does not match Brazil''s stages.'
+references:
+- citation: World Bank. World Development Indicators — metadata for SE.SEC.ENRR.
+  url: https://data.worldbank.org/indicator/SE.SEC.ENRR
+- citation: 'UNESCO Institute for Statistics. Education and science data: methodology.'
+  url: https://uis.unesco.org/

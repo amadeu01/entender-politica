@@ -10,6 +10,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 import pandas as pd
+import yaml
+from pydantic import ValidationError as PydanticError
 
 from compilador import (
     DATA_DIR,
@@ -20,6 +22,7 @@ from compilador import (
     changelog,
     content,
     dois,
+    education,
     geography,
     governments,
     guides,
@@ -29,7 +32,7 @@ from compilador import (
 from compilador.analyses import ANALYSES_DIR, POLICIES_DIR
 from compilador.dois import DOIS_FILE
 from compilador.schema import COLUMNS, empty, tidy
-from compilador.sources import SOURCES
+from compilador.sources import SOURCES, camara_votes, senado_votes
 from compilador.validate import Report, ValidationError, validate
 
 PROCESSED_DIR = DATA_DIR / "processed"
@@ -51,6 +54,7 @@ class Paths:
     guides: Path = guides.GUIDES_DIR
     dois: Path = DOIS_FILE
     brackets: Path = brackets.BRACKETS_FILE
+    education: Path = education.EDUCATION_DIR
 
 
 @dataclass(frozen=True)
@@ -107,7 +111,11 @@ def build(paths: Paths | None = None, today: str | None = None) -> Result:
     _write_json(paths.processed / "validation.json", report.to_dict())
     export_site(df, indicators, paths.site, bracket_cfg)
     for name, doc in documents.items():
-        _write_json(paths.site / name, doc)
+        if isinstance(doc, str):
+            (paths.site / name).parent.mkdir(parents=True, exist_ok=True)
+            (paths.site / name).write_text(doc)
+        else:
+            _write_json(paths.site / name, doc)
     registry = dois.load(paths.dois)
     (paths.site / "references.bib").write_text(
         "\n\n".join(registry[d]["bibtex"] for d in sorted(all_dois(paths)) if d in registry) + "\n"
@@ -148,6 +156,28 @@ def bracket_config(
                     ]
                 )
     return config
+
+
+def education_votes(paths: Paths, laws: list[education.Law]) -> dict[str, list[dict]]:
+    """Nominal plenary votes of the bills laws list, keyed `<chamber>:<bill label>`."""
+    out: dict[str, list[dict]] = {}
+    for chamber, module, refs in (
+        ("camara", camara_votes, education.camara_refs(laws)),
+        ("senado", senado_votes, education.senado_refs(laws)),
+    ):
+        if not refs:
+            continue
+        snap = snapshot.latest(module.SOURCE_ID, paths.raw)
+        if snap is None:
+            raise ValidationError(
+                [f"no raw snapshot for '{module.SOURCE_ID}': run `compilador fetch-votes`"]
+            )
+        try:
+            found = module.normalize(snap, refs)
+        except KeyError as e:
+            raise ValidationError([str(e.args[0])]) from e
+        out |= {f"{chamber}:{label}": votes for label, votes in found.items()}
+    return out
 
 
 def all_dois(paths: Paths) -> set[str]:
@@ -199,6 +229,13 @@ def compile_documents(
         for d in dois.missing(all_dois(paths), registry)
     ]
     errors += citation_errors(paths, registry)
+    try:
+        edu_module = education.load_module(paths.education)
+        edu_laws = education.load_laws(paths.education) if edu_module is not None else []
+    except (PydanticError, ValueError, yaml.YAMLError) as e:
+        raise ValidationError([f"education content: {e}"]) from e
+    if edu_module is not None:
+        errors += education.check(edu_module, edu_laws, indicators)
     if errors:
         raise ValidationError(errors)
 
@@ -224,6 +261,11 @@ def compile_documents(
     except content.ContentError as e:
         raise ValidationError([str(e)]) from e
     out["documents.json"] = index
+    if edu_module is not None:
+        votes = education_votes(paths, edu_laws)
+        out["education.json"] = education.render(edu_module, edu_laws, df, votes)
+        for name, csv in education.vote_files(votes).items():
+            out[f"education/votes/{name}"] = csv
     return out
 
 

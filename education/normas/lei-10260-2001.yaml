@@ -1,0 +1,12 @@
+slug: lei-10260-2001
+designation: "Lei 10.260/2001"
+kind: law
+year: 2001
+title: { pt: "Fundo de Financiamento Estudantil (Fies)", en: "Student Financing Fund (Fies)" }
+summary:
+  pt: "Dispõe sobre o financiamento de estudantes de graduação em instituições privadas."
+  en: "Provides financing for undergraduate students at private institutions."
+submodules: [graduacao]
+events:
+  - { year: 2001, type: enacted, description: { pt: "Sancionada a lei do Fies.", en: "The Fies law is enacted." } }
+  - { year: 2017, type: amended, by: "Lei 13.530/2017", description: { pt: "Reformulação do programa, com novas modalidades de financiamento.", en: "Reformulation of the program, with new financing modalities." } }

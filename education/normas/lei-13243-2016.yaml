@@ -1,0 +1,13 @@
+slug: lei-13243-2016
+designation: "Lei 13.243/2016"
+kind: law
+year: 2016
+title: { pt: "Marco Legal da Ciência, Tecnologia e Inovação", en: "Legal Framework for Science, Technology and Innovation" }
+summary:
+  pt: "Facilita parcerias, importação de insumos de pesquisa e a atuação de pesquisadores em instituições públicas e privadas."
+  en: "Eases partnerships, imports of research inputs and the work of researchers across public and private institutions."
+submodules: [pos-graduacao-ciencia]
+camara: [{ type: PL, number: 2177, year: 2011 }]
+identity_checked: 2026-11-01
+events:
+  - { year: 2016, type: enacted, description: { pt: "Sancionado o marco legal.", en: "The legal framework is enacted." } }

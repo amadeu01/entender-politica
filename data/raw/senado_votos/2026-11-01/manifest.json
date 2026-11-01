@@ -1,0 +1,14 @@
+{
+  "source_id": "senado_votos",
+  "retrieved_at": "2026-11-01T21:37:35+00:00",
+  "source_version": "2026-11-01",
+  "license": "LicenseRef-Senado-open-data",
+  "files": [
+    {
+      "name": "votacoes-PEC-26-2020.json",
+      "url": "https://legis.senado.leg.br/dadosabertos/votacao?sigla=PEC&numero=26&ano=2020",
+      "sha256": "8ffe77f669b7223b32bcd0ff6c97332573eab4449ff80150a5d6dbace346208f",
+      "bytes": 40236
+    }
+  ]
+}

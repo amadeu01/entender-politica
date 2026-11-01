@@ -102,10 +102,14 @@
   "ipeadata.disoc_rdcg LCN: no observations",
   "ipeadata.disoc_rdcg MEX: no observations",
   "ipeadata.disoc_rdcg WLD: no observations",
+  "undp_hdr.eys LCN: no observations",
+  "undp_hdr.eys WLD: no observations",
   "undp_hdr.hdi LCN: no observations",
   "undp_hdr.hdi WLD: no observations",
   "undp_hdr.ihdi LCN: no observations",
   "undp_hdr.ihdi WLD: no observations",
+  "undp_hdr.mys LCN: no observations",
+  "undp_hdr.mys WLD: no observations",
   "vdem.v2x_egaldem LCN: no observations",
   "vdem.v2x_egaldem WLD: no observations",
   "vdem.v2x_libdem LCN: no observations",
@@ -134,6 +138,17 @@
   "ibge_sidra.rdpc_p99_pnadc BRA 2025: atypical year-over-year change (robust z=7.7, value=15214.0)",
   "ipeadata.disoc_ppy BRA 1986: atypical year-over-year change (robust z=-5.9, value=26.4111509231732)",
   "ipeadata.disoc_ppy BRA 1987: atypical year-over-year change (robust z=5.4, value=38.710240907139)",
+  "undp_hdr.eys BRA 2013: atypical year-over-year change (robust z=-9.4, value=15.24518967)",
+  "undp_hdr.eys BRA 2014: atypical year-over-year change (robust z=34.0, value=15.36814022)",
+  "undp_hdr.eys BRA 2015: atypical year-over-year change (robust z=-81.8, value=15.24540043)",
+  "undp_hdr.eys BRA 2017: atypical year-over-year change (robust z=29.2, value=15.40701962)",
+  "undp_hdr.eys BRA 2018: atypical year-over-year change (robust z=21.7, value=15.50376034)",
+  "undp_hdr.eys BRA 2019: atypical year-over-year change (robust z=-49.6, value=15.44937038)",
+  "undp_hdr.eys BRA 2020: atypical year-over-year change (robust z=-25.5, value=15.44596004)",
+  "undp_hdr.eys BRA 2021: atypical year-over-year change (robust z=38.7, value=15.5788002)",
+  "undp_hdr.eys BRA 2022: atypical year-over-year change (robust z=76.9, value=15.7927103)",
+  "undp_hdr.eys BRA 2023: atypical year-over-year change (robust z=-23.9, value=15.7927103)",
+  "undp_hdr.eys CHL 1993: atypical year-over-year change (robust z=-9.4, value=11.73915958)",
   "undp_hdr.hdi BRA 2020: atypical year-over-year change (robust z=-7.4, value=0.77)",
   "undp_hdr.hdi CHL 2020: atypical year-over-year change (robust z=-5.7, value=0.856)",
   "undp_hdr.hdi COL 2020: atypical year-over-year change (robust z=-6.1, value=0.764)",
@@ -145,6 +160,9 @@
   "undp_hdr.ihdi BRA 2021: atypical year-over-year change (robust z=-6.7, value=0.582)",
   "undp_hdr.ihdi CHL 2020: atypical year-over-year change (robust z=-7.0, value=0.701)",
   "undp_hdr.ihdi COL 2020: atypical year-over-year change (robust z=-6.1, value=0.574)",
+  "undp_hdr.mys ARG 2002: atypical year-over-year change (robust z=14.0, value=9.394999981)",
+  "undp_hdr.mys ARG 2003: atypical year-over-year change (robust z=14.0, value=9.920000076)",
+  "undp_hdr.mys COL 2006: atypical year-over-year change (robust z=-6.9, value=6.800000191)",
   "vdem.v2x_egaldem ARG 1976: atypical year-over-year change (robust z=-41.4, value=0.132)",
   "vdem.v2x_egaldem ARG 1983: atypical year-over-year change (robust z=14.8, value=0.189)",
   "vdem.v2x_egaldem ARG 1984: atypical year-over-year change (robust z=95.0, value=0.681)",
@@ -258,6 +276,7 @@
   "wdi.fp_cpi_totl_zg MEX 1988: atypical year-over-year change (robust z=-5.9, value=114.162258549065)",
   "wdi.fp_cpi_totl_zg MEX 1989: atypical year-over-year change (robust z=-32.0, value=20.0078767139977)",
   "wdi.fp_cpi_totl_zg MEX 1995: atypical year-over-year change (robust z=9.7, value=34.9992712889592)",
+  "wdi.gb_xpd_rsdv_gd_zs COL 2016: atypical year-over-year change (robust z=-6.0, value=0.27051)",
   "wdi.ny_gdp_pcap_kd CHL 2020: atypical year-over-year change (robust z=-5.4, value=12680.7761524378)",
   "wdi.ny_gdp_pcap_kd COL 2020: atypical year-over-year change (robust z=-6.9, value=5891.95523215403)",
   "wdi.ny_gdp_pcap_kd COL 2021: atypical year-over-year change (robust z=5.5, value=6457.16921807086)",
@@ -294,6 +313,35 @@
   "wdi.pa_nus_fcrf MEX 2020: atypical year-over-year change (robust z=6.4, value=21.4856083333333)",
   "wdi.pa_nus_fcrf MEX 2023: atypical year-over-year change (robust z=-8.2, value=17.7587166666666)",
   "wdi.pa_nus_prvt_pp BRA 1995: atypical year-over-year change (robust z=5.9, value=0.837503155889501)",
+  "wdi.se_adt_litr_zs WLD 1997: atypical year-over-year change (robust z=6.3, value=79.3000030517578)",
+  "wdi.se_pre_enrr CHL 2010: atypical year-over-year change (robust z=7.1, value=108.156188964844)",
+  "wdi.se_pre_enrr CHL 2013: atypical year-over-year change (robust z=-13.5, value=79.0299987792969)",
+  "wdi.se_pre_enrr COL 1992: atypical year-over-year change (robust z=6.1, value=18.6850204467773)",
+  "wdi.se_pre_enrr COL 1994: atypical year-over-year change (robust z=5.5, value=24.6112899780273)",
+  "wdi.se_pre_enrr COL 1996: atypical year-over-year change (robust z=9.2, value=35.1725311279297)",
+  "wdi.se_pre_enrr LCN 1987: atypical year-over-year change (robust z=5.2, value=38.9925117492676)",
+  "wdi.se_pre_enrr LCN 2013: atypical year-over-year change (robust z=-7.3, value=70.6906814575195)",
+  "wdi.se_pre_enrr MEX 2013: atypical year-over-year change (robust z=-24.3, value=70.9970169067383)",
+  "wdi.se_prm_enrr CHL 2004: atypical year-over-year change (robust z=9.3, value=105.627876281738)",
+  "wdi.se_prm_enrr LCN 1995: atypical year-over-year change (robust z=-7.3, value=105.419166564941)",
+  "wdi.se_prm_enrr LCN 1997: atypical year-over-year change (robust z=11.0, value=113.496803283691)",
+  "wdi.se_prm_enrr LCN 1998: atypical year-over-year change (robust z=-7.2, value=107.703437805176)",
+  "wdi.se_prm_enrr LCN 1999: atypical year-over-year change (robust z=12.8, value=116.415557861328)",
+  "wdi.se_prm_enrr LCN 2007: atypical year-over-year change (robust z=5.8, value=113.001747131348)",
+  "wdi.se_sec_enrr ARG 1999: atypical year-over-year change (robust z=5.8, value=92.2904663085938)",
+  "wdi.se_sec_enrr ARG 2023: atypical year-over-year change (robust z=-5.3, value=105.574584297051)",
+  "wdi.se_sec_enrr CHL 2013: atypical year-over-year change (robust z=9.1, value=99.1520767211914)",
+  "wdi.se_sec_enrr COL 2012: atypical year-over-year change (robust z=-5.1, value=97.2326889038086)",
+  "wdi.se_sec_enrr LCN 2002: atypical year-over-year change (robust z=7.5, value=87.1760711669922)",
+  "wdi.se_sec_enrr LCN 2013: atypical year-over-year change (robust z=5.4, value=94.7633285522461)",
+  "wdi.se_sec_enrr MEX 2021: atypical year-over-year change (robust z=-5.4, value=98.3202514648438)",
+  "wdi.se_sec_enrr WLD 1979: atypical year-over-year change (robust z=11.1, value=52.3885307312012)",
+  "wdi.se_sec_enrr WLD 1980: atypical year-over-year change (robust z=-12.7, value=45.7111701965332)",
+  "wdi.se_sec_enrr WLD 1986: atypical year-over-year change (robust z=-5.4, value=47.0785903930664)",
+  "wdi.se_ter_enrr LCN 2006: atypical year-over-year change (robust z=12.3, value=38.6138916015625)",
+  "wdi.se_ter_enrr LCN 2007: atypical year-over-year change (robust z=-8.7, value=36.3547286987305)",
+  "wdi.se_ter_enrr LCN 2024: atypical year-over-year change (robust z=-7.4, value=58.9027099609375)",
+  "wdi.se_ter_enrr MEX 2016: atypical year-over-year change (robust z=17.8, value=38.589771270752)",
   "wdi.si_pov_dday ARG 2001: atypical year-over-year change (robust z=5.2, value=10.7)",
   "wdi.si_pov_dday ARG 2002: atypical year-over-year change (robust z=9.7, value=17.1)",
   "wdi.si_pov_dday ARG 2003: atypical year-over-year change (robust z=-13.2, value=8.2)",
@@ -349,6 +397,10 @@
   "wdi.sp_dyn_le00_in WLD 2020: atypical year-over-year change (robust z=-12.1, value=72.1832040176208)",
   "wdi.sp_dyn_le00_in WLD 2021: atypical year-over-year change (robust z=-15.6, value=71.2160780260296)",
   "wdi.sp_dyn_le00_in WLD 2022: atypical year-over-year change (robust z=18.3, value=72.9689585478052)",
+  "wdi.sp_pop_scie_rd_p6 MEX 2002: atypical year-over-year change (robust z=6.1, value=308.76297)",
+  "wdi.sp_pop_scie_rd_p6 MEX 2006: atypical year-over-year change (robust z=-8.9, value=340.43454)",
+  "wdi.sp_pop_scie_rd_p6 MEX 2010: atypical year-over-year change (robust z=-5.7, value=341.23898)",
+  "wdi.sp_pop_scie_rd_p6 MEX 2012: atypical year-over-year change (robust z=-10.9, value=250.69335)",
   "wgi.gov_wgi_cc_est ARG 2016: atypical year-over-year change (robust z=8.7, value=-0.2198226)"
  ],
  "coverage": [
@@ -501,6 +553,46 @@
    ]
   },
   {
+   "indicator_id": "undp_hdr.eys",
+   "geo_code": "ARG",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.eys",
+   "geo_code": "BRA",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.eys",
+   "geo_code": "CHL",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.eys",
+   "geo_code": "COL",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.eys",
+   "geo_code": "MEX",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
    "indicator_id": "undp_hdr.hdi",
    "geo_code": "ARG",
    "first_year": 1990,
@@ -578,6 +670,46 @@
    "first_year": 2010,
    "last_year": 2023,
    "observations": 14,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.mys",
+   "geo_code": "ARG",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.mys",
+   "geo_code": "BRA",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.mys",
+   "geo_code": "CHL",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.mys",
+   "geo_code": "COL",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "undp_hdr.mys",
+   "geo_code": "MEX",
+   "first_year": 1990,
+   "last_year": 2023,
+   "observations": 34,
    "missing_years": []
   },
   {
@@ -789,6 +921,62 @@
    "missing_years": []
   },
   {
+   "indicator_id": "wdi.gb_xpd_rsdv_gd_zs",
+   "geo_code": "ARG",
+   "first_year": 1996,
+   "last_year": 2023,
+   "observations": 28,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.gb_xpd_rsdv_gd_zs",
+   "geo_code": "BRA",
+   "first_year": 2000,
+   "last_year": 2023,
+   "observations": 24,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.gb_xpd_rsdv_gd_zs",
+   "geo_code": "CHL",
+   "first_year": 2007,
+   "last_year": 2022,
+   "observations": 16,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.gb_xpd_rsdv_gd_zs",
+   "geo_code": "COL",
+   "first_year": 2000,
+   "last_year": 2020,
+   "observations": 21,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.gb_xpd_rsdv_gd_zs",
+   "geo_code": "LCN",
+   "first_year": 2000,
+   "last_year": 2023,
+   "observations": 24,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.gb_xpd_rsdv_gd_zs",
+   "geo_code": "MEX",
+   "first_year": 1996,
+   "last_year": 2024,
+   "observations": 29,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.gb_xpd_rsdv_gd_zs",
+   "geo_code": "WLD",
+   "first_year": 1996,
+   "last_year": 2023,
+   "observations": 28,
+   "missing_years": []
+  },
+  {
    "indicator_id": "wdi.ny_gdp_pcap_kd",
    "geo_code": "ARG",
    "first_year": 1975,
@@ -978,6 +1166,595 @@
    "first_year": 1990,
    "last_year": 2025,
    "observations": 36,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_adt_litr_zs",
+   "geo_code": "ARG",
+   "first_year": 1980,
+   "last_year": 2020,
+   "observations": 4,
+   "missing_years": [
+    1981,
+    1982,
+    1983,
+    1984,
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_adt_litr_zs",
+   "geo_code": "BRA",
+   "first_year": 1980,
+   "last_year": 2024,
+   "observations": 22,
+   "missing_years": [
+    1981,
+    1982,
+    1983,
+    1984,
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2001,
+    2002,
+    2003,
+    2005
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_adt_litr_zs",
+   "geo_code": "CHL",
+   "first_year": 1982,
+   "last_year": 2017,
+   "observations": 7,
+   "missing_years": [
+    1983,
+    1984,
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2012,
+    2014,
+    2016
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_adt_litr_zs",
+   "geo_code": "COL",
+   "first_year": 1993,
+   "last_year": 2024,
+   "observations": 21,
+   "missing_years": [
+    1994,
+    1995,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2012,
+    2013
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_adt_litr_zs",
+   "geo_code": "LCN",
+   "first_year": 1975,
+   "last_year": 2024,
+   "observations": 50,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_adt_litr_zs",
+   "geo_code": "MEX",
+   "first_year": 1980,
+   "last_year": 2024,
+   "observations": 25,
+   "missing_years": [
+    1981,
+    1982,
+    1983,
+    1984,
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2001,
+    2003
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_adt_litr_zs",
+   "geo_code": "WLD",
+   "first_year": 1975,
+   "last_year": 2024,
+   "observations": 50,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_pre_enrr",
+   "geo_code": "ARG",
+   "first_year": 1975,
+   "last_year": 2020,
+   "observations": 40,
+   "missing_years": [
+    1978,
+    1989,
+    1990,
+    1992,
+    1993,
+    1995
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_pre_enrr",
+   "geo_code": "BRA",
+   "first_year": 2007,
+   "last_year": 2020,
+   "observations": 13,
+   "missing_years": [
+    2010
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_pre_enrr",
+   "geo_code": "CHL",
+   "first_year": 1975,
+   "last_year": 2020,
+   "observations": 42,
+   "missing_years": [
+    1983,
+    1987,
+    1997,
+    2001
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_pre_enrr",
+   "geo_code": "COL",
+   "first_year": 1975,
+   "last_year": 2020,
+   "observations": 24,
+   "missing_years": [
+    1990,
+    1997,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_pre_enrr",
+   "geo_code": "LCN",
+   "first_year": 1975,
+   "last_year": 2020,
+   "observations": 46,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_pre_enrr",
+   "geo_code": "MEX",
+   "first_year": 1975,
+   "last_year": 2020,
+   "observations": 45,
+   "missing_years": [
+    1979
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_pre_enrr",
+   "geo_code": "WLD",
+   "first_year": 1975,
+   "last_year": 2020,
+   "observations": 46,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_prm_enrr",
+   "geo_code": "ARG",
+   "first_year": 1975,
+   "last_year": 2023,
+   "observations": 44,
+   "missing_years": [
+    1983,
+    1989,
+    1992,
+    1993,
+    1995
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_prm_enrr",
+   "geo_code": "BRA",
+   "first_year": 2012,
+   "last_year": 2024,
+   "observations": 12,
+   "missing_years": [
+    2023
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_prm_enrr",
+   "geo_code": "CHL",
+   "first_year": 2000,
+   "last_year": 2024,
+   "observations": 24,
+   "missing_years": [
+    2001
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_prm_enrr",
+   "geo_code": "COL",
+   "first_year": 2000,
+   "last_year": 2022,
+   "observations": 22,
+   "missing_years": [
+    2003
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_prm_enrr",
+   "geo_code": "LCN",
+   "first_year": 1993,
+   "last_year": 2024,
+   "observations": 32,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_prm_enrr",
+   "geo_code": "MEX",
+   "first_year": 2000,
+   "last_year": 2024,
+   "observations": 25,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_prm_enrr",
+   "geo_code": "WLD",
+   "first_year": 1975,
+   "last_year": 2024,
+   "observations": 50,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_sec_enrr",
+   "geo_code": "ARG",
+   "first_year": 1975,
+   "last_year": 2023,
+   "observations": 45,
+   "missing_years": [
+    1989,
+    1992,
+    1993,
+    1995
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_sec_enrr",
+   "geo_code": "BRA",
+   "first_year": 2012,
+   "last_year": 2024,
+   "observations": 12,
+   "missing_years": [
+    2023
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_sec_enrr",
+   "geo_code": "CHL",
+   "first_year": 2000,
+   "last_year": 2024,
+   "observations": 24,
+   "missing_years": [
+    2001
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_sec_enrr",
+   "geo_code": "COL",
+   "first_year": 2000,
+   "last_year": 2022,
+   "observations": 21,
+   "missing_years": [
+    2001,
+    2003
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_sec_enrr",
+   "geo_code": "LCN",
+   "first_year": 1999,
+   "last_year": 2024,
+   "observations": 26,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_sec_enrr",
+   "geo_code": "MEX",
+   "first_year": 2000,
+   "last_year": 2024,
+   "observations": 25,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_sec_enrr",
+   "geo_code": "WLD",
+   "first_year": 1975,
+   "last_year": 2024,
+   "observations": 50,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_ter_enrr",
+   "geo_code": "ARG",
+   "first_year": 1975,
+   "last_year": 2023,
+   "observations": 41,
+   "missing_years": [
+    1988,
+    1989,
+    1990,
+    1992,
+    1993,
+    1995,
+    1996,
+    1997
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_ter_enrr",
+   "geo_code": "BRA",
+   "first_year": 2012,
+   "last_year": 2024,
+   "observations": 12,
+   "missing_years": [
+    2023
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_ter_enrr",
+   "geo_code": "CHL",
+   "first_year": 2000,
+   "last_year": 2024,
+   "observations": 24,
+   "missing_years": [
+    2001
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_ter_enrr",
+   "geo_code": "COL",
+   "first_year": 2000,
+   "last_year": 2022,
+   "observations": 22,
+   "missing_years": [
+    2003
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_ter_enrr",
+   "geo_code": "LCN",
+   "first_year": 1999,
+   "last_year": 2024,
+   "observations": 26,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_ter_enrr",
+   "geo_code": "MEX",
+   "first_year": 2000,
+   "last_year": 2024,
+   "observations": 25,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_ter_enrr",
+   "geo_code": "WLD",
+   "first_year": 1975,
+   "last_year": 2024,
+   "observations": 50,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.se_xpd_totl_gd_zs",
+   "geo_code": "ARG",
+   "first_year": 1975,
+   "last_year": 2023,
+   "observations": 41,
+   "missing_years": [
+    1981,
+    1988,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1997
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_xpd_totl_gd_zs",
+   "geo_code": "BRA",
+   "first_year": 1995,
+   "last_year": 2022,
+   "observations": 25,
+   "missing_years": [
+    1996,
+    1997,
+    2003
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_xpd_totl_gd_zs",
+   "geo_code": "CHL",
+   "first_year": 1975,
+   "last_year": 2022,
+   "observations": 35,
+   "missing_years": [
+    1976,
+    1977,
+    1982,
+    1983,
+    1984,
+    1985,
+    1986,
+    1988,
+    1989,
+    1991,
+    1992,
+    2001,
+    2012
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_xpd_totl_gd_zs",
+   "geo_code": "COL",
+   "first_year": 1979,
+   "last_year": 2020,
+   "observations": 29,
+   "missing_years": [
+    1982,
+    1983,
+    1986,
+    1987,
+    1988,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_xpd_totl_gd_zs",
+   "geo_code": "LCN",
+   "first_year": 1995,
+   "last_year": 2023,
+   "observations": 26,
+   "missing_years": [
+    1996,
+    1997,
+    2005
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_xpd_totl_gd_zs",
+   "geo_code": "MEX",
+   "first_year": 1989,
+   "last_year": 2022,
+   "observations": 30,
+   "missing_years": [
+    1993,
+    1996,
+    1997,
+    2019
+   ]
+  },
+  {
+   "indicator_id": "wdi.se_xpd_totl_gd_zs",
+   "geo_code": "WLD",
+   "first_year": 1999,
+   "last_year": 2023,
+   "observations": 25,
    "missing_years": []
   },
   {
@@ -1339,6 +2116,80 @@
    "last_year": 2024,
    "observations": 50,
    "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.sp_pop_scie_rd_p6",
+   "geo_code": "ARG",
+   "first_year": 1997,
+   "last_year": 2023,
+   "observations": 27,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.sp_pop_scie_rd_p6",
+   "geo_code": "BRA",
+   "first_year": 2000,
+   "last_year": 2014,
+   "observations": 15,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.sp_pop_scie_rd_p6",
+   "geo_code": "CHL",
+   "first_year": 2007,
+   "last_year": 2022,
+   "observations": 16,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.sp_pop_scie_rd_p6",
+   "geo_code": "COL",
+   "first_year": 2013,
+   "last_year": 2017,
+   "observations": 5,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.sp_pop_scie_rd_p6",
+   "geo_code": "LCN",
+   "first_year": 2000,
+   "last_year": 2014,
+   "observations": 14,
+   "missing_years": [
+    2004
+   ]
+  },
+  {
+   "indicator_id": "wdi.sp_pop_scie_rd_p6",
+   "geo_code": "MEX",
+   "first_year": 1996,
+   "last_year": 2024,
+   "observations": 29,
+   "missing_years": []
+  },
+  {
+   "indicator_id": "wdi.sp_pop_scie_rd_p6",
+   "geo_code": "WLD",
+   "first_year": 2000,
+   "last_year": 2020,
+   "observations": 6,
+   "missing_years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2006,
+    2007,
+    2008,
+    2009,
+    2011,
+    2012,
+    2013,
+    2014,
+    2016,
+    2017,
+    2019
+   ]
   },
   {
    "indicator_id": "wgi.gov_wgi_cc_est",

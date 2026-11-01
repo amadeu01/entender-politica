@@ -1,0 +1,13 @@
+slug: lei-13530-2017
+designation: "Lei 13.530/2017"
+kind: law
+year: 2017
+title: { pt: "Reformulação do Fies", en: "Reform of Fies" }
+summary:
+  pt: "Altera a lei do Fundo de Financiamento Estudantil, reformulando o programa. Originou-se de medida provisória."
+  en: "Amends the Student Financing Fund law, reformulating the program. It originated from a provisional measure."
+submodules: [graduacao]
+camara: [{ type: MPV, number: 785, year: 2017 }]
+identity_checked: 2026-11-01
+events:
+  - { year: 2017, type: enacted, description: { pt: "Sancionada a lei de conversão.", en: "The conversion law is enacted." } }

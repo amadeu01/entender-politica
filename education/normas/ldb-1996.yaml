@@ -1,0 +1,14 @@
+slug: ldb-1996
+designation: "Lei 9.394/1996"
+kind: law
+year: 1996
+title: { pt: "Lei de Diretrizes e Bases da Educação Nacional (LDB)", en: "National Education Guidelines and Framework Law (LDB)" }
+summary:
+  pt: "Organiza a educação nacional em níveis e etapas e define competências da União, dos estados e dos municípios. É a lei que muitas outras normas da educação alteram."
+  en: "Organizes national education into levels and stages and sets the roles of the Union, states and municipalities. It is the law that most other education norms amend."
+submodules: [planejamento, educacao-infantil, ensino-fundamental, ensino-medio, graduacao]
+events:
+  - { year: 1996, type: enacted, description: { pt: "Sancionada a LDB.", en: "The LDB is enacted." } }
+  - { year: 2006, type: amended, by: "Lei 11.274/2006", description: { pt: "Ampliação da duração do ensino fundamental.", en: "The duration of the ensino fundamental is extended." } }
+  - { year: 2013, type: amended, by: "Lei 12.796/2013", description: { pt: "Educação básica obrigatória e gratuita da pré-escola ao ensino médio.", en: "Basic education becomes compulsory and free from pre-school through upper secondary." } }
+  - { year: 2017, type: amended, by: "Lei 13.415/2017", description: { pt: "Reforma do currículo e da carga horária do ensino médio.", en: "Reform of the upper secondary curriculum and school hours." } }

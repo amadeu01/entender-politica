@@ -1,0 +1,13 @@
+slug: ec-59-2009
+designation: "Emenda Constitucional 59/2009"
+kind: constitutional_amendment
+year: 2009
+title: { pt: "Educação básica obrigatória e plano nacional decenal", en: "Compulsory basic education and a ten-year national plan" }
+summary:
+  pt: "Torna obrigatória a educação básica da pré-escola ao ensino médio, prevê o plano nacional de educação como plano decenal e reduz gradualmente a desvinculação de receitas sobre os recursos da educação."
+  en: "Makes basic education compulsory from pre-school to upper secondary, sets the national education plan as a ten-year plan, and gradually reduces the revenue unearmarking applied to education resources."
+submodules: [educacao-infantil, ensino-fundamental, ensino-medio, financiamento, planejamento]
+camara: [{ type: PEC, number: 277, year: 2008 }]
+identity_checked: 2026-11-01
+events:
+  - { year: 2009, type: enacted, description: { pt: "Promulgada a emenda.", en: "The amendment is promulgated." } }

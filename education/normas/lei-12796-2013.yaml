@@ -1,0 +1,11 @@
+slug: lei-12796-2013
+designation: "Lei 12.796/2013"
+kind: law
+year: 2013
+title: { pt: "Educação básica obrigatória e gratuita na LDB", en: "Compulsory and free basic education in the LDB" }
+summary:
+  pt: "Adapta a LDB à emenda de 2009, tornando obrigatória e gratuita a educação básica da pré-escola ao ensino médio."
+  en: "Adapts the LDB to the 2009 amendment, making basic education compulsory and free from pre-school to upper secondary."
+submodules: [educacao-infantil, ensino-fundamental, ensino-medio]
+events:
+  - { year: 2013, type: enacted, description: { pt: "Sancionada a lei que altera a LDB.", en: "The law amending the LDB is enacted." } }

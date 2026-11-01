@@ -1,0 +1,27 @@
+id: wdi.gb_xpd_rsdv_gd_zs
+source: wdi
+source_code: GB.XPD.RSDV.GD.ZS
+unit: percent
+min: 0
+max: 100
+name:
+  pt: Gasto em pesquisa e desenvolvimento (% do PIB)
+  en: Research and development expenditure (% of GDP)
+definition:
+  pt: Gasto interno bruto em pesquisa e desenvolvimento, público e privado, como proporção do
+    PIB. Dados do UIS, reproduzidos pelo Banco Mundial.
+  en: Gross domestic expenditure on research and development, public and private, as a share of
+    GDP. UIS data, republished by the World Bank.
+formula:
+  pt: Gasto interno bruto em P&D / PIB × 100.
+  en: Gross domestic R&D expenditure / GDP × 100.
+criticisms:
+- pt: Mistura gasto público e empresarial, então não mede só a política científica do governo.
+    As pesquisas de P&D têm periodicidade irregular em alguns anos.
+  en: It mixes public and business spending, so it does not measure government science policy
+    alone. R&D surveys are irregular in some years.
+references:
+- citation: World Bank. World Development Indicators — metadata for GB.XPD.RSDV.GD.ZS.
+  url: https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS
+- citation: 'UNESCO Institute for Statistics. Education and science data: methodology.'
+  url: https://uis.unesco.org/

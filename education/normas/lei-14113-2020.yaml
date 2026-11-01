@@ -1,0 +1,13 @@
+slug: lei-14113-2020
+designation: "Lei 14.113/2020"
+kind: law
+year: 2020
+title: { pt: "Regulamentação do Fundeb permanente", en: "Permanent Fundeb regulation" }
+summary:
+  pt: "Regulamenta o Fundeb permanente e revoga a lei que regulava a primeira versão do fundo."
+  en: "Regulates the permanent Fundeb and revokes the law that regulated the fund's first version."
+submodules: [financiamento, educacao-infantil, ensino-fundamental, ensino-medio]
+camara: [{ type: PL, number: 4372, year: 2020 }]
+identity_checked: 2026-11-01
+events:
+  - { year: 2020, type: enacted, description: { pt: "Sancionada a lei de regulamentação.", en: "The regulating law is enacted." } }

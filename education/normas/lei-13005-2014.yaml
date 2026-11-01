@@ -1,0 +1,14 @@
+slug: lei-13005-2014
+designation: "Lei 13.005/2014"
+kind: law
+year: 2014
+title: { pt: "Plano Nacional de Educação 2014–2024", en: "National Education Plan 2014–2024" }
+summary:
+  pt: "Aprova o plano decenal com metas e estratégias para todas as etapas, do acesso à educação infantil à pós-graduação, e para o financiamento."
+  en: "Approves the ten-year plan with goals and strategies for all stages, from early childhood access to graduate education, and for funding."
+submodules: [planejamento, educacao-infantil, ensino-fundamental, ensino-medio, educacao-profissional, graduacao, pos-graduacao-ciencia, financiamento]
+camara: [{ type: PL, number: 8035, year: 2010 }]
+identity_checked: 2026-11-01
+events:
+  - { year: 2014, type: enacted, description: { pt: "Sancionado o plano.", en: "The plan is enacted." } }
+  - { year: 2026, type: superseded, by: "Lei 15.388/2026", description: { pt: "Sucedido pelo novo Plano Nacional de Educação.", en: "Succeeded by the new National Education Plan." } }

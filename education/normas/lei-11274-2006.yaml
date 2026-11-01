@@ -1,0 +1,11 @@
+slug: lei-11274-2006
+designation: "Lei 11.274/2006"
+kind: law
+year: 2006
+title: { pt: "Ampliação do ensino fundamental", en: "Longer ensino fundamental" }
+summary:
+  pt: "Altera a LDB para ampliar a duração do ensino fundamental, com início aos seis anos de idade."
+  en: "Amends the LDB to lengthen the ensino fundamental, starting at age six."
+submodules: [ensino-fundamental, educacao-infantil]
+events:
+  - { year: 2006, type: enacted, description: { pt: "Sancionada a lei que altera a LDB.", en: "The law amending the LDB is enacted." } }

@@ -1,0 +1,27 @@
+id: wdi.se_ter_enrr
+source: wdi
+source_code: SE.TER.ENRR
+unit: percent
+min: 0
+name:
+  pt: Matrícula bruta no ensino superior (% da população em idade escolar)
+  en: Gross tertiary enrollment (% of school-age population)
+definition:
+  pt: Matrículas no ensino superior, de qualquer idade, como proporção da população da faixa de
+    cinco anos seguinte ao fim do ensino médio. Estimativa do UIS, reproduzida pelo Banco Mundial.
+  en: Tertiary enrollment of any age as a share of the population in the five-year age group after
+    secondary school. UIS estimate, republished by the World Bank.
+formula:
+  pt: Matrículas totais no ensino superior / população da faixa etária de referência × 100.
+  en: Total tertiary enrollment / population of the reference age group × 100.
+criticisms:
+- pt: Como inclui alunos de qualquer idade, pode passar de cem por cento em sistemas com muitos
+    adultos matriculados. Não separa graduação de pós-graduação nem presencial de a distância.
+  en: Because it includes students of any age, it can exceed one hundred percent in systems with
+    many adult students. It does not separate undergraduate from graduate or in-person from distance
+    learning.
+references:
+- citation: World Bank. World Development Indicators — metadata for SE.TER.ENRR.
+  url: https://data.worldbank.org/indicator/SE.TER.ENRR
+- citation: 'UNESCO Institute for Statistics. Education and science data: methodology.'
+  url: https://uis.unesco.org/

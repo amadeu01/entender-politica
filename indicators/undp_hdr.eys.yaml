@@ -1,0 +1,47 @@
+id: undp_hdr.eys
+source: undp_hdr
+source_code: eys
+unit: years
+min: 0
+max: 25
+name:
+  pt: "Anos esperados de estudo (PNUD)"
+  en: "Expected years of schooling (UNDP)"
+definition:
+  pt: >-
+    Anos de estudo que uma criança em idade de entrar na escola pode esperar completar se
+    as taxas de matrícula por idade do ano se mantiverem ao longo da vida escolar. É um
+    dos dois componentes de educação do IDH. Mede o acesso e a permanência esperados do
+    sistema, não o que os estudantes aprendem. A série inteira é recalculada a cada
+    edição do relatório.
+  en: >-
+    Years of schooling a child of school-entry age can expect to complete if that year's
+    age-specific enrollment rates hold throughout their school life. One of the two
+    education components of the HDI. It measures the access and retention the system
+    offers, not what students learn. The whole series is recomputed with each report
+    edition.
+formula:
+  pt: "Soma das taxas de matrícula por idade, da entrada na escola até a idade máxima considerada."
+  en: "Sum of age-specific enrollment rates, from school-entry age up to the maximum age considered."
+criticisms:
+  - pt: >-
+      Conta anos de matrícula, não aprendizado: um sistema com muita repetência ou baixa
+      qualidade pode ter anos esperados altos e resultados de aprendizagem baixos.
+    en: >-
+      It counts years enrolled, not learning: a system with high repetition or low quality
+      can show high expected years and low learning outcomes.
+  - pt: >-
+      Depende de taxas de matrícula e de estimativas de população por idade, e os dados
+      de matrícula dos anos recentes costumam ser revistos.
+    en: >-
+      It depends on enrollment rates and population-by-age estimates, and recent
+      enrollment data are often revised.
+  - pt: >-
+      O valor combina todos os níveis de ensino; não separa educação básica, técnica e
+      superior.
+    en: >-
+      The value combines all education levels; it does not separate basic, technical
+      and higher education.
+references:
+  - citation: "UNDP. Human Development Report 2025 — Technical notes."
+    url: https://hdr.undp.org/data-center/documentation-and-downloads

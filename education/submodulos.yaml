@@ -1,0 +1,117 @@
+# Módulo de educação: subtemas, indicadores de cada um e métricas planejadas.
+# Indicadores listados aqui precisam existir em /indicadores. Métricas planejadas ainda
+# não têm dado coletado: uma série só vira indicador depois que o código foi conferido na
+# API da fonte e há snapshot real (docs/adr/0012-modulo-educacao.md).
+overview_indicators:
+  - undp_hdr.eys
+  - undp_hdr.mys
+
+submodules:
+  - id: educacao-infantil
+    name: { pt: "Educação infantil", en: "Early childhood education" }
+    summary:
+      pt: "Creche e pré-escola, a primeira etapa da educação básica."
+      en: "Nursery and pre-school, the first stage of basic education."
+    indicators: [wdi.se_pre_enrr]
+    planned_metrics:
+      - name: { pt: "Cobertura de creche (faixa etária mais nova)", en: "Nursery coverage (youngest age group)" }
+        source: ibge_sidra
+        note:
+          pt: "Vem da PNAD Contínua (SIDRA); o host do SIDRA ainda não está liberado no ambiente de desenvolvimento."
+          en: "Comes from the Continuous PNAD (SIDRA); the SIDRA host is not yet allowed in the development environment."
+
+  - id: ensino-fundamental
+    name: { pt: "Ensino fundamental", en: "Primary and lower secondary (ensino fundamental)" }
+    summary:
+      pt: "A etapa obrigatória mais longa, dos anos iniciais aos finais."
+      en: "The longest compulsory stage, from the early to the final grades."
+    indicators: [wdi.se_prm_enrr]
+    planned_metrics:
+      - name: { pt: "Ideb e Saeb (aprendizado)", en: "Ideb and Saeb (learning)" }
+        source: inep
+        note:
+          pt: "Medem aprendizado e fluxo escolar, que a matrícula não mede. O Inep ainda não tem conector."
+          en: "They measure learning and school flow, which enrollment does not. Inep has no connector yet."
+      - name: { pt: "Taxa de conclusão do ensino primário", en: "Primary completion rate" }
+        source: wdi
+        code: SE.PRM.CMPT.ZS
+        note:
+          pt: "O Banco Mundial não publica valores para o Brasil nesta série."
+          en: "The World Bank publishes no values for Brazil in this series."
+
+  - id: ensino-medio
+    name: { pt: "Ensino médio", en: "Upper secondary (ensino médio)" }
+    summary:
+      pt: "Última etapa da educação básica, com currículo alterado pelas reformas de 2017 e 2024."
+      en: "Last stage of basic education, with a curriculum changed by the 2017 and 2024 reforms."
+    indicators: [wdi.se_sec_enrr]
+    planned_metrics:
+      - name: { pt: "Frequência líquida e abandono", en: "Net attendance and dropout" }
+        source: ibge_sidra
+        note:
+          pt: "Vêm da PNAD Contínua (SIDRA) e do Censo Escolar, ainda sem conector."
+          en: "They come from the Continuous PNAD (SIDRA) and the School Census, with no connector yet."
+
+  - id: educacao-profissional
+    name: { pt: "Educação profissional e técnica", en: "Vocational and technical education" }
+    summary:
+      pt: "Cursos técnicos e de qualificação, incluindo a rede dos institutos federais."
+      en: "Technical and qualification courses, including the federal institutes network."
+    planned_metrics:
+      - name: { pt: "Matrículas em educação profissional", en: "Vocational education enrollment" }
+        source: inep
+        note:
+          pt: "O Banco Mundial não oferece uma série válida para isso; o detalhe por rede vem do Censo Escolar, ainda sem conector."
+          en: "The World Bank offers no valid series for this; detail by network comes from the School Census, with no connector yet."
+
+  - id: graduacao
+    name: { pt: "Graduação", en: "Undergraduate education" }
+    summary:
+      pt: "Ensino superior de graduação, com ingresso, cotas e financiamento estudantil."
+      en: "Undergraduate higher education, with admission, quotas and student financing."
+    indicators: [wdi.se_ter_enrr]
+    planned_metrics:
+      - name: { pt: "Perfil dos ingressantes por raça e renda", en: "Entrants' profile by race and income" }
+        source: inep
+        note:
+          pt: "Vem da PNAD Contínua e do Censo da Educação Superior, ainda sem conector."
+          en: "Comes from the Continuous PNAD and the Higher Education Census, with no connector yet."
+
+  - id: pos-graduacao-ciencia
+    name: { pt: "Pós-graduação, ciência e tecnologia", en: "Graduate education, science and technology" }
+    summary:
+      pt: "Pesquisa, pós-graduação e o arcabouço legal de ciência, tecnologia e inovação."
+      en: "Research, graduate programs and the legal framework for science, technology and innovation."
+    indicators: [wdi.gb_xpd_rsdv_gd_zs, wdi.sp_pop_scie_rd_p6]
+    planned_metrics:
+      - name: { pt: "Títulos de mestrado e doutorado", en: "Master's and doctoral degrees" }
+        source: capes
+        note:
+          pt: "Vêm da Capes, ainda sem conector."
+          en: "They come from Capes, which has no connector yet."
+
+  - id: financiamento
+    name: { pt: "Financiamento da educação", en: "Education funding" }
+    summary:
+      pt: "Fundeb, vinculações constitucionais e o regime fiscal que limita o gasto."
+      en: "Fundeb, constitutional earmarks and the fiscal regime that caps spending."
+    indicators: [wdi.se_xpd_totl_gd_zs]
+    planned_metrics:
+      - name: { pt: "Transferências do Fundeb", en: "Fundeb transfers" }
+        source: tesouro
+        note:
+          pt: "Vêm do Tesouro Nacional e do FNDE, ainda sem conector."
+          en: "They come from the National Treasury and FNDE, which have no connector yet."
+
+  - id: planejamento
+    name: { pt: "Planejamento e profissionais da educação", en: "Planning and education professionals" }
+    summary:
+      pt: "Lei de Diretrizes e Bases, planos nacionais de educação e carreira docente."
+      en: "The national education guidelines law, national education plans and the teaching career."
+    indicators: [wdi.se_adt_litr_zs]
+    planned_metrics:
+      - name: { pt: "Metas do plano nacional (Ideb, Saeb, PNAD)", en: "National plan targets (Ideb, Saeb, PNAD)" }
+        source: inep
+        note:
+          pt: "As metas dos planos usam fontes do Inep e do IBGE, ainda sem conector."
+          en: "Plan targets use Inep and IBGE sources, which have no connector yet."

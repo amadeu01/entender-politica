@@ -1,5 +1,97 @@
 # Changelog dos dados / Data changelog
 
+## 2026-11-01
+
+- Fonte / Source `ibge_sidra`: versão / version `2026-05-08`
+- Fonte / Source `ipeadata`: versão / version `2016-01-06`
+- Fonte / Source `undp_hdr`: versão / version `HDR 2025`
+- Fonte / Source `vdem`: versão / version `v16`
+- Fonte / Source `wdi`: versão / version `2026-10-08`
+- Fonte / Source `wgi`: versão / version `2026-09-25`
+- Séries novas / New series: 56
+  - `wdi.gb_xpd_rsdv_gd_zs ARG`
+  - `wdi.gb_xpd_rsdv_gd_zs BRA`
+  - `wdi.gb_xpd_rsdv_gd_zs CHL`
+  - `wdi.gb_xpd_rsdv_gd_zs COL`
+  - `wdi.gb_xpd_rsdv_gd_zs LCN`
+  - `wdi.gb_xpd_rsdv_gd_zs MEX`
+  - `wdi.gb_xpd_rsdv_gd_zs WLD`
+  - `wdi.se_adt_litr_zs ARG`
+  - `wdi.se_adt_litr_zs BRA`
+  - `wdi.se_adt_litr_zs CHL`
+  - `wdi.se_adt_litr_zs COL`
+  - `wdi.se_adt_litr_zs LCN`
+  - `wdi.se_adt_litr_zs MEX`
+  - `wdi.se_adt_litr_zs WLD`
+  - `wdi.se_pre_enrr ARG`
+  - `wdi.se_pre_enrr BRA`
+  - `wdi.se_pre_enrr CHL`
+  - `wdi.se_pre_enrr COL`
+  - `wdi.se_pre_enrr LCN`
+  - `wdi.se_pre_enrr MEX`
+  - `wdi.se_pre_enrr WLD`
+  - `wdi.se_prm_enrr ARG`
+  - `wdi.se_prm_enrr BRA`
+  - `wdi.se_prm_enrr CHL`
+  - `wdi.se_prm_enrr COL`
+  - `wdi.se_prm_enrr LCN`
+  - `wdi.se_prm_enrr MEX`
+  - `wdi.se_prm_enrr WLD`
+  - `wdi.se_sec_enrr ARG`
+  - `wdi.se_sec_enrr BRA`
+  - `wdi.se_sec_enrr CHL`
+  - `wdi.se_sec_enrr COL`
+  - `wdi.se_sec_enrr LCN`
+  - `wdi.se_sec_enrr MEX`
+  - `wdi.se_sec_enrr WLD`
+  - `wdi.se_ter_enrr ARG`
+  - `wdi.se_ter_enrr BRA`
+  - `wdi.se_ter_enrr CHL`
+  - `wdi.se_ter_enrr COL`
+  - `wdi.se_ter_enrr LCN`
+  - `wdi.se_ter_enrr MEX`
+  - `wdi.se_ter_enrr WLD`
+  - `wdi.se_xpd_totl_gd_zs ARG`
+  - `wdi.se_xpd_totl_gd_zs BRA`
+  - `wdi.se_xpd_totl_gd_zs CHL`
+  - `wdi.se_xpd_totl_gd_zs COL`
+  - `wdi.se_xpd_totl_gd_zs LCN`
+  - `wdi.se_xpd_totl_gd_zs MEX`
+  - `wdi.se_xpd_totl_gd_zs WLD`
+  - `wdi.sp_pop_scie_rd_p6 ARG`
+  - `wdi.sp_pop_scie_rd_p6 BRA`
+  - `wdi.sp_pop_scie_rd_p6 CHL`
+  - `wdi.sp_pop_scie_rd_p6 COL`
+  - `wdi.sp_pop_scie_rd_p6 LCN`
+  - `wdi.sp_pop_scie_rd_p6 MEX`
+  - `wdi.sp_pop_scie_rd_p6 WLD`
+- Observações adicionadas / Observations added: 1540
+- Observações removidas / Observations removed: 0
+- Valores revisados pela fonte / Values revised upstream: 0
+
+## 2026-11-01
+
+- Fonte / Source `ibge_sidra`: versão / version `2026-05-08`
+- Fonte / Source `ipeadata`: versão / version `2016-01-06`
+- Fonte / Source `undp_hdr`: versão / version `HDR 2025`
+- Fonte / Source `vdem`: versão / version `v16`
+- Fonte / Source `wdi`: versão / version `2026-10-08`
+- Fonte / Source `wgi`: versão / version `2026-09-25`
+- Séries novas / New series: 10
+  - `undp_hdr.eys ARG`
+  - `undp_hdr.eys BRA`
+  - `undp_hdr.eys CHL`
+  - `undp_hdr.eys COL`
+  - `undp_hdr.eys MEX`
+  - `undp_hdr.mys ARG`
+  - `undp_hdr.mys BRA`
+  - `undp_hdr.mys CHL`
+  - `undp_hdr.mys COL`
+  - `undp_hdr.mys MEX`
+- Observações adicionadas / Observations added: 340
+- Observações removidas / Observations removed: 0
+- Valores revisados pela fonte / Values revised upstream: 0
+
 ## 2026-10-26
 
 - Fonte / Source `ibge_sidra`: versão / version `2026-05-08`

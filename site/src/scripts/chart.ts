@@ -203,5 +203,7 @@ export function renderAll(): void {
     width = window.innerWidth;
     draw();
   });
+  // Pages that show and hide sections ask for a redraw once a section is visible again.
+  window.addEventListener("charts:redraw", draw);
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", draw);
 }

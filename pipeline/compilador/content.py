@@ -45,6 +45,7 @@ UNIT_DECIMALS = {
     "usd_2015": 0,
     "years": 1,
     "per_1000_live_births": 1,
+    "per_million_people": 0,
     "wgi_estimate": 2,
     "brl_month": 0,
     "brl_month_real": 0,

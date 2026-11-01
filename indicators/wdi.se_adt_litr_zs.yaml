@@ -1,0 +1,27 @@
+id: wdi.se_adt_litr_zs
+source: wdi
+source_code: SE.ADT.LITR.ZS
+unit: percent
+min: 0
+max: 100
+name:
+  pt: Taxa de alfabetização de adultos (% das pessoas com 15 anos ou mais)
+  en: Adult literacy rate (% of people aged 15 and over)
+definition:
+  pt: Proporção de pessoas de 15 anos ou mais que sabem ler e escrever, com compreensão, um enunciado
+    simples sobre a vida cotidiana. Dados do UIS, reproduzidos pelo Banco Mundial.
+  en: Share of people aged 15 and over who can both read and write, with understanding, a short
+    simple statement about everyday life. UIS data, republished by the World Bank.
+formula:
+  pt: Pessoas alfabetizadas de 15 anos ou mais / população de 15 anos ou mais × 100.
+  en: Literate people aged 15 and over / population aged 15 and over × 100.
+criticisms:
+- pt: A alfabetização costuma ser declarada em pesquisas domiciliares, não testada, e as definições
+    variam entre países e ao longo do tempo. Não mede alfabetização funcional.
+  en: Literacy is usually self-reported in household surveys, not tested, and definitions vary
+    across countries and over time. It does not measure functional literacy.
+references:
+- citation: World Bank. World Development Indicators — metadata for SE.ADT.LITR.ZS.
+  url: https://data.worldbank.org/indicator/SE.ADT.LITR.ZS
+- citation: 'UNESCO Institute for Statistics. Education and science data: methodology.'
+  url: https://uis.unesco.org/

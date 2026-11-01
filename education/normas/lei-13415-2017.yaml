@@ -1,0 +1,14 @@
+slug: lei-13415-2017
+designation: "Lei 13.415/2017"
+kind: law
+year: 2017
+title: { pt: "Reforma do ensino médio", en: "Upper secondary reform" }
+summary:
+  pt: "Altera a LDB para ampliar a carga horária, criar itinerários formativos e adotar a Base Nacional Comum Curricular."
+  en: "Amends the LDB to lengthen school hours, create formative itineraries and adopt the national common curriculum base."
+submodules: [ensino-medio, educacao-profissional]
+camara: [{ type: MPV, number: 746, year: 2016 }]
+identity_checked: 2026-11-01
+events:
+  - { year: 2017, type: enacted, description: { pt: "Sancionada a reforma.", en: "The reform is enacted." } }
+  - { year: 2024, type: amended, by: "Lei 14.945/2024", description: { pt: "Revisão do novo ensino médio, com mudança na organização dos itinerários.", en: "Revision of the new ensino médio, changing how itineraries are organized." } }

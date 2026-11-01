@@ -5,8 +5,8 @@ import sys
 
 import httpx
 
-from compilador import build, catalog, dois, geography, snapshot
-from compilador.sources import SOURCES
+from compilador import build, catalog, dois, education, geography, snapshot
+from compilador.sources import SOURCES, camara_votes, senado_votes
 from compilador.validate import ValidationError
 
 USER_AGENT = "entender-politica/0.1 (+https://github.com/amadeu01/entender-politica)"
@@ -28,6 +28,24 @@ def fetch(source_ids: list[str]) -> None:
             print(f"{source_id}: {len(files)} files, version {version} -> {snap.path}")
 
 
+def fetch_votes() -> None:
+    laws = education.load_laws()
+    jobs = (
+        (camara_votes, education.camara_refs(laws)),
+        (senado_votes, education.senado_refs(laws)),
+    )
+    with httpx.Client(timeout=60, headers={"User-Agent": USER_AGENT}) as client:
+        for module, refs in jobs:
+            if not refs:
+                print(f"{module.SOURCE_ID}: no bills listed in education/normas, skipped")
+                continue
+            files, version = module.fetch(refs, client)
+            snap = snapshot.write(
+                module.SOURCE_ID, files, source_version=version, license=module.LICENSE
+            )
+            print(f"{module.SOURCE_ID}: {len(files)} files, version {version} -> {snap.path}")
+
+
 def verify_dois() -> None:
     with httpx.Client(timeout=60, headers={"User-Agent": USER_AGENT}) as client:
         added = dois.verify(build.all_dois(build.Paths()), client)
@@ -39,12 +57,18 @@ def main(argv: list[str] | None = None) -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     p_fetch = sub.add_parser("fetch", help="download raw snapshots (network)")
     p_fetch.add_argument("sources", nargs="*", choices=list(SOURCES))
+    sub.add_parser(
+        "fetch-votes", help="download Câmara and Senado roll calls for education bills (network)"
+    )
     sub.add_parser("build", help="raw snapshots -> processed data and site artifacts (offline)")
     sub.add_parser("verify-dois", help="look up new DOIs on Crossref (network)")
     args = parser.parse_args(argv)
 
     if args.command == "fetch":
         fetch(args.sources or list(SOURCES))
+        return 0
+    if args.command == "fetch-votes":
+        fetch_votes()
         return 0
     if args.command == "verify-dois":
         verify_dois()

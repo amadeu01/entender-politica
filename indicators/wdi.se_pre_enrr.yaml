@@ -1,0 +1,27 @@
+id: wdi.se_pre_enrr
+source: wdi
+source_code: SE.PRE.ENRR
+unit: percent
+min: 0
+name:
+  pt: Matrícula bruta na pré-escola (% da população em idade escolar)
+  en: Gross pre-primary enrollment (% of school-age population)
+definition:
+  pt: Matrículas na pré-escola, de qualquer idade, como proporção da população da faixa etária
+    oficial da pré-escola. Estimativa do Instituto de Estatística da UNESCO (UIS), reproduzida
+    pelo Banco Mundial.
+  en: Pre-primary enrollment of any age as a share of the population of the official pre-primary
+    age group. UNESCO Institute for Statistics (UIS) estimate, republished by the World Bank.
+formula:
+  pt: Matrículas totais / população da faixa etária oficial × 100.
+  en: Total enrollment / population of the official age group × 100.
+criticisms:
+- pt: 'É uma taxa bruta: conta alunos fora da faixa etária e pode passar de cem por cento. Não
+    separa creche de pré-escola nem mede frequência ou qualidade.'
+  en: 'It is a gross rate: it counts students outside the age group and can exceed one hundred
+    percent. It does not separate nursery from pre-school or measure attendance or quality.'
+references:
+- citation: World Bank. World Development Indicators — metadata for SE.PRE.ENRR.
+  url: https://data.worldbank.org/indicator/SE.PRE.ENRR
+- citation: 'UNESCO Institute for Statistics. Education and science data: methodology.'
+  url: https://uis.unesco.org/

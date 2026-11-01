@@ -1,0 +1,12 @@
+slug: ec-53-2006
+designation: "Emenda Constitucional 53/2006"
+kind: constitutional_amendment
+year: 2006
+title: { pt: "Criação do Fundeb", en: "Creation of Fundeb" }
+summary:
+  pt: "Cria o Fundo de Manutenção e Desenvolvimento da Educação Básica, com prazo definido, no lugar do fundo anterior que cobria só o ensino fundamental."
+  en: "Creates the Basic Education Maintenance and Development Fund, with a fixed term, replacing the earlier fund that covered only the ensino fundamental."
+submodules: [financiamento, educacao-infantil, ensino-fundamental, ensino-medio]
+events:
+  - { year: 2006, type: enacted, description: { pt: "Promulgada a emenda que cria o Fundeb.", en: "The amendment creating Fundeb is promulgated." } }
+  - { year: 2007, type: regulated, by: "Lei 11.494/2007", description: { pt: "Regulamentação do fundo.", en: "The fund is regulated." } }

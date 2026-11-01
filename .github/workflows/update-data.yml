@@ -35,6 +35,7 @@ jobs:
           cache-dependency-path: site/package-lock.json
       - run: uv sync --locked
       - run: uv run compilador fetch
+      - run: uv run compilador fetch-votes
       - id: build
         run: |
           uv run compilador build | tee build.log
