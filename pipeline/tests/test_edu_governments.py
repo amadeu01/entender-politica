@@ -41,7 +41,7 @@ def _started(**over):
 
 
 def _cut(**over):
-    base = {"kind": "withheld", "title": T, "year": 2015, "submodules": ["ensino-medio"]}
+    base = {"kind": "withheld", "title": T, "year": 2014, "submodules": ["ensino-medio"]}
     return base | {"description": T, "source": URL} | over
 
 
@@ -149,7 +149,7 @@ def test_render_resolves_numbers_and_tabulates_changes():
     doc = _doc(
         summary={"pt": f"No fim, {v}.", "en": f"At the end, {v}."},
         started=[_started(year=2012)],
-        cuts=[_cut(year=2015)],
+        cuts=[_cut(year=2014)],
     )
     out = eg.render(doc, "pt", df, _inds(), govs, [_law()])
     assert out["years"] == [2011, 2014]
@@ -162,3 +162,11 @@ def test_render_resolves_numbers_and_tabulates_changes():
     assert lcn["change"] == pytest.approx(0.0)
     assert out["started"][0]["values"][IND] == 52.0
     assert out["cuts"][0]["values"][IND] == 55.0
+
+
+def test_items_must_fall_inside_the_period_years():
+    doc = _doc(started=[_started(year=2003)])
+    assert "outside the period" in "\n".join(_check(doc))
+    assert _check(_doc(started=[_started(year=2014)])) == []
+    # Dilma's first term ends on 2014-12-31: the end date is exclusive.
+    assert "outside the period" in "\n".join(_check(_doc(started=[_started(year=2015)])))

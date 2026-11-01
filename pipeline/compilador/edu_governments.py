@@ -153,7 +153,13 @@ def check(
         errors += [
             f"{where}: unknown indicator '{i}'" for i in doc.indicators if i not in indicators
         ]
+        window_years = _period_years(govs, claimed)
         for item in [*doc.started, *doc.cuts]:
+            if window_years and item.year not in window_years:
+                errors.append(
+                    f"{where}: '{item.title.en}' is in {item.year}, outside the period "
+                    f"({window_years[0]}–{window_years[-1]})"
+                )
             errors += [
                 f"{where}: unknown sub-module '{s}' in '{item.title.en}'"
                 for s in item.submodules
@@ -186,6 +192,18 @@ def check(
             if r.doi and r.doi.lower() not in registry
         ]
     return errors
+
+
+def _period_years(govs: Governments, ids: list[str]) -> list[int]:
+    """Calendar years touched by the periods, inclusive (the end date is exclusive)."""
+    by_id = {p.id: p for p in govs.periods}
+    spans = [by_id[i] for i in ids if i in by_id]
+    if not spans:
+        return []
+    first = min(p.start.year for p in spans)
+    ends = [p.end - dt.timedelta(days=1) if p.end else dt.date.max for p in spans]
+    last = min(max(ends).year, dt.date.today().year + 1)
+    return list(range(first, last + 1))
 
 
 def window(govs: Governments, ids: list[str], last_year: int) -> list[int]:
