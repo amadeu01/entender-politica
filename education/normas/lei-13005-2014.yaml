@@ -8,6 +8,7 @@ summary:
   en: "Approves the ten-year plan with goals and strategies for all stages, from early childhood access to graduate education, and for funding."
 submodules: [planejamento, educacao-infantil, ensino-fundamental, ensino-medio, educacao-profissional, graduacao, pos-graduacao-ciencia, financiamento]
 camara: [{ type: PL, number: 8035, year: 2010 }]
+identity_checked: 2026-11-01
 events:
   - { year: 2014, type: enacted, description: { pt: "Sancionado o plano.", en: "The plan is enacted." } }
   - { year: 2026, type: superseded, by: "Lei 15.388/2026", description: { pt: "Sucedido pelo novo Plano Nacional de Educação.", en: "Succeeded by the new National Education Plan." } }

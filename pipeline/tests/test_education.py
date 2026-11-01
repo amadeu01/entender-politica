@@ -67,6 +67,13 @@ def test_amendments_must_name_the_amending_norm():
         _law(events=[_event(), _event(type="amended", year=2021)])
 
 
+def test_identity_check_needs_a_camara_bill_to_check_against():
+    with pytest.raises(ValidationError, match="identity_checked needs a Câmara bill"):
+        _law(identity_checked="2026-11-01")
+    ok = _law(identity_checked="2026-11-01", camara=[{"type": "PL", "number": 1, "year": 2020}])
+    assert ok.identity_checked == dt.date(2026, 11, 1)
+
+
 def test_event_date_must_fall_in_event_year():
     with pytest.raises(ValidationError, match="not in year"):
         _law(events=[_event(date="2019-05-01")])

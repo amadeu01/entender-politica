@@ -205,6 +205,7 @@ export type EducationLaw = {
   title: Text;
   summary: Text;
   submodules: string[];
+  identity_checked: string | null;
   verified: string | null;
   events: EducationEvent[];
 };

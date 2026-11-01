@@ -8,5 +8,6 @@ summary:
   en: "Caps the growth of the Union's primary spending for a long period and updates the minimum applied to education by inflation."
 submodules: [financiamento]
 camara: [{ type: PEC, number: 241, year: 2016 }]
+identity_checked: 2026-11-01
 events:
   - { year: 2016, type: enacted, description: { pt: "Promulgada a emenda.", en: "The amendment is promulgated." } }

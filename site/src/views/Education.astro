@@ -50,6 +50,7 @@ const copy = {
     plannedLede: "Estas séries ainda não estão no catálogo. O código deve ser conferido na API da fonte antes de virar indicador.",
     code: "Código na fonte",
     unverified: "Registro ainda não conferido com o texto oficial",
+    identityChecked: (d: string) => `Número, ano e projeto de origem conferidos no registro oficial da Câmara em ${d}; resumo ainda não conferido com o texto`,
     bill: "Projeto",
     by: "por",
     noData: "sem dado",
@@ -99,6 +100,7 @@ const copy = {
     plannedLede: "These series are not in the catalog yet. The code must be confirmed against the source's API before it becomes an indicator.",
     code: "Source code",
     unverified: "Record not yet checked against the official text",
+    identityChecked: (d: string) => `Number, year and originating bill checked in the Câmara's official record on ${d}; summary not yet checked against the text`,
     bill: "Bill",
     by: "by",
     noData: "no data",
@@ -195,7 +197,7 @@ const tabs = [
                   <p class="meta">
                     <span class="badge">{copy.kinds[law.kind]}</span>
                     {law.bill && <>{" · "}{copy.bill} {law.bill}</>}
-                    {!law.verified && <>{" · "}<span class="badge unverified">{copy.unverified}</span></>}
+                    {!law.verified && <>{" · "}<span class="badge unverified">{law.identity_checked ? copy.identityChecked(law.identity_checked) : copy.unverified}</span></>}
                   </p>
                   <p>{law.summary[lang]}</p>
                   <ol class="events">

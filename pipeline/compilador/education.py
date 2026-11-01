@@ -121,12 +121,18 @@ class Law(Strict):
     # chamber's numbering (the Câmara's PEC 15/2015 is the Senado's PEC 26/2020).
     camara: list[Bill] = []
     senado: list[Bill] = []
-    # Date someone matched this record against the official text. Empty means the record
-    # was not checked yet, and the site says so.
+    # Date the designation, year and originating bill were matched against the Câmara's
+    # official procedural record (the entry "Transformado na Lei ..."). Says nothing about
+    # the summary, so the site still flags the record as not checked against the text.
+    identity_checked: dt.date | None = None
+    # Date someone matched the whole record against the official text. Empty means that
+    # was not done yet, and the site says so.
     verified: dt.date | None = None
 
     @model_validator(mode="after")
     def _enacted(self) -> "Law":
+        if self.identity_checked and not self.camara:
+            raise ValueError(f"{self.slug}: identity_checked needs a Câmara bill in `camara`")
         if len(set(self.submodules)) != len(self.submodules):
             raise ValueError(f"{self.slug}: repeated sub-module in `submodules`")
         enacted = [e for e in self.events if e.type == EventType.ENACTED]

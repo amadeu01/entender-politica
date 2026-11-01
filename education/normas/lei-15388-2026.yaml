@@ -9,6 +9,7 @@ summary:
   en: "New ten-year national education plan, succeeding the 2014 plan. It went through the Câmara in conclusive form; the plenary rejected the appeal against that route and the bill moved to the Senado."
 submodules: [planejamento, educacao-infantil, ensino-fundamental, ensino-medio, educacao-profissional, graduacao, pos-graduacao-ciencia, financiamento]
 camara: [{ type: PL, number: 2614, year: 2024 }]
+identity_checked: 2026-11-01
 events:
   - { year: 2024, date: 2024-06-27, type: proposed, chamber: camara, description: { pt: "Projeto apresentado à Câmara.", en: "Bill introduced in the Câmara." } }
   - { year: 2025, date: 2025-12-10, type: committee_vote, chamber: camara, form: unknown, description: { pt: "Comissão especial aprova o parecer do relator; o projeto tramita em caráter conclusivo.", en: "The special committee approves the rapporteur's report; the bill moves in conclusive form." } }

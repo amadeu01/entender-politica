@@ -8,5 +8,6 @@ summary:
   en: "Makes basic education compulsory from pre-school to upper secondary, sets the national education plan as a ten-year plan, and gradually reduces the revenue unearmarking applied to education resources."
 submodules: [educacao-infantil, ensino-fundamental, ensino-medio, financiamento, planejamento]
 camara: [{ type: PEC, number: 277, year: 2008 }]
+identity_checked: 2026-11-01
 events:
   - { year: 2009, type: enacted, description: { pt: "Promulgada a emenda.", en: "The amendment is promulgated." } }

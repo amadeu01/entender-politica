@@ -36,14 +36,16 @@ tramitação), então os votos vêm de outra fonte.
    de estudo, mudam devagar por construção.
 5. **Métricas planejadas** (`planned_metrics`) listam séries ainda não coletadas, com o
    código na fonte a conferir. Só entram no catálogo junto com o snapshot real.
-6. **Verificação:** `verified` (data) indica que o registro foi conferido com o texto
-   oficial. Sem ele, o site mostra o aviso "Registro ainda não conferido".
+6. **Verificação em dois níveis:** `identity_checked` (data) indica que número, ano e projeto
+   de origem foram conferidos no registro oficial de tramitação da Câmara (a entrada
+   "Transformado na Lei ..."); exige um projeto em `camara`. `verified` (data) indica que o
+   registro inteiro foi conferido com o texto oficial. Sem `verified`, o site mostra o
+   aviso, dizendo o que foi conferido.
 
 ### Consequências
 - Estrutura e navegação prontas; o conteúdo cresce por pull request, como as análises.
 - Votações em plenário de projetos listados em `camara:` ou `senado:` aparecem com placar; as demais só como registro. O Senado exige descobrir o número do projeto na numeração própria da casa, o que ainda foi feito só para o Fundeb.
-- Os registros iniciais foram redigidos sem acesso às fontes oficiais e precisam de
-  conferência humana antes de receberem `verified`.
+- Os registros iniciais foram redigidos sem acesso às fontes oficiais. Em 2026-11-01, número e ano de 16 dos 23 foram conferidos na Câmara; os outros 7 (sem projeto na Câmara) e os resumos de todos precisam de conferência humana antes de receberem `verified`.
 
 ## English
 
@@ -71,8 +73,11 @@ votes (only propositions, themes and procedural history), so votes need another 
    descriptive (ADR 0003) and does not show causation.
 5. `planned_metrics` list series not collected yet, with the source code to confirm; they
    join the catalog only together with a real snapshot.
-6. `verified` (a date) marks a record checked against the official text; without it the
-   site shows a "not yet checked" notice.
+6. Two levels of checking: `identity_checked` (a date) means the number, year and
+   originating bill were matched against the Câmara's official procedural record (the
+   "Transformado na Lei ..." entry) and needs a bill in `camara`; `verified` (a date) means
+   the whole record was checked against the official text. Without `verified` the site
+   shows a notice saying what was checked.
 
 ### Consequences
 Structure and navigation are ready and content grows by pull request. Plenary votes of bills listed in `camara:` or `senado:` show tallies; others are only a record that the vote happened. The Senado needs the bill's number in its own numbering, which has only been found for Fundeb so far. The seed records were written without

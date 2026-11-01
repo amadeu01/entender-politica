@@ -8,5 +8,6 @@ summary:
   en: "Creates the Federal Network of Vocational, Scientific and Technological Education and the federal institutes."
 submodules: [educacao-profissional, graduacao]
 camara: [{ type: PL, number: 3775, year: 2008 }]
+identity_checked: 2026-11-01
 events:
   - { year: 2008, type: enacted, description: { pt: "Sancionada a lei que cria os institutos federais.", en: "The law creating the federal institutes is enacted." } }

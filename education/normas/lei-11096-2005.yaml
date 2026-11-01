@@ -8,5 +8,6 @@ summary:
   en: "Creates the University for All Program, with scholarships at private higher-education institutions in exchange for tax exemption."
 submodules: [graduacao]
 camara: [{ type: MPV, number: 213, year: 2004 }]
+identity_checked: 2026-11-01
 events:
   - { year: 2005, type: enacted, description: { pt: "Sancionada a lei do ProUni.", en: "The ProUni law is enacted." } }

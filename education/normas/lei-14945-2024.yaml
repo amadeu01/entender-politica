@@ -8,5 +8,6 @@ summary:
   en: "Revises the 2017 reform, reorganizing general education and formative itineraries."
 submodules: [ensino-medio, educacao-profissional]
 camara: [{ type: PL, number: 5230, year: 2023 }]
+identity_checked: 2026-11-01
 events:
   - { year: 2024, type: enacted, description: { pt: "Sancionada a revisão.", en: "The revision is enacted." } }

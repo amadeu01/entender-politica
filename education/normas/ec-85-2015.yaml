@@ -8,5 +8,6 @@ summary:
   en: "Updates the constitutional treatment of science, technology and innovation and widens cooperation between public and private bodies."
 submodules: [pos-graduacao-ciencia]
 camara: [{ type: PEC, number: 290, year: 2013 }]
+identity_checked: 2026-11-01
 events:
   - { year: 2015, type: enacted, description: { pt: "Promulgada a emenda.", en: "The amendment is promulgated." } }

@@ -8,5 +8,6 @@ summary:
   en: "Amends the Student Financing Fund law, reformulating the program. It originated from a provisional measure."
 submodules: [graduacao]
 camara: [{ type: MPV, number: 785, year: 2017 }]
+identity_checked: 2026-11-01
 events:
   - { year: 2017, type: enacted, description: { pt: "Sancionada a lei de conversão.", en: "The conversion law is enacted." } }

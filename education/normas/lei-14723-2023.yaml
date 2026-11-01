@@ -8,6 +8,7 @@ summary:
   en: "Amends the quota law, reformulating the special access program for federal higher-education and upper-secondary technical institutions, as described in the ementa of the bill behind it."
 submodules: [graduacao, educacao-profissional]
 camara: [{ type: PL, number: 5384, year: 2020 }]
+identity_checked: 2026-11-01
 events:
   - { year: 2020, type: proposed, chamber: camara, description: { pt: "Projeto apresentado à Câmara.", en: "Bill introduced in the Câmara." } }
   - { year: 2023, type: enacted, description: { pt: "Sancionada a lei.", en: "The law is enacted." } }
