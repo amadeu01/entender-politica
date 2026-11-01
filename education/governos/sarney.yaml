@@ -1,0 +1,109 @@
+# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
+# Itens sem `checked` ainda não foram conferidos com o registro oficial.
+period: sarney
+includes:
+- sarney-interino
+summary:
+  pt: Os anos médios de estudo dos adultos variaram {{ diff("undp_hdr.mys", "BRA", 1990, 1991) }} entre
+    1990 e 1991, primeiros anos da série do PNUD; antes disso o catálogo não tem dado. Este governo reorganizou
+    o financiamento (regulamentação da vinculação de 1983 e a Constituição de 1988), o livro didático
+    e a alfabetização de adultos.
+  en: Adults' mean years of schooling changed {{ diff("undp_hdr.mys", "BRA", 1990, 1991) }} between 1990
+    and 1991, the first years of the UNDP series; before that the catalog has no data. This government
+    reorganized financing (regulation of the 1983 earmark and the 1988 Constitution), textbooks and adult
+    literacy.
+context:
+  pt: Inflação muito alta e planos de estabilização (Cruzado, Bresser, Verão) corroeram salários de professores
+    e orçamentos públicos; estados e municípios, não a União, respondiam pela maior parte das matrículas.
+    A Constituição de 1988 ampliou o piso federal de aplicação em educação, com efeito sobre os orçamentos
+    a partir dos anos seguintes.
+  en: Very high inflation and stabilization plans (Cruzado, Bresser, Verão) eroded teacher pay and public
+    budgets; states and municipalities, not the Union, held most enrollments. The 1988 Constitution raised
+    the federal minimum for education spending, with effect on budgets in the following years.
+started:
+- title:
+    pt: Regulamentação da vinculação de receitas à educação
+    en: Regulation of the education revenue earmark
+  year: 1985
+  date: '1985-07-24'
+  instrument: Lei 7.348/1985
+  submodules:
+  - financiamento
+  description:
+    pt: Define a receita e a forma de aplicação, pela União, estados, Distrito Federal e municípios, do
+      percentual mínimo vinculado à manutenção e ao desenvolvimento do ensino (Emenda Calmon).
+    en: Defines the revenue and how the Union, states, Federal District and municipalities apply the minimum
+      share earmarked for maintaining and developing education (Calmon Amendment).
+  source: https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-7348-24-julho-1985-356943-norma-pl.html
+  checked: '2026-11-01'
+- title:
+    pt: Programa Nacional do Livro Didático (PNLD)
+    en: National Textbook Program (PNLD)
+  year: 1985
+  date: '1985-08-19'
+  instrument: Decreto 91.542/1985
+  submodules:
+  - ensino-fundamental
+  description:
+    pt: Substitui o programa anterior de livros e passa a permitir que professores escolham os livros
+      didáticos distribuídos pela rede pública.
+    en: Replaces the previous textbook program and lets teachers choose the textbooks distributed to public
+      schools.
+  source: https://legis.senado.leg.br/norma/514182/publicacao/15708004
+  checked: '2026-11-01'
+- title:
+    pt: Fundação Educar
+    en: Educar Foundation
+  year: 1985
+  date: '1985-11-25'
+  instrument: Decreto 91.980/1985
+  submodules:
+  - ensino-fundamental
+  description:
+    pt: Transforma o Mobral na Fundação Nacional para Educação de Jovens e Adultos (Educar), órgão federal
+      de alfabetização de jovens e adultos.
+    en: Transforms Mobral into the National Foundation for Youth and Adult Education (Educar), the federal
+      youth and adult literacy agency.
+  source: https://legis.senado.leg.br/norma/514620
+  checked: '2026-11-01'
+- title:
+    pt: Educação na Constituição de 1988
+    en: Education in the 1988 Constitution
+  year: 1988
+  date: '1988-10-05'
+  instrument: Constituição Federal de 1988
+  submodules:
+  - financiamento
+  - educacao-infantil
+  - ensino-fundamental
+  - planejamento
+  description:
+    pt: Estabelece a educação como direito, o ensino fundamental obrigatório e gratuito, a autonomia universitária,
+      a gestão democrática e a vinculação de receitas, com percentual mínimo da União maior que o da Emenda
+      Calmon.
+    en: Establishes education as a right, free compulsory primary education, university autonomy, democratic
+      management and revenue earmarking, with a Union minimum higher than the Calmon Amendment's.
+  source: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
+indicators:
+- undp_hdr.mys
+- wdi.se_adt_litr_zs
+limitations:
+- pt: Os itens desta página foram redigidos a partir de pesquisa em fontes secundárias, sem acesso aos
+    textos oficiais no ambiente de desenvolvimento; cada item mostra se foi conferido com o registro oficial.
+  en: The items on this page were written from research in secondary sources, without access to the official
+    texts in the development environment; each item shows whether it was checked against the official
+    record.
+- pt: Anos médios de estudo e alfabetização de adultos mudam devagar por construção e refletem décadas
+    de matrículas; uma variação num mandato não mede o efeito das políticas daquele mandato. Séries de
+    matrícula por etapa só existem a partir de 2007 ou 2012, e não há série de aprendizado nem de gasto
+    federal em reais no catálogo.
+  en: Mean years of schooling and adult literacy move slowly by construction and reflect decades of enrollment;
+    a change within one term does not measure that term's policies. Enrollment series by level only start
+    in 2007 or 2012, and the catalog has no learning series or federal spending in reais.
+references:
+- citation: Planalto — Legislação federal
+  url: https://www.planalto.gov.br/ccivil_03/
+- citation: Banco Mundial — World Development Indicators (educação)
+  url: https://datatopics.worldbank.org/world-development-indicators/
+- citation: PNUD — Relatório de Desenvolvimento Humano, dados
+  url: https://hdr.undp.org/data-center
