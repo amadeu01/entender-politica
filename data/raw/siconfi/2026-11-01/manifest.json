@@ -1,0 +1,86 @@
+{
+  "source_id": "siconfi",
+  "retrieved_at": "2026-11-01T23:28:29+00:00",
+  "source_version": "DCA 2014-2025; IPCA SGS 433",
+  "license": "ODbL-1.0",
+  "files": [
+    {
+      "name": "dca-2014.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2014",
+      "sha256": "0ecfd164013d63adf1f982d9f1f66c43a9942b2b7731ebdb3fc18de76aa7e4a2",
+      "bytes": 197818
+    },
+    {
+      "name": "dca-2015.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2015",
+      "sha256": "08f067360189f2c1fb99665cc1ded6a9a980839fa8bedafb2c998eb6366084b1",
+      "bytes": 197641
+    },
+    {
+      "name": "dca-2016.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2016",
+      "sha256": "444bc83fde24600fadd979c22da8f94f7ffe5d2a5fb9e101b6b0f4a71f78ed1d",
+      "bytes": 228547
+    },
+    {
+      "name": "dca-2017.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2017",
+      "sha256": "c96be41f288693bd60dae246fc1efcd13337cc0bf7b3e41e51abd7dfecd588b2",
+      "bytes": 259566
+    },
+    {
+      "name": "dca-2018.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2018",
+      "sha256": "438274a3dd2ed1b100f7dd363d6722e1dbc8d3a4a679de5aaaca0dec5e7912d0",
+      "bytes": 262786
+    },
+    {
+      "name": "dca-2019.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2019",
+      "sha256": "b51ba3205680762a5fb1900088f2e8be7ec80f87380ae97e8b8e23f02490a150",
+      "bytes": 259667
+    },
+    {
+      "name": "dca-2020.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2020",
+      "sha256": "a4652b3672018dbd8f25b6e526015d398c8bf3e955fdc14bc73fba3bd74d4e0d",
+      "bytes": 257678
+    },
+    {
+      "name": "dca-2021.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2021",
+      "sha256": "64ed4243c9f391b920dda1195af625359485f45910d9c6f47104fe85b686740e",
+      "bytes": 256050
+    },
+    {
+      "name": "dca-2022.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2022",
+      "sha256": "6cbdf885508fd7b6b23f50213a9c1d048de5c4f438d4c4f42578ff460bc7f01e",
+      "bytes": 258361
+    },
+    {
+      "name": "dca-2023.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2023",
+      "sha256": "00177b7c95f2d379c54612bf9069cde19ac510b699d0eac196758383bb8e61d7",
+      "bytes": 257114
+    },
+    {
+      "name": "dca-2024.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024",
+      "sha256": "a074bff9139a3e93882b52465d8c5a6b5d92598726cfbca22d85e4b0d0eccb22",
+      "bytes": 258856
+    },
+    {
+      "name": "dca-2025.json",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025",
+      "sha256": "3194aa6b04f8c4be2e423db3142cfa2d3f8743729ecaa3d214deea951fa61c2c",
+      "bytes": 263218
+    },
+    {
+      "name": "ipca-sgs433.json",
+      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json&dataInicial=01%2F01%2F2013&dataFinal=31%2F12%2F2025",
+      "sha256": "6dfa11c7a41264a066dea1d47664d275074cdbc41ec562bfbcaab2e344983ea9",
+      "bytes": 5785
+    }
+  ]
+}

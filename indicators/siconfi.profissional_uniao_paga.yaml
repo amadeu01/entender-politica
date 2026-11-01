@@ -1,0 +1,41 @@
+id: siconfi.profissional_uniao_paga
+source: siconfi
+source_code: Despesas Pagas|12.363 - Ensino Profissional
+source_params:
+  coluna: Despesas Pagas
+  conta: 12.363 - Ensino Profissional
+  real: 'true'
+name:
+  pt: Gasto federal pago em ensino profissional (R$ bilhões, preços constantes)
+  en: Federal spending paid on vocational education (R$ billion, constant prices)
+unit: brl_billion_real
+min: 0
+definition:
+  pt: Valor anual da despesa paga pela União na subfunção Ensino Profissional, em R$ bilhões a preços do
+    último ano completo, deflacionado pela média anual do IPCA.
+  en: Annual amount of federal spending paid in the Vocational Education sub-function, in R$ billion at
+    prices of the latest full year, deflated by the annual average of the IPCA.
+formula:
+  pt: Valor nominal da DCA, Anexo I-E, ÷ média anual do índice IPCA × média do índice do ano-base ÷ 1
+    bilhão.
+  en: Nominal DCA Annex I-E amount ÷ annual average IPCA index × base-year average index ÷ one billion.
+criticisms:
+- pt: A DCA da União só existe na API a partir de 2014, então governos anteriores ficam sem série. A despesa
+    por função inclui transferências a estados e municípios e muda quando uma ação orçamentária é reclassificada
+    de função. Restos a pagar adiam o pagamento para o ano seguinte, de modo que 'pago' e 'empenhado'
+    de um ano podem divergir sem que haja corte. O IPCA não mede o custo específico de universidades e
+    escolas.
+  en: The Union's DCA is only in the API from 2014, so earlier governments have no series. Spending by
+    function includes transfers to states and municipalities and shifts when a budget action is reclassified
+    to another function. Unpaid carry-overs (restos a pagar) defer payment to the next year, so 'paid'
+    and 'committed' for a year can diverge without a cut. The IPCA does not measure the specific cost
+    of universities and schools.
+- pt: 'Não mostra a dotação autorizada nem o contingenciamento: um bloqueio revertido no mesmo ano não
+    aparece.'
+  en: 'It shows neither authorized appropriation nor withholding: a block reversed within the year does
+    not show.'
+references:
+- citation: 'Tesouro Nacional. Siconfi: Declaração de Contas Anuais (DCA), Anexo I-E, API de dados abertos.'
+  url: https://apidatalake.tesouro.gov.br/docs/siconfi/
+- citation: Banco Central do Brasil. Sistema Gerenciador de Séries Temporais, série 433 (IPCA).
+  url: https://dadosabertos.bcb.gov.br/dataset/433-indice-nacional-de-precos-ao-consumidor-amplo-ipca

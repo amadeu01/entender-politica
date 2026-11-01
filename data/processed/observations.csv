@@ -277,6 +277,66 @@ BRA,country,2011,ipeadata.disoc_rdcg,0.531389367431006,,,index_0_1,ipeadata,2016
 BRA,country,2012,ipeadata.disoc_rdcg,0.529710654306152,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,2013,ipeadata.disoc_rdcg,0.527496734249119,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
 BRA,country,2014,ipeadata.disoc_rdcg,0.517949507143333,,,index_0_1,ipeadata,2016-01-06,2026-10-26T01:07:55+00:00,LicenseRef-Ipeadata-reuse-with-attribution,False
+BRA,country,2014,siconfi.educ_uniao_empenhada,157.766807043122,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2015,siconfi.educ_uniao_empenhada,153.75128542815867,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2016,siconfi.educ_uniao_empenhada,147.27774223907193,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2017,siconfi.educ_uniao_empenhada,147.2158348007813,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2018,siconfi.educ_uniao_empenhada,142.41500543133895,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2019,siconfi.educ_uniao_empenhada,141.85432478335085,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2020,siconfi.educ_uniao_empenhada,128.90326226002622,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2021,siconfi.educ_uniao_empenhada,127.6387139594463,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2022,siconfi.educ_uniao_empenhada,134.9890389033011,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2023,siconfi.educ_uniao_empenhada,153.5261580282354,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2024,siconfi.educ_uniao_empenhada,159.28295966051078,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2025,siconfi.educ_uniao_empenhada,176.01176898498002,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2014,siconfi.educ_uniao_paga,134.09952096147558,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2015,siconfi.educ_uniao_paga,132.61105212671293,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2016,siconfi.educ_uniao_paga,131.8386582956669,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2017,siconfi.educ_uniao_paga,132.9913005187373,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2018,siconfi.educ_uniao_paga,126.47810203664594,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2019,siconfi.educ_uniao_paga,117.98597571220363,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2020,siconfi.educ_uniao_paga,106.19908069773565,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2021,siconfi.educ_uniao_paga,107.60418559105915,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2022,siconfi.educ_uniao_paga,114.31038473437013,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2023,siconfi.educ_uniao_paga,130.19783390783223,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2024,siconfi.educ_uniao_paga,131.88134037739258,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2025,siconfi.educ_uniao_paga,148.50879879476,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2014,siconfi.fundeb_uniao_paga,73.7194759571367,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2015,siconfi.fundeb_uniao_paga,71.2182432424859,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2016,siconfi.fundeb_uniao_paga,72.96338969758649,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2017,siconfi.fundeb_uniao_paga,68.59827757561114,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2018,siconfi.fundeb_uniao_paga,70.8196656909956,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2019,siconfi.fundeb_uniao_paga,71.65144235340316,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2020,siconfi.fundeb_uniao_paga,67.31565766532927,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2021,siconfi.fundeb_uniao_paga,79.36578861771267,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2022,siconfi.fundeb_uniao_paga,88.94350715105011,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2023,siconfi.fundeb_uniao_paga,88.93009873917512,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2024,siconfi.fundeb_uniao_paga,97.71345421395985,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2025,siconfi.fundeb_uniao_paga,102.0423733863,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2014,siconfi.profissional_uniao_paga,19.19856975693391,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2015,siconfi.profissional_uniao_paga,17.040891027415412,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2016,siconfi.profissional_uniao_paga,15.853040343440677,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2017,siconfi.profissional_uniao_paga,15.834953680551216,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2018,siconfi.profissional_uniao_paga,14.824948848586718,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2019,siconfi.profissional_uniao_paga,15.018031256222491,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2020,siconfi.profissional_uniao_paga,14.421865865541076,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2021,siconfi.profissional_uniao_paga,13.564101224592811,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2022,siconfi.profissional_uniao_paga,13.376572112824482,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2023,siconfi.profissional_uniao_paga,14.009163196570643,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2024,siconfi.profissional_uniao_paga,14.171939685178987,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2025,siconfi.profissional_uniao_paga,16.36402095082,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2014,siconfi.superior_uniao_paga,47.2628824793877,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2015,siconfi.superior_uniao_paga,49.77740391734965,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2016,siconfi.superior_uniao_paga,45.542535571108665,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2017,siconfi.superior_uniao_paga,45.75251631910087,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2018,siconfi.superior_uniao_paga,42.15157814471731,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2019,siconfi.superior_uniao_paga,41.86432013338066,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2020,siconfi.superior_uniao_paga,38.96568268952005,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2021,siconfi.superior_uniao_paga,35.59423314439606,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2022,siconfi.superior_uniao_paga,34.41547607948355,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2023,siconfi.superior_uniao_paga,36.61944715988879,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2024,siconfi.superior_uniao_paga,36.449989071154285,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
+BRA,country,2025,siconfi.superior_uniao_paga,40.54911283305,,,brl_billion_real,siconfi,DCA 2014-2025; IPCA SGS 433,2026-11-01T23:28:29+00:00,ODbL-1.0,False
 ARG,country,1990,undp_hdr.eys,13.39248967,,,years,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
 ARG,country,1991,undp_hdr.eys,13.35243988,,,years,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
 ARG,country,1992,undp_hdr.eys,13.31250985,,,years,undp_hdr,HDR 2025,2026-10-26T01:07:55+00:00,CC-BY-3.0-IGO,False
