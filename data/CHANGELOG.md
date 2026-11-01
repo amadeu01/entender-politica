@@ -4,6 +4,42 @@
 
 - Fonte / Source `ibge_sidra`: versão / version `2026-05-08`
 - Fonte / Source `ipeadata`: versão / version `2016-01-06`
+- Fonte / Source `siconfi`: versão / version `DCA 2014-2025; IPCA SGS 433`
+- Fonte / Source `undp_hdr`: versão / version `HDR 2025`
+- Fonte / Source `vdem`: versão / version `v16`
+- Fonte / Source `wdi`: versão / version `2026-10-08`
+- Fonte / Source `wgi`: versão / version `2026-09-25`
+- Séries novas / New series: 1
+  - `siconfi.transf_educ_basica_uniao_paga BRA`
+- Séries removidas / Removed series: 1
+  - `siconfi.fundeb_uniao_paga BRA`
+- Observações adicionadas / Observations added: 12
+- Observações removidas / Observations removed: 12
+- Valores revisados pela fonte / Values revised upstream: 0
+
+## 2026-11-01
+
+- Fonte / Source `ibge_sidra`: versão / version `2026-05-08`
+- Fonte / Source `ipeadata`: versão / version `2016-01-06`
+- Fonte / Source `siconfi`: versão / version `DCA 2014-2025; IPCA SGS 433`
+- Fonte / Source `undp_hdr`: versão / version `HDR 2025`
+- Fonte / Source `vdem`: versão / version `v16`
+- Fonte / Source `wdi`: versão / version `2026-10-08`
+- Fonte / Source `wgi`: versão / version `2026-09-25`
+- Séries novas / New series: 5
+  - `siconfi.educ_uniao_empenhada BRA`
+  - `siconfi.educ_uniao_paga BRA`
+  - `siconfi.fundeb_uniao_paga BRA`
+  - `siconfi.profissional_uniao_paga BRA`
+  - `siconfi.superior_uniao_paga BRA`
+- Observações adicionadas / Observations added: 60
+- Observações removidas / Observations removed: 0
+- Valores revisados pela fonte / Values revised upstream: 0
+
+## 2026-11-01
+
+- Fonte / Source `ibge_sidra`: versão / version `2026-05-08`
+- Fonte / Source `ipeadata`: versão / version `2016-01-06`
 - Fonte / Source `undp_hdr`: versão / version `HDR 2025`
 - Fonte / Source `vdem`: versão / version `v16`
 - Fonte / Source `wdi`: versão / version `2026-10-08`

@@ -49,6 +49,7 @@ UNIT_DECIMALS = {
     "wgi_estimate": 2,
     "brl_month": 0,
     "brl_month_real": 0,
+    "brl_billion_real": 1,
     "usd_ppp_2021": 0,
     "lcu_per_intl_usd": 2,
     "lcu_per_usd": 2,

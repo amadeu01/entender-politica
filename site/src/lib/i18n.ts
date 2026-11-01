@@ -343,6 +343,7 @@ export const SOURCE_NAMES: Record<string, Record<Lang, string>> = {
   undp_hdr: { pt: "PNUD — Relatório de Desenvolvimento Humano", en: "UNDP — Human Development Report" },
   ibge_sidra: { pt: "IBGE — SIDRA (PNAD Contínua)", en: "IBGE — SIDRA (Continuous PNAD)" },
   ipeadata: { pt: "Ipea — Ipeadata", en: "Ipea — Ipeadata" },
+  siconfi: { pt: "Tesouro Nacional — Siconfi (DCA) e Banco Central (IPCA)", en: "National Treasury — Siconfi (DCA) and Central Bank (IPCA)" },
   vdem: { pt: "V-Dem — Varieties of Democracy", en: "V-Dem — Varieties of Democracy" },
   inep: { pt: "Inep", en: "Inep" },
   capes: { pt: "Capes", en: "Capes" },
@@ -369,6 +370,7 @@ export const SOURCE_CODE: Record<string, string> = {
   ibge_sidra: "pipeline/compilador/sources/sidra.py",
   ipeadata: "pipeline/compilador/sources/ipeadata.py",
   vdem: "pipeline/compilador/sources/vdem.py",
+  siconfi: "pipeline/compilador/sources/siconfi.py",
 };
 
 /** Entities keep the same color on every chart (color follows the entity, not its rank). */
@@ -403,6 +405,7 @@ export const UNIT_DECIMALS: Record<string, number> = {
   wgi_estimate: 2,
   brl_month: 0,
   brl_month_real: 0,
+  brl_billion_real: 1,
   usd_ppp_2021: 0,
   lcu_per_intl_usd: 2,
   lcu_per_usd: 2,
@@ -419,6 +422,7 @@ export const UNIT_LABELS: Record<string, Record<Lang, string>> = {
   per_million_people: { pt: "por milhão de habitantes", en: "per million people" },
   wgi_estimate: { pt: "estimativa (≈ −2,5 a +2,5)", en: "estimate (≈ −2.5 to +2.5)" },
   brl_month: { pt: "R$ por mês", en: "R$ per month" },
+  brl_billion_real: { pt: "R$ bilhões, a preços do último ano completo", en: "R$ billion, at prices of the latest full year" },
   brl_month_real: { pt: "R$ por mês, a preços do último ano", en: "R$ per month, at prices of the latest year" },
   usd_ppp_2021: { pt: "US$ PPC de 2021", en: "2021 PPP US$" },
   lcu_per_intl_usd: { pt: "moeda local por US$ internacional", en: "local currency per international $" },
