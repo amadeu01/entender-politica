@@ -221,6 +221,7 @@ export type EducationVote = {
   proposition: string;
   date: string;
   description: string;
+  main: boolean;
   turn: string | null;
   approved: boolean | null;
   totals: Record<string, number>;

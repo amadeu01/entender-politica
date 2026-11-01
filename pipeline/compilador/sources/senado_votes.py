@@ -59,6 +59,7 @@ def normalize(snapshot: Snapshot, refs: list[PropRef]) -> dict[str, list[dict]]:
                     "proposition": ref.label,
                     "date": item["dataSessao"],
                     "description": item["descricaoVotacao"],
+                    "main": True,
                     "turn": None,
                     "approved": {"A": True, "R": False}.get(item.get("resultadoVotacao")),
                     "totals": dict(Counter(b["siglaVotoParlamentar"] for b in ballots)),

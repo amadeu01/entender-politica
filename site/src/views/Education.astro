@@ -5,6 +5,7 @@
 import Base from "../layouts/Base.astro";
 import Chart from "../components/Chart.astro";
 import Notice from "../components/Notice.astro";
+import VoteList from "../components/VoteList.astro";
 import { education, indicator } from "../lib/data";
 import type { EducationEvent, EducationLaw, EducationMark } from "../lib/data";
 import { asset, SOURCE_NAMES, UI, UNIT_DECIMALS, UNIT_LABELS, formatNumber, url, type Lang } from "../lib/i18n";
@@ -29,6 +30,7 @@ const copy = {
     nominal: "Votações nominais",
     nominalLede: "Placar de cada votação em plenário com registro de voto individual, segundo os dados abertos da Câmara e do Senado.",
     otherVotes: "Outros registros de votação",
+    procedural: (n: number) => `Requerimentos, emendas e destaques (${n})`,
     votesNone: "Nenhuma votação registrada para este subtema.",
     result: { true: "Aprovada", false: "Rejeitada", null: "Resultado não informado" },
     byParty: "Votos por partido",
@@ -36,7 +38,7 @@ const copy = {
     party: "Partido",
     download: "Baixar votos individuais (CSV)",
     fromSource: "Fonte",
-    voteLabels: { "P-NRV": "presidente (não vota)" } as Record<string, string>,
+    voteLabels: { "P-NRV": "presidente (não vota)", "Artigo 17": "presidente (art. 17)", LG: "licença à gestante" } as Record<string, string>,
     votesPending:
       "Só aparecem votações com registro de voto individual nos dados abertos; votações simbólicas e as de outros projetos ainda não coletados constam apenas como registro de que ocorreram, com a casa e a forma.",
     marks: "Marcos legais e métricas no mesmo ano",
@@ -77,6 +79,7 @@ const copy = {
     nominal: "Roll-call votes",
     nominalLede: "The tally of each plenary vote with individual vote records, from the Câmara and Senado open data.",
     otherVotes: "Other vote records",
+    procedural: (n: number) => `Requests, amendments and highlights (${n})`,
     votesNone: "No vote recorded for this sub-topic.",
     result: { true: "Approved", false: "Rejected", null: "Result not reported" },
     byParty: "Votes by party",
@@ -84,7 +87,7 @@ const copy = {
     party: "Party",
     download: "Download individual votes (CSV)",
     fromSource: "Source",
-    voteLabels: { "P-NRV": "chair (does not vote)" } as Record<string, string>,
+    voteLabels: { "P-NRV": "chair (does not vote)", "Artigo 17": "chair (art. 17)", LG: "maternity leave" } as Record<string, string>,
     votesPending:
       "Only votes with individual records in the open data appear as roll calls; symbolic votes and votes on bills not yet collected are listed only as a record that they happened, with the chamber and form.",
     marks: "Legal milestones and metrics in the same year",
@@ -169,6 +172,8 @@ const tabs = [
     edu.submodules.map((sub) => {
       const laws = sub.laws.map((slug) => lawBySlug.get(slug)).filter((l): l is EducationLaw => !!l);
       const votes = sub.events.filter(isVote);
+      const main = sub.votes.filter((v) => v.main);
+      const rest = sub.votes.filter((v) => !v.main);
       const inSub = new Set(sub.laws);
       const lawLink = (slug: string | null, text: string) =>
         slug && inSub.has(slug) ? <a href={`#${sub.id}--${slug}`}>{text}</a> : text;
@@ -219,56 +224,13 @@ const tabs = [
               <>
                 <h4>{copy.nominal}</h4>
                 <p class="meta">{copy.nominalLede}</p>
-                <ul class="votes nominal">
-                  {sub.votes.map((v) => {
-                    const kinds = Object.keys(v.totals).sort((a, b) => v.totals[b] - v.totals[a]);
-                    const label = (k: string) => copy.voteLabels[k] ?? k;
-                    return (
-                      <li>
-                        <strong>{when(v)}</strong> · {v.designation} · {v.proposition} ·{" "}
-                        {copy.chambers[v.chamber]} · <span class="badge">{copy.result[String(v.approved) as "true" | "false" | "null"]}</span>
-                        <br />
-                        {v.description}
-                        <p class="tally">
-                          {kinds.map((k, n) => <>{n > 0 && " · "}<strong>{label(k)}</strong> {formatNumber(v.totals[k], lang, 0)}</>)}
-                        </p>
-                        <details>
-                          <summary>{copy.byParty}</summary>
-                          <div class="table-scroll">
-                            <table class="data">
-                              <thead>
-                                <tr>
-                                  <th scope="col">{copy.party}</th>
-                                  {kinds.map((k) => <th scope="col" class="num">{label(k)}</th>)}
-                                </tr>
-                              </thead>
-                              <tbody>
-                                {Object.entries(v.by_party).map(([party, counts]) => (
-                                  <tr>
-                                    <th scope="row">{party}</th>
-                                    {kinds.map((k) => <td class="num">{counts[k] ? formatNumber(counts[k], lang, 0) : "–"}</td>)}
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
-                          </div>
-                        </details>
-                        {v.orientations.length > 0 && (
-                          <details>
-                            <summary>{copy.orientations}</summary>
-                            <ul>
-                              {v.orientations.map((o) => <li>{o.party_or_bloc}: {o.orientation}</li>)}
-                            </ul>
-                          </details>
-                        )}
-                        <p class="meta">
-                          <a href={asset(`data/education/votes/${v.csv}`)}>{copy.download}</a> ·{" "}
-                          <a href={v.source_url}>{copy.fromSource}</a> · {t.retrieved}: {v.retrieved_at.slice(0, 10)} · {t.license}: {v.license}
-                        </p>
-                      </li>
-                    );
-                  })}
-                </ul>
+                <VoteList lang={lang} votes={main} copy={copy} when={when} />
+                {rest.length > 0 && (
+                  <details>
+                    <summary>{copy.procedural(rest.length)}</summary>
+                    <VoteList lang={lang} votes={rest} copy={copy} when={when} />
+                  </details>
+                )}
               </>
             )
           }

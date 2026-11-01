@@ -1,0 +1,76 @@
+---
+// A list of roll-call votes: result, totals, votes by party, orientations and the CSV.
+import { asset, UI, formatNumber, type Lang } from "../lib/i18n";
+import type { EducationVote } from "../lib/data";
+interface Props {
+  lang: Lang;
+  votes: EducationVote[];
+  // Texts and helpers of the education page.
+  copy: any;
+  when: (v: { year?: number; date?: string | null }) => string;
+}
+const { lang, votes, copy, when } = Astro.props;
+const t = UI[lang];
+---
+
+<ul class="votes nominal">
+  {
+    votes.map((v) => {
+      const kinds = Object.keys(v.totals).sort((a, b) => v.totals[b] - v.totals[a]);
+      const label = (k: string) => copy.voteLabels[k] ?? k;
+      return (
+        <li>
+          <strong>{when(v)}</strong> · {v.designation} · {v.proposition} · {copy.chambers[v.chamber]} ·{" "}
+          <span class="badge">{copy.result[String(v.approved) as "true" | "false" | "null"]}</span>
+          <br />
+          {v.description}
+          <p class="tally">
+            {kinds.map((k, n) => (
+              <>
+                {n > 0 && " · "}
+                <strong>{label(k)}</strong> {formatNumber(v.totals[k], lang, 0)}
+              </>
+            ))}
+          </p>
+          <details>
+            <summary>{copy.byParty}</summary>
+            <div class="table-scroll">
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th scope="col">{copy.party}</th>
+                    {kinds.map((k) => <th scope="col" class="num">{label(k)}</th>)}
+                  </tr>
+                </thead>
+                <tbody>
+                  {
+                    Object.entries(v.by_party).map(([party, counts]) => (
+                      <tr>
+                        <th scope="row">{party}</th>
+                        {kinds.map((k) => <td class="num">{counts[k] ? formatNumber(counts[k], lang, 0) : "–"}</td>)}
+                      </tr>
+                    ))
+                  }
+                </tbody>
+              </table>
+            </div>
+          </details>
+          {
+            v.orientations.length > 0 && (
+              <details>
+                <summary>{copy.orientations}</summary>
+                <ul>
+                  {v.orientations.map((o) => <li>{o.party_or_bloc}: {o.orientation}</li>)}
+                </ul>
+              </details>
+            )
+          }
+          <p class="meta">
+            <a href={asset(`data/education/votes/${v.csv}`)}>{copy.download}</a> ·{" "}
+            <a href={v.source_url}>{copy.fromSource}</a> · {t.retrieved}: {v.retrieved_at.slice(0, 10)} · {t.license}: {v.license}
+          </p>
+        </li>
+      );
+    })
+  }
+</ul>

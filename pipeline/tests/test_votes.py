@@ -222,3 +222,35 @@ def test_vote_files_quote_names_and_render_attaches_votes_to_laws():
     assert [v["id"] for v in doc["laws"][0]["votes"]] == ["7-1"]
     assert "ballots" not in doc["laws"][0]["votes"][0]
     assert doc["submodules"][0]["votes"][0]["designation"] == law.designation
+
+
+@pytest.mark.parametrize(
+    ("description", "main"),
+    [
+        ("Aprovada, em segundo turno, a Proposta de Emenda à Constituição nº 15, de 2015", True),
+        ("Aprovado o Substitutivo do Senado Federal ao Projeto de Lei nº 4.372", True),
+        (
+            "Aprovada a Medida Provisória nº 746 de 2016, na forma do Projeto de Lei de Conversão",
+            True,
+        ),
+        ("Aprovada a Redação Final.", True),
+        (
+            "Aprovada a Proposta de Emenda à Constituição nº 241, ressalvados os destaques.",
+            True,
+        ),
+        (
+            "Aprovado o Substitutivo do Senado ao Projeto de Lei, ressalvados os destaques",
+            True,
+        ),
+        ("Aprovada a Emenda de Plenário nº 40 ao Projeto de Lei nº 4.372", False),
+        ("Aprovado o Requerimento de urgência para o Projeto de Lei nº 5.230", False),
+        ("Aprovado o Requerimento. Sim: 264; Não: 41", False),
+        ("Aprovada a Emenda n° 6. Sim: 212; não: 205", False),
+        ("Rejeitada a Emenda Aglutinativa n° 5.", False),
+        ("Mantido o texto. Sim: 399; não: 19", False),
+        ("Rejeitado o Recurso 18/2024, contra apreciação terminativa do Projeto de Lei", False),
+        ("Inadmitidos, em globo, os destaques simples", False),
+    ],
+)
+def test_is_main_separates_the_decision_from_procedural_votes(description, main):
+    assert camara_votes.is_main(description) is main

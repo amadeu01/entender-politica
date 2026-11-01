@@ -115,6 +115,42 @@ def fetch(refs: list[PropRef], client: httpx.Client) -> tuple[list[RawFile], str
     return list(files.values()), datetime.now(UTC).strftime("%Y-%m-%d")
 
 
+_DECISIONS = ("aprovad", "rejeitad")
+_BILL_WORDS = (
+    "proposta de emenda",
+    "projeto de lei",
+    "medida provisória",
+    "substitutivo",
+    "redação final",
+)
+_PROCEDURAL_WORDS = (
+    "requerimento",
+    "emenda n",
+    "emenda de plenário",
+    "emenda aglutinativa",
+    "destaque",
+    "recurso",
+)
+
+
+def is_main(description: str) -> bool:
+    """Whether a plenary vote decides the bill itself, not a request, amendment or highlight.
+
+    The API has no field for this, so it reads the vote's description, which always opens
+    with the decision (`Aprovada a Proposta de Emenda ...`, `Rejeitado o Requerimento`).
+    It is the bill, not a procedural term, that must come first: a final vote often ends
+    with `ressalvados os destaques`, while `Aprovada a Emenda n. 6 ao Projeto de Lei`
+    names the amendment first. A wrong guess only moves a vote between the main list and
+    the collapsed one.
+    """
+    text = description.casefold().strip()
+    if not text.startswith(_DECISIONS):
+        return False
+    bill = min((text.find(w) for w in _BILL_WORDS if w in text), default=-1)
+    procedural = min((text.find(w) for w in _PROCEDURAL_WORDS if w in text), default=-1)
+    return bill >= 0 and (procedural < 0 or bill < procedural)
+
+
 def _json(snapshot: Snapshot, name: str) -> dict:
     return json.loads(snapshot.read(name))
 
@@ -149,6 +185,7 @@ def normalize(snapshot: Snapshot, refs: list[PropRef]) -> dict[str, list[dict]]:
                     "proposition": ref.label,
                     "date": detail["data"],
                     "description": detail["descricao"],
+                    "main": is_main(detail["descricao"]),
                     "turn": detail.get("descUltimaAberturaVotacao"),
                     "approved": {1: True, 0: False}.get(detail.get("aprovacao")),
                     "totals": dict(Counter(b["tipoVoto"] for b in ballots)),
