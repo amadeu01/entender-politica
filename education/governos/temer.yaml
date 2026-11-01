@@ -1,0 +1,187 @@
+# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
+# Itens sem `checked` ainda não foram conferidos com o registro oficial.
+period: temer
+includes:
+- temer-interino
+summary:
+  pt: O gasto público em educação foi de {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2016) }}% do PIB em 2016
+    e {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2018) }}% em 2018, e o gasto em pesquisa e desenvolvimento
+    de {{ v("wdi.gb_xpd_rsdv_gd_zs", "BRA", 2016) }}% a {{ v("wdi.gb_xpd_rsdv_gd_zs", "BRA", 2018) }}%
+    do PIB. O governo aprovou o teto de gastos, a reforma do ensino médio, a base curricular nacional
+    e a reforma do Fies.
+  en: Public education spending was {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2016) }}% of GDP in 2016 and
+    {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2018) }}% in 2018, and research and development spending went
+    from {{ v("wdi.gb_xpd_rsdv_gd_zs", "BRA", 2016) }}% to {{ v("wdi.gb_xpd_rsdv_gd_zs", "BRA", 2018)
+    }}% of GDP. The government passed the spending cap, the secondary school reform, the national curriculum
+    base and the Fies reform.
+context:
+  pt: A emenda do teto limita o crescimento da despesa primária federal; o piso de educação, por sua vez,
+    passou a crescer pela inflação (a diferença entre as duas regras nos primeiros anos não foi conferida
+    com dados orçamentários). Estados e municípios, que respondem pela maior parte do gasto, não estão
+    sujeitos ao teto federal. A recessão e a lenta recuperação afetam as mesmas séries.
+  en: The cap amendment limits growth of federal primary spending; the education floor, in turn, began
+    to grow with inflation (the gap between the two rules in the first years was not checked against budget
+    data). States and municipalities, which account for most spending, are not subject to the federal
+    cap. The recession and slow recovery affect the same series.
+started:
+- title:
+    pt: Novo regime fiscal (teto de gastos)
+    en: New fiscal regime (spending cap)
+  year: 2016
+  date: '2016-12-15'
+  instrument: Emenda Constitucional 95/2016
+  norm: ec-95-2016
+  submodules:
+  - financiamento
+  description:
+    pt: Limita por vinte anos o crescimento das despesas primárias da União ao valor do ano anterior corrigido
+      pela inflação. O piso de educação manteve a regra anterior em 2017 e passa a ser corrigido pela
+      inflação a partir de 2018, e a complementação da União ao Fundeb fica fora do teto; a leitura do
+      piso é contestada no Supremo Tribunal Federal.
+    en: Caps for twenty years the growth of the Union's primary spending at the previous year's value
+      adjusted for inflation. The education floor kept the previous rule in 2017 and is adjusted for inflation
+      from 2018, and the Union's Fundeb top-up sits outside the cap; the reading of the floor is contested
+      in the Supreme Federal Court.
+  source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc95.htm
+- title:
+    pt: Reforma do ensino médio
+    en: Secondary school reform
+  year: 2017
+  date: '2017-02-16'
+  instrument: Lei 13.415/2017
+  norm: lei-13415-2017
+  submodules:
+  - ensino-medio
+  - educacao-profissional
+  description:
+    pt: Altera a LDB para ampliar a carga horária, criar itinerários formativos e adotar a base curricular
+      nacional; originou-se de medida provisória de 2016.
+    en: Amends the LDB to lengthen school hours, create formative itineraries and adopt the national curriculum
+      base; originated in a 2016 provisional measure.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13415.htm
+- title:
+    pt: Reforma do Fies
+    en: Fies reform
+  year: 2017
+  date: '2017-12-07'
+  instrument: Lei 13.530/2017
+  norm: lei-13530-2017
+  submodules:
+  - graduacao
+  - financiamento
+  description:
+    pt: Cria novas modalidades de financiamento estudantil, com pagamento ligado à renda e fundo garantidor.
+    en: Creates new student financing modalities, with income-linked repayment and a guarantee fund.
+  source: https://legis.senado.leg.br/norma/26314723
+  checked: '2026-11-01'
+- title:
+    pt: Base Nacional Comum Curricular
+    en: National Common Curriculum Base
+  year: 2017
+  date: '2017-12-22'
+  submodules:
+  - educacao-infantil
+  - ensino-fundamental
+  - ensino-medio
+  description:
+    pt: Define as aprendizagens essenciais da educação infantil e do ensino fundamental (aprovada em 2017)
+      e do ensino médio (2018).
+    en: Defines the essential learning of early childhood and primary education (approved in 2017) and
+      of secondary education (2018).
+  source: http://basenacionalcomum.mec.gov.br/
+- title:
+    pt: Programa Mais Alfabetização
+    en: More Literacy Program
+  year: 2018
+  date: '2018-02-22'
+  instrument: Portaria MEC 142/2018
+  submodules:
+  - ensino-fundamental
+  description:
+    pt: Apoia a alfabetização nos dois primeiros anos do ensino fundamental com assistentes de alfabetização;
+      sucede o pacto de 2012.
+    en: Supports literacy in the first two years of primary school with literacy assistants; succeeds
+      the 2012 pact.
+  source: https://www.gov.br/mec/pt-br
+cuts:
+- kind: cut
+  title:
+    pt: Fim das novas bolsas de graduação do Ciência sem Fronteiras
+    en: End of new undergraduate Science without Borders scholarships
+  year: 2016
+  date: '2016-07-26'
+  submodules:
+  - graduacao
+  - pos-graduacao-ciencia
+  description:
+    pt: O governo interrompeu a concessão de novas bolsas de graduação no exterior do programa, mantendo
+      as de pós-graduação. O ministro da época afirmou em 2017 que novas vagas já estavam suspensas desde
+      2015.
+    en: The government stopped granting new undergraduate scholarships abroad under the program, keeping
+      graduate ones. The minister of the time said in 2017 that new places had already been suspended
+      since 2015.
+  source: https://www12.senado.leg.br/radio/1/noticia/2016/07/26/alunos-de-graduacao-nao-poderao-mais-participar-do-programa-ciencia-sem-fronteiras
+- kind: fiscal_rule
+  title:
+    pt: Teto de gastos e o orçamento federal
+    en: Spending cap and the federal budget
+  year: 2017
+  submodules:
+  - financiamento
+  - pos-graduacao-ciencia
+  description:
+    pt: A regra fiscal passou a limitar a despesa discricionária federal, incluindo universidades e agências
+      de pesquisa, enquanto o piso de educação crescia pela inflação. O gasto federal pago em educação,
+      a preços constantes e em bilhões de reais, foi de {{ v('siconfi.educ_uniao_paga', 'BRA', 2016) }}
+      em 2016 e {{ v('siconfi.educ_uniao_paga', 'BRA', 2018) }} em 2018; o pago em ensino superior, de
+      {{ v('siconfi.superior_uniao_paga', 'BRA', 2016) }} a {{ v('siconfi.superior_uniao_paga', 'BRA',
+      2018) }}.
+    en: The fiscal rule began to limit federal discretionary spending, including universities and research
+      agencies, while the education floor grew with inflation. Federal spending paid on education, at
+      constant prices and in billions of reais, was {{ v('siconfi.educ_uniao_paga', 'BRA', 2016) }} in
+      2016 and {{ v('siconfi.educ_uniao_paga', 'BRA', 2018) }} in 2018; paid on higher education, {{ v('siconfi.superior_uniao_paga',
+      'BRA', 2016) }} to {{ v('siconfi.superior_uniao_paga', 'BRA', 2018) }}.
+  source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc95.htm
+- kind: withheld
+  title:
+    pt: Bloqueio do orçamento de ciência e tecnologia que alcançou o CNPq
+    en: Block on the science and technology budget that reached CNPq
+  year: 2017
+  submodules:
+  - pos-graduacao-ciencia
+  description:
+    pt: Em 2017 o orçamento do ministério de ciência e tecnologia sofreu bloqueio relevante; o CNPq foi
+      poupado de início e depois atingido, e parte do bloqueio foi revertida em seguida. Valores divergem
+      entre fontes e não foram conferidos.
+    en: In 2017 the science and technology ministry's budget suffered a significant block; CNPq was spared
+      at first and then hit, and part of the block was later reversed. Amounts differ across sources and
+      were not checked.
+  source: https://ihu.unisinos.br/570861
+indicators:
+- wdi.se_xpd_totl_gd_zs
+- wdi.gb_xpd_rsdv_gd_zs
+- siconfi.educ_uniao_paga
+- siconfi.superior_uniao_paga
+- undp_hdr.mys
+- wdi.se_ter_enrr
+- wdi.se_sec_enrr
+limitations:
+- pt: Os itens desta página foram redigidos a partir de pesquisa em fontes secundárias, sem acesso aos
+    textos oficiais no ambiente de desenvolvimento; cada item mostra se foi conferido com o registro oficial.
+  en: The items on this page were written from research in secondary sources, without access to the official
+    texts in the development environment; each item shows whether it was checked against the official
+    record.
+- pt: Anos médios de estudo e alfabetização de adultos mudam devagar por construção e refletem décadas
+    de matrículas; uma variação num mandato não mede o efeito das políticas daquele mandato. Séries de
+    matrícula por etapa só existem a partir de 2007 ou 2012, e não há série de aprendizado nem de gasto
+    federal em reais no catálogo.
+  en: Mean years of schooling and adult literacy move slowly by construction and reflect decades of enrollment;
+    a change within one term does not measure that term's policies. Enrollment series by level only start
+    in 2007 or 2012, and the catalog has no learning series or federal spending in reais.
+references:
+- citation: Planalto — Legislação federal
+  url: https://www.planalto.gov.br/ccivil_03/
+- citation: Banco Mundial — World Development Indicators (educação)
+  url: https://datatopics.worldbank.org/world-development-indicators/
+- citation: PNUD — Relatório de Desenvolvimento Humano, dados
+  url: https://hdr.undp.org/data-center
