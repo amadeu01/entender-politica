@@ -1,0 +1,186 @@
+# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
+# Itens sem `checked` ainda não foram conferidos com o registro oficial.
+period: lula-3
+summary:
+  pt: A taxa bruta de matrícula na educação superior foi de {{ v("wdi.se_ter_enrr", "BRA", 2022) }}% em
+    2022 a {{ v("wdi.se_ter_enrr", "BRA", 2024) }}% em 2024, e o gasto público em educação foi de {{ v("wdi.se_xpd_totl_gd_zs",
+    "BRA", 2022) }}% do PIB em 2022, último ano com dado. O governo revisou a lei de cotas e o novo ensino
+    médio, criou o Pé-de-Meia e o compromisso nacional de alfabetização, e sancionou o novo plano nacional
+    de educação.
+  en: The gross tertiary enrollment ratio went from {{ v("wdi.se_ter_enrr", "BRA", 2022) }}% in 2022 to
+    {{ v("wdi.se_ter_enrr", "BRA", 2024) }}% in 2024, and public education spending was {{ v("wdi.se_xpd_totl_gd_zs",
+    "BRA", 2022) }}% of GDP in 2022, the last year with data. The government revised the quota law and
+    the new secondary school model, created Pé-de-Meia and the national literacy commitment, and signed
+    the new national education plan.
+context:
+  pt: O governo ainda está em exercício e as séries do Banco Mundial e do PNUD têm defasagem de publicação
+    de um a três anos, de modo que quase nenhum resultado das políticas listadas aparece nos dados. Qualquer
+    leitura de efeito é prematura.
+  en: The government is still in office and the World Bank and UNDP series lag publication by one to three
+    years, so almost no result of the listed policies shows in the data. Any reading of effect is premature.
+started:
+- title:
+    pt: Compromisso Nacional Criança Alfabetizada
+    en: National Commitment to Literate Children
+  year: 2023
+  date: '2023-06-12'
+  instrument: Decreto 11.556/2023
+  submodules:
+  - ensino-fundamental
+  - planejamento
+  description:
+    pt: Articula União, estados e municípios para alfabetizar as crianças na idade certa; revoga a política
+      de alfabetização de 2019.
+    en: Coordinates the Union, states and municipalities to make children literate at the right age; revokes
+      the 2019 literacy policy.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11556.htm
+- title:
+    pt: Fim do programa de escolas cívico-militares
+    en: End of the civic-military schools program
+  year: 2023
+  date: '2023-07-19'
+  instrument: Decreto 11.611/2023
+  submodules:
+  - ensino-fundamental
+  - ensino-medio
+  description:
+    pt: Revoga o decreto de 2019 que criou o programa federal; programas estaduais continuam.
+    en: Revokes the 2019 decree that created the federal program; state programs continue.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11611.htm
+- title:
+    pt: Programa Escola em Tempo Integral
+    en: Full-Time School Program
+  year: 2023
+  date: '2023-07-31'
+  instrument: Lei 14.640/2023
+  submodules:
+  - ensino-fundamental
+  - ensino-medio
+  description:
+    pt: Dá assistência técnica e financeira da União para ampliar matrículas em tempo integral.
+    en: Provides Union technical and financial assistance to expand full-time enrollment.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/L14640.htm
+- title:
+    pt: Revisão da lei de cotas
+    en: Revision of the quota law
+  year: 2023
+  date: '2023-11-13'
+  instrument: Lei 14.723/2023
+  norm: lei-14723-2023
+  submodules:
+  - graduacao
+  - pos-graduacao-ciencia
+  description:
+    pt: Altera o teto de renda familiar per capita, inclui quilombolas e estende ações afirmativas à pós-graduação.
+    en: Changes the per capita family income ceiling, includes quilombolas and extends affirmative action
+      to graduate programs.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/L14723.htm
+- title:
+    pt: Pé-de-Meia
+    en: Pé-de-Meia
+  year: 2024
+  date: '2024-01-16'
+  instrument: Lei 14.818/2024
+  submodules:
+  - ensino-medio
+  description:
+    pt: Incentivo financeiro em poupança para estudantes de famílias do Cadastro Único matriculados no
+      ensino médio público, para estimular a permanência e a conclusão.
+    en: Savings-based financial incentive for students from Cadastro Único families enrolled in public
+      secondary school, to encourage retention and completion.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/L14818.htm
+- title:
+    pt: Revisão do novo ensino médio
+    en: Revision of the new secondary school model
+  year: 2024
+  date: '2024-07-31'
+  instrument: Lei 14.945/2024
+  norm: lei-14945-2024
+  submodules:
+  - ensino-medio
+  - educacao-profissional
+  description:
+    pt: Amplia a formação geral básica e reorganiza os itinerários formativos, alterando a reforma de
+      2017.
+    en: Expands basic general education and reorganizes formative itineraries, changing the 2017 reform.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/L14945.htm
+- title:
+    pt: Plano Nacional de Educação 2026
+    en: National Education Plan 2026
+  year: 2026
+  date: '2026-04-14'
+  instrument: Lei 15.388/2026
+  norm: lei-15388-2026
+  submodules:
+  - planejamento
+  - financiamento
+  description:
+    pt: Novo plano decenal com metas por etapa e a meta de elevar o investimento público em educação como
+      proporção do PIB.
+    en: New ten-year plan with goals by level and the goal of raising public investment in education as
+      a share of GDP.
+  source: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/L15388.htm
+cuts:
+- kind: fiscal_rule
+  title:
+    pt: Novo arcabouço fiscal
+    en: New fiscal framework
+  year: 2023
+  date: '2023-08-30'
+  submodules:
+  - financiamento
+  description:
+    pt: A lei complementar substitui o teto de gastos por regra que limita o crescimento real da despesa
+      a uma fração do crescimento da receita, dentro de piso e teto; a tramitação no Senado excluiu despesas
+      do Fundeb do limite (texto final não conferido). O gasto federal pago em educação, a preços constantes
+      e em bilhões de reais, foi de {{ v('siconfi.educ_uniao_paga', 'BRA', 2022) }} em 2022 e {{ v('siconfi.educ_uniao_paga',
+      'BRA', 2025) }} em 2025.
+    en: The complementary law replaces the spending cap with a rule limiting real spending growth to a
+      fraction of revenue growth, within a floor and a ceiling; passage in the Senate left Fundeb expenses
+      out of the limit (final text not checked). Federal spending paid on education, at constant prices
+      and in billions of reais, was {{ v('siconfi.educ_uniao_paga', 'BRA', 2022) }} in 2022 and {{ v('siconfi.educ_uniao_paga',
+      'BRA', 2025) }} in 2025.
+  source: https://www.planalto.gov.br/ccivil_03/leis/lcp/Lcp200.htm
+- kind: withheld
+  title:
+    pt: Decisão do TCU sobre os recursos do Pé-de-Meia
+    en: Federal Court of Accounts decision on Pé-de-Meia funds
+  year: 2025
+  submodules:
+  - ensino-medio
+  - financiamento
+  description:
+    pt: 'Ato de controle externo, não corte do governo: o Tribunal de Contas da União questionou a forma
+      de financiamento do programa e bloqueou recursos de fundos no início de 2025; o governo recorreu
+      e os pagamentos foram depois liberados. A sequência dos fatos diverge entre as fontes.'
+    en: 'An external-oversight act, not a government cut: the Federal Court of Accounts questioned how
+      the program was financed and blocked fund resources in early 2025; the government appealed and payments
+      were later released. The sequence of events differs across sources.'
+  source: https://portal.tcu.gov.br/
+indicators:
+- wdi.se_xpd_totl_gd_zs
+- siconfi.educ_uniao_paga
+- siconfi.superior_uniao_paga
+- wdi.se_ter_enrr
+- wdi.se_sec_enrr
+- undp_hdr.mys
+limitations:
+- pt: Os itens desta página foram redigidos a partir de pesquisa em fontes secundárias, sem acesso aos
+    textos oficiais no ambiente de desenvolvimento; cada item mostra se foi conferido com o registro oficial.
+  en: The items on this page were written from research in secondary sources, without access to the official
+    texts in the development environment; each item shows whether it was checked against the official
+    record.
+- pt: Anos médios de estudo e alfabetização de adultos mudam devagar por construção e refletem décadas
+    de matrículas; uma variação num mandato não mede o efeito das políticas daquele mandato. Séries de
+    matrícula por etapa só existem a partir de 2007 ou 2012, e não há série de aprendizado nem de gasto
+    federal em reais no catálogo.
+  en: Mean years of schooling and adult literacy move slowly by construction and reflect decades of enrollment;
+    a change within one term does not measure that term's policies. Enrollment series by level only start
+    in 2007 or 2012, and the catalog has no learning series or federal spending in reais.
+references:
+- citation: Planalto — Legislação federal
+  url: https://www.planalto.gov.br/ccivil_03/
+- citation: Banco Mundial — World Development Indicators (educação)
+  url: https://datatopics.worldbank.org/world-development-indicators/
+- citation: PNUD — Relatório de Desenvolvimento Humano, dados
+  url: https://hdr.undp.org/data-center
