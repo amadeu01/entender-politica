@@ -1,5 +1,3 @@
-# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
-# Itens sem `checked` ainda não foram conferidos com o registro oficial.
 period: itamar
 includes:
 - itamar-interino
@@ -64,6 +62,7 @@ cuts:
       (effect not checked).
   source: https://www2.camara.leg.br/legin/fed/emecrv/1994/emendaconstitucionalderevisao-1-1-marco-1994-363599-norma-pl.html
   checked: '2026-11-01'
+  instrument: Emenda Constitucional de Revisão 1/1994
 indicators:
 - undp_hdr.mys
 - wdi.se_adt_litr_zs

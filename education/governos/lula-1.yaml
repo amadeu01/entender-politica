@@ -1,5 +1,3 @@
-# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
-# Itens sem `checked` ainda não foram conferidos com o registro oficial.
 period: lula-1
 summary:
   pt: Os anos médios de estudo dos adultos foram de {{ v("undp_hdr.mys", "BRA", 2002) }} em 2002 a {{
@@ -118,6 +116,13 @@ started:
     en: Replaces Fundef with a fund covering all of basic education, with a Union top-up; regulated in
       2007.
   source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc53.htm
+  later:
+  - year: 2020
+    status: expanded
+    by: Emenda Constitucional 108/2020
+    note:
+      pt: Tornado permanente em 2020, com complementação da União crescente.
+      en: Made permanent in 2020, with a growing Union top-up.
 cuts:
 - kind: earmark
   title:
@@ -132,6 +137,7 @@ cuts:
     en: The 2003 amendment extended the Union revenue delinking, which kept reaching the base of the federal
       education minimum until the reduction for education from 2009.
   source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc42.htm
+  instrument: Emenda Constitucional 42/2003
 indicators:
 - wdi.se_xpd_totl_gd_zs
 - undp_hdr.mys

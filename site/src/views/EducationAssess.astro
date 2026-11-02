@@ -1,0 +1,157 @@
+---
+// Guide: how to assess a government's education record and its adopted, kept and cancelled
+// policies critically, with the site's tools. Method only: it ranks no government (ADR 0003, 0013).
+import Base from "../layouts/Base.astro";
+import Notice from "../components/Notice.astro";
+import { eduGovernments, eduGovernment } from "../lib/data";
+import { REPO, url, type Lang } from "../lib/i18n";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const govPath = (id: string) => `${url(lang, "education")}${lang === "pt" ? "governos" : "governments"}/${id}/`;
+const pages = eduGovernments().map((id) => eduGovernment(id, lang));
+const examples = pages.filter((g) => ["bolsonaro", "lula-3", "temer", "dilma-2"].includes(g.id));
+
+const copy = {
+  pt: {
+    title: "Como avaliar criticamente um governo e suas políticas de educação",
+    back: "Educação",
+    lede: "O site não dá nota nem faz ranking de governos (ADR 0003). Esta página mostra como montar uma análise crítica com os dados e as páginas por governo, incluindo as políticas adotadas, as mantidas e as canceladas.",
+    stepsTitle: "Cinco passos",
+    steps: [
+      ["Defina “sucesso” antes de olhar os números", "Acesso (matrícula), permanência (abandono, atraso escolar), aprendizado (Saeb, Pisa), equidade (por renda e raça) e escolaridade dos adultos são coisas diferentes e nem sempre andam juntas. Escolha o que será medido e por quê, antes de ver qual governo “vai bem”."],
+      ["Separe insumo, acesso e resultado", "Gasto e lei são insumo. Matrícula é acesso. Aprendizado e conclusão são resultado. O catálogo tem muito insumo e acesso e quase nenhum resultado: sem aprendizado, não dá para dizer se a qualidade melhorou."],
+      ["Respeite a defasagem", "Anos médios de estudo e analfabetismo de adultos mudam sobretudo porque gerações mais novas e mais escolarizadas substituem as mais velhas: o que muda num mandato reflete décadas de matrículas. Indicadores de crianças e jovens (frequência líquida, atraso, conclusão) tendem a responder mais cedo, mas não necessariamente no mesmo ano. Por isso a tabela de variação mostra defasagens de zero a dois anos."],
+      ["Compare com algo", "Compare com a América Latina e os vizinhos, que estão na tabela: se todos subiram junto, a causa provavelmente não é o governo. E compare com a tendência anterior: a seção “Ritmo antes e durante” de cada página mostra se a série andava no mesmo passo antes. Só vale falar em mudança quando houve quebra de ritmo."],
+      ["Para falar em impacto, só com desenho causal", "Experimento, diferenças-em-diferenças, descontinuidade ou controle sintético, em estudo revisado por pares. Sem isso, a análise é descritiva. A literatura causal existe para poucas políticas (como o Fundef e o Bolsa Escola) e não para a maioria."],
+    ],
+    policiesTitle: "Políticas adotadas, mantidas e canceladas",
+    policiesLede: "Uma política tem uma história maior que o governo que a começou. Em cada cartão de “O que começou”, o bloco “Depois” diz o que veio a seguir: mantida, ampliada, reduzida, alterada, substituída ou encerrada, e por qual norma.",
+    adoptedTitle: "Ao avaliar uma política adotada, pergunte",
+    adopted: [
+      "Qual problema ela atacava e em que métrica ele aparecia?",
+      "Quem executa: a União, os estados ou os municípios? Se a União só induz, o resultado depende de quem aderiu.",
+      "Quando o efeito deveria aparecer, e a série já se movia nesse ritmo antes?",
+      "Houve avaliação com desenho causal? Se não houve, trate qualquer efeito como hipótese.",
+      "O que mais mudou ao mesmo tempo (renda, demografia, outras políticas, pandemia)?",
+    ],
+    cancelledTitle: "Ao avaliar uma política cancelada ou substituída, pergunte",
+    cancelled: [
+      "Foi encerrada por quê: avaliação negativa, mudança de prioridade, falta de recurso ou fusão com outra?",
+      "O que a substituiu e houve período de transição ou lacuna?",
+      "A política original tinha evidência de efeito, a favor ou contra? Cancelar algo sem efeito e cancelar algo que funcionava são casos diferentes.",
+      "O custo da troca: tempo de implementação, perda de equipes e de série histórica de dados.",
+      "Quem tomou a decisão: o Executivo, o Congresso ou o Judiciário?",
+    ],
+    cutsTitle: "Ao analisar um corte, pergunte",
+    cuts: [
+      "É dotação, bloqueio (contingenciamento) ou execução? O site mostra execução; um bloqueio revertido no mesmo ano não aparece.",
+      "Em valores nominais ou reais? Um valor que sobe em reais correntes pode cair em reais constantes. As séries federais do site estão em reais constantes.",
+      "O gasto é da União ou de todos os entes? A razão gasto/PIB sobe quando o PIB cai, sem que haja mais gasto.",
+      "Pago abaixo de empenhado pode ser adiamento (restos a pagar), não corte.",
+      "A que métrica o corte poderia chegar, e em quanto tempo?",
+    ],
+    trapsTitle: "Armadilhas comuns",
+    traps: [
+      "Atribuir ao presidente o que o Congresso, o Judiciário, os estados ou o ciclo econômico fizeram. As páginas por governo indicam quando o ato foi do Congresso.",
+      "Anos com troca de presidente: dados anuais não separam os dois (a tabela sinaliza esses anos).",
+      "Mudança de metodologia ou quebra de série: compare dentro da mesma série.",
+      "Matrícula bruta acima de cem por cento (repetentes e alunos fora da idade): não é erro, mas exige cuidado.",
+      "Escolher o período, o país de comparação ou o indicador depois de ver o resultado.",
+    ],
+    toolsTitle: "Onde ver isso no site",
+    toolsLede: "Cada página por governo reúne: o que começou (com o destino de cada política), cortes e limites, variação das séries, ritmo antes e durante, gráficos com vizinhos, outros fatores e limitações. Alguns exemplos:",
+    gapsTitle: "O que o site ainda não mede",
+    gaps: "Aprendizado (Saeb, Ideb, Pisa), analfabetismo funcional, dotação autorizada e bloqueio por ano, matrículas por rede e etapa antes de 2007 ou 2012, e séries por programa (Pronatec, Fies, ProUni, Pé-de-Meia). Veja a auditoria dos dados.",
+    audit: "Auditoria dos dados de educação",
+    government: "Governo",
+  },
+  en: {
+    title: "How to assess a government and its education policies critically",
+    back: "Education",
+    lede: "The site gives no grades and no ranking of governments (ADR 0003). This page shows how to build a critical analysis with the data and the per-government pages, including adopted, kept and cancelled policies.",
+    stepsTitle: "Five steps",
+    steps: [
+      ["Define “success” before looking at numbers", "Access (enrollment), retention (dropout, age-grade lag), learning (Saeb, Pisa), equity (by income and race) and adult schooling are different things and do not always move together. Choose what will be measured, and why, before seeing which government “does well”."],
+      ["Separate input, access and outcome", "Spending and laws are inputs. Enrollment is access. Learning and completion are outcomes. The catalog has a lot of input and access and almost no outcomes: without learning data you cannot say quality improved."],
+      ["Respect the lag", "Mean years of schooling and adult illiteracy change mainly because younger, more schooled generations replace older ones: what changes in a term reflects decades of enrollment. Indicators for children and youth (net attendance, lag, completion) tend to respond sooner, but not necessarily in the same year. That is why the change table shows lags of zero to two years."],
+      ["Compare with something", "Compare with Latin America and the neighbors, which are in the table: if all rose together, the cause is probably not the government. And compare with the earlier trend: each page's “Pace before and during” section shows whether the series moved at the same pace before. Talk of change only when the pace broke."],
+      ["To speak of impact, only with a causal design", "Experiment, difference-in-differences, discontinuity or synthetic control, in a peer-reviewed study. Without that, the analysis is descriptive. Causal literature exists for few policies (such as Fundef and Bolsa Escola) and not for most."],
+    ],
+    policiesTitle: "Adopted, kept and cancelled policies",
+    policiesLede: "A policy has a longer history than the government that started it. In each “What started” card, the “Afterwards” block says what came next: kept, expanded, reduced, amended, replaced or ended, and by which norm.",
+    adoptedTitle: "When assessing an adopted policy, ask",
+    adopted: [
+      "What problem did it target and in which metric did that problem show?",
+      "Who runs it: the Union, states or municipalities? If the Union only induces, the result depends on who joined.",
+      "When should the effect appear, and was the series already moving at that pace before?",
+      "Was there an evaluation with a causal design? If not, treat any effect as a hypothesis.",
+      "What else changed at the same time (income, demographics, other policies, the pandemic)?",
+    ],
+    cancelledTitle: "When assessing a cancelled or replaced policy, ask",
+    cancelled: [
+      "Why did it end: negative evaluation, changed priorities, lack of funds or a merger with another?",
+      "What replaced it, and was there a transition period or a gap?",
+      "Did the original have evidence of effect, for or against? Cancelling something without effect and cancelling something that worked are different cases.",
+      "The cost of switching: implementation time, lost teams and a broken data series.",
+      "Who decided: the Executive, Congress or the courts?",
+    ],
+    cutsTitle: "When analyzing a cut, ask",
+    cuts: [
+      "Is it appropriation, withholding (contingenciamento) or execution? The site shows execution; a block reversed within the year does not appear.",
+      "In nominal or real terms? A figure that rises in current reais can fall in constant reais. The site's federal series are in constant reais.",
+      "Is the spending the Union's or all levels'? The spending/GDP ratio rises when GDP falls, with no extra spending.",
+      "Paid below committed can be deferral (restos a pagar), not a cut.",
+      "Which metric could the cut reach, and how long would it take?",
+    ],
+    trapsTitle: "Common traps",
+    traps: [
+      "Crediting the president with what Congress, the courts, states or the economic cycle did. The per-government pages say when an act was Congress's.",
+      "Years with a change of president: annual data cannot separate the two (the table flags these years).",
+      "Methodology changes or series breaks: compare within the same series.",
+      "Gross enrollment above one hundred percent (repeaters and over-age students): not an error, but needs care.",
+      "Choosing the period, the comparison country or the indicator after seeing the result.",
+    ],
+    toolsTitle: "Where to see this on the site",
+    toolsLede: "Each per-government page gathers: what started (with each policy's fate), cuts and limits, change in the series, pace before and during, charts with neighbors, other factors and limitations. Some examples:",
+    gapsTitle: "What the site does not measure yet",
+    gaps: "Learning (Saeb, Ideb, Pisa), functional illiteracy, authorized appropriation and withholding per year, enrollment by system and level before 2007 or 2012, and program-level series (Pronatec, Fies, ProUni, Pé-de-Meia). See the data audit.",
+    audit: "Education data audit",
+    government: "Government",
+  },
+}[lang];
+---
+
+<Base lang={lang} title={copy.title} route="education">
+  <p class="meta"><a href={url(lang, "education")}>{copy.back}</a></p>
+  <h1>{copy.title}</h1>
+  <p class="lede">{copy.lede}</p>
+  <Notice lang={lang} />
+
+  <h2>{copy.stepsTitle}</h2>
+  <ol>
+    {copy.steps.map(([head, body]) => <li><strong>{head}.</strong> {body}</li>)}
+  </ol>
+
+  <h2>{copy.policiesTitle}</h2>
+  <p>{copy.policiesLede}</p>
+  <h3>{copy.adoptedTitle}</h3>
+  <ul>{copy.adopted.map((q) => <li>{q}</li>)}</ul>
+  <h3>{copy.cancelledTitle}</h3>
+  <ul>{copy.cancelled.map((q) => <li>{q}</li>)}</ul>
+  <h3>{copy.cutsTitle}</h3>
+  <ul>{copy.cuts.map((q) => <li>{q}</li>)}</ul>
+
+  <h2>{copy.trapsTitle}</h2>
+  <ul>{copy.traps.map((q) => <li>{q}</li>)}</ul>
+
+  <h2>{copy.toolsTitle}</h2>
+  <p>{copy.toolsLede}</p>
+  <ul>
+    {examples.map((g) => <li><a href={govPath(g.id)}>{g.periods[g.periods.length - 1].short_name} · {g.periods[g.periods.length - 1].term[lang]}</a></li>)}
+  </ul>
+
+  <h2>{copy.gapsTitle}</h2>
+  <p>{copy.gaps} <a href={`${REPO}/blob/main/docs/auditoria-dados-educacao.md`} rel="noopener">{copy.audit}</a>.</p>
+</Base>

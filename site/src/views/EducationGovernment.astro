@@ -38,6 +38,15 @@ const copy = {
     references: "Fontes",
     noData: "sem dado",
     window: "Janela",
+    absolute: "Variação absoluta na unidade da série (p.p. = pontos percentuais); variação relativa, em %, só onde indicado.",
+    trend: "Ritmo antes e durante o governo",
+    trendLede: "Variação por ano nesta janela, comparada com a mesma duração imediatamente antes. Só vale falar em mudança de ritmo quando a série andava de outro jeito antes; mesmo assim isso não diz o porquê. Se a América Latina mudou de ritmo junto, a causa provavelmente não é o governo.",
+    before: "Antes",
+    during: "Durante",
+    perYear: "por ano",
+    later: "Depois",
+    statuses: { maintained: "Mantido", expanded: "Ampliado", reduced: "Reduzido", amended: "Alterado", replaced: "Substituído", ended: "Encerrado" } as Record<string, string>,
+    how: "Como avaliar criticamente um governo e suas políticas",
     mixed: "Ano com mais de um presidente na janela",
     norm: "Registro na página de educação",
     years: (n: number) => (n === 0 ? "sem defasagem" : `defasagem de ${n} ${n === 1 ? "ano" : "anos"}`),
@@ -63,6 +72,15 @@ const copy = {
     references: "Sources",
     noData: "no data",
     window: "Window",
+    absolute: "Absolute change in the series unit (p.p. = percentage points); relative change, in %, only where shown.",
+    trend: "Pace before and during the government",
+    trendLede: "Yearly change in this window, against the same length immediately before. Talk of a change in pace only when the series moved differently before; even then it does not say why. If Latin America changed pace together, the cause is probably not the government.",
+    before: "Before",
+    during: "During",
+    perYear: "per year",
+    later: "Afterwards",
+    statuses: { maintained: "Maintained", expanded: "Expanded", reduced: "Reduced", amended: "Amended", replaced: "Replaced", ended: "Ended" } as Record<string, string>,
+    how: "How to assess a government and its policies critically",
     mixed: "Year with more than one president in the window",
     norm: "Record on the education page",
     years: (n: number) => (n === 0 ? "no lag" : `${n}-year lag`),
@@ -76,11 +94,25 @@ const fmt = (v: number | null | undefined, unit: string) =>
   v === null || v === undefined ? copy.noData : formatNumber(v, lang, UNIT_DECIMALS[unit] ?? 2);
 const when = (e: EduGovItem) => (e.date ? (lang === "pt" ? e.date.split("-").reverse().join("/") : e.date) : String(e.year));
 const change = (i: string, geo: string, lag: number) => g.changes.find((c) => c.indicator_id === i && c.geo_code === geo && c.lag === lag);
+const SHORT: Record<string, Record<Lang, string>> = {
+  percent: { pt: " p.p.", en: " p.p." },
+  years: { pt: " anos", en: " yrs" },
+  brl_billion_real: { pt: " R$ bi", en: " R$ bn" },
+  per_million_people: { pt: " /milhão", en: " /million" },
+};
 const showChange = (c: ReturnType<typeof change>, unit: string) => {
   if (!c || c.change === null) return copy.noData;
   const sign = c.change > 0 ? "+" : c.change < 0 ? "−" : "";
-  return `${sign}${formatNumber(Math.abs(c.change), lang, c.relative ? 1 : UNIT_DECIMALS[unit] ?? 2)}${c.relative ? "%" : ""}`;
+  const value = formatNumber(Math.abs(c.change), lang, c.relative ? 1 : UNIT_DECIMALS[unit] ?? 2);
+  return `${sign}${value}${c.relative ? "%" : (SHORT[unit]?.[lang] ?? "")}`;
 };
+const rate = (v: number, unit: string, relative = false) => {
+  const sign = v > 0 ? "+" : v < 0 ? "−" : "";
+  const value = formatNumber(Math.abs(v), lang, relative ? 2 : (UNIT_DECIMALS[unit] ?? 2) + 1);
+  return `${sign}${value}${relative ? "%" : (SHORT[unit]?.[lang] ?? "")}`;
+};
+const trendOf = (i: string, geo: string) => g.trend.find((t) => t.indicator_id === i && t.geo_code === geo);
+const statusLabel = (s: string) => copy.statuses[s] ?? s;
 const label = copy.title(main.short_name);
 const items = [
   { list: g.started, head: copy.started, none: copy.startedNone, cut: false },
@@ -114,6 +146,16 @@ const items = [
                 {e.norm && <> · <a href={`${url(lang, "education")}#${e.submodules[0]}--${e.norm}`}>{copy.norm}</a></>}
               </p>
               <Fragment set:html={e.description} />
+              {e.later && e.later.length > 0 && (
+                <ul class="meta later">
+                  {e.later.map((x) => (
+                    <li>
+                      <strong>{copy.later}, {x.year}: {statusLabel(x.status)}</strong>
+                      {x.by && <> · {x.by}</>} — <span set:html={x.note} />
+                    </li>
+                  ))}
+                </ul>
+              )}
               <p class="meta">{copy.source}: <a href={e.source} rel="noopener">{new URL(e.source).hostname}</a></p>
               <details>
                 <summary>{copy.values}</summary>
@@ -133,6 +175,7 @@ const items = [
   <section>
     <h2>{copy.changes}</h2>
     <p>{copy.changesLede}</p>
+    <p class="meta">{copy.absolute}</p>
     {
       lags.map((lag) => (
         <>
@@ -166,10 +209,48 @@ const items = [
   </section>
 
   {
+    g.trend.length > 0 && (
+      <section>
+        <h2>{copy.trend}</h2>
+        <p>{copy.trendLede}</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr>
+                <th scope="col">{t.indicator}</th>
+                <th scope="col">{copy.before}</th>
+                <th scope="col">{copy.during}</th>
+                <th scope="col">{geoName("LCN", lang)}: {copy.before.toLowerCase()} → {copy.during.toLowerCase()}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {inds.map((ind) => {
+                const b = trendOf(ind.id, "BRA");
+                if (!b) return null;
+                const l = trendOf(ind.id, "LCN");
+                return (
+                  <tr>
+                    <th scope="row"><a href={url(lang, "indicators", ind.id)}>{ind.name[lang]}</a> <span class="meta">{copy.perYear}</span></th>
+                    <td class="num">{rate(b.before_rate, ind.unit, b.relative)} <span class="meta">({b.before_from}–{b.from})</span></td>
+                    <td class="num">{rate(b.during_rate, ind.unit, b.relative)} <span class="meta">({b.from}–{b.to})</span></td>
+                    <td class="num">{l ? `${rate(l.before_rate, ind.unit, l.relative)} → ${rate(l.during_rate, ind.unit, l.relative)}` : copy.noData}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )
+  }
+
+  {
     inds.map((ind) => (
       <Chart lang={lang} id={`gov-${ind.id.replace(/\W/g, "-")}`} title={ind.name[lang]} alt={copy.alt(ind.name[lang])} indicators={[ind.id]} geographies={REGION} />
     ))
   }
+
+  <p><a href={`${url(lang, "education")}${lang === "pt" ? "como-avaliar" : "how-to-assess"}/`}>{copy.how}</a></p>
 
   <h2>{copy.context}</h2>
   <Fragment set:html={g.context} />

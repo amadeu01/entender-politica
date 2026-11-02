@@ -1,5 +1,3 @@
-# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
-# Itens sem `checked` ainda não foram conferidos com o registro oficial.
 period: dilma-1
 summary:
   pt: Entre 2010 e 2014 o gasto público em educação foi de {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2010)
@@ -53,6 +51,12 @@ started:
       engineering and mathematics.
   source: https://legis.senado.leg.br/norma/588454
   checked: '2026-11-01'
+  later:
+  - year: 2016
+    status: reduced
+    note:
+      pt: Em 2016 o MEC informou que não concederia novas bolsas de graduação no exterior.
+      en: In 2016 the Ministry of Education said it would no longer award new undergraduate grants abroad.
 - title:
     pt: Lei de Cotas nas instituições federais
     en: Quota Law in federal institutions
@@ -71,6 +75,13 @@ started:
       with sub-quotas by income and by race and ethnicity.
   source: https://legis.senado.leg.br/norma/588087
   checked: '2026-11-01'
+  later:
+  - year: 2023
+    status: amended
+    by: Lei 14.723/2023
+    note:
+      pt: Revista em 2023, com mudança no teto de renda familiar.
+      en: Revised in 2023, changing the family income ceiling.
 - title:
     pt: Pacto Nacional pela Alfabetização na Idade Certa
     en: National Pact for Literacy at the Right Age
@@ -85,7 +96,13 @@ started:
       com formação de professores; foi sucedido pelo Programa Mais Alfabetização.
     en: Commitment of the three levels of government to make all children literate by the end of the initial
       cycle, with teacher training; it was succeeded by the More Literacy Program.
-  source: https://www.gov.br/mec/pt-br
+  source: https://abmes.org.br/legislacoes/detalhe/1264/portaria-mec-n-867
+  later:
+  - year: 2018
+    status: replaced
+    note:
+      pt: Sucedido em 2018 pelo Programa Mais Alfabetização; não foi localizado ato que encerre o pacto.
+      en: Succeeded in 2018 by the More Literacy Program; no act ending the pact was located.
 - title:
     pt: Educação básica obrigatória dos quatro aos dezessete anos
     en: Compulsory basic education from four to seventeen
@@ -130,6 +147,13 @@ started:
     en: Ten-year plan with goals by level and the goal of raising public investment in education as a
       share of GDP.
   source: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13005.htm
+  later:
+  - year: 2026
+    status: replaced
+    by: Lei 15.388/2026
+    note:
+      pt: Sucedido em 2026 por novo plano decenal.
+      en: Succeeded in 2026 by a new ten-year plan.
 indicators:
 - wdi.se_xpd_totl_gd_zs
 - undp_hdr.mys

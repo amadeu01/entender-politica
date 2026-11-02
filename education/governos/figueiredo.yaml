@@ -1,5 +1,3 @@
-# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
-# Itens sem `checked` ainda não foram conferidos com o registro oficial.
 period: figueiredo
 summary:
   pt: 'Série de alfabetização de adultos do Banco Mundial só começa em {{ v("wdi.se_adt_litr_zs", "BRA",

@@ -23,7 +23,10 @@ Transparência exige chave).
 3. **O que a série não mostra:** dotação, bloqueio e contingenciamento. Um bloqueio revertido
    no mesmo ano não aparece, e "pago" menor que "empenhado" pode ser adiamento (restos a
    pagar), não corte. Os críticos estão no cadastro de cada indicador.
-4. **Antes de 2014:** sem série federal em reais. Fica como lacuna registrada na auditoria
+4. **Coleta no começo do ano:** a coleta busca até o ano anterior; uma execução nos primeiros meses
+   pode encontrar uma DCA ainda preliminar, que só vira definitiva depois. Rodar a coleta após o
+   fechamento (meados do ano) evita isso.
+5. **Antes de 2014:** sem série federal em reais. Fica como lacuna registrada na auditoria
    (`docs/auditoria-dados-educacao.md`), não preenchida com número digitado.
 
 ## English
@@ -48,3 +51,4 @@ Transparency Portal needs a key).
    deferral (*restos a pagar*), not a cut. Critics are in each indicator's record.
 4. **Before 2014:** no federal series in reais. Recorded as a gap in the audit
    (`docs/auditoria-dados-educacao.md`), not filled with typed numbers.
+5. **Fetching early in the year:** the fetch reads up to last year; a run in the first months may find a still-preliminary DCA. Run it after the close (mid-year) to avoid this.

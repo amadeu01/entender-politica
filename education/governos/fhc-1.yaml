@@ -1,5 +1,3 @@
-# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
-# Itens sem `checked` ainda não foram conferidos com o registro oficial.
 period: fhc-1
 summary:
   pt: O gasto público total em educação foi de {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 1995) }}% do PIB em
@@ -36,6 +34,14 @@ started:
     en: Creates the National Education Council and institutes the national exam for undergraduate graduates
       (the Provão, applied from 1996).
   source: https://www.planalto.gov.br/ccivil_03/leis/l9131.htm
+  later:
+  - year: 2004
+    status: replaced
+    by: Lei 10.861/2004
+    note:
+      pt: O exame nacional dos concluintes foi substituído em 2004 pelo sistema de avaliação da educação
+        superior.
+      en: The national graduates' exam was replaced in 2004 by the higher education assessment system.
 - title:
     pt: Lei de Diretrizes e Bases da Educação Nacional
     en: National Education Guidelines and Bases Law
@@ -72,6 +78,13 @@ started:
       each state by number of students and provides Union top-ups where per-pupil value falls below the
       national minimum. Regulated by a federal law of the same year and operating since 1998.
   source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc14.htm
+  later:
+  - year: 2006
+    status: replaced
+    by: Emenda Constitucional 53/2006
+    note:
+      pt: Substituído em 2006 pelo Fundeb, que ampliou o fundo a toda a educação básica.
+      en: Replaced in 2006 by Fundeb, which extended the fund to all of basic education.
 - title:
     pt: Separação do ensino médio e da educação profissional
     en: Separation of secondary and vocational education
@@ -87,6 +100,13 @@ started:
     en: Separates vocational education from academic secondary schooling and funds the technical network's
       expansion with an external loan.
   source: https://www.planalto.gov.br/ccivil_03/decreto/d2208.htm
+  later:
+  - year: 2004
+    status: replaced
+    by: Decreto 5.154/2004
+    note:
+      pt: Revogado em 2004; os cursos técnicos integrados ao ensino médio voltaram a ser permitidos.
+      en: Revoked in 2004; technical courses integrated with secondary school were allowed again.
 - title:
     pt: Exame Nacional do Ensino Médio (Enem)
     en: National Secondary Education Exam (Enem)
@@ -119,6 +139,7 @@ cuts:
       of federal revenue outside earmarks. Sources differ on how much this affected the base of the federal
       education minimum, whose delinking only began to fall, for education, from 2009.
   source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc10.htm
+  instrument: Emenda Constitucional 10/1996
 - kind: cut
   title:
     pt: Valor mínimo por aluno do Fundef e a complementação da União
@@ -137,6 +158,7 @@ cuts:
       average for 1998 to 2007, which supports the view that the values set were below the legal formula.
       The dispute spans more than one government.
   source: https://www.planalto.gov.br/ccivil_03/leis/l9424.htm
+  instrument: Decreto 2.264/1997
 indicators:
 - wdi.se_xpd_totl_gd_zs
 - undp_hdr.mys
