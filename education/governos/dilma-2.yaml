@@ -104,7 +104,7 @@ cuts:
       entre fontes e não foram conferidos).
     en: Higher interest and a minimum Enem score, with a non-zero essay, for new contracts reduced new
       Fies contracts; the recession also reduced demand (figures differ across sources and were not checked).
-  source: https://www.gov.br/fnde/pt-br
+  source: https://agenciabrasil.ebc.com.br/educacao/noticia/2015-07/novas-regras-do-fies-para-segundo-semestre-entram-em-vigor
 indicators:
 - wdi.se_xpd_totl_gd_zs
 - siconfi.educ_uniao_paga

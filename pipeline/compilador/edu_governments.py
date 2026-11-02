@@ -277,23 +277,37 @@ def _changes(
 
 
 def _trend(
-    df: pd.DataFrame, years: list[int], ids: list[str], geos: tuple[str, ...] = ("BRA", "LCN")
+    df: pd.DataFrame,
+    years: list[int],
+    ids: list[str],
+    indicators: dict[str, Indicator],
+    geos: tuple[str, ...] = ("BRA", "LCN"),
 ) -> list[dict]:
     """Yearly rate of change in the window against the same-length window just before it.
 
     Descriptive: it asks whether the pace changed, not why (ADR 0013). Rows exist only when
-    the series has all three end points.
+    the series has all three end points. Series in a relative unit (the same ones the change
+    table shows in %) get a percent-per-year rate, as in the table; the others, the unit per year.
     """
     values = df.set_index(["indicator_id", "geo_code", "year"])["value"]
     start, end = years[0] - 1, years[-1]
     length = end - start
     rows = []
     for ind in ids:
+        relative = indicators[ind].unit in RELATIVE_UNITS
         for geo in geos:
             pts = [values.get((ind, geo, y)) for y in (start - length, start, end)]
-            if any(p is None for p in pts):
+            if any(p is None or pd.isna(p) for p in pts):
                 continue
             before, baseline, after = (float(p) for p in pts)
+            if relative:
+                if before <= 0 or baseline <= 0:
+                    continue
+                before_rate = (baseline / before - 1) * 100 / length
+                during_rate = (after / baseline - 1) * 100 / length
+            else:
+                before_rate = (baseline - before) / length
+                during_rate = (after - baseline) / length
             rows.append(
                 {
                     "indicator_id": ind,
@@ -301,8 +315,9 @@ def _trend(
                     "before_from": start - length,
                     "from": start,
                     "to": end,
-                    "before_rate": (baseline - before) / length,
-                    "during_rate": (after - baseline) / length,
+                    "before_rate": before_rate,
+                    "during_rate": during_rate,
+                    "relative": relative,
                 }
             )
     return rows
@@ -374,7 +389,7 @@ def render(
         "cuts": sorted(cuts, key=key),
         "indicators": doc.indicators,
         "changes": _changes(df, govs, years, indicators, doc.indicators) if years else [],
-        "trend": _trend(df, years, doc.indicators) if years else [],
+        "trend": _trend(df, years, doc.indicators, indicators) if years else [],
         "limitations": [r.text(t, block=True) for t in doc.limitations],
         "references": [
             {"citation": ref.citation, "doi": ref.doi, "url": str(ref.url)}

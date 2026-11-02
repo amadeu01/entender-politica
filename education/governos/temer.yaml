@@ -69,7 +69,7 @@ started:
     status: amended
     by: Lei 14.945/2024
     note:
-      pt: Revista em 2024, com mais horas de formação geral básica e novos itinerários.
+      pt: Revista em 2024, com mais horas de formação geral básica e itinerários reorganizados.
       en: Revised in 2024, with more basic general education hours and reorganized itineraries.
 - title:
     pt: Reforma do Fies
@@ -100,7 +100,7 @@ started:
       e do ensino médio (2018).
     en: Defines the essential learning of early childhood and primary education (approved in 2017) and
       of secondary education (2018).
-  source: http://basenacionalcomum.mec.gov.br/
+  source: https://abmes.org.br/legislacoes/detalhe/2457/resolucao-cne-cp-n-2
 - title:
     pt: Programa Mais Alfabetização
     en: More Literacy Program
@@ -114,7 +114,7 @@ started:
       sucede o pacto de 2012.
     en: Supports literacy in the first two years of primary school with literacy assistants; succeeds
       the 2012 pact.
-  source: https://www.gov.br/mec/pt-br
+  source: https://portal.mec.gov.br/expansao-da-rede-federal/30000-uncategorised/62871-programa-mais-alfabetizacao
 cuts:
 - kind: cut
   title:

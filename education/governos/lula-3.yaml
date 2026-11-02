@@ -154,7 +154,7 @@ cuts:
     en: 'An external-oversight act, not a government cut: the Federal Court of Accounts questioned how
       the program was financed and blocked fund resources in early 2025; the government appealed and payments
       were later released. The sequence of events differs across sources.'
-  source: https://portal.tcu.gov.br/
+  source: https://portal.tcu.gov.br/imprensa/noticias/tcu-da-prazo-de-120-dias-para-governo-federal-adequar-programa-pe-de-meia-ao-orcamento
 indicators:
 - wdi.se_xpd_totl_gd_zs
 - siconfi.educ_uniao_paga

@@ -206,3 +206,26 @@ def test_trend_compares_the_pace_with_the_window_before():
     assert row["before_rate"] == pytest.approx(0.0)
     assert row["during_rate"] == pytest.approx(2.0)
     assert not [t for t in out["trend"] if t["geo_code"] == "LCN"]
+
+
+def test_trend_skips_series_with_a_missing_end_point():
+    govs = governments.load()
+    # No value for 2006 (the start of the window before): no row, not a wrong rate.
+    rows = [(IND, "BRA", y, 50.0 + y) for y in range(2007, 2015)]
+    out = eg.render(_doc(cuts=[_cut(year=2014)]), "pt", _df(rows), _inds(), govs, [_law()])
+    assert out["trend"] == []
+
+
+def test_trend_uses_percent_per_year_for_relative_units():
+    govs = governments.load()
+    inds = {IND: make_indicator(id=IND, source_code="X", unit="usd_2015")}
+    rows = [(IND, "BRA", 2006, 100.0), (IND, "BRA", 2010, 100.0), (IND, "BRA", 2014, 120.0)]
+    out = eg.render(_doc(cuts=[_cut(year=2014)]), "pt", _df(rows), inds, govs, [_law()])
+    (row,) = out["trend"]
+    assert row["relative"] is True
+    assert row["before_rate"] == pytest.approx(0.0)
+    assert row["during_rate"] == pytest.approx(5.0)
+    # A non-positive base has no meaningful rate.
+    rows = [(IND, "BRA", 2006, 0.0), (IND, "BRA", 2010, 5.0), (IND, "BRA", 2014, 6.0)]
+    out = eg.render(_doc(cuts=[_cut(year=2014)]), "pt", _df(rows), inds, govs, [_law()])
+    assert out["trend"] == []

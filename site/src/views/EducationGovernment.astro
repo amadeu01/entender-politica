@@ -106,9 +106,10 @@ const showChange = (c: ReturnType<typeof change>, unit: string) => {
   const value = formatNumber(Math.abs(c.change), lang, c.relative ? 1 : UNIT_DECIMALS[unit] ?? 2);
   return `${sign}${value}${c.relative ? "%" : (SHORT[unit]?.[lang] ?? "")}`;
 };
-const rate = (v: number, unit: string) => {
+const rate = (v: number, unit: string, relative = false) => {
   const sign = v > 0 ? "+" : v < 0 ? "−" : "";
-  return `${sign}${formatNumber(Math.abs(v), lang, (UNIT_DECIMALS[unit] ?? 2) + 1)}${SHORT[unit]?.[lang] ?? ""}`;
+  const value = formatNumber(Math.abs(v), lang, relative ? 2 : (UNIT_DECIMALS[unit] ?? 2) + 1);
+  return `${sign}${value}${relative ? "%" : (SHORT[unit]?.[lang] ?? "")}`;
 };
 const trendOf = (i: string, geo: string) => g.trend.find((t) => t.indicator_id === i && t.geo_code === geo);
 const statusLabel = (s: string) => copy.statuses[s] ?? s;
@@ -230,9 +231,9 @@ const items = [
                 return (
                   <tr>
                     <th scope="row"><a href={url(lang, "indicators", ind.id)}>{ind.name[lang]}</a> <span class="meta">{copy.perYear}</span></th>
-                    <td class="num">{rate(b.before_rate, ind.unit)} <span class="meta">({b.before_from}–{b.from})</span></td>
-                    <td class="num">{rate(b.during_rate, ind.unit)} <span class="meta">({b.from}–{b.to})</span></td>
-                    <td class="num">{l ? `${rate(l.before_rate, ind.unit)} → ${rate(l.during_rate, ind.unit)}` : copy.noData}</td>
+                    <td class="num">{rate(b.before_rate, ind.unit, b.relative)} <span class="meta">({b.before_from}–{b.from})</span></td>
+                    <td class="num">{rate(b.during_rate, ind.unit, b.relative)} <span class="meta">({b.from}–{b.to})</span></td>
+                    <td class="num">{l ? `${rate(l.before_rate, ind.unit, l.relative)} → ${rate(l.during_rate, ind.unit, l.relative)}` : copy.noData}</td>
                   </tr>
                 );
               })}

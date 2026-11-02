@@ -287,6 +287,7 @@ export type EduGovTrend = {
   to: number;
   before_rate: number;
   during_rate: number;
+  relative: boolean;
 };
 export type EduGovernment = {
   id: string;

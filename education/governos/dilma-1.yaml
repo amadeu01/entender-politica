@@ -55,8 +55,8 @@ started:
   - year: 2016
     status: reduced
     note:
-      pt: As bolsas de graduação no exterior deixaram de ser concedidas em 2016; as de pós-graduação continuaram.
-      en: Undergraduate grants abroad stopped being awarded in 2016; graduate ones continued.
+      pt: Em 2016 o MEC informou que não concederia novas bolsas de graduação no exterior.
+      en: In 2016 the Ministry of Education said it would no longer award new undergraduate grants abroad.
 - title:
     pt: Lei de Cotas nas instituições federais
     en: Quota Law in federal institutions
@@ -96,7 +96,7 @@ started:
       com formação de professores; foi sucedido pelo Programa Mais Alfabetização.
     en: Commitment of the three levels of government to make all children literate by the end of the initial
       cycle, with teacher training; it was succeeded by the More Literacy Program.
-  source: https://www.gov.br/mec/pt-br
+  source: https://abmes.org.br/legislacoes/detalhe/1264/portaria-mec-n-867
   later:
   - year: 2018
     status: replaced
