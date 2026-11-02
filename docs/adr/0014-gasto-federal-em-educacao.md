@@ -51,4 +51,4 @@ Transparency Portal needs a key).
    deferral (*restos a pagar*), not a cut. Critics are in each indicator's record.
 4. **Before 2014:** no federal series in reais. Recorded as a gap in the audit
    (`docs/auditoria-dados-educacao.md`), not filled with typed numbers.
-4. **Fetching early in the year:** the fetch reads up to last year; a run in the first months may find a still-preliminary DCA. Run it after the close (mid-year) to avoid this.
+5. **Fetching early in the year:** the fetch reads up to last year; a run in the first months may find a still-preliminary DCA. Run it after the close (mid-year) to avoid this.
