@@ -1,5 +1,3 @@
-# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
-# Itens sem `checked` ainda não foram conferidos com o registro oficial.
 period: lula-2
 summary:
   pt: Os anos médios de estudo dos adultos foram de {{ v("undp_hdr.mys", "BRA", 2006) }} em 2006 a {{
@@ -37,6 +35,13 @@ started:
       União.
     en: Regulates Fundeb, with distribution rules among states and municipalities and a Union top-up.
   source: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11494.htm
+  later:
+  - year: 2020
+    status: replaced
+    by: Lei 14.113/2020
+    note:
+      pt: Substituída em 2020 pela regulamentação do Fundeb permanente.
+      en: Replaced in 2020 by the regulation of the permanent Fundeb.
 - title:
     pt: Plano de Metas Compromisso Todos pela Educação e Ideb
     en: Targets plan Commitment All for Education and Ideb
@@ -130,6 +135,7 @@ cuts:
     en: The 2007 amendment extended the Union revenue delinking; the 2009 amendment made the delinking
       on the education base fall in steps from 2009 (percentages not checked).
   source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc59.htm
+  instrument: Emenda Constitucional 59/2009
 indicators:
 - wdi.se_xpd_totl_gd_zs
 - undp_hdr.mys

@@ -24,6 +24,13 @@ então DOIs novos não podem ser verificados (ADR 0007) e os textos oficiais nã
 4. **Página** `/educacao/governos/<id>/`: o que começou, cortes, variação das séries na
    janela do período com defasagem 0 a 2 e comparação regional, gráficos, outros fatores e
    limitações. Descritiva: não demonstra causa.
+5. **Destino das políticas:** cada início pode ter `later` (mantido, ampliado, reduzido, alterado,
+   substituído ou encerrado, com o ano e a norma), para acompanhar a política além do governo
+   que a começou. Cortes podem citar o `instrument` (decreto ou emenda).
+6. **Ritmo antes e durante:** para cada série, a variação por ano na janela do governo contra a
+   mesma duração imediatamente antes, para o Brasil e a América Latina. Só diz se o ritmo mudou.
+7. **Guia** `/educacao/como-avaliar/`: método para avaliar governo, políticas adotadas, mantidas,
+   canceladas e cortes, sem ranking.
 
 ## English
 
@@ -46,3 +53,11 @@ verified (ADR 0007) and official texts were not read.
 4. **Page** `/en/education/governments/<id>/`: what started, cuts, change in the series
    over the period's window with lags 0 to 2 and regional comparison, charts, other factors
    and limitations. Descriptive: it does not show causation.
+5. **Fate of policies:** each start may carry `later` (maintained, expanded, reduced, amended,
+   replaced or ended, with the year and the norm), to follow a policy beyond the government that
+   started it. Cuts may cite the `instrument` (decree or amendment).
+6. **Pace before and during:** for each series, the yearly change over the government's window
+   against the same length immediately before, for Brazil and Latin America. It only says whether
+   the pace changed.
+7. **Guide** `/en/education/how-to-assess/`: method to assess a government, adopted, kept and
+   cancelled policies and cuts, without a ranking.

@@ -277,6 +277,16 @@ export type EduGovItem = {
   instrument?: string | null;
   norm?: string | null;
   norm_designation?: string | null;
+  later?: { year: number; status: string; by: string | null; note: string }[];
+};
+export type EduGovTrend = {
+  indicator_id: string;
+  geo_code: string;
+  before_from: number;
+  from: number;
+  to: number;
+  before_rate: number;
+  during_rate: number;
 };
 export type EduGovernment = {
   id: string;
@@ -289,6 +299,7 @@ export type EduGovernment = {
   cuts: EduGovItem[];
   indicators: string[];
   changes: EduGovChange[];
+  trend: EduGovTrend[];
   limitations: string[];
   references: { citation: string; doi: string | null; url: string }[];
   numbers: Cited[];

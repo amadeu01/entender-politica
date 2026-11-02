@@ -46,6 +46,25 @@ class CutKind(StrEnum):
     VETO = "veto"
 
 
+class LaterStatus(StrEnum):
+    MAINTAINED = "maintained"
+    EXPANDED = "expanded"
+    REDUCED = "reduced"
+    AMENDED = "amended"
+    REPLACED = "replaced"
+    ENDED = "ended"
+
+
+class Later(Strict):
+    """What happened to a policy after it started, in a later year and often a later government."""
+
+    year: int = Field(ge=1900, le=2100)
+    status: LaterStatus
+    # Designation of the norm that did it (`Decreto 11.556/2023`), when there is one.
+    by: str | None = None
+    note: Text
+
+
 class Started(Strict):
     title: Text
     year: int = Field(ge=1900, le=2100)
@@ -60,9 +79,15 @@ class Started(Strict):
     # Date someone matched this item against the official record. Empty means not checked,
     # and the site says so.
     checked: dt.date | None = None
+    later: list[Later] = []
 
     @model_validator(mode="after")
     def _date_in_year(self) -> "Started":
+        for step in self.later:
+            if step.year < self.year:
+                raise ValueError(
+                    f"{self.title.en}: a later step in {step.year} precedes {self.year}"
+                )
         if self.date is not None and self.date.year != self.year:
             raise ValueError(f"{self.title.en}: date {self.date} is not in year {self.year}")
         return self
@@ -73,6 +98,8 @@ class Cut(Strict):
     title: Text
     year: int = Field(ge=1900, le=2100)
     date: dt.date | None = None
+    # Designation of the decree or amendment behind the cut, when there is one.
+    instrument: str | None = None
     submodules: list[str] = Field(min_length=1)
     description: Text
     source: HttpUrl
@@ -125,6 +152,7 @@ def _texts(doc: GovernmentEducation) -> list[tuple[str, Text]]:
     found += [(f"limitation {i}", t) for i, t in enumerate(doc.limitations)]
     for s in doc.started:
         found += [(f"started '{s.title.en}'", s.title), (f"started '{s.title.en}'", s.description)]
+        found += [(f"later '{s.title.en}' {x.year}", x.note) for x in s.later]
     for c in doc.cuts:
         found += [(f"cut '{c.title.en}'", c.title), (f"cut '{c.title.en}'", c.description)]
     return found
@@ -248,6 +276,38 @@ def _changes(
     return rows
 
 
+def _trend(
+    df: pd.DataFrame, years: list[int], ids: list[str], geos: tuple[str, ...] = ("BRA", "LCN")
+) -> list[dict]:
+    """Yearly rate of change in the window against the same-length window just before it.
+
+    Descriptive: it asks whether the pace changed, not why (ADR 0013). Rows exist only when
+    the series has all three end points.
+    """
+    values = df.set_index(["indicator_id", "geo_code", "year"])["value"]
+    start, end = years[0] - 1, years[-1]
+    length = end - start
+    rows = []
+    for ind in ids:
+        for geo in geos:
+            pts = [values.get((ind, geo, y)) for y in (start - length, start, end)]
+            if any(p is None for p in pts):
+                continue
+            before, baseline, after = (float(p) for p in pts)
+            rows.append(
+                {
+                    "indicator_id": ind,
+                    "geo_code": geo,
+                    "before_from": start - length,
+                    "from": start,
+                    "to": end,
+                    "before_rate": (baseline - before) / length,
+                    "during_rate": (after - baseline) / length,
+                }
+            )
+    return rows
+
+
 def _value_at(df: pd.DataFrame, indicator_id: str, year: int) -> float | None:
     rows = df[
         (df["indicator_id"] == indicator_id) & (df["geo_code"] == FOCUS_GEO) & (df["year"] == year)
@@ -275,6 +335,14 @@ def render(
     def values(year: int) -> dict[str, float | None]:
         return {i: _value_at(df, i, year) for i in doc.indicators}
 
+    def later(step: Later) -> dict:
+        return {
+            "year": step.year,
+            "status": step.status.value,
+            "by": step.by,
+            "note": r.text(step.note),
+        }
+
     def item(x: Started | Cut) -> dict:
         return {
             "title": r.text(x.title),
@@ -289,11 +357,11 @@ def render(
 
     started = [
         item(s)
-        | {"instrument": s.instrument, "norm": s.norm}
+        | {"instrument": s.instrument, "norm": s.norm, "later": [later(x) for x in s.later]}
         | {"norm_designation": norm_designation.get(s.norm or "")}
         for s in doc.started
     ]
-    cuts = [item(c) | {"kind": c.kind.value} for c in doc.cuts]
+    cuts = [item(c) | {"kind": c.kind.value, "instrument": c.instrument} for c in doc.cuts]
     key = lambda e: (e["date"] or f"{e['year']}", e["title"])  # noqa: E731
     out = {
         "id": doc.period,
@@ -306,6 +374,7 @@ def render(
         "cuts": sorted(cuts, key=key),
         "indicators": doc.indicators,
         "changes": _changes(df, govs, years, indicators, doc.indicators) if years else [],
+        "trend": _trend(df, years, doc.indicators) if years else [],
         "limitations": [r.text(t, block=True) for t in doc.limitations],
         "references": [
             {"citation": ref.citation, "doi": ref.doi, "url": str(ref.url)}

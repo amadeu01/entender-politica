@@ -1,5 +1,3 @@
-# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
-# Itens sem `checked` ainda não foram conferidos com o registro oficial.
 period: temer
 includes:
 - temer-interino
@@ -43,6 +41,13 @@ started:
       from 2018, and the Union's Fundeb top-up sits outside the cap; the reading of the floor is contested
       in the Supreme Federal Court.
   source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc95.htm
+  later:
+  - year: 2023
+    status: replaced
+    by: Lei Complementar 200/2023
+    note:
+      pt: Substituído em 2023 por novo arcabouço fiscal.
+      en: Replaced in 2023 by a new fiscal framework.
 - title:
     pt: Reforma do ensino médio
     en: Secondary school reform
@@ -59,6 +64,13 @@ started:
     en: Amends the LDB to lengthen school hours, create formative itineraries and adopt the national curriculum
       base; originated in a 2016 provisional measure.
   source: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13415.htm
+  later:
+  - year: 2024
+    status: amended
+    by: Lei 14.945/2024
+    note:
+      pt: Revista em 2024, com mais horas de formação geral básica e novos itinerários.
+      en: Revised in 2024, with more basic general education hours and reorganized itineraries.
 - title:
     pt: Reforma do Fies
     en: Fies reform
@@ -70,8 +82,8 @@ started:
   - graduacao
   - financiamento
   description:
-    pt: Cria novas modalidades de financiamento estudantil, com pagamento ligado à renda e fundo garantidor.
-    en: Creates new student financing modalities, with income-linked repayment and a guarantee fund.
+    pt: Cria novas modalidades de financiamento estudantil, com pagamento ligado à renda.
+    en: Creates new student financing modalities, with income-linked repayment.
   source: https://legis.senado.leg.br/norma/26314723
   checked: '2026-11-01'
 - title:
@@ -142,6 +154,7 @@ cuts:
       2016 and {{ v('siconfi.educ_uniao_paga', 'BRA', 2018) }} in 2018; paid on higher education, {{ v('siconfi.superior_uniao_paga',
       'BRA', 2016) }} to {{ v('siconfi.superior_uniao_paga', 'BRA', 2018) }}.
   source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc95.htm
+  instrument: Emenda Constitucional 95/2016
 - kind: withheld
   title:
     pt: Bloqueio do orçamento de ciência e tecnologia que alcançou o CNPq

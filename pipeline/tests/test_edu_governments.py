@@ -170,3 +170,39 @@ def test_items_must_fall_inside_the_period_years():
     assert _check(_doc(started=[_started(year=2014)])) == []
     # Dilma's first term ends on 2014-12-31: the end date is exclusive.
     assert "outside the period" in "\n".join(_check(_doc(started=[_started(year=2015)])))
+
+
+def _later(**over):
+    base = {"year": 2020, "status": "replaced", "note": T}
+    return base | over
+
+
+def test_a_later_step_cannot_precede_the_policy():
+    with pytest.raises(ValidationError, match="precedes"):
+        eg.Started.model_validate(_started(later=[_later(year=2010)]))
+    ok = eg.Started.model_validate(_started(later=[_later(by="Decreto 1/2020")]))
+    assert ok.later[0].status.value == "replaced"
+
+
+def test_later_notes_obey_the_number_rules_and_render():
+    typed = _doc(started=[_started(later=[_later(note={"pt": "caiu 30", "en": "fell 30"})])])
+    assert "'30'" in "\n".join(_check(typed))
+    govs = governments.load()
+    df = _df([(IND, "BRA", y, 50.0 + y - 2010) for y in range(2005, 2019)])
+    doc = _doc(started=[_started(later=[_later(status="ended")])])
+    out = eg.render(doc, "pt", df, _inds(), govs, [_law()])
+    assert out["started"][0]["later"][0]["status"] == "ended"
+
+
+def test_trend_compares_the_pace_with_the_window_before():
+    govs = governments.load()
+    # Flat until 2010, then one point a year: dilma-1 spans 2011-2014, baseline 2010.
+    rows = [(IND, "BRA", y, 50.0) for y in range(2006, 2011)]
+    rows += [(IND, "BRA", y, 50.0 + 2 * (y - 2010)) for y in range(2011, 2015)]
+    doc = _doc(cuts=[_cut(year=2014)])
+    out = eg.render(doc, "pt", _df(rows), _inds(), govs, [_law()])
+    (row,) = [t for t in out["trend"] if t["geo_code"] == "BRA"]
+    assert (row["before_from"], row["from"], row["to"]) == (2006, 2010, 2014)
+    assert row["before_rate"] == pytest.approx(0.0)
+    assert row["during_rate"] == pytest.approx(2.0)
+    assert not [t for t in out["trend"] if t["geo_code"] == "LCN"]

@@ -1,5 +1,3 @@
-# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
-# Itens sem `checked` ainda não foram conferidos com o registro oficial.
 period: bolsonaro
 summary:
   pt: O gasto público em educação foi de {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 2018) }}% do PIB em 2018
@@ -37,6 +35,13 @@ started:
     pt: Institui política nacional de alfabetização com ênfase em métodos fônicos; revogada em 2023.
     en: Institutes a national literacy policy emphasizing phonics-based methods; revoked in 2023.
   source: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/D9765.htm
+  later:
+  - year: 2023
+    status: replaced
+    by: Decreto 11.556/2023
+    note:
+      pt: Revogado em 2023, quando foi criado o compromisso nacional de alfabetização.
+      en: Revoked in 2023, when the national literacy commitment was created.
 - title:
     pt: Programa Nacional das Escolas Cívico-Militares
     en: National Civic-Military Schools Program
@@ -52,6 +57,13 @@ started:
     en: Supports the adoption of a civic-military management model in participating state and municipal
       public schools; revoked in 2023.
   source: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/D10004.htm
+  later:
+  - year: 2023
+    status: ended
+    by: Decreto 11.611/2023
+    note:
+      pt: Revogado em 2023; o programa federal foi encerrado.
+      en: Revoked in 2023; the federal program ended.
 - title:
     pt: Fundeb permanente
     en: Permanent Fundeb
@@ -127,6 +139,7 @@ cuts:
       {{ v('siconfi.superior_uniao_paga', 'BRA', 2019) }} and {{ v('siconfi.superior_uniao_paga', 'BRA',
       2021) }}.
   source: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/D9741.htm
+  instrument: Decreto 9.741/2019
 - kind: withheld
   title:
     pt: Bloqueio de despesas do MEC
@@ -143,6 +156,7 @@ cuts:
     en: A September 2022 decree blocked part of the MEC budget under the spending cap; the federal prosecutors
       recorded an unblocking in October, and the minister said MEC absorbed the effect (amounts not checked).
   source: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11216.htm
+  instrument: Decreto 11.216/2022
 - kind: fiscal_rule
   title:
     pt: Teto de gastos em vigor
@@ -155,6 +169,7 @@ cuts:
     pt: A regra do teto seguiu limitando a despesa primária federal durante todo o período.
     en: The cap rule kept limiting federal primary spending throughout the period.
   source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc95.htm
+  instrument: Emenda Constitucional 95/2016
 indicators:
 - wdi.se_xpd_totl_gd_zs
 - wdi.gb_xpd_rsdv_gd_zs

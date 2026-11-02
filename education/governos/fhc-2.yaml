@@ -1,5 +1,3 @@
-# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
-# Itens sem `checked` ainda não foram conferidos com o registro oficial.
 period: fhc-2
 summary:
   pt: O gasto público em educação ficou em {{ v("wdi.se_xpd_totl_gd_zs", "BRA", 1999) }}% do PIB em 1999
@@ -35,6 +33,13 @@ started:
     en: Replaces the previous student credit and finances undergraduate courses at positively assessed
       private institutions; originated in a 1999 provisional measure.
   source: https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10260.htm
+  later:
+  - year: 2017
+    status: amended
+    by: Lei 13.530/2017
+    note:
+      pt: Reformado em 2017, com novas modalidades de financiamento.
+      en: Reformed in 2017, with new financing modalities.
 - title:
     pt: Plano Nacional de Educação 2001–2010
     en: National Education Plan 2001–2010
@@ -50,6 +55,13 @@ started:
     en: First ten-year plan with goals by level and modality. Its financing provisions were vetoed (see
       cuts).
   source: https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10172.htm
+  later:
+  - year: 2014
+    status: replaced
+    by: Lei 13.005/2014
+    note:
+      pt: Sucedido em 2014 por novo plano decenal.
+      en: Succeeded in 2014 by a new ten-year plan.
 - title:
     pt: Bolsa Escola federal
     en: Federal Bolsa Escola
@@ -64,6 +76,13 @@ started:
     en: Cash transfer to poor families conditional on school attendance of primary-age children, run by
       municipalities.
   source: https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10219.htm
+  later:
+  - year: 2004
+    status: replaced
+    by: Lei 10.836/2004
+    note:
+      pt: Unificada em 2004 ao Bolsa Família, com condicionalidade de frequência escolar.
+      en: Merged in 2004 into Bolsa Família, with a school attendance condition.
 cuts:
 - kind: veto
   title:
@@ -81,6 +100,7 @@ cuts:
       GDP-share goal was the main item) and, especially, higher education expansion goals. Congress upheld
       the veto.
   source: https://www.congressonacional.leg.br/materias/vetos/-/veto/detalhe/3037
+  instrument: Veto 2/2001
 - kind: earmark
   title:
     pt: Desvinculação de receitas da União (DRU)
@@ -95,6 +115,7 @@ cuts:
     en: The Union revenue delinking succeeded the fiscal stabilization fund and kept part of federal revenue
       outside earmarks; its effect on the federal education minimum is the subject of divergent studies.
   source: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc27.htm
+  instrument: Emenda Constitucional 27/2000
 indicators:
 - wdi.se_xpd_totl_gd_zs
 - wdi.gb_xpd_rsdv_gd_zs

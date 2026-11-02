@@ -156,6 +156,7 @@ const tabs = [
       <section aria-labelledby="h-gov">
         <h2 id="h-gov">{govHeading}</h2>
         <p>{govLede}</p>
+        <p><a href={`${url(lang, "education")}${lang === "pt" ? "como-avaliar" : "how-to-assess"}/`}>{lang === "pt" ? "Como avaliar criticamente um governo e suas políticas" : "How to assess a government and its policies critically"}</a></p>
         <ul>
           {govPages.map((g) => (
             <li><a href={govPath(g.id)}>{g.periods[g.periods.length - 1].short_name} · {g.periods[g.periods.length - 1].term[lang]}</a></li>

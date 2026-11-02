@@ -1,5 +1,3 @@
-# Educação neste governo: o que começou, o que foi cortado e as séries do período (ADR 0013).
-# Itens sem `checked` ainda não foram conferidos com o registro oficial.
 period: collor
 summary:
   pt: Entre 1990 e 1992 os anos médios de estudo dos adultos passaram de {{ v("undp_hdr.mys", "BRA", 1990)
